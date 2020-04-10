@@ -1,0 +1,55 @@
+\documentclass[border=0pt]{standalone}
+\usepackage{tikz}
+\usetikzlibrary{decorations.pathreplacing,
+  fadings,
+  arrows,
+  decorations.markings
+}
+\tikzset{>=latex}
+\tikzfading[name=fade img right,left color=transparent!100, right color=transparent!0]
+\tikzfading[name=fade img left,right color=transparent!100, left color=transparent!0]
+\usepackage{graphicx}
+\begin{document}
+\begin{tikzpicture}[scale=1.5]
+  % Legends
+  \draw[line width=1,blue,opacity=0.6] (0, 2.8) -- (0.6, 2.8) node[right,black,opacity=1] {$P_{down}$};
+  \draw[line width=1,orange,opacity=0.7] (1.8, 2.8) -- (2.4, 2.8) node[right,black,opacity=1] {$P_{up}$};
+  \draw[line width=1,purple] (3.6, 2.8) -- (4.2, 2.8) node[right,black,opacity=1] {$P_{total}$};
+
+  % Y (power) markers
+  \draw[line width=0.5,dashed] (5, 1.2) -- (0, 1.2) node[below] {\small $P_{Raman}$};
+
+  % X (time) markers
+  \draw[line width=0.5,dashed] (1.5, 0) -- (1.5, 2.4);
+  \draw[line width=0.5,dashed] (3.5, 0) -- (3.5, 2.4);
+  \node (TRaman) at (2.5, 2.2) {\small $t_{Raman}$};
+  \draw[->] (TRaman) -- (1.5, 2.2);
+  \draw[->] (TRaman) -- (3.5, 2.2);
+
+  \draw[line width=0.5,dashed] (1.9, 0) -- (1.9, 1.9);
+  \draw[->] (1.25, 1.75) -- (1.5, 1.75);
+  \draw[<-] (1.9, 1.75) -- (2.15, 1.75) node[right] {\small $t_{ramp}$};
+
+  % Down leg
+  \draw[line width=1,blue,opacity=0.6] (0, 0) -- (1.5, 0)
+  -- plot[domain={-0.2}:{0.2},variable=\x] ({\x + 1.7}, {0.3*sin(180 * 5 / 2 * \x) + 0.3})
+  -- (3.1, 0.6)
+  -- plot[domain={-0.2}:{0.2},variable=\x] ({\x + 3.3}, {-0.3*sin(180 * 5 / 2 * \x) + 0.3})
+  -- (5, 0);
+  % Up leg
+  \draw[line width=1,orange,opacity=0.7] (0, 2) -- (0.5, 2)
+  -- plot[domain={-0.5}:{0.5},variable=\x] ({\x + 1}, {-0.4*sin(180 * \x) + 1.6})
+  -- plot[domain={-0.2}:{0.2},variable=\x] ({\x + 1.7}, {-0.3*sin(180 * 5 / 2 * \x) + 0.9})
+  -- (3.1, 0.6)
+  -- plot[domain={-0.2}:{0.2},variable=\x] ({\x + 3.3}, {0.3*sin(180 * 5 / 2 * \x) + 0.9})
+  -- plot[domain={-0.5}:{0.5},variable=\x] ({\x + 4}, {0.4*sin(180 * \x) + 1.6})
+  -- (5, 2);
+  % Total
+  \draw[line width=1,purple] (0, 2) -- (0.5, 2)
+  -- plot[domain={-0.5}:{0.5},variable=\x] ({\x + 1}, {-0.4*sin(180 * \x) + 1.6})
+  -- (3.5, 1.2)
+  -- plot[domain={-0.5}:{0.5},variable=\x] ({\x + 4}, {0.4*sin(180 * \x) + 1.6})
+  -- (5, 2);
+  \draw[line width=1.5,->] (-0.3, 0) --  node[below] {Time} (5.3, 0);
+\end{tikzpicture}
+\end{document}
