@@ -31,25 +31,19 @@
   \draw[<-] (1.9, 1.75) -- (2.15, 1.75) node[right] {\small $t_{ramp}$};
 
   % Down leg
-  \draw[line width=1,blue,opacity=0.6] (0, 0) -- (1.5, 0)
+  \draw[line width=1,blue,opacity=0.6] (0.5, 0)
   -- plot[domain={-0.2}:{0.2},variable=\x] ({\x + 1.7}, {0.3*sin(180 * 5 / 2 * \x) + 0.3})
   -- (3.1, 0.6)
   -- plot[domain={-0.2}:{0.2},variable=\x] ({\x + 3.3}, {-0.3*sin(180 * 5 / 2 * \x) + 0.3})
   -- (5, 0);
   % Up leg
-  \draw[line width=1,orange,opacity=0.7] (0, 2) -- (0.5, 2)
-  -- plot[domain={-0.5}:{0.5},variable=\x] ({\x + 1}, {-0.4*sin(180 * \x) + 1.6})
+  \draw[line width=1,orange,opacity=0.7] (0.5, 1.2)
   -- plot[domain={-0.2}:{0.2},variable=\x] ({\x + 1.7}, {-0.3*sin(180 * 5 / 2 * \x) + 0.9})
   -- (3.1, 0.6)
   -- plot[domain={-0.2}:{0.2},variable=\x] ({\x + 3.3}, {0.3*sin(180 * 5 / 2 * \x) + 0.9})
-  -- plot[domain={-0.5}:{0.5},variable=\x] ({\x + 4}, {0.4*sin(180 * \x) + 1.6})
-  -- (5, 2);
+  -- (4.5, 1.2);
   % Total
-  \draw[line width=1,purple] (0, 2) -- (0.5, 2)
-  -- plot[domain={-0.5}:{0.5},variable=\x] ({\x + 1}, {-0.4*sin(180 * \x) + 1.6})
-  -- (3.5, 1.2)
-  -- plot[domain={-0.5}:{0.5},variable=\x] ({\x + 4}, {0.4*sin(180 * \x) + 1.6})
-  -- (5, 2);
+  \draw[line width=1,purple] (0.5, 1.2) -- (4.5, 1.2);
   \draw[line width=1.5,->] (-0.3, 0) --  node[below] {Time} (5.3, 0);
 \end{tikzpicture}
 \end{document}
