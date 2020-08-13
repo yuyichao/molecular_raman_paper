@@ -130,7 +130,49 @@ are a promising platform to study quantum infoqrmation and quantum simulations.
     \label{f-lifetime}}
 \end{figure*}
 
-% In this Letter, we demostrate that a single ground state molecule can be formed
+In this Letter, we demostrate that a single ground electronic state molecule can be formed
+from two single optical tweezers by driving an optical Raman transition
+
+\todo{Previous result}
+\todo{talk about size mismatch, two step transfer/weakly bound molecule in intro}
+
+%% Preparation
+Our experiment begins by loading a single ${}^{23}\mathrm{Na}$ atom and a single ${}^{133}\mathrm{Cs}$ atom into an optical tweezer from a dual-species MOT\todo{cite na loading paper} into separate optical tweezers. The atoms are imaged to distinguish between loading of two atoms, one atom (Na or Cs), or no atom during post selection. We then perform simutanious Raman sideband cooling (RSC) to cool both atoms into a single 3-dimentional motional ground state in the tweezers. After RSC, the Na tweezer is moved by sweeping the frequency on an acustical optical beam deflector (AOBD) to overlap with the Cs tweezer before smoothly ramping off so that the Na and Cs atoms are merged into the same tweezer \todo{cite}. The spin states for the Na and Cs atoms after RSC and during the merge process are $|F=2,m_F=2\rangle$ and $|F=4,m_F=4\rangle$ respectively. This states combination has a low scattering length of $... a_0$ which allows the two atoms to be merged into the same tweezer with minimum pertubation on each other and remains in their motional ground state after the merge.
+
+After preparing the Na and Cs atoms in the same tweezer in a single quantum state, we perform interaction shift spectroscopy using a Cs Raman transition to drive the Cs into the $|F=3,m_F=3\rangle$ state. The new spin state combination has a larger scattering length of $... a_0$ which generates a interaction shift of $... kHz$ in the tweezer. This interaction shift is larger than the differential axial trapping frequency between Na and Cs atoms, which decouples the relative and center of mass motional state and improves the robustness of our preparation of relative motional ground state. The stronger interaction in this spin state also enhances the atomic wavefunction at short range and increases its overlap with the intermediate molecular state used for our Raman transfer.
+
+%% Transfer scheme
+
+The optical transfer scheme we used is shown in figure \todo{}.
+We use an optical Raman transition to drive the system from the atomic initial state to a
+ground electronic molecular state.
+In order to reduce the size mismatch between the atomic and molecular states,
+we selected the first bound state for the 3322 spin state \todo{asymtopt to the 3322 threshold?} as our final state. \todo{move selection of intermediate state to intro?}.
+For similar reason, the natural choice for the intermediate excited molecular state is one
+with highly excited motional level.
+However, from our calculation (and experiment?), the smaller level space for high
+vibrational state and the smaller detuning from the atomic threshold increases the
+the scattering rate of the molecular state which causes a reduced Raman Rabi frequency
+to decoherence rate ratio and a lower transfer efficiency.
+Therefore, in our experiment, we selected the v=0 state as the intermediate state for our
+Raman transition.
+
+The pulse sequence for the experiment can be seen in figure (). Instead of adding another beam to drive the Raman transition on the atoms in the tweezer, we use the tweezer itself to achieve this goal. After the total tweezer power is set to the desired value, we smoothly ramp down the power of one frequency in the tweezer while simutaniously ramping up the power of a different frequency so that the total tweezer power remains unchanged. Both frequencies are kept on for a variable length of time before the process is reversed and we return to having a single frequency in the tweezer. The dual use of the tweezer beam ensures that there is not any undesired laser frequency that can interfere with the Raman transition. Using the tweezer beam for the Raman transition also allow us to maximize the intensity of the Raman beams and minimize the transfer time.
+
+Figure () shows the geometry of the experiment setup. The B field which defines the quantization axis in the experiment is perpendicular to the tweezer axis. The tweezer beam (both frequencies for the Raman transition) has a $\pi$ polarization relative to the quantization axis, which allows us to selectively drive the Raman transition to a final state with the same total $m_F$ quantum number as our initial state.
+
+%% Prediction
+
+This excited state used in the Raman transition was measured in our previous experiment using PA to be at $288... GHz$ from our atomic state. The ground molecular state has not been observed previously in experimentally. Based on previous FB and interaction shift and 4422 bound state data. Theory prediction was at $770... MHz$. \todo{more, mention/cite Jeremy}
+
+%% Experiment condition/resonance
+
+\todo{Resonance observed at}
+\todo{FWHM of line}
+
+\todo{Rabi flopping}
+
+\todo{Scattering}
 
 \bibliography{paper}
 \end{document}
