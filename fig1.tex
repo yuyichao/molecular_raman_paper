@@ -1,4 +1,6 @@
 \documentclass{standalone}
+
+\usepackage{hyperref}
 \usepackage{tikz}
 \usetikzlibrary{
   arrows,
@@ -27,11 +29,16 @@
 \pdfinfoomitdate=1
 \pdfsuppressptexinfo=-1
 \pdftrailerid{}
+\hypersetup{
+  pdfcreator={},
+  pdfproducer={}
+}
 \fi
 
 \begin{document}
 
 \begin{tikzpicture}
+  \node at (-10, 0) {\includegraphics[width=5cm]{imgs/RamanTransferScheme}};
   \node at (-5, 0) {\includegraphics[width=5cm]{imgs/raman_theory.pdf}};
   \node at (0, 0) {\includegraphics[width=5cm]{apparatus}};
   \node at (5, 0) {\includegraphics[width=5cm]{sequence}};
