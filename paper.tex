@@ -140,10 +140,20 @@ In this Letter, we survey theoretically the best electronic intermediate state, 
     \label{f-det}}
 \end{figure*}
 
-
-
 \todo{Previous result}
 \todo{talk about size mismatch, two step transfer/weakly bound molecule in intro}
+
+For atoms in the motional ground state in the tweezer, the average distance between the two atoms is $...$. However, for the ground rovibrational molecule, the bond length is only $...$. The size mismatch between the initial and final state causes a very small wavefunction overlap between the initial and final state, \todo{overlap is always 0, the accurate description here is the product of wavefunction overlap through any reasonable intermediate state, or the density-density correlation which serves as a reasonable estimate of the matrix element through different pathways} which poses the biggest challege for for coherent creation of the molecule. Because of this, it is necessary to use a intermediate state with a size in between the initial and final state and accomplish the transfer in two steps, each with improved wavefunction overlap.
+
+The traditional choice for such an intermediate state is a FB molecule \todo{cite our FB result}. However, the requirement of a suitable FB resonance limits its generality (e.g. non-magnetic atoms). Instead, we selected a weakly bound molecular state as the intermediate state and we use an optical Raman transition as the first step transfer. This approach relies on fewer special properties of the system and can be more generally applied to creating other molecules. Such a transfer using optical transition has been observed in previous experiments (\todo{cite}). However, they either require the use of a narrow optical transition which limits the generality or were driving the transition incoherently due to scattering. In this letter, we will present our result on coherent creation of a weakly bond molecule using only optical transition for the first time.
+
+Even with the first step transfer to a weakly bond molecular state, it is still a challenge to achieve high enough Raman Rabi frequency to drive this transition due to the wavefunction size mismatch with the excited molecular state. For this reason, previous experiments also use weakly bond molecular excited states for the Raman transition. However, for a typical molecular potential, vibrationally excited states have a smaller spacing between neighboring states which limits the detuning for the Raman transition and increases the scattering. Moreover, there is also a significant scattering process from the excited atomic states due to the strong coupling with the weakly bond molecular ground state. Such scattering process is proportional to $1/\delta^2$ from the desociation threshold which is also much stronger for more weakly bound states. (combining these factors, confirm with figure 1 Rabi rate vs scattering rate calculation). Because of this, we use a deeply bound molecular excited state to drive the Raman transition.
+
+(mention scattering/lightshift depends on up/down matrix element ratio?)
+
+In additional to the final and the excited state, it is also important to select the an initial atomic state in order to improve the coupling. Due to the small size of the molecular wavefunction, the coupling between the ground atomic state and the excited molecular state is approximately proportional to the value of the relative atomic wavefunction at short distance. In additional to the confinement, this value is related to the interaction between the two atoms. States with a large scattering length (positive or negative), the phase shift in the relative wavefunction between the atoms can significantly increase the short range wavefunction (add figure?). The increase in the coupling is proportional to (quote/cite Olive's equation?).
+For our system, among the stable spin combinations, 4422 and 3311 has a small scattering length of $\abs{a}=....$ respectively and 3322 has a large and negative scattering length.
+(interaction shift $\approx$ binding?)
 
 %% Preparation
 Our experiment begins by loading a single ${}^{23}\mathrm{Na}$ atom and a single ${}^{133}\mathrm{Cs}$ atom into an optical tweezer from a dual-species MOT\todo{cite na loading paper} into separate optical tweezers. The atoms are imaged to distinguish between loading of two atoms, one atom (Na or Cs), or no atom during post selection. We then perform simutanious Raman sideband cooling (RSC) to cool both atoms into a single 3-dimentional motional ground state in the tweezers. After RSC, the Na tweezer is moved by sweeping the frequency on an acustical optical beam deflector (AOBD) to overlap with the Cs tweezer before smoothly ramping off so that the Na and Cs atoms are merged into the same tweezer \todo{cite}. The spin states for the Na and Cs atoms after RSC and during the merge process are $|F=2,m_F=2\rangle$ and $|F=4,m_F=4\rangle$ respectively. This states combination has a low scattering length of $... a_0$ which allows the two atoms to be merged into the same tweezer with minimum pertubation on each other and remains in their motional ground state after the merge.
@@ -152,10 +162,10 @@ After preparing the Na and Cs atoms in the same tweezer in a single quantum stat
 
 %% Transfer scheme
 
+
 The optical transfer scheme we used is shown in figure \todo{}.
 We use an optical Raman transition to drive the system from the atomic initial state to a
-ground electronic molecular state.
-In order to reduce the size mismatch between the atomic and molecular states,
+ground electronic molecular state. In order to reduce the size mismatch between the atomic and molecular states,
 we selected the first bound state for the 3322 spin state \todo{asymtopt to the 3322 threshold?} as our final state. \todo{move selection of intermediate state to intro?}.
 For similar reason, the natural choice for the intermediate excited molecular state is one
 with highly excited motional level.
@@ -200,6 +210,8 @@ We can directly measure this by \todo{pulse sequence} (figure ...)...
 \todo{Fitting}
 
 \todo{Scattering}
+
+\todo{sm: STIRAP vs Raman}
 
 \bibliography{paper}
 \end{document}
