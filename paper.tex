@@ -140,24 +140,52 @@ In this Letter, we survey theoretically the best electronic intermediate state, 
     \label{f-det}}
 \end{figure*}
 
-\todo{Previous result}
-\todo{talk about size mismatch, two step transfer/weakly bound molecule in intro}
+For atoms in the motional ground state in the tweezer,
+the average distance between the two atoms is about $1000a_0$.
+However, for the ground rovibrational molecule, the bond length is only around $4a_0$.
+The size mismatch between the initial and final states cause a very small coupling between them,
+which poses the biggest challege for for coherent creation of the molecule.
+Because of this, it is necessary to use an intermediate state
+with a size in between the initial and final states,
+and accomplish the transfer in two steps in order to increase the coupling.
 
-For atoms in the motional ground state in the tweezer, the average distance between the two atoms is $...$. However, for the ground rovibrational molecule, the bond length is only $...$. The size mismatch between the initial and final state causes a very small wavefunction overlap between them, \todo{overlap is always 0, the accurate description here is the product of wavefunction overlap through any reasonable intermediate state, or the density-density correlation which serves as a reasonable estimate of the matrix element through different pathways} which poses the biggest challege for for coherent creation of the molecule. Because of this, it is necessary to use a intermediate state with a size in between the initial and final states and accomplish the transfer in two steps, each with improved wavefunction overlap.
+The traditional choice for such an intermediate state is a FB molecule \todo{cite our FB result}.
+However, the requirement of a suitable FB resonance limits its generality. \todo{e.g. non-magnetic atoms?}
+Instead, we selected a weakly bond molecular state as the intermediate state
+and we use an optical Raman transition as the first step transfer.
+This approach minimizes the reliance on system specific properties
+and can therefore be more generally applied to creating other molecules.
+Such a transfer using optical transition has been observed in previous experiments \todo{cite}.
+However, they either require the use of a narrow optical transition which limits the generality
+or were driving the transition incoherently due to scattering.
+In this letter, we will present our result on coherent creation of a weakly bond molecule
+using only optical transitions on a broad optical line for the first time.
 
-The traditional choice for such an intermediate state is a FB molecule \todo{cite our FB result}. However, the requirement of a suitable FB resonance limits its generality (e.g. non-magnetic atoms). Instead, we selected a weakly bound molecular state as the intermediate state and we use an optical Raman transition as the first step transfer. This approach relies on fewer special properties of the system and can be more generally applied to creating other molecules. Such a transfer using optical transition has been observed in previous experiments (\todo{cite}). However, they either require the use of a narrow optical transition which limits the generality or were driving the transition incoherently due to scattering. In this letter, we will present our result on coherent creation of a weakly bond molecule using only optical transition for the first time.
+Even for the first step transfer to a weakly bond molecular state,
+it is still a challenge to achieve high Raman Rabi frequency to drive this transition
+due to the wavefunction size mismatch with the excited molecular state.
+For this reason, previous experiments also use weakly bond molecular excited states
+in the Raman transition.
+However, in additional to a higher Raman Rabi frequency,
+this choice of state also increases the scattering during the transfer process for two reasons.
+Firstly, since for a typical molecular potential the spacing between states
+decreases with increasing vibrational levels,
+a weakly bond excited molecular state limits maximum usable detuning
+and therefore the effectiveness of scattering reduction
+by increasing the detuning for the Raman transition.
+Secondly, due to size similarity, the weakly bound molecular ground state has a strong coupling
+with the atomic excited state which contributes significantly to the total scattering rate.
+The rate of such scattering process is proportional to $1/\delta_{thresh}^2$,
+where $\delta_{thresh}$ is the detuning from the dissociation threshold.
+This further increases the scattering rate for a weakly bond excited state.
+Based on these considerations, we calculated both the Raman Rabi frequency
+and the scattering rate at different detunings.
+As seen in figure (1....), despite a higher Raman Rabi frequency at the same detuning,
+the weakly bond state also has a much higher scattering rate
+and ultimately a smaller Rabi frequency to scattering at the optimal detuning.
+As a result, we use a deeply bound molecular excited state to drive the Raman transition.
 
-Even with the first step transfer to a weakly bond molecular state, it is still a challenge to achieve high Raman Rabi frequency to drive this transition due to the wavefunction size mismatch with the excited molecular state.
-For this reason, previous experiments also use weakly bond molecular excited states in the Raman transition.
-However, this choice of state also increases the scattering during the transfer process for two reasons.
-Firstly, since for a typical molecular potential the spacing between states decreases with increasing vibrational levels,
-a weakly bond excited molecular state limits the effectiveness of scattering reduction by increasing the detuning for the Raman transition.
-Secondly, the weakly bound molecular ground state has a strong coupling with the atomic excited state which contributes significantly to the total scattering rate.
-The rate of such scattering process is proportional to $1/\delta_{thresh}^2$, where $\delta_{thresh}$ is the detuning from the dissociation threshold,
-which further increases the scattering rate for a weakly bond excited state.
-Based on these considerations, we calculated both the Raman Rabi frequency and the scattering rate at different detunings.
-As seen in figure (1....), despite a higher Raman Rabi frequency at the same detuning, the weakly bond state also has a much higher scattering rate
-and ultimately a smaller Rabi frequency to scattering at the optimal detuning. Based on this calculation, we use a deeply bound molecular excited state to drive the Raman transition.
+
 
 (mention scattering/lightshift depends on up/down matrix element ratio?)
 
