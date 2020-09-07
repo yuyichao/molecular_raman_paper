@@ -1,5 +1,6 @@
 \documentclass{standalone}
 \usepackage{tikz}
+\usepackage[colorlinks=true]{hyperref}
 \usetikzlibrary{
   arrows,
   calc,
@@ -27,6 +28,10 @@
 \pdfinfoomitdate=1
 \pdfsuppressptexinfo=-1
 \pdftrailerid{}
+\hypersetup{
+  pdfcreator={},
+  pdfproducer={}
+}
 \fi
 
 \begin{document}
@@ -43,13 +48,12 @@
   \end{scope}
   \draw[black,fill=white,line width=1] (1.2, 0.605) -- (1.6, 0.85) -- (3.6, 0.85) --
   (3.6, -0.85) -- (1.6, -0.85) -- (1.2, -0.605) -- cycle;
-  \node[right] at (1.55, -0.4) {Objective};
+  \node[right] at (1.50, -0.4) {\Large Objective};
 
   \draw[<->,>=stealth,line width=0.7,red!50!black] (0, 0.3) -- (0, -0.3)
-  node[below,align=center,
-  execute at begin node=\setlength{\baselineskip}{7pt}] at (0, -0.3) {\scriptsize Raman \&\\\scriptsize Tweezer};
+  node[below,align=center] at (0, -0.5) {\large Raman \&\\\large Tweezer};
 
-  \draw[->,>=stealth,line width=0.7] (-0.2, 0.3) -- node[left] {\scriptsize $B_0$} (-0.2, 0.85);
+  \draw[->,>=stealth,line width=0.7] (-0.1, 0.3) -- node[left] {\Large $B_0$} (-0.1, 0.85);
 \end{tikzpicture}
 
 \end{document}
