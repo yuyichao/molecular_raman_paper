@@ -96,10 +96,29 @@
 
 % Introduction
 
-Trapped neutral molecules, assembled in an array of optical tweezers, are a promising platform to study quantum infoqrmation and quantum simulations.
-1. we want to have a diverse species to tailor to different applications. 2. but so far all has been done with Feshbach association (before STIRAP), or in the case of Sr2, a narrow excited state. Previous work on near-threshold Raman transfer has been incoherent. (suggested referees: Florian Shreck and Immanual Bloch)
+Trapped neutral molecules, assembled in an array of optical tweezers, are a promising platform to study quantum information and quantum simulation. (more detail to add here about applications?).
 
-In this Letter, we survey theoretically the best electronic intermediate state, detuning, etc that balance coupling/transfer efficiency and photon scattering to demonstrate coherent association of a electronic ground-state molecule from two atoms. Because the electronic excited state we used are generic in most diatomic molecules, this technique is general....
+Production of ultracold molecules in optical tweezers is challenging due to their internal degrees of freedom including rotation and vibration. In certain molecular species with relatively closed cycling transitions, direct laser cooling remains a viable option. However, for many species, including NaCs, the vibrational branching ratios are unfavorable, making direct laser cooling challenging. In these systems, a bottom-up approach of assembling the molecule from its constituent atoms has been demonstrated both in bulk gas and in optical tweezers. The challenge in a bottom-up approach is the vastly different length scales between the free atoms and a ground state molecule, leading to small coupling between them. For atoms in the motional ground state in the tweezer,
+the average distance between the two atoms is about $1000a_0$.
+However, for the ground rovibrational molecule, the bond length is only around $4a_0$. Because of this, it is necessary to use an intermediate state
+with a size in between the initial and final states,
+and accomplish the transfer in two steps in order to increase the coupling.
+
+The traditional choice for such an intermediate state is a weakly-bound Feshbach molecule, which can be coherently produced by ramping a magnetic field across the Feshbach resonance \todo{cite our FB result}. However, this requires a suitable Feshbach resonance, which limits the generality of this technique. An alternative approach uses a weakly bound ground electronic molecular state as the intermediate state (I'm wondering how we can distinguish this weakly bound molecular state from the weakly-bound Feshbach molecule state, we can maybe specify typcial binding energies? "most weakly bound state of the low field ground state electronic potential" maybe?), populated by an optical Raman transition, schematically shown in figure \todo{}. In this scheme, a pair of Raman beams is used to drive the unbound, but confined, atoms to a bound molecular state via an excited molecular state. This approach minimizes the reliance on system specific properties
+and can therefore be more generally applied to creating other molecules. Such a transfer using an optical transition has been observed in previous experiments \todo{cite}.
+However, they either require the use of a narrow optical transition which limits the generality
+or were driving the transition incoherently due to scattering.
+
+%the requirement of a suitable FB resonance limits its generality. \todo{e.g. non-magnetic atoms?}
+
+%The size mismatch between the initial and final states cause a very small coupling between them,
+%which poses the biggest challege for for coherent creation of the molecule.
+
+% 1. we want to have a diverse species to tailor to different applications. 2. but so far all has been done with Feshbach association (before STIRAP), or in the case of Sr2, a narrow excited state. Previous work on near-threshold Raman transfer has been incoherent. (suggested referees: Florian Shreck and Immanual Bloch)
+
+In this Letter, we theoretically determine the best initial hyperfine combination of the atoms to use and best single photon frequency that balances coupling/transfer efficiency and photon scattering. Using these parameters, we demonstrate coherent association of a electronic ground-state molecule from two atoms via an optical Raman transition in an optical tweezer.
+
+% Because the electronic excited state we used are generic in most diatomic molecules, this technique is general....
 
 
 \begin{figure*}
@@ -140,103 +159,70 @@ In this Letter, we survey theoretically the best electronic intermediate state, 
     \label{f-det}}
 \end{figure*}
 
-For atoms in the motional ground state in the tweezer,
-the average distance between the two atoms is about $1000a_0$.
-However, for the ground rovibrational molecule, the bond length is only around $4a_0$.
-The size mismatch between the initial and final states cause a very small coupling between them,
-which poses the biggest challege for for coherent creation of the molecule.
-Because of this, it is necessary to use an intermediate state
-with a size in between the initial and final states,
-and accomplish the transfer in two steps in order to increase the coupling.
-
-The traditional choice for such an intermediate state is a FB molecule \todo{cite our FB result}.
-However, the requirement of a suitable FB resonance limits its generality. \todo{e.g. non-magnetic atoms?}
-Instead, we selected a weakly bond molecular state as the intermediate state
-and we use an optical Raman transition as the first step transfer.
-This approach minimizes the reliance on system specific properties
-and can therefore be more generally applied to creating other molecules.
-Such a transfer using optical transition has been observed in previous experiments \todo{cite}.
-However, they either require the use of a narrow optical transition which limits the generality
-or were driving the transition incoherently due to scattering.
-In this letter, we will present our result on coherent creation of a weakly bond molecule
-using only optical transitions on a broad optical line for the first time.
 
 
 
-Even for the first step transfer to a weakly bond molecular state,
-it is still a challenge to achieve high Raman Rabi frequency to drive this transition
-due to the wavefunction size mismatch with the excited molecular state.
-For this reason, previous experiments also use weakly bond molecular excited states
-in the Raman transition.
-However, in additional to a higher Raman Rabi frequency,
-this choice of state also increases the scattering during the transfer process for two reasons.
+%In this letter, we will present our result on coherent creation of a weakly bond molecule
+%using only optical transitions on a broad optical line for the first time.
+
+
+%The optical transfer scheme we use is shown in figure \todo{}. To drive the atoms from
+% We use an optical Raman transition to drive the system from the atomic initial state to a ground electronic molecular state. In order to reduce the size mismatch between the atomic and molecular states, we selected the first bound state for the 3322 spin state \todo{asymtopt to the 3322 threshold?} as our final state. \todo{move selection of intermediate state to intro?}. For similar reason, the natural choice for the intermediate excited molecular state is one with highly excited motional level.However, from our calculation (and experiment?), the smaller level space for high vibrational state and the smaller detuning from the atomic threshold increases the scattering rate of the molecular state which causes a reduced Raman Rabi frequency to decoherence rate ratio and a lower transfer efficiency. Therefore, in our experiment, we selected the v=0 state as the intermediate state for our Raman transition.
+
+Even for this first step transfer to a weakly bound molecular state, it is still a challenge to achieve high Raman Rabi frequency to drive this transition due to the wavefunction size mismatch with the excited molecular state. Due to the small size of the molecular wavefunction, the coupling between the ground atomic state and the excited molecular state is approximately proportional to the value of the relative atomic wavefunction at short distance within the molecular potential. In additional to the confinement, this value is related to the interaction between the two atoms. For states with a large scattering length (positive or negative), the phase shift in the relative wavefunction between the atoms can significantly increase the short range wavefunction (add figure?). The increase in the coupling is proportional to (quote/cite Olive's equation?). For our system, among the stable spin combinations, 4422 and 3311 has a small scattering length of $\abs{a}=....$ respectively and 3322 has a large and negative scattering length. (interaction shift $\approx$ binding?) Thus, we use the 3322 spin combination as our initial state and drive to the first bound state for the 3322 spin combination. 
+
+In addition to the choice of initial state, the choice of the intermediate state also plays a role. Previous experiments use weakly bound molecular excited states in the Raman transition to increase the Raman Rabi frequency. However, this choice of state also increases the scattering during the transfer process for two reasons.
 Firstly, since for a typical molecular potential the spacing between states
 decreases with increasing vibrational levels,
-a weakly bond excited molecular state limits maximum usable detuning
-and therefore the effectiveness of scattering reduction
-by increasing the detuning for the Raman transition.
-Secondly, due to size similarity, the weakly bound molecular ground state has a strong coupling
-with the atomic excited state which contributes significantly to the total scattering rate.
+a weakly bound excited molecular state limits maximum usable detuning and therefore the effectiveness of scattering reduction by increasing the detuning for the Raman transition.
+Secondly, due to size similarity, the weakly bound molecular ground state has a strong coupling with the atomic excited state which contributes significantly to the total scattering rate.
 The rate of such scattering process is proportional to $1/\delta_{thresh}^2$,
-where $\delta_{thresh}$ is the detuning from the dissociation threshold.
-This further increases the scattering rate for a weakly bond excited state.
-Based on these considerations, we calculated both the Raman Rabi frequency
-and the scattering rate at different detunings.
-As seen in figure (1....), despite a higher Raman Rabi frequency at the same detuning,
-the weakly bond state also has a much higher scattering rate
-and ultimately a smaller Rabi frequency to scattering at the optimal detuning.
-As a result, we use a deeply bound molecular excited state to drive the Raman transition.
+where $\delta_{thresh}$ is the detuning from the dissociation threshold. (Should we also mention scattering of the atomic initial state too? This should affect the Raman process as well)
+% This further increases the scattering rate for a weakly bond excited state.
+Based on these considerations, we calculated both the Raman Rabi frequency and the scattering rate at different detunings. As seen in figure (1....), despite a higher Raman Rabi frequency at the same detuning, using a weakly bound intermediate state results in a much higher scattering rate and ultimately a smaller Rabi frequency to scattering rate ratio as compared to deeply bound states. As a result, we use a deeply bound molecular excited state to drive the Raman transition. 
 
 (goes to SM?)
 
 (mention scattering/lightshift depends on up/down matrix element ratio?)
 
-In additional to the final and the excited state, it is also important to select the an initial atomic state in order to improve the coupling. Due to the small size of the molecular wavefunction, the coupling between the ground atomic state and the excited molecular state is approximately proportional to the value of the relative atomic wavefunction at short distance. In additional to the confinement, this value is related to the interaction between the two atoms. States with a large scattering length (positive or negative), the phase shift in the relative wavefunction between the atoms can significantly increase the short range wavefunction (add figure?). The increase in the coupling is proportional to (quote/cite Olive's equation?).
-For our system, among the stable spin combinations, 4422 and 3311 has a small scattering length of $\abs{a}=....$ respectively and 3322 has a large and negative scattering length.
-(interaction shift $\approx$ binding?)
+%In additional to the final and the excited state, it is also important to select the an initial atomic state in order to improve the coupling. 
+
 
 %% Preparation
-Our experiment begins by loading a single ${}^{23}\mathrm{Na}$ atom and a single ${}^{133}\mathrm{Cs}$ atom into an optical tweezer from a dual-species MOT\todo{cite na loading paper} into separate optical tweezers. The atoms are imaged to distinguish between loading of two atoms, one atom (Na or Cs), or no atom during post selection. We then perform simutanious Raman sideband cooling (RSC) to cool both atoms into a single 3-dimentional motional ground state in the tweezers. After RSC, the Na tweezer is moved by sweeping the frequency on an acustical optical beam deflector (AOBD) to overlap with the Cs tweezer before smoothly ramping off so that the Na and Cs atoms are merged into the same tweezer \todo{cite}. The spin states for the Na and Cs atoms after RSC and during the merge process are $|F=2,m_F=2\rangle$ and $|F=4,m_F=4\rangle$ respectively. This states combination has a low scattering length of $... a_0$ which allows the two atoms to be merged into the same tweezer with minimum pertubation on each other and remains in their motional ground state after the merge.
+Our experiment begins by loading a single ${}^{23}\mathrm{Na}$ atom and a single ${}^{133}\mathrm{Cs}$ atom into an optical tweezer from a dual-species MOT\todo{cite na loading paper} into separate optical tweezers. The atoms are imaged to distinguish between loading of two atoms, one atom (Na or Cs), or no atom during post selection. We then perform simultaneous Raman sideband cooling (RSC) to cool both atoms into the 3-dimensional motional ground state of their optical tweezers. After RSC, the Na tweezer is moved by sweeping the frequency on an acoustical optical beam deflector (AOBD) to overlap with the Cs tweezer before smoothly ramping off rso that the Na and Cs atoms are merged into the same tweezer \todo{cite}. The spin states for the Na and Cs atoms after RSC and during the merge process are $|F=2,m_F=2\rangle$ and $|F=4,m_F=4\rangle$ respectively. This states combination has a low scattering length of $... a_0$ which allows the two atoms to be merged into the same tweezer with minimum pertubation on each other and thus they remain in the motional ground state after the merge.
 
-After preparing the Na and Cs atoms in the same tweezer in a single quantum state, we perform interaction shift spectroscopy using a Cs Raman transition to drive the Cs into the $|F=3,m_F=3\rangle$ state. The new spin state combination has a larger scattering length of $... a_0$ which generates a interaction shift of $... kHz$ in the tweezer. This interaction shift is larger than the differential axial trapping frequency between Na and Cs atoms, which decouples the relative and center of mass motional state and improves the robustness of our preparation of relative motional ground state. The stronger interaction in this spin state also enhances the atomic wavefunction at short range and increases its overlap with the intermediate molecular state used for our Raman transfer.
+After preparing the Na and Cs atoms in the same tweezer in a single quantum state, we need to drive the atoms into the large scattering length 3322 hyperfine combination. To do this, we perform interaction shift spectroscopy using a Cs Raman transition to drive the Cs into the $|F=3,m_F=3\rangle$ state (Is this really "performing spectroscopy"? Or should we just say we drive a Raman transfer to flip the spin). The new spin state combination has a larger scattering length of $... a_0$ which generates a interaction shift of $... kHz$ in the tweezer. This interaction shift is larger than the differential axial trapping frequency between Na and Cs atoms, which decouples the relative and center of mass motional state and improves the robustness of our preparation of relative motional ground state. 
+
+%The stronger interaction in this spin state also enhances the atomic wavefunction at short range and increases its overlap with the intermediate molecular state used for our Raman transfer..
 
 %% Transfer scheme
-
-
-The optical transfer scheme we used is shown in figure \todo{}.
-We use an optical Raman transition to drive the system from the atomic initial state to a
-ground electronic molecular state. In order to reduce the size mismatch between the atomic and molecular states,
-we selected the first bound state for the 3322 spin state \todo{asymtopt to the 3322 threshold?} as our final state. \todo{move selection of intermediate state to intro?}.
-For similar reason, the natural choice for the intermediate excited molecular state is one
-with highly excited motional level.
-However, from our calculation (and experiment?), the smaller level space for high
-vibrational state and the smaller detuning from the atomic threshold increases the
-the scattering rate of the molecular state which causes a reduced Raman Rabi frequency
-to decoherence rate ratio and a lower transfer efficiency.
-Therefore, in our experiment, we selected the v=0 state as the intermediate state for our
-Raman transition.
-
-The pulse sequence for the experiment can be seen in figure (). Instead of adding another beam to drive the Raman transition on the atoms in the tweezer, we use the tweezer itself to achieve this goal. After the total tweezer power is set to the desired value, we smoothly ramp down the power of one frequency in the tweezer while simutaniously ramping up the power of a different frequency so that the total tweezer power remains unchanged. Both frequencies are kept on for a variable length of time before the process is reversed and we return to having a single frequency in the tweezer. The dual use of the tweezer beam ensures that there is not any undesired laser frequency that can interfere with the Raman transition. Using the tweezer beam for the Raman transition also allow us to maximize the intensity of the Raman beams and minimize the transfer time.
+After the atoms are prepared in the 3322 hyperfine combination, we then perform the Raman transfer. The pulse sequence for this step is shown in figure (). Instead of adding another beam to drive the Raman transition on the atoms in the tweezer, we use the tweezer itself to achieve this goal. The dual use of the tweezer beam ensures that there is not any undesired laser frequency that can interfere with the Raman transition, and also allows us to maximize the Raman Rabi frequency and minimize the transfer time. After the total tweezer power is set to the desired value, we smoothly ramp down the power of one frequency in the tweezer while simutaniously ramping up the power of a different frequency so that the total tweezer power remains unchanged. Both frequencies are kept on for a variable length of time before the process is reversed and we return to having a single frequency in the tweezer. 
 \todo{clarify coprop of Raman beam?}
-
-Figure () shows the geometry of the experiment setup. A $8.8\mathrm{G}$ B field was used to defines the quantization axis in the experiment and is applied perpendicular to the tweezer axis. The tweezer beam (both frequencies for the Raman transition) has a $\pi$ polarization relative to the quantization axis, which allows us to selectively drive the Raman transition to a final state with the same total $m_F$ quantum number as our initial state.
-
-%% Prediction
-
-This excited state used in the Raman transition was measured in our previous experiment using photoassociation to be at $288... GHz$ from our atomic state. The ground molecular state has not been observed previously in experimentally. Based on our measurement of FB resonance, interaction shift and the binding energy of the 4422 bound state. Theory prediction was at $770... MHz$. \todo{more, mention/cite Jeremy}
 
 %% Experiment condition/resonance
 
-We locate the Raman resonance for the atom to molecule transition at $770... MHz$ (figure \todo{}) with a $15 mW$ tweezer at $288... GHz$ which corresponds to a $... GHz$ single photon detuning.
-The background level of $...\%$ corresponds to the propability of preparing the two atoms in the relative motional ground state using interaction shift spectroscopy. When the atoms are transfered into molecule by the Raman transition, there is a decrease in the two body survival since the resulting molecule is not directly detected by our imagine step.
-
+We locate the Raman resonance for the atom to molecule transition at $770... MHz$ (figure \todo{}) with a $15 mW$ tweezer at $288... GHz$ which corresponds to a $... GHz$ single photon detuning. (We can maybe add information about the prediction here?)
+The background level of $...\%$ corresponds to the probability of preparing the two atoms in the relative motional ground state using interaction shift spectroscopy (can this be considered "interaction shift spectroscopy"?). When the atoms are transferred into the molecule state by the Raman transition, there is a decrease in the two body survival since the resulting molecule is not directly detected by our imaging step.
 We observed the narrowest linewidth of $.... kHz$ for the Raman resonance at a pulse time of $... ms$, which corresponds to a linewidth-pulsetime product of $...$. This is consistent with the expected value of $...$ for an ideal $\pi$ pulse which is an evidence that the transfer is coherent. In order to verify the coherence of the transfer directly, we fixed the Raman frequency on the resonance and scanned the pulse time. figure ... shows the observed Rabi oscillation between the atomic and molecular states. Fitting the data with a decaying Rabi oscillation suggests that $..\%$ of initial ground state atoms are transfered into the molecular state.
 
 In order to understand the fidelity of molecule formation, we fit our measurements to a model that includes a Raman Rabi frequency and a finite lifetime for the final molecular state. We also account for atomic state loss by measuring the single and two body lifetime for the atomic state (figure ...). The result suggests that our transfer has a Raman Rabi frequency of and the molecule we form has a lifetime of $...$. We can also directly verify this result by measuring the lifetime of the molecule directly. This is done by applying a reverse Raman pulse to dissociate the molecule back to atoms after a variable wait time. The result of the direct measurement shows a molecular lifetime consistent with our fitting of the Raman transition data.
 
-The molecule lifetime measured in the experiment is $...$ larger than the expected value of $...$ calculated from ..... By measuring the lifetime for different tweezer powers, we observed a linear dependency of the lifetime (fig ...). This confirms that the short lifetime is mainly caused by scattering from the tweezer light rather than the intrinsic lifetime of the molecule itself. Additionally, we also measured the loss rate as a function of the tweezer frequency (fig ...) which shows only a very weak dependency for a $...x$ change in the detuning from the $v=0$ excited state. This result is significantly different from the $1/\delta^2$ dependency expected from off-resonant scattering and suggests that the main source of the scattering is due to a broadband process that is not directly related to the $v=0$ excited state.
+The molecule lifetime measured in the experiment is $...$ larger than the expected value of $...$ calculated from ..... By measuring the lifetime for different tweezer powers, we observed a linear dependency of the lifetime (fig ...). This confirms that the short lifetime is mainly caused by scattering from the tweezer light rather than the intrinsic lifetime of the molecule itself. Additionally, we also measured the loss rate as a function of the tweezer frequency (fig ...) which shows only a very weak dependency for a $...x$ change in the detuning from the $v=0$ excited state. This result is significantly different from the $1/\delta^2$ dependency expected from off-resonant scattering and suggests that the main source of the scattering is due to a broadband process that is not directly related to the $v=0$ excited state. (ASE filter?)
 
-(ASE filter?)
+
+%%%% Maybe this following section about the B field can be relegated to a figure caption?
+% Figure () shows the geometry of the experiment setup. A $8.8\mathrm{G}$ B field was used to defines the quantization axis in the experiment and is applied perpendicular to the tweezer axis. The tweezer beam (both frequencies for the Raman transition) has a $\pi$ polarization relative to the quantization axis, which allows us to selectively drive the Raman transition to a final state with the same total $m_F$ quantum number as our initial state. 
+
+%% Prediction
+
+%This excited state used in the Raman transition was measured in our previous experiment using photoassociation to be at $288... GHz$ from our atomic state. The ground molecular state has not been observed previously in experimentally. Based on our measurement of FB resonance, interaction shift and the binding energy of the 4422 bound state. Theory prediction was at $770... MHz$. \todo{more, mention/cite Jeremy}
+
+
+
+
+
+
+
 
 B field dependency $... kHz/G$ which agrees with theory prediction of $... kHz/G$.
 Dependency on tweezer power $... kHz/mW$, extrapulated to obtain the bare resonance at $0$ tweezer power to be at $... MHz$.
