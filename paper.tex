@@ -58,7 +58,7 @@
 \fi
 
 \begin{document}
-\title{Coherent optical association of single molecules}
+\title{Coherent optical association of a single molecule}
 \author{Yichao Yu}
 \email{yichaoyu@g.harvard.edu}
 \author{Kenneth Wang}
@@ -96,27 +96,37 @@
 
 % Introduction
 
-Trapped neutral molecules, assembled in an array of optical tweezers, are a promising platform to study quantum information and quantum simulation. (more detail to add here about applications?).
 
-Production of ultracold molecules in optical tweezers is challenging due to their internal degrees of freedom including rotation and vibration. In certain molecular species with relatively closed cycling transitions, direct laser cooling remains a viable option. However, for many species, including NaCs, the vibrational branching ratios are unfavorable, making direct laser cooling challenging. In these systems, a bottom-up approach of assembling the molecule from its constituent atoms has been demonstrated both in bulk gas and in optical tweezers. The challenge in a bottom-up approach is the vastly different length scales between the free atoms and a ground state molecule, leading to small coupling between them. For atoms in the motional ground state in the tweezer,
-the average distance between the two atoms is about $1000a_0$.
-However, for the ground rovibrational molecule, the bond length is only around $4a_0$. Because of this, it is necessary to use an intermediate state
-with a size in between the initial and final states,
-and accomplish the transfer in two steps in order to increase the coupling.
+% 1. we want to have a diverse species to tailor to different applications including precision measurements and quantum engineering. 2. for the technique of associating atoms to form molecules, but so far all has been done with Feshbach association (before STIRAP), or in the case of Sr2, a narrow excited state. Previous work on near-threshold Raman transfer has been incoherent. 
+%(suggested referees: Florian Shreck and Immanual Bloch, Tanya, Deep Gupta, DeMille)
 
-The traditional choice for such an intermediate state is a weakly-bound Feshbach molecule, which can be coherently produced by ramping a magnetic field across the Feshbach resonance \todo{cite our FB result}. However, this requires a suitable Feshbach resonance, which limits the generality of this technique. An alternative approach uses a weakly bound ground electronic molecular state as the intermediate state (I'm wondering how we can distinguish this weakly bound molecular state from the weakly-bound Feshbach molecule state, we can maybe specify typcial binding energies? "most weakly bound state of the low field ground state electronic potential" maybe?), populated by an optical Raman transition, schematically shown in figure \todo{}. In this scheme, a pair of Raman beams is used to drive the unbound, but confined, atoms to a bound molecular state via an excited molecular state. This approach minimizes the reliance on system specific properties
-and can therefore be more generally applied to creating other molecules. Such a transfer using an optical transition has been observed in previous experiments \todo{cite}.
-However, they either require the use of a narrow optical transition which limits the generality
-or were driving the transition incoherently due to scattering.
+%Trapped neutral molecules, assembled in an array of optical tweezers, are a promising platform to study quantum information and quantum simulation. (more detail to add here about applications?).
+
+Diverse species of fully quantum controlled  ultracod molecules are desired for a  wide variety of applications including precision measurements~\cite{Nick_and_Ivan}, quantum simulations~\cite{Yao2018}, quantum  information processing~\cite{DeMille2002, Ni2018}, and the studies of ultracold chemistry.
+While many innovative approaches demonstrated in the last few years have directly cooled different species of diatomic or polyatomic molecules  below 1~mK~\cite{Norrgard2016}, the coldest and the highest phase-space-density gas to date in an ensemble~\cite{Demarco2018} or as individuals~\cite{Zhang2020}  have been achieved through the associations of ultracold atoms. 
+%(any place to cite  molecular ion work?)
+
+Such ultracold molecular associating takes advantage of the much developed cooling and trapping techniques for atoms  as a starting point. To overcome the challenges of small wavefunction overlap and the large release of binding energy of converting atoms to deeply-bound molecules, an established two-step approach have been taken to first associate atom pairs into weakly-bound molecules, then transfer the molecules from one internal state  to a desired rovibrational and electronic state~\cite{Danzl2008, Ni2008,Lang2008, Takekoshi2014, Molony2014, Park2015, Guo2016, Kondov2019, Voges2020}.  
+So far, all of such association process  utilize a magnetic Feshbach scattering resonance. The only exception is Sr$_2$~\cite{Reinaudi2012,Stellmer2012} where narrow excited states are available and optical association can be driven. The requirement of a Feshbach resonance to enhance atom-to-molecule wavefunction overlap (and the narrow excited state) limits the   generality of the association technique to  more diverse species of molecules which are needed (or picked) for a desired application.
+
+
+Here, we demonstrate coherent association of an atom pair to a weakly bound molecules using an optical Raman transfer via an electronic excited state, without the use of a Feshbach resonance nor a narrow excited state. Our scheme is based on theoretically determined most suitable vibrational state of the electronic excited state $c^3\Sigma$ that balances coupling/transfer efficiency and photon scattering. Furthermore, to reduce technical requirements such as intensity stability, etc , we choose a initial and final state ... This approach is general and can be use to associate other molecular species or large molecules atom-by-atom.
+%electronic the best initial hyperfine combination of the atoms to use and best single photon frequency that balances coupling/transfer efficiency and photon scattering. Using these parameters, we demonstrate coherent association of a electronic ground-state molecule from two atoms via an optical Raman transition in an optical tweezer.
+
+
+
+
+%Production of ultracold molecules in optical tweezers is challenging due to their internal degrees of freedom including rotation and vibration. In certain molecular species with relatively closed cycling transitions, direct laser cooling remains a viable option. However, for many species, including NaCs, the vibrational branching ratios are unfavorable, making direct laser cooling challenging. In these systems, a bottom-up approach of assembling the molecule from its constituent atoms has been demonstrated both in bulk gas and in optical tweezers. The challenge in a bottom-up approach is the vastly different length scales between the free atoms and a ground state molecule, leading to small coupling between them. For atoms in the motional ground state in the tweezer, the average distance between the two atoms is about $1000a_0$. However, for the ground rovibrational molecule, the bond length is only around $4a_0$. Because of this, it is necessary to use an intermediate state with a size in between the initial and final states, and accomplish the transfer in two steps in order to increase the coupling.
+
+%The traditional choice for such an intermediate state is a weakly-bound Feshbach molecule, which can be coherently produced by ramping a magnetic field across the Feshbach resonance \todo{cite our FB result}. However, this requires a suitable Feshbach resonance, which limits the generality of this technique. An alternative approach uses a weakly bound ground electronic molecular state as the intermediate state (I'm wondering how we can distinguish this weakly bound molecular state from the weakly-bound Feshbach molecule state, we can maybe specify typcial binding energies? "most weakly bound state of the low field ground state electronic potential" maybe?), populated by an optical Raman transition, schematically shown in figure \todo{}. In this scheme, a pair of Raman beams is used to drive the unbound, but confined, atoms to a bound molecular state via an excited molecular state. This approach minimizes the reliance on system specific properties and can therefore be more generally applied to creating other molecules. Such a transfer using an optical transition has been observed in previous experiments \todo{cite}. However, they either require the use of a narrow optical transition which limits the generality or were driving the transition incoherently due to scattering.
 
 % the requirement of a suitable FB resonance limits its generality. \todo{e.g. non-magnetic atoms?}
 
 % The size mismatch between the initial and final states cause a very small coupling between them,
-% which poses the biggest challege for for coherent creation of the molecule.
+% which poses the biggest challenge for for coherent creation of the molecule.
 
-% 1. we want to have a diverse species to tailor to different applications. 2. but so far all has been done with Feshbach association (before STIRAP), or in the case of Sr2, a narrow excited state. Previous work on near-threshold Raman transfer has been incoherent. (suggested referees: Florian Shreck and Immanual Bloch)
 
-In this Letter, we theoretically determine the best initial hyperfine combination of the atoms to use and best single photon frequency that balances coupling/transfer efficiency and photon scattering. Using these parameters, we demonstrate coherent association of a electronic ground-state molecule from two atoms via an optical Raman transition in an optical tweezer.
+
 
 % Because the electronic excited state we used are generic in most diatomic molecules, this technique is general....
 
@@ -169,9 +179,8 @@ In this Letter, we theoretically determine the best initial hyperfine combinatio
 % The optical transfer scheme we use is shown in figure \todo{}. To drive the atoms from
 % We use an optical Raman transition to drive the system from the atomic initial state to a ground electronic molecular state. In order to reduce the size mismatch between the atomic and molecular states, we selected the first bound state for the 3322 spin state \todo{asymtopt to the 3322 threshold?} as our final state. \todo{move selection of intermediate state to intro?}. For similar reason, the natural choice for the intermediate excited molecular state is one with highly excited motional level.However, from our calculation (and experiment?), the smaller level space for high vibrational state and the smaller detuning from the atomic threshold increases the scattering rate of the molecular state which causes a reduced Raman Rabi frequency to decoherence rate ratio and a lower transfer efficiency. Therefore, in our experiment, we selected the v=0 state as the intermediate state for our Raman transition.
 
-Even for this first step transfer to a weakly bound molecular state, it is still a challenge to achieve high Raman Rabi frequency to drive this transition due to the wavefunction size mismatch with the excited molecular state. Due to the small size of the molecular wavefunction, the coupling between the ground atomic state and the excited molecular state is approximately proportional to the value of the relative atomic wavefunction at short distance within the molecular potential. In additional to the confinement, this value is related to the interaction between the two atoms. For states with a large scattering length (positive or negative), the phase shift in the relative wavefunction between the atoms can significantly increase the short range wavefunction (add figure?). The increase in the coupling is proportional to (quote/cite Olive's equation?). For our system, among the stable spin combinations, 4422 and 3311 has a small scattering length of $\abs{a}=....$ respectively and 3322 has a large and negative scattering length. (interaction shift $\approx$ binding?) Thus, we use the 3322 spin combination as our initial state and drive to the first bound state for the 3322 spin combination.
-
-In addition to the choice of initial state, the choice of the intermediate state also plays a role. Previous experiments use weakly bound molecular excited states in the Raman transition to increase the Raman Rabi frequency. However, this choice of state also increases the scattering during the transfer process for two reasons.
+While optical Raman transfer of atoms to molecules utilizing an electronic excited state has been shown previously\todo{cite}. Those demonstrations were  incoherent  where the signal comes from loss of population (and therefore more like spectroscopy and the transferred molecules cannot be further utilized). The challenge lies at  achieve high enough Raman Rabi frequency to drive this transition due to the wavefunction size mismatch with the excited molecular state. 
+ Previous experiments use weakly bound molecular excited states in the Raman transition to increase the Raman Rabi frequency. However, this choice of state also increases the scattering during the transfer process for two reasons.
 Firstly, since for a typical molecular potential the spacing between states
 decreases with increasing vibrational levels,
 a weakly bound excited molecular state limits maximum usable detuning and therefore the effectiveness of scattering reduction by increasing the detuning for the Raman transition.
@@ -184,6 +193,8 @@ Based on these considerations, we calculated both the Raman Rabi frequency and t
 (goes to SM?)
 
 (mention scattering/lightshift depends on up/down matrix element ratio?)
+
+Due to the small size of the molecular wavefunction, the coupling between the ground atomic state and the excited molecular state is approximately proportional to the value of the relative atomic wavefunction at short distance within the molecular potential. In additional to the confinement, this value is related to the interaction between the two atoms. For states with a large scattering length (positive or negative), the phase shift in the relative wavefunction between the atoms can significantly increase the short range wavefunction (add figure?). The increase in the coupling is proportional to (quote/cite Olive's equation?). For our system, among the stable spin combinations, 4422 and 3311 has a small scattering length of $\abs{a}=....$ respectively and 3322 has a large and negative scattering length. (interaction shift $\approx$ binding?) Thus, we use the 3322 spin combination as our initial state and drive to the first bound state for the 3322 spin combination.
 
 % In additional to the final and the excited state, it is also important to select the an initial atomic state in order to improve the coupling.
 
@@ -240,5 +251,7 @@ Dependency on tweezer power $... kHz/mW$, extrapulated to obtain the bare resona
 
 \todo{sm: STIRAP vs Raman}
 
-\bibliography{paper}
+%\bibliography{paper}
+\bibliography{master_ref}
+\bibliographystyle{apsrev4-2}
 \end{document}
