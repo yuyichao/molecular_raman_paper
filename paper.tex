@@ -135,21 +135,45 @@ Here, we demonstrate coherent association of an atom pair to a weakly bound mole
 \begin{figure*}
   \includegraphics[height=5cm]{fig1.pdf}
   \caption{Optical creation of single molecule from single atoms in tweezer.
-    (A) Schematics of the Raman transition. \todo{more about the states involved}
-    (B) Geometry and polarization of trap and Raman beam relative to the bias magnetic field.
-    \todo{Field strength, power, polarization description (pi)}
-    (C) Molecule formation pulse sequence. The tweezer initially consists of only up leg power.
-    This power is smoothly ramped down and the down leg power ramped up over $10\mu s$ while
-    maintaining the total power of the tweezer.
-    \todo{to minimize heating?}
-    \label{f-setup}
+    (A) Schematics of the optical transition from an atom pair to a weakly bound molecule.
+    The initial state is the relative motional ground state between the two atoms
+    and the final state is the first molecular bound state.
+    The transition is driven by a pair of laser frequencies matching the binding energy
+    of the molecule.
+    The lasers are detuned from an excited molecular state in the $c^3\Sigma$ potential
+    by $\Delta$ in order to suppress the scattering during the transfer.
+    (B) Comparison between using a weakly bound and a deeply bound excited state
+    as intermediate state for the Raman transition.
+    The deeply bound excited state (upper half $v=0$) has a smaller Raman Rabi frequency ($\Omega_{Raman}$)
+    compared to the weakly bound excited state (lower half $v=63$) at a given detuning.
+    However, the scattering rate ($\Gamma_{scatter}$) is also much lower,
+    which results in a larger Raman Rabi frequency to scattering rate ratio.
+    (C) Enhancement of short range wavefunction.
+    The large scattering length for the $Na(2,2),Cs(3,3)$ state creates an interaction shift
+    comparable to the axial trapping frequency.
+    This causes a significant change in the relative wavefunction especially at short
+    intranuclear distance ($R$).
+    Compared to other spin states with weaker interaction,
+    the wavefunction at short distance ($R<100\mathrm{\AA}$) is significantly enhanced.
+    \label{f-theory}
   }
 \end{figure*}
 
 \begin{figure*}
   \includegraphics[height=4.5cm]{fig2.pdf}
   \caption{
-    (A) Raman resonance from atomic state to molecular state, showing Fourier limited linewidth.
+    (A) Geometry and polarization of trap and Raman beam relative to the bias magnetic field.
+    The tweezer and Raman beam is focused through an objective to define the location of the
+    atoms and molecule.
+    We use a bias B field of $B_0=8.8 G$ alone the tweezer polarization
+    to define the quantization axis.
+    As a result, the atoms experiences predominately $\pi$ polarization from the tweezer.
+    (B) Molecule formation pulse sequence. The tweezer initially consists of only up leg power.
+    When driving the Raman transition, the up leg power is smoothly ramped down and
+    the down leg power ramped up over $10\mu s$ while maintaining the total power of the tweezer.
+    This minimizes the heating on the atoms due to power fluctuation while maximizes the time
+    with maximum Raman Rabi frequency when the up and down leg powers are equal.
+    (C) Raman resonance from atomic state to molecular state, showing Fourier limited linewidth.
     \todo{states, time}
     (B) Rabi oscillation on resonance
     \label{f-raman}}
