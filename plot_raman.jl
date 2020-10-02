@@ -47,7 +47,7 @@ plot(data[:, 1] .- 288625.081, abs.(data[:, 2] ./ 2π / 1000), "C0",
      label="\$\\Omega_{Raman}\$")
 plot(data[:, 1] .- 288625.081, abs.(data[:, 4] ./ 2π / 1000), "C1",
      label="\$\\Gamma_{scatter}\$")
-text(-32, 2.5, "v=0", fontsize="small")
+text(-32, 2.5, "v'=0", fontsize="small")
 ylim([0, 30])
 grid()
 tax1 = ax1.twinx()
@@ -66,7 +66,7 @@ l1 = plot(data[:, 1] .- 351271.53, abs.(data[:, 2] ./ 2π / 1000), "C0",
           label="\$\\Omega_{Raman}\$")
 l2 = plot(data[:, 1] .- 351271.53, abs.(data[:, 4] ./ 2π / 1000), "C1",
           label="\$\\Gamma_{scatter}\$")
-text(-32, 130, "v=63", fontsize="small")
+text(-32, 130, "v'=63", fontsize="small")
 xlabel("One-Photon Detuning (GHz)")
 ylim([0, 596])
 grid()
