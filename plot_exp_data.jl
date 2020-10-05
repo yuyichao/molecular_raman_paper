@@ -339,7 +339,7 @@ text(0.218, 0.07 * scale_ramsey,
 xlim([0, 0.9])
 grid()
 xlabel("Molecule Hold Time (ms)")
-ylabel("Two-body survival")
+ylabel("Molecule survival")
 NaCsPlot.maybe_save("$(prefix)_norm_m_t")
 
 const img_freq = param_1[3] .+ linspace(-20, 20, 201)
