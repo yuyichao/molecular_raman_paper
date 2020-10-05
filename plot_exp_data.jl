@@ -342,93 +342,21 @@ xlabel("Molecule Hold Time (ms)")
 ylabel("Two-body survival")
 NaCsPlot.maybe_save("$(prefix)_norm_m_t")
 
-NaCsPlot.maybe_show()
+const img_freq = param_1[3] .+ linspace(-20, 20, 201)
+const img_time = linspace(0, 0.5, 201)
+const mol_2d = [model_2d(t, f, param_1, molecule=true) .* scale_1
+                for f in img_freq, t in img_time]
 
-
-
-exit()
-#!/usr/bin/julia
-
-
-
-
-
-figure(figsize=[12.6, 11.2])
-
-subplot(2, 2, 1)
-ratio_00, uncs_00 = get_ratio_val(data_nacs_00)
-v00 = model_2d(0, 0, param_2)
-errorbar([param_2[3]], [ratio_00], [uncs_00], fmt="C0.", label="0.00 ms")
-plot([plot_freq_lo, plot_freq_hi], [v00, v00], "C0-")
-NaCsPlot.plot_survival_data(data_nacs_25, fmt="C1.", label="0.25 ms")
-plot(plot_freq, model_2d.(0.25, plot_freq, (param_2,)), "C1")
-NaCsPlot.plot_survival_data(data_nacs_12, fmt="C2.", label="0.12 ms")
-plot(plot_freq, model_2d.(0.12, plot_freq, (param_2,)), "C2")
-legend(fontsize="x-small", loc="lower right")
-ylim([0, ylim()[2]])
+figure()
+imshow(mol_2d, aspect="auto", interpolation="none", origin="lower",
+       extent=[img_time[1] - step(img_time) / 2, img_time[end] + step(img_time) / 2,
+               img_freq[1] - step(img_freq) / 2 - param_1[3],
+               img_freq[end] + step(img_freq) / 2 - param_1[3]])
+xlabel("Raman time (ms)")
+ylabel("Detuning from resonance (kHz)")
+title("Molecule Population")
 grid()
-xlabel("2-Photon Detuning (770XXX kHz)")
-ylabel("Two-body survival")
-title("288895 GHz, 15 mW")
-
-subplot(2, 2, 2)
-NaCsPlot.plot_survival_data(data_nacs_t, fmt="C0.", label="770.5704 MHz")
-plot(plot_time, model_2d.(plot_time, 570.4, (param_1,)), "C0")
-title("Time")
-text(0.13, 0.15, ("\$f_{res}=$(uncs_1[3] / 1000 + 770)\$ MHz\n" *
-                  "\$\\Omega_{Raman}=2\\pi\\times$(uncs_1[4] / 2π) kHz\$\n" *
-                  "\$\\Gamma_{atom}=2\\pi\\times$(uncs_1[5] / 2π * 1000)\$ Hz\n" *
-                  "\$\\Gamma_{molecule}=2\\pi\\times$(uncs_1[6] / 2π) kHz\$"),
-     color="C0", fontsize="small")
-xlim([0, 0.8])
-ylim([0, ylim()[2]])
-legend(fontsize="x-small", loc="upper right")
-grid()
-xlabel("Raman time (ms)\${}_{\\mathrm{(with\\ 0.01\\ ms\\ offset)}}\$")
-ylabel("Two-body survival")
-
-subplot(2, 2, 3)
-NaCsPlot.plot_survival_data(data_pa_na, fmt="C0s", label="Na")
-plot(plot_pa_time, model_exp(plot_pa_time, gen_pa_param(fit.param, 1, 3)), "C0-")
-NaCsPlot.plot_survival_data(data_pa_cs, fmt="C1s", label="Cs")
-plot(plot_pa_time, model_exp(plot_pa_time, gen_pa_param(fit.param, 2, 4)), "C1-")
-NaCsPlot.plot_survival_data(data_pa_a, fmt="C2s", label="Hot")
-plot(plot_pa_time, model_exp(plot_pa_time, gen_pa_param(fit.param, 3, 5)), "C2-")
-NaCsPlot.plot_survival_data(data_pa_m, fmt="C3s", label="Cold")
-plot(plot_pa_time, model_exp(plot_pa_time, gen_pa_param(fit.param, 4, 6)), "C3-")
-xlim([0, 22])
-ylim([0, 0.9])
-legend(fontsize="small", ncol=2, borderpad=0.2, labelspacing=0.2,
-       handletextpad=0.3, columnspacing=0.2, borderaxespad=0.4, loc="center left")
-title("Atomic Lifetime")
-grid()
-xlabel("Time (ms)")
-ylabel("Two-body survival")
-
-subplot(2, 2, 4)
-NaCsPlot.plot_survival_data(data_nacs_m[1:end - 1], fmt="C0s")
-plot(plot_m_time, model_ramsey(plot_m_time, gen_ramsey_param(fit.param, 7)), "C0-")
-xlim([0, 0.9])
-title("Molecular lifetime")
-grid()
-xlabel("Molecule Hold Time (ms)")
-ylabel("Two-body survival")
-
-# subplot(2, 2, 4)
-# const img_freq = param_1[3] .+ linspace(-20, 20, 201)
-# const img_time = linspace(0, 0.8, 201)
-# const mol_2d = [model_2d(t, f, param_1, molecule=true)
-#                 for f in img_freq, t in img_time]
-# imshow(mol_2d, aspect="auto", interpolation="none", origin="lower",
-#        extent=[img_time[1] - step(img_time) / 2, img_time[end] + step(img_time) / 2,
-#                img_freq[1] - step(img_freq) / 2, img_freq[end] + step(img_freq) / 2])
-# xlabel("Raman time (ms)\${}_{\\mathrm{(with\\ 0.01\\ ms\\ offset)}}\$")
-# ylabel("2-Photon Detuning (770XXX kHz)")
-# title("Molecule Population")
-# grid()
-# colorbar()
-
-tight_layout(pad=0.6)
-NaCsPlot.maybe_save("$(prefix)")
+colorbar()
+NaCsPlot.maybe_save("$(prefix)_norm_2d")
 
 NaCsPlot.maybe_show()
