@@ -148,8 +148,8 @@ Here, we demonstrate coherent association of an atom pair to a weakly bound mole
     by $\Delta$ in order to suppress the scattering during the transfer.
     (B) Comparison between using a weakly bound and a deeply bound excited state
     as intermediate state for the Raman transition.
-    The deeply bound excited state (upper half $v=0$) has a smaller Raman Rabi frequency ($\Omega_{Raman}$)
-    compared to the weakly bound excited state (lower half $v=63$) at a given detuning.
+    The deeply bound excited state (upper half $v'=0$) has a smaller Raman Rabi frequency ($\Omega_{Raman}$)
+    compared to the weakly bound excited state (lower half $v'=63$) at a given detuning.
     However, the scattering rate ($\Gamma_{scatter}$) is also much lower,
     which results in a larger Raman Rabi frequency to scattering rate ratio.
     (C) Enhancement of short range wavefunction.
@@ -172,7 +172,7 @@ Here, we demonstrate coherent association of an atom pair to a weakly bound mole
 
 
 % The optical transfer scheme we use is shown in figure \todo{}. To drive the atoms from
-% We use an optical Raman transition to drive the system from the atomic initial state to a ground electronic molecular state. In order to reduce the size mismatch between the atomic and molecular states, we selected the first bound state for the 3322 spin state \todo{asymtopt to the 3322 threshold?} as our final state. \todo{move selection of intermediate state to intro?}. For similar reason, the natural choice for the intermediate excited molecular state is one with highly excited motional level.However, from our calculation (and experiment?), the smaller level space for high vibrational state and the smaller detuning from the atomic threshold increases the scattering rate of the molecular state which causes a reduced Raman Rabi frequency to decoherence rate ratio and a lower transfer efficiency. Therefore, in our experiment, we selected the v=0 state as the intermediate state for our Raman transition.
+% We use an optical Raman transition to drive the system from the atomic initial state to a ground electronic molecular state. In order to reduce the size mismatch between the atomic and molecular states, we selected the first bound state for the 3322 spin state \todo{asymtopt to the 3322 threshold?} as our final state. \todo{move selection of intermediate state to intro?}. For similar reason, the natural choice for the intermediate excited molecular state is one with highly excited motional level.However, from our calculation (and experiment?), the smaller level space for high vibrational state and the smaller detuning from the atomic threshold increases the scattering rate of the molecular state which causes a reduced Raman Rabi frequency to decoherence rate ratio and a lower transfer efficiency. Therefore, in our experiment, we selected the v'=0 state as the intermediate state for our Raman transition.
 
 % While optical Raman transfers of atoms to molecules utilizing an electronic excited state have been shown previously, the transfers were incoherent  where the resulting molecules were lost~\cite{Wynar2000,Rom2004}.
 % For a given excited intermediate state,
@@ -206,7 +206,7 @@ To find the optimal excited intermediate state, we perform a  calculation of the
 % we calculated both the Raman Rabi frequency and the scattering rate at different detunings (full result is shown in SM). As seen in Fig.~\ref{f-theory}B,
 % we found a distinct optimal regime from what has been explored experimentally previously.
 % Namely, despite a smaller Raman Rabi frequency at deeply bound intermediate states, the Rabi frequency to scattering rate ratio is much higher as compared to a weakly bound intermediate state.
-As a result, we choose a deeply bound molecular excited state ($v'=0$ of $c^3\Sigma^+$) as an intermediate state to drive the Raman transition. %(mention the trend, also v=12 will work as similarly as v=0)
+As a result, we choose a deeply bound molecular excited state ($v'=0$ of $c^3\Sigma^+$) as an intermediate state to drive the Raman transition. %(mention the trend, also v'=12 will work as similarly as v'=0)
 
 % higher Raman Rabi frequency at the same detuning, using a weakly bound intermediate state results in a much higher scattering rate and ultimately a smaller Rabi frequency to scattering rate ratio as compared to deeply bound states. As a result, we use a deeply bound molecular excited state to drive the Raman transition.
 
@@ -296,46 +296,105 @@ We observed the narrowest linewidth of $7.56(82) \mathrm{kHz}$ for the Raman res
 
 In order to understand the fidelity of molecule formation, we fit our measurements to a model that includes a Raman Rabi frequency and a finite lifetime for the final molecular state (Fig.~\ref{f-lifetime}A). We account for the effect of atomic state loss by measuring the single and two body lifetime of the atoms directly (Fig.~\ref{f-lifetime}B). The fit shows that we have a Raman Rabi frequency of $2\pi\times3.282(42) \mathrm{kHz}$. The molecule we form has a lifetime of $0.204(13) \mathrm{ms}$ which is the main limitation on the fidelity of the transfer. The molecule lifetime can be verified directly by adding a second Raman pulse to dissociate the molecule back to atoms after a variable wait time (Fig.~\ref{f-lifetime}C). The result shows a molecular lifetime consistent with our fitting of the decaying Rabi oscillation.
 
-The ratio of molecule scattering rate to the Rabi frequency is larger than the theory prediction. In order to understand the origin of this discrepancy, we measured the dependency of the Raman resonance (what does dependence of the Raman resonance mean? Do you just mean we measured molecule formation as a function of all these parameters?) as a function of the tweezer power and single photon frequency. The important results from the fits are the 2 photon resonance frequency (light shift), Raman Rabi frequency, atomic lifetime and molecular lifetime. Each of these quantities provide us with information about a different combination of physical processes.
+The ratio of molecule scattering rate to the Rabi frequency is larger than the theory prediction
+by more than a factor of $10$.
+Based on the calculation above, if this comes from the coupling to the $v'=0$ excited state,
+it can be either due to a high ratio of $\Omega_m / \Omega_a$ or a large $\Gamma_e$.
+Additionally, coupling to other excited states can also adds an offset to both the Raman
+Rabi frequency and the scattering rate which can affect the scattering rate
+to Rabi frequency ratio.
 
-First we look at the change in resonance frequency. As a function of the tweezer power, we observe a linear dependency on the resonance frequency caused by the differential light shift between the atomic and molecular state (Fig.~\ref{f-det}A). When we vary the tweezer frequency around the $v=0$ excited state, we can further observe a $1/\delta$ component and a background component that is constant for different detunings in the experimentally explored region. The background is caused by coupling to other excited states that are further away in energy. %which is not very important in this case.
-% The $1/\delta$ component, however, is due to the coupling to the $v=0$ excited state and from equation (?) we know that the light shift is mainly due to the coupling between the excited and ground molecular states.
-The $1/\delta$ component, however, is predominantly due to the coupling between the molecular state and the $ v =0 $ excited state. From this measurement, we can calculate a matrix element between the molecular state and the excited state, $ \Omega_m$, of $....$ which is similar to what we calculated from theory (ref/sm theory). (make sure theory part mentions $\Omega_{down}\gg\Omega_{up}$, also $\Omega$ vs $\Omega'$ for the single leg vs cross coupling number).
-% what's the take away of this paragraph with respect to the mystery that is setup in the previous paragraph of having a larger scattering rate to rabi frequency ratio than expected?
+In order to verify whether any one of these known sources are the origin of the discrepancy,
+we measured the Raman resonance as a function of the tweezer power and single photon frequency.
+The important results from the fits are the 2 photon resonance frequency (light shift),
+Raman Rabi frequency, atomic lifetime and molecular lifetime.
+Each of these quantities provide us with information about a different combination
+of physical processes and the detuning dependency of them allows us
+to distinguish the contribution from the $v'=0$ excited states and other states.
 
-(talk about blue side?)
+First we look at the change in resonance frequency.
+As a function of the tweezer power, we observe a linear dependency on the resonance frequency
+caused by the differential light shift between the atomic and molecular state (Fig.~\ref{f-det}A).
+When we vary the tweezer frequency around the $v'=0$ excited state,
+we can further observe a $1/\delta$ component and a constant component
+in the experimentally explored region.
+The background is caused by coupling to other excited states that are further away in energy.
+The $1/\delta$ component, however, is predominantly due to the coupling between
+the molecular state and the $v'=0$ excited state.
+From this measurement, we can calculate a matrix element between the molecular state and
+the excited state, $\Omega_m$, of $2\pi\times89.40(17) \mathrm{MHz}/\sqrt{\mathrm{mW}}$
+or $2\pi\times346.24(65) \mathrm{MHz}$ for the $15 \mathrm{mW}$ tweezer power used above.
+This number is about $3$ times larger than the value of
+$2\pi\times27 \mathrm{MHz}/\sqrt{\mathrm{mW}}$ \todo{ref/sm theory}.
+\todo{make sure theory part mentions $\Omega_{down}\gg\Omega_{up}$,
+  also $\Omega$ vs $\Omega'$ for the single leg vs cross coupling number.}
 
-Next, we discuss the dependencies of the Raman Rabi frequency. The Raman Rabi frequency shows a non-linear dependency on the tweezer power due to the change in the atomic wavefunction caused by the change in confinement (Fig.~\ref{f-det}?). The atomic matrix element, $\Omega_a$, is proportional to the the short range atomic wavefunction amplitude, which scales as $ P^{0.375} $ for weakly interacting particles. However, due to the strong interaction between the two atoms, this approximation breaks down. Instead, theory calculation shows that the scaling is very well approximated by $ P^{0.29} $ within the range of confinement in our experiment. Combined with the intensity factor, the Raman Rabi frequency should scale with $P^{1.29}$, which agrees with our experimental result. Similar to the light shift, there is also a background component and a $v=0$ component in the Raman Rabi frequency. The $v=0$ component predicts a up leg Rabi frequency of $...$ which is consistent with theory. Unfortunately, the background Raman Rabi frequency cancels the Rabi frequency for red detuning Raman transition which is one of the factors that decreases our transfer efficiency. (need blue side?)
-% I think we should include some takeaway from this paragraph as well, otherwise it may not be clear what the point is. Maybe something like, "Based on these analyses, the Rabi frequencies agree with theory. Thus, the high scattering rate to raman rabi frequency ratio is caused by larger than expected scattering, which we discuss next"
+In order to calculate the matrix element ratio,
+next we discuss the dependencies of the Raman Rabi frequency.
+The Raman Rabi frequency shows a non-linear dependency on the tweezer power due to the change
+in the atomic wavefunction caused by the change in confinement (Fig.~\ref{f-det}B).
+The atomic matrix element, $\Omega_a$,
+is proportional to the the short range atomic wavefunction amplitude,
+which scales as $P^{0.375}$ for weakly interacting particles.
+However, due to the strong interaction between the two atoms, this approximation breaks down.
+Instead, theory calculation shows that the scaling is very well approximated by $P^{0.29}$
+within the range of confinement in our experiment.
+Combined with the intensity factor, the Raman Rabi frequency should scale with $P^{1.29}$,
+which agrees with our experimental result.
+Similar to the light shift, there is also an offset and
+a $v'=0$ component in the Raman Rabi frequency.
+Based on the $v'=0$ component and the $\Omega_m$ measured above,
+we measured a up leg Rabi frequency of $...$, or $...$ at $15 \mathrm{mW}$ tweezer power.
+This gives a Rabi frequency, and therefore matrix element, ratio of $...$,
+which is in fact better than the theory prediction of $...$
+and should not cause the scattering from the $v'=0$ state to be higher than expected.
 
-Next, we look at the atomic loss rate during the transfer process. (Fig.~\ref{f-det}?)
-The atomic loss rate scales as $P^{2.58}$ but shows little to no dependency on the tweezer frequency. The lack of frequency dependency suggests that most of the atomic loss are due to the coupling to states other than $v=0$. After subtracting 0.58 from the power scaling due to the effect of confinement on the square of the atomic matrix element, the loss rate is proportional to $P^2$. This is evidence that the loss is likely caused by a two photon scattering process rather than one photon scattering. The strong power scaling causes a faster than expected loss rate for the atom. However, the atomic scattering rate contributes only a small fraction of the total scattering rate so this is not the limiting factor for the transfer.
+Unfortunately, the offset in the Raman Rabi frequency fit cancels
+the Rabi frequency for red detuning Raman transition and reduces it by about $...\times$
+at the current detuning. However, this difference is not enough to explain
+the difference we observed in the experiment.
+The same offset will increase the Rabi frequency for blue detuning
+but we have observed additional excited states at slightly higher frequencies
+which prevent the blue side of the transition to be usuable for Raman transition.
 
 \begin{figure*}
   \includegraphics[height=4.5cm]{fig4.pdf}
-  \caption{Raman transition parameters as a function of tweezer/Raman power and detuning.
-    (A) Raman Rabi frequency scales as $P_{tweezer}^{1.29}$ and follows $1/\delta$ with an offset.
-    (B) Atom loss rate scales as $P_{tweezer}^{2.58}$ suggesting a two-photon scattering loss.
-    (C) Molecular loss rate scales closed to $P_{tweezer}$ and follows $1/\delta^2$
-    with additional detuning independent background loss rate.
-    This result controdicts the our previous measurement of excited state lifetime
-    suggesting that there are additional loss mechanism that is not taken into account.
+  \caption{Raman transition parameters as a function of tweezer and Raman power and detuning.
+    (A) The light shift of the Raman resonance scales as $P_{tweezer}$
+    and follows $1/\delta$ with an offset.
+    (B) Raman Rabi frequency scales as $P_{tweezer}^{1.29}$ and follows $1/\delta$ with an offset.
+    From these results we can confirm the theory prediction of
+    the atom-molecule matrix element ratio.
+    (C) Atomic scattering rate scales as $P_{tweezer}^{2.58}$,
+    this is consistent with a two photon scattering process.
+    We have not measured a clear dependency of the loss rate on the tweezer detuning.
     \label{f-det}}
 \end{figure*}
 
-Finally, we fit the scaling for the molecular loss rate. (Fig.~\ref{f-det}?)
-We observed a dependency on the detuning that is consistent with $1/\delta^2$ suggesting that the loss is indeed mostly coming from the $v=0$ excited state (but this is only true at certain single photon detunings?). (preliminary) We observed a power scaling power of $\approx1.2$ which is closed to the prediction for a single photon scattering process. The excited state line width calculated from the scattering rate is $...(1 GHz?)$ which is much larger than the theory prediction of $10 MHz$ as well as the $20 MHz$ upper bound from our previous PA measurements (cite).
+Based on our previous measurements of the excited state using photoassociation (PA) spectroscopy,
+the linewidth of the $v'=0$ excited state is no larger than $50 \mathrm{MHz}$.
+This suggests that the excited state linewidth should not cause a stronger than expected
+scattering from $v'=0$ state either.
+
+These results suggests that the decoherence or loss we observed during the the Raman transition
+comes from either a higher than expected background scattering rate
+or a different intrinsic or technical source that we have not accounted for.
+As mentioned above, we have observed significant improvment in the coherence time
+by filtering out most of the ASE from the laser suggesting the spectral purity of
+the laser is a significant source of scattering.
+Although we have good control on the total power of the tweezer and Raman beam to stabilize
+the light shift on the transition, the power ratio of the two frequencies within the beam
+is not yet controlled as tightly and may result in a residual resonance fluctuation.
+Finally, Fig.~\ref{f-det}C shows the two-body scattering rate for the atomic initial state.
+The scattering rate scales as $P_{tweezer}^{2.58}$ which is inconsistent with
+the prediction based on single photon scattering process.
+Although the absolute scattering rate is much lower than the total decoherence rate
+and we have not been able to observe a dependency on the detuning in order to
+verify if the scattering process is related to the $v'=0$ state, the power scaling
+strongly suggests the existence of a unknown two photon scattering process.
 
 %%%% Maybe this following section about the B field can be relegated to a figure caption?
 % Figure () shows the geometry of the experiment setup. A $8.8\mathrm{G}$ B field was used to defines the quantization axis in the experiment and is applied perpendicular to the tweezer axis. The tweezer beam (both frequencies for the Raman transition) has a $\pi$ polarization relative to the quantization axis, which allows us to selectively drive the Raman transition to a final state with the same total $m_F$ quantum number as our initial state.
-
-
-
-
-
-
-
-
 B field dependency $... kHz/G$ which agrees with theory prediction of $... kHz/G$.
 Dependency on tweezer power $... kHz/mW$, extrapulated to obtain the bare resonance at $0$ tweezer power to be at $... MHz$.
 
