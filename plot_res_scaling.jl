@@ -53,6 +53,10 @@ const freqs = [668.35 21 772.1367 0.0082
                605 9 770.54816 0.00058
                605 6 770.437052 0.000072
                605 3 770.321367 0.000038
+
+               625 15 770.89410 0.00024
+               625 6 770.490130 0.000059
+               625 3 770.347812 0.000022
                ]
 
 function model_sqr(x, p)
@@ -166,11 +170,11 @@ for i in 1:length(powers_plot)
     power = powers_plot[i]
     plot1 = get_plot_data_power(data, fit1, model1, power)
     errorbar(plot1.x .+ 288000, (plot1.y .- fit1.param[1]) .* 1000,
-             plot1.unc .* 1000, fmt="C$(i - 1)s")
+             plot1.unc .* 1000, fmt="C$(i - 1).")
     plot(plot1.plotx .+ 288000, (plot1.ploty .- fit1.param[1]) .* 1000,
          "C$(i - 1)", label="$(power) mW")
 end
-xticks([288500, 288525, 288550, 288575, 288600])
+xticks([288500, 288530, 288560, 288590, 288620])
 # p: framan0, fpa0, offset, strength, bs...
 # text(560, 1700, ("\$f_{Raman0} + a\\cdot P\$\n" *
 #                  "  \$-\\dfrac{b}{f-f_{PA0}}\\cdot P\$"))
