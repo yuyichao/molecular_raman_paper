@@ -182,7 +182,7 @@ xticks([288500, 288530, 288560, 288590, 288620])
 #                 "\$f_{PA0}=$(fit1.uncs[2] + 288000)\$ GHz\n" *
 #                 "\$a=$(fit1.uncs[3] * 1000)\$ kHz/mW\n" *
 #                 "\$b=$(fit1.uncs[4])\$ MHz\$\\cdot\$GHz/mW"), fontsize="small")
-legend(fontsize="small")
+legend(loc="upper center", fontsize="small")
 grid()
 xlabel("Tweezer Frequency (GHz)")
 ylabel("Light Shift (kHz)")

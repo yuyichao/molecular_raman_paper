@@ -1184,27 +1184,27 @@ L 404.22 7.2
    </g>
    <g id="legend_1">
     <g id="patch_7">
-     <path d="M 56.816 79.423712 
-L 150.549375 79.423712 
-Q 153.325375 79.423712 153.325375 76.647712 
-L 153.325375 16.916 
-Q 153.325375 14.14 150.549375 14.14 
-L 56.816 14.14 
-Q 54.04 14.14 54.04 16.916 
-L 54.04 76.647712 
-Q 54.04 79.423712 56.816 79.423712 
+     <path d="M 169.406469 93.889269 
+L 281.913531 93.889269 
+Q 285.245531 93.889269 285.245531 90.557269 
+L 285.245531 18.862 
+Q 285.245531 15.53 281.913531 15.53 
+L 169.406469 15.53 
+Q 166.074469 15.53 166.074469 18.862 
+L 166.074469 90.557269 
+Q 166.074469 93.889269 169.406469 93.889269 
 z
 " style="fill:#ffffff;opacity:0.8;stroke:#cccccc;stroke-linejoin:miter;"/>
     </g>
     <g id="line2d_27">
-     <path d="M 59.592 25.380631 
-L 87.352 25.380631 
+     <path d="M 172.738469 29.021997 
+L 206.058469 29.021997 
 " style="fill:none;stroke:#1f77b4;stroke-linecap:square;stroke-width:1.5;"/>
     </g>
     <g id="line2d_28"/>
     <g id="text_13">
      <!-- 15 mW -->
-     <g transform="translate(98.456 30.238631)scale(0.1388 -0.1388)">
+     <g transform="translate(219.386469 34.852997)scale(0.1666 -0.1666)">
       <defs>
        <path d="M 12.40625 8.296875 
 L 28.515625 8.296875 
@@ -1273,14 +1273,14 @@ z
      </g>
     </g>
     <g id="line2d_29">
-     <path d="M 59.592 45.753869 
-L 87.352 45.753869 
+     <path d="M 172.738469 53.475753 
+L 206.058469 53.475753 
 " style="fill:none;stroke:#ff7f0e;stroke-linecap:square;stroke-width:1.5;"/>
     </g>
     <g id="line2d_30"/>
     <g id="text_14">
      <!-- 6 mW -->
-     <g transform="translate(98.456 50.611869)scale(0.1388 -0.1388)">
+     <g transform="translate(219.386469 59.306753)scale(0.1666 -0.1666)">
       <use xlink:href="#DejaVuSans-54"/>
       <use x="63.623047" xlink:href="#DejaVuSans-32"/>
       <use x="95.410156" xlink:href="#DejaVuSans-109"/>
@@ -1288,14 +1288,14 @@ L 87.352 45.753869
      </g>
     </g>
     <g id="line2d_31">
-     <path d="M 59.592 66.127106 
-L 87.352 66.127106 
+     <path d="M 172.738469 77.929509 
+L 206.058469 77.929509 
 " style="fill:none;stroke:#2ca02c;stroke-linecap:square;stroke-width:1.5;"/>
     </g>
     <g id="line2d_32"/>
     <g id="text_15">
      <!-- 3 mW -->
-     <g transform="translate(98.456 70.985106)scale(0.1388 -0.1388)">
+     <g transform="translate(219.386469 83.760509)scale(0.1666 -0.1666)">
       <use xlink:href="#DejaVuSans-51"/>
       <use x="63.623047" xlink:href="#DejaVuSans-32"/>
       <use x="95.410156" xlink:href="#DejaVuSans-109"/>

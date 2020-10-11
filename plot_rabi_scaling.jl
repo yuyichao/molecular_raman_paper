@@ -140,7 +140,7 @@ xticks([288500, 288530, 288560, 288590, 288620])
 # text(500, 5.0, ("\$\\left(a-\\dfrac{b}{f-705 GHz}\\right)\\cdot P^{1.29}\$"))
 # text(500, 2.8, ("\$a=$(fit1.uncs[1] * 1000)\$ Hz/mW\$^{1.29}\$\n" *
 #               "\$b=$(fit1.uncs[2])\$ kHz\$\\cdot\$GHz/mW\$^{1.29}\$"), fontsize="small")
-legend(fontsize="x-small")
+legend(loc="upper center", fontsize="small")
 grid()
 xlabel("Tweezer Frequency (GHz)")
 ylabel("\$\\Omega_{Raman} (2\\pi\\cdot \\mathrm{kHz})\$")
