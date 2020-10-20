@@ -103,8 +103,7 @@
   Starting from two atoms in their relative motional ground state,
   we achieve optical transfer efficiency of $69\%$.
   The molecule has a binding energy of $770.200516(24) \mathrm{MHz}$ at $8.8~\mathrm{G}$
-  and lifetime up to $1 \mathrm{ms}$ \textcolor{blue}{(1~ms seems long here)} with more than $60\%$ of the molecule created in the
-  motional ground state.
+  with more than $60\%$ of the molecule created in the motional ground state.
   This technique is general without relying on narrow excited state lines or Feshbach resonances and could allow a wider range of molecular species to be assembled atom-by-atom.
 \end{abstract}
 
@@ -333,20 +332,35 @@ The molecular state is dark to the imaging step, so successful transfer of the a
 
 In order to understand the fidelity of molecule formation, we fit our measurements to a model that includes a Raman Rabi frequency and a finite lifetime for the molecular state (Fig.~\ref{f-lifetime}A). We account for the effect of atomic state loss by measuring the single and two body lifetime of the atoms directly (Fig.~\ref{f-lifetime}B) without turning on the second frequency. The fit shows that we have a Raman Rabi frequency of $2\pi\times3.282(42) ~\mathrm{kHz}$. The molecule we form has a lifetime of $0.204(13) ~\mathrm{ms}$ which is the main limitation on the fidelity of the transfer. The molecule lifetime can be measured directly by preparing the molecule with a $\pi $ pulse and then using a second $\pi $ pulse to dissociate the molecule back to atoms after a variable wait time (Fig.~\ref{f-lifetime}C). The result shows a molecular lifetime consistent with our fitting of the decaying Rabi oscillation.
 
-The ratio of the molecule scattering rate to the Rabi frequency is larger than the theory prediction by more than a factor of $10$. Based on the discussion above, if this discrepancy arises from the $v'=0$ excited state, it can be either due to a high ratio of $\Omega_m / \Omega_a$ or a large $\Gamma_e$. Additionally, coupling to other excited states can also add an offset to both the Raman Rabi frequency and the scattering rate which can affect the scattering rate to Rabi frequency ratio.
+The ratio of the molecule scattering rate to the Rabi frequency is larger than
+the theory prediction by more than a factor of $10$.
+Based on the discussion above, if this discrepancy arises from the $v'=0$ excited state,
+it can be either due to a high ratio of $\Omega_m / \Omega_a$ or a large $\Gamma_e$.
+Additionally, coupling to other excited states can also add an offset to
+both the Raman Rabi frequency and the scattering rate
+which can affect the scattering rate to Rabi frequency ratio.
 
-In order to verify whether any one of these known sources are the origin of the discrepancy, we measured the Raman resonance as a function of the tweezer power and single photon frequency. These dependencies allow us to experimentally determine the matrix elements, $ \Omega_a $, $\Omega_m $ and how much of the scattering, Stark shift, or Raman Rabi frequency comes from the $ v' = 0$ intermediate state.
+In order to verify whether any one of these known sources are the origin of the discrepancy,
+we measured the Raman resonance as a function of the tweezer power and single photon frequency.
+These dependencies allow us to experimentally determine the matrix elements,
+$ \Omega_a $, $\Omega_m $ and how much of the scattering, Stark shift,
+or Raman Rabi frequency comes from the $ v' = 0$ intermediate state.
 
-% From these fits, we extract the 2 photon resonance frequency, Raman Rabi frequency, atomic lifetime and molecular lifetime.
-% Each of these quantities provide us with information about a different combination of physical processes and the detuning dependency of them allows us to distinguish the contribution from the $v'=0$ excited states and other states.
-
-First we look at the change in resonance frequency. As a function of the tweezer power, we observe the expected linear dependency on the resonance frequency
-caused by the differential light shift between the atomic and molecular state (Fig.~\ref{f-det}A). When we vary the tweezer frequency around the $v'=0$ intermediate state, we can further observe a $1/\Delta$ component and a constant background in the experimentally explored region. The background is caused by coupling to other excited states that are further away in energy. The $1/\Delta$ component, however, is due to the coupling between the molecular state and the $v'=0$ intermediate state. From this measurement, we can calculate a  $\Omega_m$ of $2\pi\times36.162(20) ~\mathrm{MHz}/\sqrt{\mathrm{mW}}$ or $2\pi\times140.056(78) ~\mathrm{MHz}$ for the $15 ~\mathrm{mW}$ tweezer power used above.
+First we look at the change in resonance frequency.
+As a function of the tweezer power,
+we observe the expected linear dependency on the resonance frequency
+caused by the differential light shift between the atomic and molecular state (Fig.~\ref{f-det}A).
+When we vary the tweezer frequency around the $v'=0$ intermediate state,
+we can further observe a $1/\Delta$ component
+and a constant background in the experimentally explored region.
+The background is caused by coupling to other excited states that are further away in energy.
+The $1/\Delta$ component, however, is due to the coupling between the molecular state
+and the $v'=0$ intermediate state.
+From this measurement, we can calculate a $\Omega_m$ of
+$2\pi\times36.162(20) ~\mathrm{MHz}/\sqrt{\mathrm{mW}}$ or
+$2\pi\times140.056(78) ~\mathrm{MHz}$ for the $15 ~\mathrm{mW}$ tweezer power used above.
 This number is consistent with the value of
 $2\pi\times27 \mathrm{MHz}/\sqrt{\mathrm{mW}}$ calculated from theory. \todo{ref/sm theory}
-\todo{make sure theory part mentions $\Omega_{down}\gg\Omega_{up}$,
-  also $\Omega$ vs $\Omega'$ for the single leg vs cross coupling number.}
-
 
 \begin{figure*}
   \includegraphics[height=4.5cm]{fig4.pdf}
@@ -365,22 +379,70 @@ $2\pi\times27 \mathrm{MHz}/\sqrt{\mathrm{mW}}$ calculated from theory. \todo{ref
     \label{f-det}}
 \end{figure*}
 
-In order to calculate the matrix element ratio, we now need to extract the matrix element, $ \Omega_a $. We do this by measuring the dependencies of the Raman Rabi frequency, which depends on both $\Omega_m$ and $\Omega_a$. The Raman Rabi frequency shows a non-linear dependency on the tweezer power due to the change in the atomic wavefunction caused by tighter confinement at higher power (Fig.~\ref{f-det}B). Thus, as discussed before, for weakly interacting particles, $\Omega_a$ scales as $ \omega_{\text{trap}}^{3/4}$ or $P^{0.375}$. However, due to the strong interaction between the two atoms, this approximation breaks down. Instead, coupled-channel calculation shows that the scaling is very well approximated by $P^{0.29}$ within the range of confinement in our experiment. Combined with the standard intensity factor, the Raman Rabi frequency should scale as $P^{1.29}$, which agrees with our experimental result.
-Similar to the light shift, there is also a constant background component and a $v'=0$ component in the Raman Rabi frequency that scales as $1/\Delta$. The $v'=0$ component of the Raman Rabi frequency is $2\pi\times161.8(22) ~\mathrm{Hz\cdot mW^{-1.29}}$, or $2\pi \times 5.324(73)~\mathrm{kHz}$ at $15 ~\mathrm{mW}$ tweezer power. Together with the $\Omega_m$ measured above, the up leg Rabi frequency is
-$2\pi \times 11.53(16)\mathrm{MHz}$. This gives a Rabi frequency, and therefore matrix element, ratio of $12.14(16)$, which is in fact better than the theory prediction of $23.7$ and should not cause the ratio of the Raman Rabi frequency to scattering rate from the $v'=0$ state to be higher than expected. Furthermore, based on measurements of the excited state using photoassociation (PA) spectroscopy, the natural linewidth of the $v'=0$ excited state is no larger than $20 \mathrm{MHz}$. This suggests that the excited state linewidth should not cause a stronger than expected scattering from $v'=0$ state either.
+In order to calculate the matrix element ratio,
+we now need to extract the matrix element, $ \Omega_a $.
+We do this by measuring the dependencies of the Raman Rabi frequency,
+which depends on both $\Omega_m$ and $\Omega_a$.
+The Raman Rabi frequency shows a non-linear dependency on the tweezer power
+due to the change in the atomic wavefunction caused by
+tighter confinement at higher power (Fig.~\ref{f-det}B).
+Thus, as discussed before, for weakly interacting particles,
+$\Omega_a$ scales as $ \omega_{\text{trap}}^{3/4}$ or $P^{0.375}$.
+However, due to the strong interaction between the two atoms, this approximation breaks down.
+Instead, coupled-channel calculation shows that the scaling
+is very well approximated by $P^{0.29}$ within the range of confinement in our experiment.
+Combined with the standard intensity factor, the Raman Rabi frequency should scale as $P^{1.29}$,
+which agrees with our experimental result.
+Similar to the light shift, there is also a constant background component
+and a $v'=0$ component in the Raman Rabi frequency that scales as $1/\Delta$.
+The $v'=0$ component of the Raman Rabi frequency is
+$2\pi\times161.8(22) ~\mathrm{Hz\cdot mW^{-1.29}}$,
+or $2\pi \times 5.324(73)~\mathrm{kHz}$ at $15 ~\mathrm{mW}$ tweezer power.
+Together with the $\Omega_m$ measured above, the up leg Rabi frequency is
+$2\pi \times 11.53(16)\mathrm{MHz}$.
+This gives a Rabi frequency, and therefore matrix element, ratio of $12.14(16)$,
+which is in fact better than the theory prediction of $23.7$
+and should not cause the ratio of the Raman Rabi frequency to scattering rate
+from the $v'=0$ state to be higher than expected.
+Furthermore, based on measurements of the excited state using photoassociation (PA) spectroscopy,
+the natural linewidth of the $v'=0$ excited state is no larger than $20 \mathrm{MHz}$.
+This suggests that the excited state linewidth should not cause
+a stronger than expected scattering from $v'=0$ state either.
 
-With the $ v' = 0 $ state ruled out as the source of discrepancy between experiment and theory, we now consider the background effects from other states with larger single photon detuning. Unfortunately, the background in the Raman Rabi frequency fit cancels the Rabi frequency for a single photon detuning that is red of the $ v' = 0 $ and reduces it by about $30\%$ at the current detuning. However, this difference is not enough to explain the over factor of 10 discrepancy present in the experiment.
-The same offset will increase the Rabi frequency for blue detuning, but we have observed additional excited states at slightly higher frequencies which prevent the blue side of the transition to be usable for the Raman transition.
+With the $ v' = 0 $ state ruled out as the source of discrepancy between experiment and theory,
+we now consider the background effects from other states with larger single photon detuning.
+Unfortunately, the background in the Raman Rabi frequency fit cancels the Rabi frequency
+for a single photon detuning that is red of the $ v' = 0 $
+and reduces it by about $30\%$ at the current detuning.
+However, this difference is not enough to explain the over factor of $10$ discrepancy
+present in the experiment.
+The same offset will increase the Rabi frequency for blue detuning,
+but we have observed additional excited states at slightly higher frequencies
+which prevent the blue side of the transition to be usable for the Raman transition.
 
-These results suggest that the decoherence or loss we observed during the the Raman transition comes from either a higher than expected background scattering rate or a different intrinsic or technical source that we have not accounted for. We have observed a significant decrease in the coherence time without the ASE filter, suggesting the spectral purity of the laser is a significant source of scattering. Another source of decoherence could result from fluctuations in the power ratio between the two beams resulting in a fluctuation in the resonance position. In the experiment, we only stabilize the total power of the tweezer.
+These results suggest that the decoherence or loss we observed during the Raman transition
+comes from either a higher than expected background scattering rate
+or a different intrinsic or technical source that we have not accounted for.
+We have observed a significant decrease in the coherence time without the ASE filter,
+suggesting the spectral purity of the laser is a significant source of scattering.
+Another source of decoherence could result from fluctuations in the power ratio
+between the two beams resulting in a fluctuation in the resonance position.
+In the experiment, we only stabilize the total power of the tweezer.
 
-Lastly, to confirm that the excess scattering does not come from the atomic state, we measure the two-body scattering rate without turning on the second frequency (Fig.~\ref{f-det}C). The scattering rate scales as $P_{tweezer}^{2.58}$ which is inconsistent with a single photon scattering process. We have not been able to observe a dependency on the detuning in order to verify if the scattering process is related to the $v'=0$ state, but the power scaling strongly suggests the existence of a unknown two photon scattering process. Nevertheless, the absolute scattering rate is much lower than the total scattering rate and is not the limiting factor in our experiment.
-% Although we have good control on the total power of the tweezer and Raman beam to stabilizethe light shift on the transition, the power ratio of the two frequencies within the beam is not yet controlled as tightly and may result in a residual resonance fluctuation.
-
+Lastly, to confirm that the excess scattering does not come from the atomic state,
+we measure the two-body scattering rate
+without turning on the second frequency (Fig.~\ref{f-det}C).
+The scattering rate scales as $P_{tweezer}^{2.58}$ which is inconsistent
+with a single photon scattering process.
+We have not been able to observe a dependency on the detuning in order to verify
+if the scattering process is related to the $v'=0$ state,
+but the power scaling strongly suggests the existence of a unknown two photon scattering process.
+Nevertheless, the absolute scattering rate is much lower than the total scattering rate
+and is not the limiting factor in our experiment.
 
 %%%% Maybe this following section about the B field can be relegated to a figure caption?
 % Figure () shows the geometry of the experiment setup. A $8.8\mathrm{G}$ B field was used to defines the quantization axis in the experiment and is applied perpendicular to the tweezer axis. The tweezer beam (both frequencies for the Raman transition) has a $\pi$ polarization relative to the quantization axis, which allows us to selectively drive the Raman transition to a final state with the same total $m_F$ quantum number as our initial state.
-B field dependency $42.17(24) kHz/G$ which agrees with theory prediction of $... kHz/G$.
+B field dependency $42.17(24) kHz/G$.
 
 In conclusion, we have formed a weakly bound NaCs molecule in an optical tweezer via an optical Raman transfer. A theoretical investigation including all excited states of $ c^3\Sigma^+(\Omega = 1)$, the excited atomic continuum and coupled channel ground state wavefunctions indicated better transfer efficiency using a deeply bound intermediate state and the $ \ket{\uparrow_{\text{Na}} \downarrow_{\text{Cs}} } $ hyperfine state combination. Using these theoretical insights, we located the weakly bound state and coherently associated the atoms into the weakly bound molecule. Our transfer efficiency is limited by an unknown scattering source resulting in measured scattering rates over 10 times larger than theory predictions. Despite this limitation, the transfer efficiency may be further improved by increasing the $ \Omega_a/\Omega_m$ ratio by exploring the possibility of driving to more deeply bound states. There may also be a better choice of single photon detuning to increase the Raman Rabi frequency, since our location results in about 30\% cancellation of the Raman Rabi frequency due to an offset of unknown origin. Nevertheless, our technique, with the right choice of parameters, can be used to form a more diverse set of molecular species, since it does not rely on a magnetic Feshbach resonance, bound states at the MHz-level or a narrow excited state. The formation of a weakly bound molecule is a key step in forming rovibrational ground state molecules. Combined with real time rearrangement \cite{Barredo2016, Endres2016}, defect free arrays of highly controlled molecules can be formed in arbitrary geometries. These arrays are a promising and flexible platform for quantum simulation and quantum computing applications.
 
