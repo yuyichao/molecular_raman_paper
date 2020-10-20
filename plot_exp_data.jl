@@ -266,7 +266,7 @@ xlabel("Raman time (ms)")
 ylabel("Two-body survival")
 NaCsPlot.maybe_save("$(prefix)_t")
 
-figure()
+figure(figsize=[7.2, 5.4])
 NaCsPlot.plot_survival_data(data_nacs_t, scale_2,
                             fmt="C0o", label="770.5704 MHz")
 plot(plot_time, model_2d.(plot_time, 570.4, (param_2,)) .* scale_2, "C0")
