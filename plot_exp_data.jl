@@ -66,10 +66,10 @@ const data_pa_m = datas_nacs[4][1]
 
 const data_nacs_m = datas_nacs[2][3]
 
-const data_fit = [NaCsData.map_params((i, v) -> (1, 570.4, v, 2), data_nacs_00);
-                  NaCsData.map_params((i, v) -> (1, v, 0.12, 2), data_nacs_12);
-                  NaCsData.map_params((i, v) -> (1, v, 0.25, 2), data_nacs_25);
-                  NaCsData.map_params((i, v) -> (1, 570.4, v, 1), data_nacs_t);
+const data_fit = [NaCsData.map_params((i, v) -> (1, 570.4, v, 1), data_nacs_00);
+                  NaCsData.map_params((i, v) -> (1, v, 0.12, 1), data_nacs_12);
+                  NaCsData.map_params((i, v) -> (1, v, 0.25, 1), data_nacs_25);
+                  NaCsData.map_params((i, v) -> (1, 570.4, v, 2), data_nacs_t);
                   NaCsData.map_params((i, v) -> (2, v, 0.0, 3), data_pa_na);
                   NaCsData.map_params((i, v) -> (3, v, 0.0, 4), data_pa_cs);
                   NaCsData.map_params((i, v) -> (4, v, 0.0, 5), data_pa_a);
