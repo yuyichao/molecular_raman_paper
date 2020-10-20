@@ -28,7 +28,7 @@ fit_gamma_a2 = fit_data(gen_power_model(2.58), rates[:, 1], rates[:, 2], rates[:
 const prefix = joinpath(@__DIR__, "imgs", "atomic_loss_scaling")
 
 figure()
-errorbar(rates[:, 1], rates[:, 2], rates[:, 3], fmt="C0.")
+errorbar(rates[:, 1], rates[:, 2], rates[:, 3], fmt="C0o")
 plot(fit_gamma_a2.plotx, fit_gamma_a2.ploty, "C0")
 xscale("log")
 yscale("log")

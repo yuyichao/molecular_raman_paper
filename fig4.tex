@@ -32,10 +32,17 @@
 \begin{document}
 
 \begin{tikzpicture}
+  % f_raman0 = 770.200516(24) MHz
+  % f_pa0 = 288711.696(73) GHz
+  % offset = 2.194(17) kHz/mW
+  % strength = 4.1083(46) MHz GHz/mW
   \node at (-0.1, 0) {\includegraphics[height=3.9cm]{imgs/light_shift_fs.pdf}};
   \node at (-1.58, 1.6) {\footnotesize (\textbf{A})};
+  % offset = -2pi 68.0(53) Hz/mW^-1.29
+  % strength = 2pi 25.79(60) kHz GHz/mW^-1.29
   \node at (5, 0) {\includegraphics[height=3.9cm]{imgs/rabi_scaling.pdf}};
   \node at (3.4, 1.6) {\footnotesize (\textbf{B})};
+  % strength = 2pi 29.3(17) mHz/mW^2.58
   \node at (10, 0) {\includegraphics[height=3.9cm]{imgs/atomic_loss_scaling.pdf}};
   \node at (8.46, 1.6) {\footnotesize (\textbf{C})};
 \end{tikzpicture}

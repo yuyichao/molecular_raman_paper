@@ -170,7 +170,7 @@ for i in 1:length(powers_plot)
     power = powers_plot[i]
     plot1 = get_plot_data_power(data, fit1, model1, power)
     errorbar(plot1.x .+ 288000, (plot1.y .- fit1.param[1]) .* 1000,
-             plot1.unc .* 1000, fmt="C$(i - 1).")
+             plot1.unc .* 1000, fmt="C$(i - 1)o")
     plot(plot1.plotx .+ 288000, (plot1.ploty .- fit1.param[1]) .* 1000,
          "C$(i - 1)", label="$(power) mW")
 end

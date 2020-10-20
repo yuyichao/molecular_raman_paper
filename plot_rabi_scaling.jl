@@ -121,7 +121,7 @@ end
 
 const model = gen_model(705)
 const data = gen_data(freqs)
-const fit1 = fit_data(model, data.x, data.y, data.unc, [0.1, 0.1], plotx=false)
+const fit1 = fit_data(model, data.x, data.y, [0.1, 0.1], plotx=false)
 @show fit1.uncs
 
 const prefix = joinpath(@__DIR__, "imgs", "rabi_scaling")
@@ -133,7 +133,7 @@ for i in 1:length(powers_plot)
     power = powers_plot[i]
     pd = get_plot_data_power(data, fit1, model, power)
     plot(pd.plotx .+ 288000, pd.ploty, "C$(i - 1)", label="$(power) mW")
-    errorbar(pd.x .+ 288000, pd.y, pd.unc, fmt="C$(i - 1).")
+    errorbar(pd.x .+ 288000, pd.y, pd.unc, fmt="C$(i - 1)o")
 end
 xticks([288500, 288530, 288560, 288590, 288620])
 # p: offset, strength
