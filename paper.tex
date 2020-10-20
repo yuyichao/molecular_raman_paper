@@ -250,8 +250,8 @@ Therefore, using an initial $\ket{\uparrow_{\text{Na}} \downarrow_{\text{Cs}}}$ 
 \textcolor{blue}{(clean up the paragraph some more).} %(We might want to mention that those ratios are for 80 kHz spherical trap if we want to give more details about the coupled channel calculation anywhere...)
 
 % In additional to the final and the excited state, it is also important to select the an initial atomic state in order to improve the coupling.
-\begin{figure*}[ht!]
-  \includegraphics[height=4.5cm]{fig2.pdf}
+\begin{figure}[ht!]
+  \includegraphics[width=0.45\textwidth]{fig2.pdf}
   \caption{
     (A) Geometry and polarization of trap and Raman beam relative to the bias magnetic field.
     The tweezer and Raman beam is focused through an objective to define the location of the
@@ -264,14 +264,10 @@ Therefore, using an initial $\ket{\uparrow_{\text{Na}} \downarrow_{\text{Cs}}}$ 
     the down leg power ramped up over $10\mu s$ while maintaining the total power of the tweezer.
     This minimizes the heating on the atoms due to power fluctuation while maximizes the time
     with maximum Raman Rabi frequency when the up and down leg powers are equal.
-    (C) Raman resonance from atomic state $Na(2,2)\ Cs(3,3)$ to the first molecular bound state
-    using a $0.12\mathrm{ms}$ pulse.
-    The full width half maximum (FWHM) of $7.56(82) \mathrm{kHz}$ of the resonance
-    is consistent with the FWHM for a coherent $0.12\mathrm{ms}$ $\pi$ pulse $6.7 \mathrm{kHz}$.
-    (D) Raman pulse time scan on resonance. A decaying Rabi oscillation can be observed
+    (C) Raman pulse time scan on resonance. A decaying Rabi oscillation can be observed
     proving the coherence of the Raman transfer process.
     \label{f-raman}}
-\end{figure*}
+\end{figure}
 
 
 
@@ -322,13 +318,25 @@ Furthermore, we use a Bragg grating with a linewidth (FWHM) of $50 ~\mathrm{GHz}
 
 %% Experiment condition/resonance
 
-Guided by coupled channel calculations, we locate the Raman resonance for the atom to molecule transition at $770.59430(17) ~\mathrm{MHz}$ (Fig.~\ref{f-raman}C) with a $15 ~\mathrm{mW}$ tweezer at $288560 ~\mathrm{GHz}$ which corresponds to a $145 ~\mathrm{GHz}$ single photon detuning.
+Guided by coupled channel calculations,
+we locate the Raman resonance for the atom to molecule transition at
+$770.59430(17) ~\mathrm{MHz}$ (Fig.~\ref{f-lifetime}A)
+with a $15 ~\mathrm{mW}$ tweezer at $288560 ~\mathrm{GHz}$
+which corresponds to a $145 ~\mathrm{GHz}$ single photon detuning.
 % (We can maybe add information about the prediction here?)
 %% Prediction
 % This excited state used in the Raman transition was measured in our previous experiment using photoassociation to be at $288560 GHz$ from our atomic state. The ground molecular state has not been observed previously in experimentally. Based on our measurement of FB resonance, interaction shift and the binding energy of the 4422 bound state. Theory prediction was at $770.1 MHz$. \todo{more, mention/cite Jeremy}
 % The background level of $31\%$ corresponds to the probability of preparing the two atoms in the relative motional ground state.
 % When the atoms are transferred into the molecule state by the Raman transition, there is a decrease in the two body survival since the resulting molecule is dark to our imaging sequence. % directly detected by our imaging step.
-The molecular state is dark to the imaging step, so successful transfer of the atoms to the molecular state will be detected as loss of atoms in the post experiment image when compared to the initial image. We observed the narrowest linewidth of $7.56(82) \mathrm{kHz}$ for the Raman resonance at a pulse time of $0.12 \mathrm{ms}$, which corresponds to a linewidth-pulsetime product of $0.907(98)$. This is consistent with the expected value of $0.80$ for an ideal $\pi$ pulse which is evidence of a coherent transfer. In order to verify the coherence of the transfer directly, we fix the two photon detuning on resonance and scan the pulse time. Fig.~\ref{f-raman}D shows the observed Rabi oscillation between the atomic and molecular states. Fitting the data with a decaying Rabi oscillation suggests that $69\%$ of initial ground state atoms are transferred into the molecular state.
+The molecular state is dark to the imaging step,
+so successful transfer of the atoms to the molecular state will be detected as loss of atoms
+in the post experiment image when compared to the initial image.
+We observed a Fourier limited linewidth which is evidence of a coherent transfer.
+In order to verify the coherence of the transfer directly,
+we fix the two photon detuning on resonance and scan the pulse time.
+Fig.~\ref{f-raman}C shows the observed Rabi oscillation between the atomic and molecular states.
+Fitting the data with a decaying Rabi oscillation suggests that
+$69\%$ of initial ground state atoms are transferred into the molecular state.
 
 In order to understand the fidelity of molecule formation, we fit our measurements to a model that includes a Raman Rabi frequency and a finite lifetime for the molecular state (Fig.~\ref{f-lifetime}A). We account for the effect of atomic state loss by measuring the single and two body lifetime of the atoms directly (Fig.~\ref{f-lifetime}B) without turning on the second frequency. The fit shows that we have a Raman Rabi frequency of $2\pi\times3.282(42) ~\mathrm{kHz}$. The molecule we form has a lifetime of $0.204(13) ~\mathrm{ms}$ which is the main limitation on the fidelity of the transfer. The molecule lifetime can be measured directly by preparing the molecule with a $\pi $ pulse and then using a second $\pi $ pulse to dissociate the molecule back to atoms after a variable wait time (Fig.~\ref{f-lifetime}C). The result shows a molecular lifetime consistent with our fitting of the decaying Rabi oscillation.
 
