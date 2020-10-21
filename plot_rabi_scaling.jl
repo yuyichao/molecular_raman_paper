@@ -143,7 +143,7 @@ xticks([288500, 288530, 288560, 288590, 288620])
 legend(loc="upper center", fontsize="small")
 grid()
 xlabel("Tweezer Frequency (GHz)")
-ylabel("\$\\Omega_{Raman} (2\\pi\\cdot \\mathrm{kHz})\$")
+ylabel("\$\\Omega_{R} (2\\pi\\cdot \\mathrm{kHz})\$")
 NaCsPlot.maybe_save("$(prefix)")
 
 NaCsPlot.maybe_show()
