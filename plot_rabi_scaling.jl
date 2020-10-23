@@ -142,7 +142,7 @@ end
 #               "\$b=$(fit1.uncs[2])\$ kHz\$\\cdot\$GHz/mW\$^{1.29}\$"), fontsize="small")
 legend(loc=(0.74, 0.31), fontsize="small", handlelength=0.6, handletextpad=0.3)
 grid()
-xlabel("Tweezer Frequency (GHz)")
+xlabel("Detuning (GHz)")
 ylabel("\$\\Omega_{R} (2\\pi\\cdot \\mathrm{kHz})\$")
 NaCsPlot.maybe_save("$(prefix)")
 
