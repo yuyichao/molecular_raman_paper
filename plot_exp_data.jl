@@ -15,7 +15,7 @@ using DataStructures
 using LsqFit
 
 const inames = ["nacs_202010/data/data_20201001_203322.mat",
-                "nacs_202010/data/data_20201002_203848.mat",
+                "nacs_202010/data/data_20201006_190214.mat",
                 "nacs_202010/data/data_20201002_085901.mat",
                 "nacs_202010/data/data_20201003_102015.mat"]
 const datas = [NaCsData.load_striped_mat(joinpath(@__DIR__, "../../experiments/", iname)) for iname in inames]
@@ -92,14 +92,14 @@ end
 
 function get_model_param(p, idx)
     f0, Ω, Γ1, Γ2, Γ_na, Γ_cs, p0r = p
-    p1 = p[9 + idx]
+    p1 = p[8 + idx]
     p0 = p1 * p0r
     return (p0, p1, f0, Ω, Γ1 + Γ_na + Γ_cs, Γ2)
 end
 
 function gen_pa_param(p, typ, pidx)
     f0, Ω, Γ1, Γ2, Γ_na, Γ_cs, p0r = p
-    p1 = p[9 + pidx]
+    p1 = p[8 + pidx]
     if typ == 1
         return (p1, Γ_na)
     elseif typ == 2
@@ -112,9 +112,9 @@ function gen_pa_param(p, typ, pidx)
 end
 
 function gen_ramsey_param(p, pidx)
-    f0, Ω, Γ1, Γ2, Γ_na, Γ_cs, p0r, p0rm, df = p
-    p1 = p[9 + pidx]
-    return (p1, Γ2, p0rm * p1, f0 - 570.4 + df)
+    f0, Ω, Γ1, Γ2, Γ_na, Γ_cs, p0r, p0rm = p
+    p1 = p[8 + pidx]
+    return (p1, Γ2, p0rm * p1, 0)
 end
 
 function model(xs, p)
@@ -135,9 +135,9 @@ function model(xs, p)
     return wrapper.(xs)
 end
 
-fit = fit_survival(model, data_fit, [570.4, 2π * 1.5, 0, 2π / 0.2, 0, 0, 0.1, 0.2, 0,
+fit = fit_survival(model, data_fit, [570.4, 2π * 1.5, 0, 2π / 0.2, 0, 0, 0.1, 0.2,
                                      0.3, 0.3, 0.8, 0.3, 0.3, 0.3, 0.15],
-                   plotx=false, lower=[-Inf; zeros(15)])
+                   plotx=false, lower=[-Inf; zeros(14)])
 @show fit.uncs
 const param_1 = get_model_param(fit.param, 1)
 const uncs_1 = get_model_param(fit.uncs, 1)
