@@ -181,8 +181,25 @@ plot(plot_freq .- param_1[3], model_2d.(0.25, plot_freq, (param_1,)) .* scale_1,
 legend(fontsize="x-small", loc="lower right")
 grid()
 xlabel("Detuning from resonance (kHz)")
-ylabel("% Atomic Ground State")
+ylabel("Fraction of Atomic Ground State")
 NaCsPlot.maybe_save("$(prefix)_norm_raman_det")
+
+figure(figsize=[3.6, 3.0])
+bg = matplotlib.patches.Rectangle((-13, 0.08), 24, 0.98, facecolor="white", alpha=0.9)
+gca().add_patch(bg)
+NaCsPlot.plot_survival_data(data_nacs_12′, scale_1, fmt="C1o", label="0.12 ms")
+plot(plot_freq .- param_1[3], model_2d.(0.12, plot_freq, (param_1,)) .* scale_1, "C1")
+NaCsPlot.plot_survival_data(data_nacs_25′, scale_1, fmt="C2o", label="0.25 ms")
+plot(plot_freq .- param_1[3], model_2d.(0.25, plot_freq, (param_1,)) .* scale_1, "C2")
+xticks([-10, 0, 10])
+yticks([0.2, 0.6, 1.0])
+xlim([-13, 11])
+ylim([0.08, 1.06])
+# legend(fontsize="x-small", loc="lower right")
+grid()
+# xlabel("Detuning from resonance (kHz)")
+# ylabel("Fraction of Atomic Ground State")
+NaCsPlot.maybe_save("$(prefix)_norm_raman_det_inset")
 
 function model_lorentzian(x, p)
     p[1] .- p[2] ./ (1 .+ ((x .- p[3]) ./ (p[4] / 2)).^2)
@@ -230,7 +247,7 @@ function plot_lorentz_norm()
          color="C0", fontsize="small")
     grid()
     xlabel("Detuning from resonance (kHz)")
-    ylabel("% Atomic Ground State")
+    ylabel("Fraction of Atomic Ground State")
 end
 
 figure()
@@ -257,7 +274,7 @@ xlim([0, 0.8])
 ylim([0, ylim()[2]])
 legend(fontsize="x-small", loc="upper right")
 annotate("Atom", (0.01, 0.27), xytext=(0.13, 0.26), arrowprops=Dict(:color=>"C3"), color="C3")
-annotate("Molecule", (0.155, 0.030),
+annotate("Molecule", (0.155, 0.047),
          xytext=(0.097, 0.155), arrowprops=Dict(:color=>"C3"), color="C3")
 annotate("Atom", (0.295, 0.140),
          xytext=(0.42, 0.16), arrowprops=Dict(:color=>"C3"), color="C3")
@@ -270,17 +287,18 @@ figure(figsize=[7.2, 5.4])
 NaCsPlot.plot_survival_data(data_nacs_t, scale_2,
                             fmt="C0o", label="770.5704 MHz")
 plot(plot_time, model_2d.(plot_time, 570.4, (param_2,)) .* scale_2, "C0")
-xlim([0, 0.8])
-ylim([0, ylim()[2]])
-legend(fontsize="x-small", loc="upper right")
-annotate("Atom", (0.01, 1), xytext=(0.13, 0.96), arrowprops=Dict(:color=>"C3"), color="C3")
-annotate("Molecule", (0.155, 0.111),
-         xytext=(0.097, 0.573), arrowprops=Dict(:color=>"C3"), color="C3")
-annotate("Atom", (0.295, 0.517),
-         xytext=(0.42, 0.591), arrowprops=Dict(:color=>"C3"), color="C3")
+xlim([0, 0.86])
+ylim([0.04, 1.08])
+# legend(fontsize="x-small", loc="upper right")
+annotate("Atom", (0.023, 1), xytext=(0.17, 0.88), arrowprops=Dict(:color=>"C3"), color="C3")
+annotate("Molecule", (0.155, 0.175),
+         xytext=(0.07, 0.573), arrowprops=Dict(:color=>"C3"), color="C3")
+annotate("", (0.295, 0.54),
+         xytext=(0.28, 0.86), arrowprops=Dict(:color=>"C3"), color="C3")
 grid()
+yticks([0.2, 0.6, 1.0])
 xlabel("Raman time (ms)")
-ylabel("% Atomic Ground State")
+ylabel("Fraction of Atomic Ground State")
 NaCsPlot.maybe_save("$(prefix)_norm_t")
 
 figure()
