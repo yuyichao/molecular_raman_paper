@@ -169,12 +169,12 @@ const plot_freqs = get_plot_range(data.freqs)
 for i in 1:length(powers_plot)
     power = powers_plot[i]
     plot1 = get_plot_data_power(data, fit1, model1, power)
-    errorbar(plot1.x .+ 288000, (plot1.y .- fit1.param[1]) .* 1000,
-             plot1.unc .* 1000, fmt="C$(i - 1)o")
-    plot(plot1.plotx .+ 288000, (plot1.ploty .- fit1.param[1]) .* 1000,
-         "C$(i - 1)", label="$(power) mW")
+    errorbar(plot1.x .- 703.6, (plot1.y .- fit1.param[1]) .* 1000,
+             plot1.unc .* 1000, fmt="C$(i - 1)o", label="$(power) mW")
+    plot(plot1.plotx .- 703.6, (plot1.ploty .- fit1.param[1]) .* 1000,
+         "C$(i - 1)")
 end
-xticks([288500, 288530, 288560, 288590, 288620])
+# xticks([288500, 288530, 288560, 288590, 288620])
 # p: framan0, fpa0, offset, strength, bs...
 # text(560, 1700, ("\$f_{Raman0} + a\\cdot P\$\n" *
 #                  "  \$-\\dfrac{b}{f-f_{PA0}}\\cdot P\$"))
@@ -182,9 +182,9 @@ xticks([288500, 288530, 288560, 288590, 288620])
 #                 "\$f_{PA0}=$(fit1.uncs[2] + 288000)\$ GHz\n" *
 #                 "\$a=$(fit1.uncs[3] * 1000)\$ kHz/mW\n" *
 #                 "\$b=$(fit1.uncs[4])\$ MHz\$\\cdot\$GHz/mW"), fontsize="small")
-legend(loc="upper center", fontsize="small")
+legend(loc=(0.74, 0.38), fontsize="small", handlelength=0.6, handletextpad=0.3)
 grid()
-xlabel("Tweezer Frequency (GHz)")
+xlabel("Detuning (GHz)")
 ylabel("Light Shift (kHz)")
 NaCsPlot.maybe_save("$(prefix)_fs")
 

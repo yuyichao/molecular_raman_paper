@@ -132,15 +132,15 @@ const powers_plot = [15, 6, 3]
 for i in 1:length(powers_plot)
     power = powers_plot[i]
     pd = get_plot_data_power(data, fit1, model, power)
-    plot(pd.plotx .+ 288000, pd.ploty, "C$(i - 1)", label="$(power) mW")
-    errorbar(pd.x .+ 288000, pd.y, pd.unc, fmt="C$(i - 1)o")
+    plot(pd.plotx .- 703.6, pd.ploty, "C$(i - 1)")
+    errorbar(pd.x .- 703.6, pd.y, pd.unc, fmt="C$(i - 1)o", label="$(power) mW")
 end
-xticks([288500, 288530, 288560, 288590, 288620])
+# xticks([288500, 288530, 288560, 288590, 288620])
 # p: offset, strength
 # text(500, 5.0, ("\$\\left(a-\\dfrac{b}{f-705 GHz}\\right)\\cdot P^{1.29}\$"))
 # text(500, 2.8, ("\$a=$(fit1.uncs[1] * 1000)\$ Hz/mW\$^{1.29}\$\n" *
 #               "\$b=$(fit1.uncs[2])\$ kHz\$\\cdot\$GHz/mW\$^{1.29}\$"), fontsize="small")
-legend(loc="upper center", fontsize="small")
+legend(loc=(0.74, 0.31), fontsize="small", handlelength=0.6, handletextpad=0.3)
 grid()
 xlabel("Tweezer Frequency (GHz)")
 ylabel("\$\\Omega_{R} (2\\pi\\cdot \\mathrm{kHz})\$")
