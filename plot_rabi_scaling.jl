@@ -76,29 +76,29 @@ end
 #     return fit_data(model, data.x, data.y, data.unc, p0, plotx=false)
 # end
 
-# function get_plot_data_freq(data, fit, model, freq)
-#     local freq_id
-#     xs = Float64[]
-#     ys = Float64[]
-#     uncs = Float64[]
-#     for i in 1:length(data.x)
-#         x = data.x[i]
-#         x[1] == freq || continue
-#         if !@isdefined(freq_id)
-#             freq_id = x[3]
-#         else
-#             @assert(freq_id == x[3])
-#         end
-#         push!(xs, x[2])
-#         push!(ys, data.y[i])
-#         push!(uncs, data.unc[i])
-#     end
-#     function plot_func(x)
-#         return model((freq, x, freq_id), fit.param)
-#     end
-#     plotx = get_plot_range(xs)
-#     return (x=xs, y=ys, unc=uncs, plotx=plotx, ploty=plot_func.(plotx))
-# end
+function get_plot_data_freq(data, fit, model, freq)
+    local freq_id
+    xs = Float64[]
+    ys = Float64[]
+    uncs = Float64[]
+    for i in 1:length(data.x)
+        x = data.x[i]
+        x[1] == freq || continue
+        if !@isdefined(freq_id)
+            freq_id = x[3]
+        else
+            @assert(freq_id == x[3])
+        end
+        push!(xs, x[2])
+        push!(ys, data.y[i])
+        push!(uncs, data.unc[i])
+    end
+    function plot_func(x)
+        return model((freq, x, freq_id), fit.param)
+    end
+    plotx = get_plot_range(xs)
+    return (x=xs, y=ys, unc=uncs, plotx=plotx, ploty=plot_func.(plotx))
+end
 
 function get_plot_data_power(data, fit, model, power)
     xs = Float64[]
@@ -126,7 +126,7 @@ const fit1 = fit_data(model, data.x, data.y, [0.1, 0.1], plotx=false)
 
 const prefix = joinpath(@__DIR__, "imgs", "rabi_scaling")
 
-figure()
+figure(figsize=[7.2, 5.4])
 const powers_plot = [15, 6, 3]
 # const plot_freqs = get_plot_range(data.freqs)
 for i in 1:length(powers_plot)
@@ -140,10 +140,38 @@ end
 # text(500, 5.0, ("\$\\left(a-\\dfrac{b}{f-705 GHz}\\right)\\cdot P^{1.29}\$"))
 # text(500, 2.8, ("\$a=$(fit1.uncs[1] * 1000)\$ Hz/mW\$^{1.29}\$\n" *
 #               "\$b=$(fit1.uncs[2])\$ kHz\$\\cdot\$GHz/mW\$^{1.29}\$"), fontsize="small")
-legend(loc=(0.74, 0.31), fontsize="small", handlelength=0.6, handletextpad=0.3)
+legend(loc=(0.74, 0.32), fontsize="small", handlelength=0.6, handletextpad=0.3)
 grid()
+yticks([0, 4, 8])
+xticks([-200, -160, -120, -80])
+ylim([0, 9.7])
 xlabel("Detuning (GHz)")
 ylabel("\$\\Omega_{R} (2\\pi\\cdot \\mathrm{kHz})\$")
 NaCsPlot.maybe_save("$(prefix)")
+
+figure(figsize=[3.6, 3.0])
+freq = 560
+plot2 = get_plot_data_freq(data, fit1, model, freq)
+bg = matplotlib.patches.Rectangle((2.8, 0.42), 10.2, 3.78, facecolor="white", alpha=0.9)
+gca().add_patch(bg)
+bg = matplotlib.patches.Rectangle((13, 0.6), 4, 3.6, facecolor="white", alpha=0.9)
+gca().add_patch(bg)
+# errorbar(plot2.x, plot2.y, plot2.unc, fmt="C0o")
+errorbar(plot2.x[1], plot2.y[1], plot2.unc[1], fmt="C0o")
+errorbar(plot2.x[2], plot2.y[2], plot2.unc[2], fmt="C1o")
+errorbar(plot2.x[3], plot2.y[3], plot2.unc[3], fmt="C2o")
+plot(plot2.plotx, plot2.ploty, "k")
+xscale("log")
+yscale("log")
+minorticks_off()
+xticks([])
+yticks([1, 4], ["1", "4"])
+xlim([2.8, 17])
+ylim([0.42, 4.2])
+ax = gca()
+ax.spines["top"].set_visible(false)
+ax.spines["bottom"].set_visible(false)
+ax.spines["right"].set_visible(false)
+NaCsPlot.maybe_save("$(prefix)_560")
 
 NaCsPlot.maybe_show()

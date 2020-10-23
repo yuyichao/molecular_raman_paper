@@ -163,9 +163,9 @@ const nploty = ceil(Int, nfreq / nplotx)
 function plot_freq_func(model, fit, power, x)
     return model((x, power, 0), fit.param)
 end
-figure()
+
+figure(figsize=[7.2, 5.4])
 const powers_plot = [15, 6, 3]
-const plot_freqs = get_plot_range(data.freqs)
 for i in 1:length(powers_plot)
     power = powers_plot[i]
     plot1 = get_plot_data_power(data, fit1, model1, power)
@@ -182,10 +182,36 @@ end
 #                 "\$f_{PA0}=$(fit1.uncs[2] + 288000)\$ GHz\n" *
 #                 "\$a=$(fit1.uncs[3] * 1000)\$ kHz/mW\n" *
 #                 "\$b=$(fit1.uncs[4])\$ MHz\$\\cdot\$GHz/mW"), fontsize="small")
-legend(loc=(0.74, 0.38), fontsize="small", handlelength=0.6, handletextpad=0.3)
+legend(loc=(0.74, 0.385), fontsize="small", handlelength=0.6, handletextpad=0.3)
 grid()
+xticks([-225, -175, -125, -75])
+yticks([200, 400, 600])
 xlabel("Detuning (GHz)")
 ylabel("Light Shift (kHz)")
 NaCsPlot.maybe_save("$(prefix)_fs")
+
+figure(figsize=[3.6, 3.0])
+freq = 560
+plot2 = get_plot_data_freq(data, fit1, model1, freq)
+bg = matplotlib.patches.Rectangle((2.5, 70), 4.0, 370, facecolor="white", alpha=0.9)
+gca().add_patch(bg)
+bg = matplotlib.patches.Rectangle((6.5, 160), 10.5, 280, facecolor="white", alpha=0.9)
+gca().add_patch(bg)
+errorbar(plot2.x[1], (plot2.y[1] .- fit1.param[1]) .* 1000, plot2.unc[1] .* 1000, fmt="C0o")
+errorbar(plot2.x[2], (plot2.y[2] .- fit1.param[1]) .* 1000, plot2.unc[2] .* 1000, fmt="C1o")
+errorbar(plot2.x[3], (plot2.y[3] .- fit1.param[1]) .* 1000, plot2.unc[3] .* 1000, fmt="C2o")
+plot(plot2.plotx, (plot2.ploty .- fit1.param[1]) .* 1000, "k")
+xscale("log")
+yscale("log")
+minorticks_off()
+xticks([])
+yticks([100, 400], ["100", "400"])
+xlim([2.5, 17])
+ylim([70, 440])
+ax = gca()
+ax.spines["top"].set_visible(false)
+ax.spines["bottom"].set_visible(false)
+ax.spines["right"].set_visible(false)
+NaCsPlot.maybe_save("$(prefix)_560")
 
 NaCsPlot.maybe_show()
