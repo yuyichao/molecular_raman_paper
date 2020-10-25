@@ -281,11 +281,11 @@ Therefore, using an initial $\ket{\uparrow_{\text{Na}} \downarrow_{\text{Cs}}}$ 
 
 
 %% Preparation
-Experimentally, we first prepare two atoms in a well-defined external and internal quantum state using techniques developed previously~\cite{Liu2018, Liu2019, Wang2019}. In brief, the experimental cycle begins by  loading a single ${}^{23}\mathrm{Na}$ atom and a single ${}^{133}\mathrm{Cs}$ atom stochastically into separate optical tweezers. The atoms are initially imaged to distinguish between loading of two atoms, one atom (Na or Cs), or no atom, which is compared to the image at the end of the experiment. Raman sideband cooling is then applied to cool both atoms simultaneous into the 3-dimensional motional ground state of their optical tweezers. After cooling, the Na and Cs atoms are in a spin state of $\ket{\uparrow_{\text{Na}}\uparrow_{\text{Cs}}}\equiv \ket{F=2,m_F=2}_{\text{Na}}\ket{F=4,m_F=4}_{\text{Cs}} $ %and are merged into the same tweezer~\cite{Liu2019}. %The spin states for the Na and Cs atoms after RSC and during the merge process are $\ket{\uparrow_{\text{Na}}\uparrow_{\text{Cs}}} $.
-that has a low scattering length. The small two atom interaction allows the two atoms to be merged into the same tweezer with minimum pertubation and remain in the motional ground state after the merge.
+Experimentally, we first prepare two atoms in a well-defined external and internal quantum state using techniques developed previously~\cite{Liu2018, Liu2019, Wang2019}. In brief, the experimental cycle begins by stochastically loading a single ${}^{23}\mathrm{Na}$ atom and a single ${}^{133}\mathrm{Cs}$ atom into separate optical tweezers. The atoms are initially imaged to distinguish between loading of two atoms, one atom (Na or Cs), or no atom to be able to post select the experimental result on the initial loading condition. Raman sideband cooling is then applied to cool both atoms simultaneously into the 3-dimensional motional ground state of their optical tweezers. After cooling, the Na and Cs atoms are in a spin state of $\ket{\uparrow_{\text{Na}}\uparrow_{\text{Cs}}}\equiv \ket{F=2,m_F=2}_{\text{Na}}\ket{F=4,m_F=4}_{\text{Cs}} $ %and are merged into the same tweezer~\cite{Liu2019}. %The spin states for the Na and Cs atoms after RSC and during the merge process are $\ket{\uparrow_{\text{Na}}\uparrow_{\text{Cs}}} $.
+which has a low scattering length. The small two atom interaction allows the two atoms to be merged into the same tweezer with minimum pertubation and remain in the motional ground state after the merge.
 
 % After preparing the Na and Cs atoms in the same tweezer in a single quantum state,
-Next, we  drive the atoms into the large scattering length $\ket{\uparrow_{\text{Na}} \downarrow_{\text{Cs}}}$ hyperfine combination as the initial atomic state of Raman transfer by performing a Cs spin flip while taking into account the $-30.7 kHz$ interaction shift~\cite{Hood2019}.  %using a Cs Raman transition to drive the Cs atom into the $\ket{\downarrow_{\text{Cs}}}$ state. The new spin state combination has a larger scattering length of $-693.8 a_0$ which generates a interaction shift of $-30.7 kHz$ in the tweezer.
+Next, we  drive the atoms into the large scattering length $\ket{\uparrow_{\text{Na}} \downarrow_{\text{Cs}}}$ hyperfine combination to use as the initial atomic state of Raman transfer by performing a Cs spin flip while taking into account the $-30.7 kHz$ interaction shift~\cite{Hood2019}.  %using a Cs Raman transition to drive the Cs atom into the $\ket{\downarrow_{\text{Cs}}}$ state. The new spin state combination has a larger scattering length of $-693.8 a_0$ which generates a interaction shift of $-30.7 kHz$ in the tweezer.
 This spin flip selectively transfers atoms in the relative motion ground state \footnote{This interaction shift is larger than the differential axial trapping frequency between Na and Cs atoms, which decouples the relative and center of mass motional state and improves the robustness of our preparation of the relative motion ground state.}, and for the experiment reported here, this is 31\% of the initial population of two atoms loaded in separate optical tweezers.
 % The stronger interaction in this spin state also enhances the atomic wavefunction at short range and increases its overlap with the intermediate molecular state used for our Raman transfer..
 
@@ -326,23 +326,21 @@ Furthermore, we use a Bragg grating with a linewidth (FWHM) of $50 ~\mathrm{GHz}
 
 %% Experiment condition/resonance
 
-Guided by coupled channel calculations,
+We choose the tweezer frequency to be far detuned ($145 ~\mathrm{GHz}$) from the $v' = 0$ line, and guided by coupled channel calculations,
 we locate the Raman resonance for the atom to molecule transition at
 $770.571504(85) ~\mathrm{MHz}$ (Fig.~\ref{f-raman}C inset)
-with a $15 ~\mathrm{mW}$ tweezer at $288560 ~\mathrm{GHz}$
-which corresponds to a $145 ~\mathrm{GHz}$ single photon detuning.
+with $15 ~\mathrm{mW}$ tweezer power. 
 % (We can maybe add information about the prediction here?)
 %% Prediction
 % This excited state used in the Raman transition was measured in our previous experiment using photoassociation to be at $288560 GHz$ from our atomic state. The ground molecular state has not been observed previously in experimentally. Based on our measurement of FB resonance, interaction shift and the binding energy of the 4422 bound state. Theory prediction was at $770.1 MHz$. \todo{more, mention/cite Jeremy}
 % The background level of $31\%$ corresponds to the probability of preparing the two atoms in the relative motional ground state.
 % When the atoms are transferred into the molecule state by the Raman transition, there is a decrease in the two body survival since the resulting molecule is dark to our imaging sequence. % directly detected by our imaging step.
 The molecular state is dark to the imaging step,
-so successful transfer of the atoms to the molecular state will be detected as loss of atoms
-in the post experiment image when compared to the initial image.
+so successful transfer of the atoms to the molecular state will be detected as loss.
 We observed a Fourier limited linewidth which is evidence of a coherent transfer.
 In order to verify the coherence of the transfer directly,
 we fix the two photon detuning on resonance and scan the pulse time.
-Fig.~\ref{f-raman}C shows the observed Rabi oscillation between the atomic and molecular states.
+Fig.~\ref{f-raman}C shows the observed coherent Rabi oscillation between the atomic and molecular states.
 Fitting the data with a decaying Rabi oscillation suggests that
 $69\%$ of initial ground state atoms are transferred into the molecular state.
 This transfer efficiency is mainly limited by the molecular lifetime
@@ -354,13 +352,12 @@ consistent with the decay of Rabi oscillation.
 We obtain the Raman Rabi frequency by fitting our measurements to a model
 that includes a Raman Rabi frequency and
 a finite lifetime for the molecular state (Fig.~\ref{f-raman}C and inset).
-We account for the effect of atomic state loss by measuring the single and
+We account for the effect of atomic state loss by measuring the one and
 two body lifetime of the atoms directly (Fig.~\ref{f-lifetime}B)
 without turning on the second frequency.
 The fit shows that we have a Raman Rabi frequency of $2\pi\times3.282(42) ~\mathrm{kHz}$.
 
-The ratio of the molecule scattering rate to the Rabi frequency is larger than
-the theory prediction by more than a factor of $10$.
+The efficiency of the transfer is worse than expected from theory and arises from the ratio of the molecule scattering rate to the Rabi frequency being 10 times larger than predicted.
 Based on the discussion above, if this discrepancy arises from the $v'=0$ excited state,
 it can be either due to a high ratio of $\Omega_m / \Omega_a$ or a large $\Gamma_e$.
 Additionally, coupling to other excited states can also add an offset to
@@ -383,7 +380,7 @@ and a constant background in the experimentally explored region.
 The background is caused by coupling to other excited states that are further away in energy.
 The $1/\Delta$ component, however, is due to the coupling between the molecular state
 and the $v'=0$ intermediate state.
-From this measurement, we can calculate a $\Omega_m$ of
+From this measurement, we can extract a $\Omega_m$ of
 $2\pi\times36.162(20) ~\mathrm{MHz}/\sqrt{\mathrm{mW}}$ or
 $2\pi\times140.056(78) ~\mathrm{MHz}$ for the $15 ~\mathrm{mW}$ tweezer power used above.
 This number is consistent with the value of
@@ -432,8 +429,7 @@ This gives a Rabi frequency, and therefore matrix element, ratio of $11.59(26)$,
 which is in fact better than the theory prediction of $23.7$
 and should not cause the ratio of the Raman Rabi frequency to scattering rate
 from the $v'=0$ state to be higher than expected.
-Furthermore, based on measurements of the excited state using photoassociation (PA) spectroscopy,
-the natural linewidth of the $v'=0$ excited state is no larger than $20 \mathrm{MHz}$.
+Furthermore, we measure the natural linewidth of the $v'=0$ excited state to be no larger than $20 \mathrm{MHz}$ using photoassociation (PA) spectroscopy.
 This suggests that the excited state linewidth should not cause
 a stronger than expected scattering from $v'=0$ state either.
 
