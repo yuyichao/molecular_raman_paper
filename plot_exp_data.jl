@@ -370,7 +370,7 @@ plot(plot_m_time, model_ramsey(plot_m_time, param_ramsey) .* scale_ramsey, "C0-"
 xlim([0, 0.9])
 grid()
 xlabel("Molecule Hold Time (ms)")
-ylabel("Molecule survival")
+ylabel("Molecule Survival")
 NaCsPlot.maybe_save("$(prefix)_norm_m_t")
 
 const img_freq = param_1[3] .+ linspace(-20, 20, 201)
