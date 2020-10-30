@@ -135,28 +135,6 @@ So far, most molecular association has been achieved for bialkali molecules by m
 
 
 Here, we demonstrate coherent association of an atom pair to a weakly-bound molecule using a two-photon optical Raman transfer via an electronic excited state, schematically shown in Fig.~\ref{f-theory}a. The scheme does not rely on a Feshbach resonance, few MHz level bound states, or a narrow excited state. The resulting single molecule is in a well-defined internal quantum state and predominately in its motional ground state. A vibrational state of the electronic excited state $c^3\Sigma^+(\Omega = 1)$ is used as the intermediate state in the Raman scheme, and is chosen to minimize the theoretical photon scattering during a Raman Rabi oscillation. To further reduce the photon scattering and sensitivity to laser intensity noise, we choose the initial and final state to balance the two Rabi frequencies as much as possible. This system-independent approach can be used for creating new molecules atom-by-atom with full quantum state control.
-% and could therefore be applied to creating other molecular species or larger molecules atom-by-atom with full quantum state control.
-% (also this result represents full quantum-state control of single [neutral] molecules, the second time ever (first being our NaCs Feshbach molecules))
-
-% This approach minimizes the reliance on system specific properties and can therefore be more generally applied to creating other molecules.
-% electronic the best initial hyperfine combination of the atoms to use and best single photon frequency that balances coupling/transfer efficiency and photon scattering. Using these parameters, we demonstrate coherent association of a electronic ground-state molecule from two atoms via an optical Raman transition in an optical tweezer.
-
-
-
-
-% Production of ultracold molecules in optical tweezers is challenging due to their internal degrees of freedom including rotation and vibration. In certain molecular species with relatively closed cycling transitions, direct laser cooling remains a viable option. However, for many species, including NaCs, the vibrational branching ratios are unfavorable, making direct laser cooling challenging. In these systems, a bottom-up approach of assembling the molecule from its constituent atoms has been demonstrated both in bulk gas and in optical tweezers. The challenge in a bottom-up approach is the vastly different length scales between the free atoms and a ground state molecule, leading to small coupling between them. For atoms in the motional ground state in the tweezer, the average distance between the two atoms is about $1000a_0$. However, for the ground rovibrational molecule, the bond length is only around $4a_0$. Because of this, it is necessary to use an intermediate state with a size in between the initial and final states, and accomplish the transfer in two steps in order to increase the coupling.
-
-% The traditional choice for such an intermediate state is a weakly-bound Feshbach molecule, which can be coherently produced by ramping a magnetic field across the Feshbach resonance. However, this requires a suitable Feshbach resonance, which limits the generality of this technique. An alternative approach uses a weakly-bound ground electronic molecular state as the intermediate state (I'm wondering how we can distinguish this weakly-bound molecular state from the weakly-bound Feshbach molecule state, we can maybe specify typcial binding energies? "most weakly-bound state of the low field ground state electronic potential" maybe?), populated by an optical Raman transition, schematically shown in figure. In this scheme, a pair of Raman beams is used to drive the unbound, but confined, atoms to a bound molecular state via an excited molecular state. This approach minimizes the reliance on system specific properties and can therefore be more generally applied to creating other molecules. Such a transfer using an optical transition has been observed in previous experiments. However, they either require the use of a narrow optical transition which limits the generality or were driving the transition incoherently due to scattering.
-
-% the requirement of a suitable FB resonance limits its generality.
-
-% The size mismatch between the initial and final states cause a very small coupling between them,
-% which poses the biggest challenge for for coherent creation of the molecule.
-
-
-
-
-% Because the electronic excited state we used are generic in most diatomic molecules, this technique is general....
 
 
 \begin{figure*}
@@ -189,23 +167,8 @@ Here, we demonstrate coherent association of an atom pair to a weakly-bound mole
 \end{figure*}
 
 
-% In this letter, we will present our result on coherent creation of a weakly bond molecule
-% using only optical transitions on a broad optical line for the first time.
 
-
-% The optical transfer scheme we use is shown in figure. To drive the atoms from
-% We use an optical Raman transition to drive the system from the atomic initial state to a ground electronic molecular state. In order to reduce the size mismatch between the atomic and molecular states, we selected the first bound state for the 3322 spin state as our final state. For similar reason, the natural choice for the intermediate excited molecular state is one with highly excited motional level.However, from our calculation (and experiment?), the smaller level space for high vibrational state and the smaller detuning from the atomic threshold increases the scattering rate of the molecular state which causes a reduced Raman Rabi frequency to decoherence rate ratio and a lower transfer efficiency. Therefore, in our experiment, we selected the v'=0 state as the intermediate state for our Raman transition.
-
-% While optical Raman transfers of atoms to molecules utilizing an electronic excited state have been shown previously, the transfers were incoherent  where the resulting molecules were lost~\cite{Wynar2000,Rom2004}.
-% For a given excited intermediate state,
-% This can be understood by using a three level model.
-% However, we are constrained by the multi-level of molecules.
-% A key difference in molecular association via a Raman process compared to Raman transfer between hyperfine states in atoms is that the matrix elements between the ground states and the excited state are greatly unbalanced. In particular, the matrix element between the molecule state and the excited state, $ \Omega_m $ is much larger than the matrix element between the free atom state and the excited state, $ \Omega_a $. To understand the effect of this imbalance, we consider a 3 level model, and ignore the presence of multiple excited states.
-
-% The challenge of optical Raman association of molecules from atoms lies with achieving a high enough Raman Rabi frequency despite the wavefunction size mismatch between the atomic state and the excited molecular state. While pioneering experiments used weakly-bound molecular excited states in the Raman transition to increase the Raman Rabi frequency, such choice of state also increases the scattering during the transfer process to render it incoherent, resulting in molecule loss~\cite{Wynar2000,Rom2004}.
-% Therefore, finding the largest Raman Rabi frequency to scattering ratio that enables population transfer with minimal loss is the first key task.
-
-The essence of an optical Raman transfer can be illustrated using a three-level system (Fig.~\ref{f-theory}a), where the initial atomic state, and the target weakly-bound molecular state are coupled to an intermediate state by two laser frequencies with Rabi frequencies, $\Omega_a$ and $\Omega_m$, with one-photon detuning $ \Delta $, and two-photon detuning, $ \delta$.  %(Ultimately, we calculate with contribution of all vibrational states of the excited electronic potential, $c^3\Sigma^+$)
+The essence of an optical Raman transfer can be illustrated using a three-level system (Fig.~\ref{f-theory}a), where the initial atomic state, and the target weakly-bound molecular state are coupled to an intermediate state by two laser  with Rabi frequencies, $\Omega_a$ and $\Omega_m$, with one-photon detuning $ \Delta $, and two-photon detuning, $ \delta$.  %(Ultimately, we calculate with contribution of all vibrational states of the excited electronic potential, $c^3\Sigma^+$)
 The transfer Raman Rabi Rate, $\Omega_R=\Omega_a\Omega_m / 2\Delta$, is accompanied by a photon scattering rate $\Gamma_s$
 % $\Gamma_e \Omega^2 / 4\Delta^2 $, where $ \Gamma_e $ is the excited state linewidth
 ~\cite{Wineland2003}.
@@ -228,11 +191,7 @@ resulting in molecule loss \todo{be more clear with "molecule loss". I think you
 This scattering is proportional to $1/\delta_{thresh}^2$,
 where $\delta_{thresh}$ is the detuning from the dissociation threshold,
 and thus can be made smaller by using deeply bound vibrational states as the intermediate level.
-% With the multiple excited vibrational states present in a molecular potential as intermediate states, the total scattering rate and Raman Rabi rate become a sum over the scattering rates and Raman Rabi rates of the individual intermediate states. Furthermore, for a more complete calculation, we also need to account for the effects of the excited atomic continuum, which is particularly important for the target molecular state. The sum of the squares of the wavefunction overlap between the target weakly-bound molecular state and all the excited molecular intermediate states considered is only about 2\%, suggesting that there is significant matrix element between the target molecular state and the excited atomic continuum. (See SM)
 
-% For a weakly-bound molecular state, the spacing between states is generally smaller compared to deeply bound states and thus limits the maximum usable detuning and therefore the effectiveness of the scattering reduction by increasing the detuning.
-% Furthermore, due to similarity in wavefunction size, the weakly-bound molecular ground state and initial atomic state have strong coupling with the atomic excited state which contributes significantly to the total scattering rate. The rate of such a scattering process is proportional to $1/\delta_{thresh}^2$, where $\delta_{thresh}$ is the detuning from the dissociation threshold, and thus can also be made smaller by detuning away from the dissociation threshold.
-% (Should we also mention scattering of the atomic initial state too? This should affect the Raman process as well)
 
 To find the optimal intermediate state, we perform a calculation of the Raman Rabi frequency
 and scattering rate at different detunings from the atomic threshold
@@ -250,19 +209,8 @@ can be made larger for more deeply bound states compared to weakly-bound states
 at a cost of a smaller Raman Rabi frequency
 (Fig.~\ref{f-theory}b, full result in SM \todo{proper cite})
 As a result, we choose the $v'=0$ of $c^3\Sigma^+(\Omega = 1)$ as an intermediate state
-to drive the Raman transition. % (mention the trend, also v'=12 will work as similarly as v'=0)
+to drive the Raman transition. 
 
-% higher Raman Rabi frequency at the same detuning, using a weakly-bound intermediate state results in a much higher scattering rate and ultimately a smaller Rabi frequency to scattering rate ratio as compared to deeply bound states. As a result, we use a deeply bound molecular excited state to drive the Raman transition.
-
-% (goes to SM?)
-
-% (mention scattering/lightshift depends on up/down matrix element ratio?)
-
-% In addition to the intermediate state, the choice of the initial and final states are critical for both fundamental and technical reasons.  Thus, a small $ \Omega_m/\Omega_a $ ratio is desired to be able to drive this transition coherently at smaller detunings where the Raman Rabi frequency will be larger. In addition to this fundamental reason, there is also a technical advantage for having a $ \Omega_m/\Omega_a $ ratio to be as small( KW: I think small, but open question whether we should always talk about $\Omega_m/\Omega_a$ or $ \Omega_a/\Omega_m$, KN: maybe $ \Omega_a/\Omega_m$ is better because it sounds more natural that we want to make it large? but either way.) as possible. The position of the resonance depends on the laser power predominantly through the AC Stark shift on the molecular state, $ \Omega_m^2 / 2\Delta $. The ratio of the AC Stark shift to the Raman Rabi frequency is $ \Omega_m / \Omega_a $, Thus, the laser needs to be stabilized to better than the inverse of this ratio, $ \Omega_a/\Omega_m $, to fluctuate by less than a linewidth. This becomes technically easier wh So en $ \Omega_m/\Omega_a $ is smaller.
-% (for our choice of states, this mean intensity fluctuation of less than 1\% or 0.1\%. KW: I mentioned this in next paragraph, does it still need to be mentioned here?)
-
-% \textcolor{blue}{Main point here. Small $\Omega_a/\Omega_m$ ratio can be compensated by larger detuning, but Stark shift is problematic.} \textcolor{red}{KW: I agree Stark shift limitation is definitely pretty problematic, but I would also argue that larger detuning may not be able to save the day, because of the many vibrational states in a molecular potential, the lower Raman rabi frequency which results from detuning farther and possibly running into other limitations if you have to do that, such as the background off resonant scattering rate from near threshold states or technical background scattering.} \textcolor{blue}{yes, I agree. I want to layout the structure .... motivate for the better ratio first, than talk about choosing the state.} \textcolor{red}{KW: Okay, got it. Makes sense. }
-% In addition to the intermediate state, the choice of the initial and final states is also critical.
 In addition to the intermediate state,
 choosing an initial and a final state for a large $ \Omega_a/\Omega_m $ ratio
 maximizes Raman Rabi coupling at a given detuning.
@@ -270,11 +218,7 @@ Furthermore, a larger ratio also relaxes the intensity stability requirement,
 because this is also the ratio between the Raman Rabi coupling
 and the AC Stark shift of the molecular state, $\Omega_m^2 / 2\Delta$
 \footnote{There is an additional factor of 2, with both beams at equal power,
-  to account for the Stark shift caused by both beams.}.
-% and relax the intensity stability requirement due to the AC Stark shift of the molecular state, $ \Omega_m^2 / 2\Delta $ \footnote{There is an additional factor of 2 to account for the Stark shift caused by both beams.}
-% As previously discussed, the ratio of the Raman Rabi rate to the scattering rate is proportional to the $ \Omega_a/\Omega_m $ ratio. The smaller this ratio is, the farther the laser needs to be detuned to achieve the same Raman Rabi rate to scattering rate ratio, which lowers the Raman Rabi rate. In addition to reducing how far the laser needs to be detuned from the transition, a larger $ \Omega_a/\Omega_m$ ratio also relaxes the intensity stability requirement, a key potential technical limitation. The position of the two photon resonance depends on the laser power predominantly through the AC Stark shift on the molecular state, $ \Omega_m^2 / 2\Delta $ \footnote{There is an additional factor of 2 to account for the Stark shift caused by both beams.}. The ratio of the AC Stark shift to the Raman Rabi frequency is $ \Omega_m / \Omega_a $, Thus, the laser intensity needs to be stabilized to better than the inverse of this ratio to fluctuate by less than a linewidth in a coherent process. The ratio, $ \Omega_a/\Omega_m $ can be changed through the choice of initial and final states.
-% Because of the large atom and molecule wavefunction mismatch, choosing an initial atomic state that has more amplitude at smaller internuclear distance can increase the coupling $\Omega_a$. \textcolor{blue}{(the two sentences have the same idea.)}
-% it can be made larger by increasing the coupling of the atomic state with the excited molecular state.
+  to account for the Stark shift caused by both beams.}. 
 Due to the small size of the intermediate state wavefunction as compared to the trapped atoms,
 the coupling $\Omega_a$ is approximately proportional to
 the value of the relative atomic wavefunction at short distance
@@ -283,7 +227,7 @@ To increase the amplitude within the molecular potential,
 one can increase the external confinement of atom pairs.
 Using a harmonic oscillator approximation,
 the short range amplitude is proportional to $ \omega_{\text{trap}}^{3/4} $,
-where $ \omega_{\text{trap}} $ is the trap frequency.
+where $ \omega_{\text{trap}} $ is the trap frequency\textcolor{blue}{(cite Julienne, a pra in 90s, check ref 43?)}.
 Alternatively, one can choose an atomic pair state with a large scattering length
 (positive or negative).
 For these states, the phase shift in the relative wavefunction
@@ -296,7 +240,7 @@ All other stable spin combinations give smaller scattering lengths ($<~50~a_0$).
 % We denote the possible hyperfine states of the atoms as $ \ket{\uparrow_{\Cs}} = \ket{F=4,m_F=4}_{\Cs}, \ket{\downarrow_{\Cs}} = \ket{F=3,m_F=3}_{\Cs}, \ket{\uparrow_{\Na}} = \ket{F=2,m_F=2}_{\Na}, $ and $ \ket{\downarrow_{\Na}} = \ket{F=1,m_F=1}_{\Na}$. Among the stable spin combinations, $\ket{\uparrow_{\Na}\uparrow_{\Cs}}$ and $\ket{\downarrow_{\Na}\downarrow_{\Cs}} $ both have small scattering lengths of $ 30.4a_0 $, and $ 13.7a_0 $ respectively, but the $\ket{\uparrow_{\Na} \downarrow_{\Cs}} $ combination has a large and negative scattering length of $ a(\uparrow_{\Na} \downarrow_{\Cs}) = -693.8a_0 $ (interaction shift $\approx$ binding?)~\cite{Hood2019}.
 For the target molecular state, we perform coupled-channel calculations
 to identify the Rabi frequencies $\Omega_m$ to different weakly-bound spin states.
-\text{red}{A target spin state is ideally similar to the initial spin state
+\textcolor{red}{A target spin state is ideally similar to the initial spin state
   in order to minimize sensitivity to the B-field.
   We find a target spin state predominantly in the initial spin state
   that also has the advantage of having a reduced sensitivity
@@ -350,7 +294,7 @@ which has a small scattering length. The small two atom interaction allows the m
 
 % After preparing the Na and Cs atoms in the same tweezer in a single quantum state,
 Next, we  drive the atoms into the large scattering length $\ket{\uparrow_{\Na} \downarrow_{\Cs}}$ hyperfine combination to use as the initial atomic state of Raman transfer by performing a Cs spin flip while taking into account the $-30.7 \mathrm{kHz}$ interaction shift~\cite{Hood2019}.  %using a Cs Raman transition to drive the Cs atom into the $\ket{\downarrow_{\Cs}}$ state. The new spin state combination has a larger scattering length of $-693.8 a_0$ which generates a interaction shift of $-30.7 kHz$ in the tweezer.
-This spin flip selectively transfers atoms in the relative motion ground state \text{red}{I'm a little confused. Aren't the atoms already in the motion ground state?} \footnote{This interaction shift is larger than the differential axial trapping frequency between Na and Cs atoms, which decouples the relative and center of mass motional state and improves the robustness of our preparation of the relative motion ground state.}, and for the experiment reported here, this is 31\% of the initial population of two atoms loaded in separate optical tweezers.\text{red}{I also find this part of the sentence confusing.  can you say this more concisely?}
+This spin flip selectively transfers atoms in the relative motion ground state \textcolor{red}{I'm a little confused. Aren't the atoms already in the motion ground state?} \footnote{This interaction shift is larger than the differential axial trapping frequency between Na and Cs atoms, which decouples the relative and center of mass motional state and improves the robustness of our preparation of the relative motion ground state.}, and for the experiment reported here, this is 31\% of the initial population of two atoms loaded in separate optical tweezers.\textcolor{red}{I also find this part of the sentence confusing.  can you say this more concisely?}
 % The stronger interaction in this spin state also enhances the atomic wavefunction at short range and increases its overlap with the intermediate molecular state used for our Raman transfer..
 
 %% Transfer scheme
@@ -421,7 +365,7 @@ two body lifetime of the atoms directly (Fig.~\ref{f-lifetime}b)
 without turning on the second frequency.
 The fit shows that we have a Raman Rabi frequency of $2\pi\times3.28(4) ~\mathrm{kHz}$.
 
-The efficiency of the transfer is worse than expected from theory and arises from the ratio of the molecule scattering rate to the Rabi frequency being 10 times larger than predicted.
+The efficiency of the transfer is lower than expected from theory and arises from the ratio of the molecule scattering rate to the Rabi frequency being 10 times larger than predicted.
 Based on the discussion above, if this discrepancy arises from the $v'=0$ excited state,
 it can be either due to a high ratio of $\Omega_m / \Omega_a$ or a large $\Gamma_e$.
 Additionally, coupling to other excited states can also add an offset to
