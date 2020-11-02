@@ -185,10 +185,7 @@ as well as the excited atomic continuum need to be considered.
 The total scattering rate and Raman Rabi rate become a sum of the scattering rates
 and Raman Rabi rates over all possible intermediate states.
 With these considerations, using a weakly-bound excited state as the intermeidate state
-suffers from strong scattering of the nearby excited atomic continuum rendering it incoherent,
-resulting in molecule loss
-\textcolor{red}{Jon: be more clear with "molecule loss". I think you mean:
-  resulting in large incoherence and loss to other molecular states.}\todo{}.
+suffers from strong scattering of the nearby excited atomic continuum, resulting in large incoherence and loss to other molecular states.
 This scattering is proportional to $1/\delta_{thresh}^2$,
 where $\delta_{thresh}$ is the detuning from the dissociation threshold,
 and thus can be made smaller by using deeply bound vibrational states as the intermediate level.
@@ -228,7 +225,7 @@ To increase the amplitude within the molecular potential,
 one can increase the external confinement of atom pairs.
 Using a harmonic oscillator approximation,
 the short range amplitude is proportional to $ \omega_{\text{trap}}^{3/4} $,
-where $ \omega_{\text{trap}} $ is the trap frequency\textcolor{blue}{(cite Julienne, a pra in 90s, check ref 43?)}.
+where $ \omega_{\text{trap}} $ is the trap frequency\cite{Mies2000}.
 Alternatively, one can choose an atomic pair state with a large scattering length
 (positive or negative).
 For these states, the phase shift in the relative wavefunction
@@ -240,23 +237,20 @@ $ a(\uparrow_{\Na} \downarrow_{\Cs}) = -693.8a_0$~\cite{Hood2019}.
 All other stable spin combinations give smaller scattering lengths ($<~50~a_0$).
 % We denote the possible hyperfine states of the atoms as $ \ket{\uparrow_{\Cs}} = \ket{F=4,m_F=4}_{\Cs}, \ket{\downarrow_{\Cs}} = \ket{F=3,m_F=3}_{\Cs}, \ket{\uparrow_{\Na}} = \ket{F=2,m_F=2}_{\Na}, $ and $ \ket{\downarrow_{\Na}} = \ket{F=1,m_F=1}_{\Na}$. Among the stable spin combinations, $\ket{\uparrow_{\Na}\uparrow_{\Cs}}$ and $\ket{\downarrow_{\Na}\downarrow_{\Cs}} $ both have small scattering lengths of $ 30.4a_0 $, and $ 13.7a_0 $ respectively, but the $\ket{\uparrow_{\Na} \downarrow_{\Cs}} $ combination has a large and negative scattering length of $ a(\uparrow_{\Na} \downarrow_{\Cs}) = -693.8a_0 $ (interaction shift $\approx$ binding?)~\cite{Hood2019}.
 For the target molecular state, we perform coupled-channel calculations
-to identify the Rabi frequencies $\Omega_m$ to different weakly-bound spin states.
-\textcolor{red}{A target spin state is ideally similar to the initial spin state
-  in order to minimize sensitivity to the B-field.
-  We find a target spin state predominantly in the initial spin state
-  that also has the advantage of having a reduced sensitivity
-  to laser intensity noise because of a larger $\Omega_a/\Omega_b$ as compared to other states.
-  This reduces the intensity stability requirement to $5\%$
-  instead of $0.3\%$ which is typical for other states.}\todo{}
-In addition to the increased atomic coupling, $ \Omega_a $,
-coupled channel calculations show that the target molecular state
-that is predominantly in this spin combination also has reduced coupling, $ \Omega_m $,
-with the intermediate state when compared to bound states of the other stable spin combinations
+to identify the Rabi frequencies $\Omega_m$ to different weakly-bound spin states. The target's spin state is ideally similar to the initial spin state in order to minimize sensitivity to the B-field.
+  % We find a target spin state predominantly in the initial spin state
+  %that also has the advantage of having a reduced sensitivity
+  %to laser intensity noise because of a larger %$\Omega_a/\Omega_b$ as compared to other states.
+  %This reduces the intensity stability requirement to $5\%$
+  %instead of $0.3\%$ which is typical for other states.
+% In addition to the increased atomic coupling, $ \Omega_a $,
+Coupled channel calculations show that this target molecular state also has reduced Rabi frequency, $ \Omega_m $,
+with the intermediate state when compared to bound states of the other stable spin combinations, thus further increasing the $\Omega_a/\Omega_m$ ratio.
 % $\ket{\uparrow_{\Na}\uparrow_{\Cs}}$ and $\ket{\downarrow_{\Na}\downarrow_{\Cs}} $ bound states.
-Therefore, using an initial $\ket{\uparrow_{\Na} \downarrow_{\Cs}}$ hyperfine combination
+Using an initial $\ket{\uparrow_{\Na} \downarrow_{\Cs}}$ hyperfine combination
 results in a $ \Omega_a/\Omega_m$ ratio of about 0.05 instead of a ratio of about 0.003
 with the other combinations,
-and thus only an required intensity stability of 5\% instead of 0.3\%.
+and thus requiring an intensity stability of 5\% instead of 0.3\%.
 % Thus, instead of a required intensity stability of $0.3 \% $ for the 4422 or 3311 combination, the 3322 combination only requires the intensity to be stabilized to $ 5\% $.
 % Thus, we choose the $\ket{\uparrow_{\Na} \downarrow_{\Cs}}$ spin combination as our initial state and drive to the first bound state for the $\ket{\uparrow_{\Na} \downarrow_{\Cs}}$ spin combination.
 \textcolor{blue}{(clean up the paragraph some more).} %(We might want to mention that those ratios are for 80 kHz spherical trap if we want to give more details about the coupled channel calculation anywhere...)
@@ -295,17 +289,18 @@ which has a small scattering length. The small two atom interaction allows the m
 
 % After preparing the Na and Cs atoms in the same tweezer in a single quantum state,
 Next, we  drive the atoms into the large scattering length $\ket{\uparrow_{\Na} \downarrow_{\Cs}}$ hyperfine combination to use as the initial atomic state of Raman transfer by performing a Cs spin flip while taking into account the $-30.7 \mathrm{kHz}$ interaction shift~\cite{Hood2019}.  %using a Cs Raman transition to drive the Cs atom into the $\ket{\downarrow_{\Cs}}$ state. The new spin state combination has a larger scattering length of $-693.8 a_0$ which generates a interaction shift of $-30.7 kHz$ in the tweezer.
-This spin flip selectively transfers atoms in the relative motion ground state \textcolor{red}{I'm a little confused. Aren't the atoms already in the motion ground state?} \footnote{This interaction shift is larger than the differential axial trapping frequency between Na and Cs atoms, which decouples the relative and center of mass motional state and improves the robustness of our preparation of the relative motion ground state.}, and for the experiment reported here, this is 31\% of the initial population of two atoms loaded in separate optical tweezers.\textcolor{red}{I also find this part of the sentence confusing.  can you say this more concisely?}\todo{}
+This spin flip selectively transfers atoms in the relative motion ground state, removing any initial hot atom background from imperfect cooling \footnote{This interaction shift is larger than the differential axial trapping frequency between Na and Cs atoms, which decouples the relative and center of mass motional state and improves the robustness of our preparation of the relative motion ground state.}. For the experiment reported here, 31\% of our initial two atom population is successfully transferred.
+% of two atoms loaded in separate optical tweezers.\textcolor{red}{I also find this part of the sentence confusing.  can you say this more concisely?}\todo{}
 % The stronger interaction in this spin state also enhances the atomic wavefunction at short range and increases its overlap with the intermediate molecular state used for our Raman transfer..
 
 %% Transfer scheme
 % After the atoms are prepared in the $\ket{\uparrow_{\Na}\uparrow_{\Cs}} $ hyperfine combination, we then perform the Raman transfer.
-To perform Raman transfer of an atom pair to the target weakly-bound molecular state, we use the tweezer itself as the Raman beams by turning on two co-propagating frequencies in the tweezer during the Raman pulse (Fig.~\ref{f-raman}a). The dual use of the tweezer beam not only eliminates additional scattering sources or undesired laser frequencies, but also allows a tight focus to maximize the Raman Rabi frequency and minimize the transfer time. %to allow perfect overlap and to eliminate additional beams and therefore scattering sources.
+To perform Raman transfer of an atom pair to the target weakly-bound molecular state, we use the tweezer itself as the Raman beams by turning on two co-propagating frequencies in the tweezer during the Raman pulse (Fig.~\ref{f-raman}a). The dual use of the tweezer beam not only eliminates additional scattering sources or undesired laser frequencies, but also allows a tight focus to maximize the Raman Rabi frequency and minimize the transfer time. Furthermore, we use a Bragg grating with a linewidth (FWHM) of $50 ~\mathrm{GHz}$ to filter the laser spectrum generated by a fiber amplifier that is seeded with a $1037~\mathrm{nm}$ external cavity diode laser. We observed a reduction of the scattering rate by a factor of $2$ due to suppression of the broadband amplified spontaneous emission (ASE) from the laser that couples to other excited states. %to allow perfect overlap and to eliminate additional beams and therefore scattering sources.
 The pulse sequence is shown in Fig.~\ref{f-raman}b. %Instead of adding another beam to drive the Raman transition on the atoms in the tweezer, we use the tweezer itself to achieve this goal.
 % In particular, we turn on two co-propagating frequencies in the tweezer during the Raman pulse. The dual use of the tweezer beam ensures that there is not any undesired laser frequency that can interfere with the Raman transition, and also allows us to maximize the Raman Rabi frequency and minimize the transfer time.
 After the total tweezer power is set to the desired value, we smoothly ramp down the power of one frequency in the tweezer while simultaneously ramping up the power of a different frequency so that the total tweezer power remains unchanged. Both frequencies are kept on for a specified duration before the process is reversed and the tweezer returns to a single frequency.
 % In addition to reducing the number of laser beams during the Raman transition,
-Furthermore, we use a Bragg grating with a linewidth (FWHM) of $50 ~\mathrm{GHz}$ to filter the laser spectrum generated by a fiber amplifier that is seeded with a $1037~\mathrm{nm}$ external cavity diode laser. We observed a reduction of the scattering rate by a factor of $2$ due to suppression of the broadband amplified spontaneous emission (ASE) from the laser that couples to other excited states.
+
 
 % found the spectral purity of the laser for Raman beams to be critical for achieving a higher transfer efficiency.
 % The tweezer/Raman beams are generated by a fiber amplifier seeded with a $1037 \mathrm{nm}$ external cavity diode laser.
@@ -374,7 +369,7 @@ both the Raman Rabi frequency and the scattering rate
 which can affect the scattering rate to Rabi frequency ratio.
 
 In order to verify whether any one of these known sources are the origin of the discrepancy,
-we measured the Raman resonance as a function of the tweezer power and single photon frequency.
+we measured the properties of the Raman resonance as a function of the tweezer power and single photon frequency.
 These dependencies allow us to experimentally determine the matrix elements,
 $ \Omega_a $, $\Omega_m $ and how much of the scattering, Stark shift,
 or Raman Rabi frequency comes from the $ v' = 0$ intermediate state.
@@ -392,7 +387,7 @@ and the $v'=0$ intermediate state.
 From this measurement, we can extract a $\Omega_m$ of
 $2\pi\times36.16(2) ~\mathrm{MHz}/\sqrt{\mathrm{mW}}$ or
 $2\pi\times140.06(8) ~\mathrm{MHz}$ for the $15 ~\mathrm{mW}$ tweezer power used above.
-This number is closed to the value of
+This number is close to the value of
 $2\pi\times27 ~\mathrm{MHz}/\sqrt{\mathrm{mW}}$ calculated from theory. \todo{ref/sm theory}
 
 \begin{figure*}
@@ -414,25 +409,25 @@ $2\pi\times27 ~\mathrm{MHz}/\sqrt{\mathrm{mW}}$ calculated from theory. \todo{re
 \end{figure*}
 
 In order to calculate the matrix element ratio,
-we now need to extract the up leg Rabi frequency, $ \Omega_a $.
+we now need to extract the Rabi frequency between the atomic state and the intermediate state, $ \Omega_a $.
 We do this by measuring the dependencies of the Raman Rabi frequency,
 which depends on both $\Omega_m$ and $\Omega_a$.
 The Raman Rabi frequency shows a non-linear dependency on the tweezer power
 due to the change in the atomic wavefunction caused by
 tighter confinement at higher power (Fig.~\ref{f-det}b).
-Thus, as discussed before, for weakly interacting particles,
+As discussed before, for weakly interacting particles,
 $\Omega_a$ scales as $ \omega_{\text{trap}}^{3/4}$ or $P^{0.375}$.
 However, due to the strong interaction between the two atoms, this approximation breaks down.
-Instead, coupled-channel calculation shows that the scaling
+Instead, coupled-channel calculations show that the scaling
 is very well approximated by $P^{0.29}$ within the range of confinement in our experiment.
 Combined with the standard intensity factor, the Raman Rabi frequency should scale as $P^{1.29}$,
 which fits well to our experimental result.
-Similar to the light shift, there is also a constant background component
-and a $v'=0$ component in the Raman Rabi frequency that scales as $1/\Delta$.
+Similar to the light shift, the Raman Rabi frequency's detuning dependence is determined by a constant background component and
+a $v'=0$ component in the Raman Rabi frequency that scales as $1/\Delta$.
 The $v'=0$ component of the Raman Rabi frequency is
 $2\pi\times170(4) ~\mathrm{Hz\cdot mW^{-1.29}}$,
 or $2\pi \times 5.6(1)~\mathrm{kHz}$ at $15 ~\mathrm{mW}$ tweezer power.
-Together with the $\Omega_m$ measured above, the up leg Rabi frequency is
+Together with the $\Omega_m$ measured above, the matrix element, $ \Omega_a $, is
 $2\pi \times 12.1(3)\mathrm{MHz}$.
 This gives a Rabi frequency, and therefore matrix element ratio of $11.6(3)$,
 which is in fact better than the theory prediction of $23.7$.
@@ -444,13 +439,10 @@ a stronger than expected scattering from $v'=0$ state either.
 
 With the $ v' = 0 $ state ruled out as the source of discrepancy between experiment and theory,
 we now consider the background effects from other states with larger single photon detuning.
-Unfortunately, the background in the Raman Rabi frequency fit cancels the Rabi frequency
-for a single photon detuning that is red of the $v' = 0$ transition
-and reduces it by about $30\%$ at the current detuning.
+In the Raman Rabi frequency fit, the fitted background is of an opposite sign from the Raman Rabi frequency for single photon detunings red of the $v' = 0 $ transition. Thus, this background reduces the Raman Rabi frequency by about $30\%$ at the current detuning.
 However, this difference is not enough to explain the greater than a factor of $10$ discrepancy
 present in the experiment.
-The same offset will increase the Rabi frequency for blue detuning,
-but we have observed additional excited states at slightly higher frequencies
+Due to the change in sign of the Raman Rabi frequency, the same background will increase the Raman Rabi frequency for detunings blue of the $v' = 0$ transition, which increases the Raman Rabi frequency. Unfortunately, we have observed additional nearby excited states at higher frequencies
 which prevent the blue side of the transition to be usable for the Raman transition.
 
 \todo{change scattering to decoherence? since the fluctuation of light shift
@@ -469,7 +461,8 @@ the scattering rate of the molecule depends on the tweezer power and detuning.
 At $3\mathrm{mW}$ tweezer power, we have observed a molecule lifetime as long as $1~\mathrm{ms}$.
 However, since the technical noise that can lead to decoherence
 is not fully characterized in our experiment,
-we are unable to further identify the source of the discrepancy based on this dependency.
+we are unable to further identify the sources of the measured scattering rate based on our measured detuning and power dependencies.
+%the discrepancy based on the dependency.
 
 Lastly, to confirm that the excess scattering does not come from the atomic state,
 we measure the two-body scattering rate
@@ -479,8 +472,8 @@ with a single photon scattering process.
 We have not been able to observe a dependency on the detuning in order to verify
 if the scattering process is related to the $v'=0$ state,
 but the power scaling strongly suggests the existence of an unknown two-photon scattering process.
-Nevertheless, the absolute scattering rate is much lower than the total scattering rate
-and is not the limiting factor in our experiment.
+Nevertheless, the absolute scattering rate from the atomic state is much lower than the total scattering rate
+and is not the limiting factor in this experiment.
 
 %%%% Maybe this following section about the B field can be relegated to a figure caption?
 % Figure () shows the geometry of the experiment setup. A $8.8\mathrm{G}$ B field was used to defines the quantization axis in the experiment and is applied perpendicular to the tweezer axis. The tweezer beam (both frequencies for the Raman transition) has a $\pi$ polarization relative to the quantization axis, which allows us to selectively drive the Raman transition to a final state with the same total $m_F$ quantum number as our initial state.
