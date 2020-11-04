@@ -171,7 +171,7 @@ xlabel("Detuning From Resonance (kHz)")
 ylabel("Two-Body Survival")
 NaCsPlot.maybe_save("$(prefix)_raman_det")
 
-figure()
+figure(figsize=[7.2, 5.4])
 errorbar([0.0], [ratio_00 * scale_1], [uncs_00 * scale_1], fmt="C0o", label="0.00 ms")
 plot([plot_freq_lo, plot_freq_hi] .- param_1[3], [v00 * scale_1, v00 * scale_1], "C0-")
 NaCsPlot.plot_survival_data(data_nacs_12′, scale_1, fmt="C1o", label="0.12 ms")
@@ -180,7 +180,7 @@ NaCsPlot.plot_survival_data(data_nacs_25′, scale_1, fmt="C2o", label="0.25 ms"
 plot(plot_freq .- param_1[3], model_2d.(0.25, plot_freq, (param_1,)) .* scale_1, "C2")
 legend(fontsize="x-small", loc="lower right")
 grid()
-xlabel("Detuning From Resonance (kHz)")
+xlabel("Raman Detuning (kHz)")
 ylabel("Fraction of Atomic Ground State")
 NaCsPlot.maybe_save("$(prefix)_norm_raman_det")
 

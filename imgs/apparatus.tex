@@ -36,8 +36,8 @@
 
 \begin{document}
 
-\begin{tikzpicture}[scale=1.0]
-  \begin{scope}[rotate=-90]
+\begin{tikzpicture}[scale=1.2]
+  \begin{scope}
     \clip(-2.5,-0.85) rectangle (2.5, 0.85);
     \shade[shading=radial,path fading=glow fading,
     fill opacity=0.9,inner color=red!80]
@@ -46,14 +46,14 @@
     \fill[white] plot[draw,samples=200,domain=1.2:2.5] function {sqrt(0.005 + x**2 / 4)}
     -- plot[draw,samples=200,domain=2.5:1.2] function {-sqrt(0.005 + x**2 / 4)};
   \end{scope}
-  \draw[black,fill=white,line width=1] (0.605, -1.2) -- (0.85, -1.6) -- (0.85, -3.2) --
-  (-0.85, -3.2) -- (-0.85, -1.6) -- (-0.605, -1.2) -- cycle;
-  \node[below] at (0, -3.2) {\Large Objective};
+  \draw[black,fill=white,line width=1] (1.2, 0.605) -- (1.6, 0.85) -- (3.6, 0.85) --
+  (3.6, -0.85) -- (1.6, -0.85) -- (1.2, -0.605) -- cycle;
+  \node[right] at (1.50, -0.4) {\Large Objective};
 
-  \draw[<->,>=stealth,line width=0.7,red!50!black] (0.3, 0) -- (-0.3, 0)
-  node[right,align=center] at (0.3, -0.2) {\Large Raman \&\\\Large Tweezer};
+  \draw[<->,>=stealth,line width=0.7,red!50!black] (0, 0.3) -- (0, -0.3)
+  node[below,align=center] at (0, -0.5) {\large Raman \&\\\large Tweezer};
 
-  \draw[->,>=stealth,line width=0.7] (-0.5, 0.2) -- node[below] {\Large $B_0$} (-1.05, 0.2);
+  \draw[->,>=stealth,line width=0.7] (-0.1, 0.3) -- node[left] {\Large $B_0$} (-0.1, 0.85);
 \end{tikzpicture}
 
 \end{document}

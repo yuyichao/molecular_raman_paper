@@ -37,10 +37,8 @@
 % Scale figure so that the text in the final plot is consistent with other figures
 % note that the figure size needs to be scaled separately.
 \begin{tikzpicture}[scale=1.27]
-  \node at (-1.85, -0.5) {\includegraphics[width=1.7cm]{imgs/apparatus}};
-  \node at (-2.5, 0.5) {\footnotesize (\textbf{a})};
-  \node at (0.648, -0.8) {\includegraphics[width=5.0cm]{imgs/sequence}};
-  \node at (-1.1, 0.5) {\footnotesize (\textbf{b})};
+  \node at (0, 0) {\includegraphics[width=6.75cm]{imgs/exp_data_norm_raman_det.pdf}};
+  \node at (-2.15, 1.9) {\footnotesize (\textbf{a})};
   \node at (0, -4.1) {\includegraphics[width=6.75cm]{imgs/exp_data_norm_t.pdf}};
   \begin{scope}[shift={(-1.7, -2.5)}]
     \draw plot[samples=200,domain=-0.2:0.2,variable=\x] ({\x + 0.06}, {\x * \x * 10 - 0.17});
@@ -57,8 +55,8 @@
     \fill[atomblue] (0, 0.0) circle (0.075);
     \fill[atomorange] (0 + 0.15, 0.0) circle (0.05);
   \end{scope}
-  \node at (-2.15, -2.1) {\footnotesize (\textbf{c})};
-  \node at (1.2, -3.48) {\includegraphics[width=3.4cm]{imgs/exp_data_norm_raman_det_inset.pdf}};
+  \node at (-2.15, -2.1) {\footnotesize (\textbf{b})};
+  \node at (0.8, -3.1) {\includegraphics[width=4.2cm]{imgs/apparatus}};
 \end{tikzpicture}
 
 \end{document}

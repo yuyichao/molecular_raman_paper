@@ -1043,8 +1043,8 @@ L 357.732869 47.178354
 " style="fill:none;stroke:#ff7f0e;stroke-width:1.5;"/>
    </g>
    <g id="LineCollection_3">
-    <path clip-path="url(#p11323d8459)" d="M 100.714688 50.606645 
-L 100.714688 19.296 
+    <path clip-path="url(#p11323d8459)" d="M 100.714687 50.606645 
+L 100.714687 19.296 
 " style="fill:none;stroke:#2ca02c;stroke-width:1.5;"/>
     <path clip-path="url(#p11323d8459)" d="M 130.474688 84.845683 
 L 130.474688 53.766252 
@@ -1417,7 +1417,7 @@ z
 " id="mbab2358add" style="stroke:#2ca02c;"/>
     </defs>
     <g clip-path="url(#p11323d8459)">
-     <use style="fill:#2ca02c;stroke:#2ca02c;" x="100.714688" xlink:href="#mbab2358add" y="34.951323"/>
+     <use style="fill:#2ca02c;stroke:#2ca02c;" x="100.714687" xlink:href="#mbab2358add" y="34.951323"/>
      <use style="fill:#2ca02c;stroke:#2ca02c;" x="130.474688" xlink:href="#mbab2358add" y="69.305968"/>
      <use style="fill:#2ca02c;stroke:#2ca02c;" x="160.234687" xlink:href="#mbab2358add" y="79.984543"/>
      <use style="fill:#2ca02c;stroke:#2ca02c;" x="189.994688" xlink:href="#mbab2358add" y="109.795628"/>

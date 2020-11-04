@@ -1011,8 +1011,8 @@ L 180.942838 83.177027
     <path clip-path="url(#pf902fcb692)" d="M 210.456888 219.64327 
 L 210.456888 194.839226 
 " style="fill:none;stroke:#1f77b4;stroke-width:1.5;"/>
-    <path clip-path="url(#pf902fcb692)" d="M 239.970937 275.1291 
-L 239.970937 258.058074 
+    <path clip-path="url(#pf902fcb692)" d="M 239.970938 275.1291 
+L 239.970938 258.058074 
 " style="fill:none;stroke:#1f77b4;stroke-width:1.5;"/>
     <path clip-path="url(#pf902fcb692)" d="M 269.484987 288.399062 
 L 269.484987 274.441135 
@@ -1137,7 +1137,7 @@ z
      <use style="fill:#1f77b4;stroke:#1f77b4;" x="151.428789" xlink:href="#mcb2457e3ba" y="78.064226"/>
      <use style="fill:#1f77b4;stroke:#1f77b4;" x="180.942838" xlink:href="#mcb2457e3ba" y="98.628998"/>
      <use style="fill:#1f77b4;stroke:#1f77b4;" x="210.456888" xlink:href="#mcb2457e3ba" y="207.241248"/>
-     <use style="fill:#1f77b4;stroke:#1f77b4;" x="239.970937" xlink:href="#mcb2457e3ba" y="266.593587"/>
+     <use style="fill:#1f77b4;stroke:#1f77b4;" x="239.970938" xlink:href="#mcb2457e3ba" y="266.593587"/>
      <use style="fill:#1f77b4;stroke:#1f77b4;" x="269.484987" xlink:href="#mcb2457e3ba" y="281.420099"/>
      <use style="fill:#1f77b4;stroke:#1f77b4;" x="298.999037" xlink:href="#mcb2457e3ba" y="235.71788"/>
      <use style="fill:#1f77b4;stroke:#1f77b4;" x="328.513086" xlink:href="#mcb2457e3ba" y="160.527411"/>
@@ -1156,13 +1156,13 @@ L 418.530938 34.383062
 " style="fill:none;stroke:#000000;stroke-linecap:square;stroke-linejoin:miter;stroke-width:0.8;"/>
    </g>
    <g id="patch_5">
-    <path d="M 61.410937 300.495062 
-L 418.530937 300.495062 
+    <path d="M 61.410938 300.495062 
+L 418.530938 300.495062 
 " style="fill:none;stroke:#000000;stroke-linecap:square;stroke-linejoin:miter;stroke-width:0.8;"/>
    </g>
    <g id="patch_6">
-    <path d="M 61.410937 34.383062 
-L 418.530937 34.383062 
+    <path d="M 61.410938 34.383062 
+L 418.530938 34.383062 
 " style="fill:none;stroke:#000000;stroke-linecap:square;stroke-linejoin:miter;stroke-width:0.8;"/>
    </g>
    <g id="text_12">
