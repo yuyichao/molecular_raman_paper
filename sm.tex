@@ -66,6 +66,17 @@
 \renewcommand{\thesection}{S\arabic{section}}
 \renewcommand{\theequation}{S.\arabic{equation}}
 
+\ifpdf
+% Ensure reproducible output
+\pdfinfoomitdate=1
+\pdfsuppressptexinfo=-1
+\pdftrailerid{}
+\hypersetup{
+  pdfcreator={},
+  pdfproducer={}
+}
+\fi
+
 \begin{document}
 \title{Coherent optical association of a single molecule -- Supplemental material}
 \author{Yichao~Yu}
