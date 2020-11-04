@@ -450,17 +450,23 @@ comes from either a higher than expected background scattering rate
 or a different intrinsic or technical source that we have not accounted for.
 We have observed a significant decrease in the coherence time without the ASE filter,
 suggesting the spectral purity of the laser is a significant source of scattering.
-Another source of decoherence could result from fluctuations in the power ratio
-between the two beams resulting in a fluctuation in the resonance position.
-In the experiment, we only stabilize the total power of the tweezer.
+Other sources that can contribute to the decoherence includes
+the stability of the tweezer power and the magnetic field.
+Based on the Raman Rabi frequency to light shift ratio (Fig.~\ref{f-det}c),
+the requirement on the tweezer power stability is $0.8~\%$ at $15~\mathrm{mW}$.
+We stabilize the tweezer power to $0.1~\%$ so this should not be a major source
+of decoherence.
+Similarly, we measured a Zeeman shift of $42.2(2)~\mathrm{kHz/G}$
+which does not cause significant decoherence from the measured magnetic field
+fluctuation of $\sim1.5~\mathrm{mG}$.
 
 In additional to calibrating the $\Omega_m$ and $\Omega_a$,
 the scattering rate of the molecule depends on the tweezer power and detuning.
 At $3\mathrm{mW}$ tweezer power, we have observed a molecule lifetime as long as $1~\mathrm{ms}$.
 However, since the technical noise that can lead to decoherence
 is not fully characterized in our experiment,
-we are unable to further identify the sources of the measured scattering rate based on our measured detuning and power dependencies.
-% the discrepancy based on the dependency.
+we are unable to further identify the sources of the measured scattering rate
+based on our measured detuning and power dependencies.
 
 Lastly, to confirm that the excess scattering does not come from the atomic state,
 we measure the two-body scattering rate
@@ -470,12 +476,9 @@ with a single photon scattering process.
 We have not been able to observe a dependency on the detuning in order to verify
 if the scattering process is related to the $v'=0$ state,
 but the power scaling strongly suggests the existence of an unknown two-photon scattering process.
-Nevertheless, the absolute scattering rate from the atomic state is much lower than the total scattering rate
+Nevertheless, the absolute scattering rate from the atomic state
+is much lower than the total scattering rate
 and is not the limiting factor in this experiment.
-
-%%%% Maybe this following section about the B field can be relegated to a figure caption?
-% Figure () shows the geometry of the experiment setup. A $8.8\mathrm{G}$ B field was used to defines the quantization axis in the experiment and is applied perpendicular to the tweezer axis. The tweezer beam (both frequencies for the Raman transition) has a $\pi$ polarization relative to the quantization axis, which allows us to selectively drive the Raman transition to a final state with the same total $m_F$ quantum number as our initial state.
-\todo{}B field dependency $42.2(2) \mathrm{kHz/G}$.
 
 In conclusion, we have formed a weakly-bound NaCs molecule in an optical tweezer
 via an optical Raman transfer.
