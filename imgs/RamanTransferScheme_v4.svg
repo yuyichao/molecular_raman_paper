@@ -15,7 +15,10 @@
    version="1.1"
    id="svg8"
    inkscape:version="1.0.1 (3bc2e813f5, 2020-09-07)"
-   sodipodi:docname="RamanTransferScheme_v4.svg">
+   sodipodi:docname="RamanTransferScheme_v4.svg"
+   inkscape:export-filename="C:\Users\goyan\Dropbox\College\Summer 2020\RamanTransferScheme_v4.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96">
   <defs
      id="defs2">
     <marker
@@ -284,15 +287,15 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.7"
-     inkscape:cx="-142.66313"
-     inkscape:cy="569.94073"
+     inkscape:cx="97.989614"
+     inkscape:cy="515.85073"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
      inkscape:window-width="1431"
      inkscape:window-height="1030"
      inkscape:window-x="255"
-     inkscape:window-y="7"
+     inkscape:window-y="0"
      inkscape:window-maximized="0"
      fit-margin-top="0"
      fit-margin-left="0"
@@ -308,7 +311,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -558,8 +561,8 @@
        id="path2185"
        inkscape:connector-curvature="0" />
     <path
-       style="fill:none;stroke:#000000;stroke-width:0.29753393;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#marker2479);marker-end:url(#marker2597)"
-       d="M 78.663653,203.8721 98.347269,134.86918"
+       style="fill:none;stroke:#000000;stroke-width:0.341182;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#marker2479);marker-end:url(#marker2597)"
+       d="M 74.670562,210.41908 98.331317,134.93712"
        id="path2469"
        inkscape:connector-curvature="0" />
     <path
