@@ -14,6 +14,7 @@ cscope.*
 *.part
 *.aux
 *.out
+*.lof
 *.log
 *.nav
 *.snm
@@ -33,6 +34,7 @@ __pycache__/
 *.db
 *.bak
 *.bck
+*-eps-converted-to.pdf
 $*
 *.zip
 _autosave-*
