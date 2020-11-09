@@ -22,51 +22,22 @@ const data = LibArchive.Reader(fname) do reader
     LibArchive.next_header(reader)
     readdlm(reader, ',', skipstart=1)
 end
-const prefix = joinpath(@__DIR__, "imgs", "raman_theory")
+const prefix = joinpath(@__DIR__, "imgs", "raman_theory_full")
 
-figure()
-l1 = plot(data[:, 1], abs.(data[:, 2] ./ 2π / 1000), "C0",
-          label="\$\\Omega_{Raman}\$")
-l2 = plot(data[:, 1], abs.(data[:, 4] ./ 2π / 1000), "C1",
-          label="\$\\Gamma_{scatter}\$")
+figure(figsize=[12.8, 4.8])
+l1 = plot(data[:, 1] ./ 1000, abs.(data[:, 2] ./ 2π / 1000), "C0",
+          label="\$\\Omega_{R}\$")
+l2 = plot(data[:, 1] ./ 1000, abs.(data[:, 4] ./ 2π / 1000), "C1",
+          label="\$\\Gamma_{s}\$")
 ylabel("\$2\\pi\\cdot \\mathrm{kHz}\$")
-xlabel("One-Photon Detuning (GHz)")
+xlabel("Raman Single-Photon Frequency (THz)")
 yscale("log")
-ylim([0.001, 10])
+ylim([0.003, 100])
+yticks([0.01, 0.1, 1, 10, 100], ["0.01", "0.1", "1", "10", "100"])
 grid()
-ax = gca()
-ax2 = ax.twinx()
-l3 = ax2.plot(data[:, 1], abs.(data[:, 2] ./ data[:, 4]), "C2",
-              label="\$\\frac{\\Omega_{Raman}}{\\Gamma_{scatter}}\$")
-ls = [l1; l2; l3]
-legend(ls, [l.get_label() for l in ls], fontsize="x-small",
-       loc="lower right", bbox_to_anchor=(1, 0.05))
-xlim([287500, 345000])
-yscale("log")
-ylim([0.1, 100])
-ax2.tick_params(axis="y", labelcolor="C2")
-# setp(ax2.get_yticklabels(), fontweight="bold")
+legend(ncol=2, loc="lower center", bbox_to_anchor=(0.5, 0.95), frameon=false)
+gca().yaxis.set_label_coords(-0.04, 0.55)
+xlim([287.5, 351.5])
 NaCsPlot.maybe_save("$(prefix)")
-
-# figure()
-# l1 = plot(data[:, 1] .- 351271.53, abs.(data[:, 2] ./ 2π / 1000), "C0",
-#           label="\$\\Omega_{Raman}\$")
-# l2 = plot(data[:, 1] .- 351271.53, abs.(data[:, 4] ./ 2π / 1000), "C1",
-#           label="\$\\Gamma_{scatter}\$")
-# ylabel("\$2\\pi\\cdot \\mathrm{kHz}\$")
-# xlabel("One-Photon Detuning (GHz)")
-# ylim([0, 800])
-# grid()
-# ax = gca()
-# ax2 = ax.twinx()
-# l3 = ax2.plot(data[:, 1] .- 351271.53, abs.(data[:, 2] ./ data[:, 4]), "C2",
-#               label="\$\\frac{\\Omega_{Raman}}{\\Gamma_{scatter}}\$", linewidth=4)
-# ls = [l1; l2; l3]
-# legend(ls, [l.get_label() for l in ls], fontsize="small", loc="upper right")
-# xlim([-12.5, 12.5])
-# ylim([0, 2])
-# ax2.tick_params(axis="y", labelcolor="C2")
-# setp(ax2.get_yticklabels(), fontweight="bold")
-# NaCsPlot.maybe_save("$(prefix)_vh")
 
 NaCsPlot.maybe_show()
