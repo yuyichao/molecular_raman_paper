@@ -24,7 +24,7 @@ const data = LibArchive.Reader(fname) do reader
 end
 const prefix = joinpath(@__DIR__, "imgs", "raman")
 
-fig = figure(figsize=[1, 1] * 4.8)
+fig = figure(figsize=[1.11, 1.11] * 4.8)
 
 ax0 = fig.add_subplot(111)    # The big subplot
 ax0.spines["top"].set_color("none")
@@ -34,7 +34,7 @@ ax0.spines["right"].set_color("none")
 ax0.set_xticks([])
 ax0.set_yticks([])
 ax0.tick_params(labelcolor="w", top="off", bottom="off", left="off", right="off")
-ylabel("\$\\Omega_{R}\$ and \$\\Gamma_{s}\$ (\$2\\pi\\cdot \\mathrm{kHz})\$", fontsize="small")
+ylabel("\$\\Omega_{R}\$ and \$\\Gamma_{s}\$ (\$2\\pi\\cdot \\mathrm{kHz})\$")
 ax0.get_yaxis().set_label_coords(-0.13, 0.5)
 ax0.tick_params(axis="x", length=0)
 ax0.tick_params(axis="y", length=0)
@@ -45,7 +45,7 @@ tax0.tick_params(labelcolor="w", top="off", bottom="off", left="off", right="off
 tax0.tick_params(axis="x", length=0)
 tax0.tick_params(axis="y", length=0)
 tax0.get_yaxis().set_label_coords(1.118, 0.5)
-ylabel("\$\\Omega_{R}/\\Gamma_{s}\$", fontsize="small", color="C2")
+ylabel("\$\\Omega_{R}/\\Gamma_{s}\$", color="C2")
 
 ax1 = fig.add_subplot(211)
 plot(data[:, 1] .- 288625.081, abs.(data[:, 2] ./ 2π / 1000), "C0",
@@ -80,7 +80,7 @@ tax2 = ax.twinx()
 l3 = tax2.plot(data[:, 1] .- 351271.53, abs.(data[:, 2] ./ data[:, 4]), "C2",
               label="\$\\frac{\\Omega_{R}}{\\Gamma_{s}}\$")
 ls = [l1; l2; l3]
-legend(ls, [l.get_label() for l in ls], fontsize="x-small", loc="upper right")
+legend(ls, [l.get_label() for l in ls], fontsize=13.88, loc="upper right")
 xlim([-35, 35])
 ylim([0, 1.49])
 tax2.tick_params(axis="y", labelcolor="C2")
