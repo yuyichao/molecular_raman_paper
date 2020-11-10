@@ -197,7 +197,7 @@ const prefix = joinpath(@__DIR__, "imgs", "scaling")
 
 const powers_plot = [15, 6, 3]
 
-figure()
+figure(figsize=[6.4, 4.8] * 1.11308)
 for i in 1:length(powers_plot)
     power = powers_plot[i]
     pd = get_plot_data_power(data_res, fit_res, model_res, power)
@@ -222,7 +222,7 @@ xlabel("Detuning (GHz)")
 ylabel("Light Shift (kHz)")
 NaCsPlot.maybe_save("$(prefix)_light_shift")
 
-figure()
+figure(figsize=[6.4, 4.8] * 1.11308)
 # const plot_freqs = get_plot_range(data_rabi.freqs)
 for i in 1:length(powers_plot)
     power = powers_plot[i]
@@ -246,7 +246,7 @@ NaCsPlot.maybe_save("$(prefix)_rabi")
 
 const freq = 560
 
-fig = figure(figsize=[3.6, 5.4])
+fig = figure(figsize=[3.6, 5.4] .* 1.0516)
 
 ax1 = fig.add_subplot(211)
 plot2 = get_plot_data_freq(data_res, fit_res, model_res, freq)
