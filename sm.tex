@@ -9,6 +9,8 @@
 \usepackage[colorlinks=true]{hyperref}
 \usepackage{listings}
 \usepackage{braket}
+\usepackage{xcolor}
+\newcommand\jmh[1]{{\color{magenta} #1}}
 
 \newcommand{\ud}{\mathrm{d}}
 \newcommand{\ue}{\mathrm{e}}
@@ -88,7 +90,7 @@
 \author{Kenneth~Wang}
 \gradstudent
 \author{Jonathan~D.~Hood}
-\affiliation{Department of Chemistry, Purdue University, West Lafayette, Indianna, 47906, USA}
+\affiliation{Department of Chemistry, Purdue University, West Lafayette, Indiana, 47906, USA}
 \author{Lewis~R.~B.~Picard}
 \gradstudent
 \author{Jessie~T.~Zhang}
@@ -167,11 +169,67 @@ A very similar result holds for the light shift and is written here for complete
   \frac{d^2E^2}{2\hbar^2}\displaystyle\sum_{v' \leq v'_{\text{max}}} \frac{\braket{m|v'}\braket{v'|m}}{\Delta_{v'}} +  \frac{d^2E^2}{2\hbar^2\delta_{\text{thresh}}}\left(1 - \displaystyle\sum_{v' \leq v'_{\text{max}}}\braket{m|v'}\braket{v'|m}\right)
 \end{equation}
 
+\section{Computational methods for bound states and scattering}
+
+For scattering and near-threshold bound states, we solve the Schr\"odinger equation by
+coupled-channel methods \cite{HUTSON1994}, using a basis set in which the electron spins
+$s_{\rm Na}$ and $s_{\rm Cs}$ and the nuclear spins $i_{\rm Na}$ and $i_{\rm Cs}$ are separately
+coupled,
+\begin{equation}
+| (s_{\rm Na} s_{\rm Cs} S)
+(i_{\rm Na} i_{\rm Cs} I) F M_F\rangle.
+\label{eqbassif}
+\end{equation}
+Here $S$ and $I$ are the total electron and nuclear spins of the molecule or atomic pair. Their
+resultant $F$ is the total spin, with projection $M_F$ onto the axis of the magnetic field. In
+principle $F$ can be further coupled to the rotational angular momentum $L$, but in the present
+work only functions with $L=0$ are included. In the absence of a magnetic field, $F$ and $M_F$ are
+both good quantum numbers, but in a magnetic field only $M_F$ is conserved. The calculations in
+this paper use basis sets with all possible values of $S$, $I$ and $F$ (for the required value of
+$M_F$) that can be constructed with $s_{\rm Na} = s_{\rm Cs} = 1/2$, $i_{\rm Na} = 3/2$ and $i_{\rm
+Cs} = 7/2$.
+
+Scattering calculations are carried out using the MOLSCAT package \cite{molscat:2019,
+mbf-github:2020} and bound-state calculations using the related BOUND package
+\cite{bound+field:2019, mbf-github:2020}. The calculations use singlet and triplet interaction
+potentials for Na+Cs obtained by adjusting the potentials of Docenko \emph{et al.}\
+\cite{Docenko:2006} at short range, using the same procedure as for KCs \cite{Groebner2017},
+to reproduce the experimental binding energy of the least-bound triplet state \cite{Hood2019}
+and the position of the s-wave Feshbach resonance near 864~G \cite{Zhang2020}. The atomic
+nuclear hyperfine coupling and Zeeman effects are fully included, using the Hamiltonian described
+in \cite{Hutson2008}.
+
+The bound-state calculations were initially used to predict the binding energies of states that lie
+within about 1~GHz of each atomic threshold of interest. At zero magnetic field, the states fall
+into groups from each hyperfine state of the atomic pair, labeled by $(f_{\rm Na},f_{\rm Cs})$. For
+example, for the $(f_{\rm Na},f_{\rm Cs}) = (2,3)$ states that are of principal interest here, each
+group comprises 5 zero-field levels with $F=1,2,3,4$ and 5; one such group is spread out over a
+range of energies between 290 MHz and 770 MHz below the $(f_{\rm Na},f_{\rm Cs}) = (2,3)$
+threshold. In a magnetic field, each zero-field level splits into $2F+1$ Zeeman sublevels labeled
+by $M_F$. For each sublevel we can calculate the dependence of the energy on magnetic field, in
+order to choose a target state for which the Raman transition frequency depends only weakly on
+field.
+
+The state that we ultimately chose as the target state for Raman transfer is the least-bound
+$(F,M_F)=(5,5)$ sublevel with $(f_{\rm Na},f_{\rm Cs}) = (2,3)$, which was predicted at a binding
+energy 763 MHz below the $(f_{\rm Na},f_{\rm Cs}) = (2,3)$ threshold. As described in the text, it
+was subsequently located experimentally at a binding energy of 770.57150(9) MHz.
+
+Multichannel bound-state wavefunctions, with components labeled by $S$, $I$ and $F$, are calculated
+using the method of Thornley and Hutson \cite{Thornley1994}. For molecular bound states, they are
+obtained on a grid of internuclear distances from 2.4~\AA\ to 50~\AA. For states of confined atomic
+pairs, a harmonic confining potential is added to the molecular potentials and the grid is extended
+to 3000~\AA. 
 
 \section{Calculating Matrix Elements with Coupled Channel Ground State}
-The free atom state (with spherically-symmetric harmonic confinement) and target weakly-bound molecular state are calculated using coupled-channel methods. Due to the cylindrical symmetry of the system, the projection of the total spin $m_F \equiv m_{F_{\text{Na}}} + m_{F_{\text{Cs}}}$ is conserved in the transition. Since our initial spin state is $ \ket{F_{\text{Na}} = 2, m_{F_{\text{Na}}} = 2, F_{\text{Cs}} = 3, m_{F_{\text{Cs}}} = 3}$, we can couple to all channels with total $ m_F = 5 $. These channels, written in the basis $ \ket{S, m_S, I, m_I}$, include $ \ket{0,0,5,5}, \ket{1,0,5,5}, \ket{1,1,5,4}, \ket{1,1,4,4} $, where $S = 0,1$ is the total electron spin and $ I = 2,3,4,5 $ is the total nuclear spin. The coupled-channel wavefunction contains a component in each of these channels . In this work, we assume the excited state wavefunction is a single-channel triplet wavefunction. Thus, only the triplet component of the coupled-channel ground state contributes to $\Omega_a$ and $ \Omega_m $.
+To calculate Rabi frequencies for transitions to intermediate vibrational levels of the c$^3\Sigma\ (\Omega=1)$ electronic state, we
+obtain their wavefunctions from a single-channel calculation using the potential curve of \cite{Grochola2011}. We
+then calculate overlap integrals between this function and the triplet ($S=1$) components of the
+coupled-channel wavefunctions for either the target molecular state or the confined atomic state.
+These calculations assume that the intermediate state has pure triplet character and neglect its
+nuclear spin character, which is unknown.
 
-The full calculation using the methods in section \ref{sm:sect_2} is shown in figure \ref{f-sm}. The strong contribution from the atomic threshold arises from the large overlap between the weakly-bound molecular state and the atomic continuum. This leads to a $1/\delta_{\text{thresh}}^2$ dependence of the scattering rate and favors deeply bound states as the intermediate state. The Raman Rabi frequency is larger than the scattering rate only for these deeply bound states.
+The full calculation of the Raman Rabi frequency and scattering rate using the methods in section \ref{sm:sect_2} is shown in figure \ref{f-sm}. The strong contribution from the atomic threshold arises from the large overlap between the target molecular state and the atomic continuum. This leads to a $1/\delta_{\text{thresh}}^2$ dependence of the scattering rate and favors using deeply bound states as the intermediate state for the Raman transfer. The Raman Rabi frequency is larger than the scattering rate only for the deeply bound states.
 
 \begin{figure}[ht!]
   \includegraphics[width=\textwidth]{imgs/raman_theory_full.pdf}
