@@ -286,9 +286,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.7"
-     inkscape:cx="97.989614"
-     inkscape:cy="515.85073"
+     inkscape:zoom="0.98994949"
+     inkscape:cx="250.1171"
+     inkscape:cy="394.06479"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -500,8 +500,8 @@
            style="writing-mode:vertical-lr" /></flowRegion><flowPara
          id="flowPara8254-7">......</flowPara></flowRoot>
     <path
-       style="fill:none;stroke:#000000;stroke-width:0.262;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:3;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#Arrow2Lstart-9);marker-end:url(#Arrow2Lend-0)"
-       d="m 119.51548,86.972124 c 0,35.410826 0,35.410826 0,35.410826"
+       style="fill:none;stroke:#000000;stroke-width:0.30148;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:3;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#Arrow2Lstart-9);marker-end:url(#Arrow2Lend-0)"
+       d="m 119.51548,87.114067 c 0,46.886803 0,46.886803 0,46.886803"
        id="path4652-0"
        inkscape:connector-curvature="0" />
     <flowRoot
@@ -1018,7 +1018,7 @@
       </g>
     </g>
     <g
-       transform="matrix(1.1888521,0,0,1.1888521,121.17941,97.808554)"
+       transform="matrix(1.1888521,0,0,1.1888521,124.20322,97.808554)"
        ns1:version="1.1.0"
        ns1:texconverter="pdflatex"
        ns1:pdfconverter="inkscape"
