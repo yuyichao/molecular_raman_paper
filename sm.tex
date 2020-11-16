@@ -1,4 +1,4 @@
-\documentclass[aps,secnumarabic,amsmath,amssymb,superscriptaddress]{revtex4}
+\documentclass[aps,secnumarabic,amsmath,amssymb,10pt,superscriptaddress]{revtex4}
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{amsfonts}
@@ -176,9 +176,9 @@ coupled-channel methods \cite{HUTSON1994}, using a basis set in which the electr
 $s_{\rm Na}$ and $s_{\rm Cs}$ and the nuclear spins $i_{\rm Na}$ and $i_{\rm Cs}$ are separately
 coupled,
 \begin{equation}
-| (s_{\rm Na} s_{\rm Cs} S)
-(i_{\rm Na} i_{\rm Cs} I) F M_F\rangle.
-\label{eqbassif}
+  | (s_{\rm Na} s_{\rm Cs} S)
+  (i_{\rm Na} i_{\rm Cs} I) F M_F\rangle.
+  \label{eqbassif}
 \end{equation}
 Here $S$ and $I$ are the total electron and nuclear spins of the molecule or atomic pair. Their
 resultant $F$ is the total spin, with projection $M_F$ onto the axis of the magnetic field. In
@@ -186,11 +186,11 @@ principle $F$ can be further coupled to the rotational angular momentum $L$, but
 work only functions with $L=0$ are included. In the absence of a magnetic field, $F$ and $M_F$ are
 both good quantum numbers, but in a magnetic field only $M_F$ is conserved. The calculations in
 this paper use basis sets with all possible values of $S$, $I$ and $F$ (for the required value of
-$M_F$) that can be constructed with $s_{\rm Na} = s_{\rm Cs} = 1/2$, $i_{\rm Na} = 3/2$ and $i_{\rm
-Cs} = 7/2$.
+$M_F$) that can be constructed with $s_{\rm Na} = s_{\rm Cs} = 1/2$,
+$i_{\rm Na} = 3/2$ and $i_{\rm Cs} = 7/2$.
 
 Scattering calculations are carried out using the MOLSCAT package \cite{molscat:2019,
-mbf-github:2020} and bound-state calculations using the related BOUND package
+  mbf-github:2020} and bound-state calculations using the related BOUND package
 \cite{bound+field:2019, mbf-github:2020}. The calculations use singlet and triplet interaction
 potentials for Na+Cs obtained by adjusting the potentials of Docenko \emph{et al.}\
 \cite{Docenko2006} at short range, using the same procedure as for KCs \cite{Groebner2017},
@@ -219,7 +219,7 @@ Multichannel bound-state wavefunctions, with components labeled by $S$, $I$ and 
 using the method of Thornley and Hutson \cite{Thornley1994}. For molecular bound states, they are
 obtained on a grid of internuclear distances from 2.4~\AA\ to 50~\AA. For states of confined atomic
 pairs, a harmonic confining potential is added to the molecular potentials and the grid is extended
-to 3000~\AA. 
+to 3000~\AA.
 
 \section{Calculating Matrix Elements with Coupled Channel Ground State}
 To calculate Rabi frequencies for transitions to intermediate vibrational levels of the c$^3\Sigma^+ (\Omega=1)$ electronic state, we
