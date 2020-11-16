@@ -157,11 +157,7 @@ We then arrive at an expression for the scattering rate, accounting for the atom
 \begin{equation}
   \Gamma_s \approx \frac{d^2E^2}{2\hbar^2}\displaystyle\sum_{v' \leq v'_{\text{max}}}\Gamma_{v'} \frac{\braket{m|v'}\braket{v'|m}}{\Delta_{v'}^2} +  \frac{d^2E^2\Gamma}{2\hbar^2\delta_{\text{thresh}}^2}\left(1 - \displaystyle\sum_{v' \leq v'_{\text{max}}}\braket{m|v'}\braket{v'|m}\right)
 \end{equation}
-We have replaced the full continuum with an effective state at the atomic threshold with strength proportional to the amount of wavefunction overlap between the target molecular state and all atomic continuum states. This term is especially important for our target-molecule state, because the square of the wavefunction overlap between the target-molecule state and all excited vibrational states is only 0.02
-\begin{equation}
-  \displaystyle\sum_{v' \leq v'_{\text{max}}}\braket{m|v'}\braket{v'|m} = 0.02
-\end{equation}
-leading to strong scattering from the atomic continuum. We note that this model leads to a component in the scattering rate that is proportional to $ 1/\delta_{\text{thresh}}^2$ and is smaller as one detunes farther from the threshold.
+We have replaced the full continuum with an effective state at the atomic threshold with strength proportional to the amount of wavefunction overlap between the target molecular state and all atomic continuum states. This model leads to a component in the scattering rate that is proportional to $ 1/\delta_{\text{thresh}}^2$ and is smaller as one detunes farther from the threshold. We note that the first term can also scale nearly as $1/\delta_{\text{thresh}}^2 $, if, as in our case, the largest terms in the summation are from states near the threshold.
 
 A very similar result holds for the light shift and is written here for completeness
 
@@ -229,7 +225,7 @@ coupled-channel wavefunctions for either the target molecular state or the confi
 These calculations assume that the intermediate state has pure triplet character and neglect its
 nuclear spin character, which is unknown.
 
-The full calculation of the Raman Rabi frequency and scattering rate using the methods in section \ref{sm:sect_2} is shown in figure \ref{f-sm}. The strong contribution from the atomic threshold arises from the large overlap between the target molecular state and the atomic continuum. This leads to a $1/\delta_{\text{thresh}}^2$ dependence of the scattering rate and favors using deeply bound states as the intermediate state for the Raman transfer. The Raman Rabi frequency is larger than the scattering rate only for the deeply bound states.
+The full calculation of the Raman Rabi frequency and scattering rate using the methods in section \ref{sm:sect_2} is shown in figure \ref{f-sm}. The strong contribution from the atomic threshold arises from the large overlap near-threshold bound states. This leads to a $1/\delta_{\text{thresh}}^2$ dependence of the scattering rate and favors using deeply bound states as the intermediate state for the Raman transfer. The Raman Rabi frequency is larger than the scattering rate only for the deeply bound states.
 
 \begin{figure}[ht!]
   \includegraphics[width=\textwidth]{imgs/raman_theory_full.pdf}

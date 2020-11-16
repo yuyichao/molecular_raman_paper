@@ -229,12 +229,11 @@ However, a complete picture must include both the many vibrational levels
 of the excited electronic state and the atomic continuum.
 The total scattering rate and Raman Rabi rate become a sum of the scattering rates
 and Raman Rabi rates over all possible intermediate states.
-With these considerations, using a weakly bound excited state as the intermediate state
-suffers from strong scattering due to the nearby excited atomic continuum,
-resulting in large incoherence and loss to other molecular states.
-This scattering is proportional to $1/\delta_{\mathrm{thresh}}^2$,
+Since there is large overlap between the target molecular state and weakly bound excited states, using states that are closer to the dissociation threshold as the intermediate state results in a large scattering rate.
+%in large incoherence and loss to other molecular states.
+This scattering is approximately proportional to $1/\delta_{\mathrm{thresh}}^2$,
 where $\delta_{\mathrm{thresh}}$ is the detuning from the dissociation threshold,
-and thus can be made smaller by using deeply bound vibrational states as the intermediate level.
+and thus can be made smaller by using deeply bound vibrational states as the intermediate state.
 
 
 To find the optimal intermediate state, we perform a calculation of the Raman Rabi frequency $\Omega_R$
@@ -242,12 +241,6 @@ and scattering rate $\Gamma_s$ at different detunings from the atomic threshold
 taking into account of all states of
 the $\mathrm{c^3\Sigma^+}(\Omega = 1)$ excited molecular state potential~\cite{Grochola2011}
 and the continuum~\cite{Liu2017}.
-The excited atomic continuum is particularly important for the target molecular state.
-The sum of the squares of the wavefunction overlap
-between the target weakly bound molecular state
-and all the excited molecular bound states is only about $0.02$,
-suggesting that there are significant matrix elements
-between the target molecular state and the excited atomic continuum.
 This calculation shows that $\Omega_R/\Gamma_s$
 can be made larger for more deeply bound states compared to weakly bound states
 at a cost of a smaller $\Omega_R$, as shown in Fig.~\ref{f-theory}b;
@@ -450,7 +443,6 @@ we measured the properties of the Raman resonance as a function of the tweezer p
 These dependencies allow us to experimentally determine the Rabi frequencies,
 $ \Omega_a $, $\Omega_m $ and how much of the scattering, Stark shift,
 or Raman Rabi frequency comes from the $ v' = 0$ intermediate state.
-% KENNETH WILL RESUME EDITING FROM HERE BASED ON LEWIS AND WILL COMMENTS
 
 First we look at the change in resonance frequency to determine $\Omega_m$.
 We observe that the resonance frequency depends linearly on the tweezer power due to the differential light shift between the atomic and molecular state.
