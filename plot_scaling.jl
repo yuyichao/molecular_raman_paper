@@ -188,7 +188,7 @@ const data_res = gen_data(res_freqs)
 const fit_res = fit_freq_model_res(model_res, data_res, [770.202, 705, 0, 100])
 @show fit_res.uncs
 
-const model_rabi = gen_model_rabi(705)
+const model_rabi = gen_model_rabi(fit_res.param[2])
 const data_rabi = gen_data(rabi_freqs)
 const fit_rabi = fit_data(model_rabi, data_rabi.x, data_rabi.y, [0.1, 0.1], plotx=false)
 @show fit_rabi.uncs
@@ -201,9 +201,10 @@ figure(figsize=[6.4, 4.8] * 1.11308)
 for i in 1:length(powers_plot)
     power = powers_plot[i]
     pd = get_plot_data_power(data_res, fit_res, model_res, power)
-    errorbar(pd.x .- 703.6, (pd.y .- fit_res.param[1]) .* 1000,
+    errorbar(1000 ./ (pd.x .- fit_res.param[2]), (pd.y .- fit_res.param[1]) .* 1000,
              pd.unc .* 1000, fmt="C$(i - 1)o", label="$(power / 4) mW")
-    plot(pd.plotx .- 703.6, (pd.ploty .- fit_res.param[1]) .* 1000, "C$(i - 1)")
+    plot(1000 ./ (pd.plotx .- fit_res.param[2]), (pd.ploty .- fit_res.param[1]) .* 1000,
+         "C$(i - 1)")
 end
 # xticks([288500, 288530, 288560, 288590, 288620])
 # p: framan0, fpa0, offset, strength, bs...
@@ -213,12 +214,12 @@ end
 #                 "\$f_{PA0}=$(fit_res.uncs[2] + 288000)\$ GHz\n" *
 #                 "\$a=$(fit_res.uncs[3] * 1000)\$ kHz/mW\n" *
 #                 "\$b=$(fit_res.uncs[4])\$ MHz\$\\cdot\$GHz/mW"), fontsize="small")
-legend(loc="upper left", fontsize="small", handlelength=0.6, handletextpad=0.3)
+legend(loc="upper right", fontsize="small", handlelength=0.6, handletextpad=0.3)
 grid()
-xticks([-200, -160, -120, -80])
+# xticks([-200, -160, -120, -80])
 yticks([0, 200, 400, 600])
 ylim([0, 790])
-xlabel("Detuning (GHz)")
+xlabel("\$1 / \\Delta~(\\mathrm{THz^{-1}})\$")
 ylabel("Light Shift (kHz)")
 NaCsPlot.maybe_save("$(prefix)_light_shift")
 
@@ -227,21 +228,22 @@ figure(figsize=[6.4, 4.8] * 1.11308)
 for i in 1:length(powers_plot)
     power = powers_plot[i]
     pd = get_plot_data_power(data_rabi, fit_rabi, model_rabi, power)
-    plot(pd.plotx .- 703.6, pd.ploty, "C$(i - 1)")
-    errorbar(pd.x .- 703.6, pd.y, pd.unc, fmt="C$(i - 1)o", label="$(power / 4) mW")
+    plot(1000 ./ (pd.plotx .- fit_res.param[2]), pd.ploty, "C$(i - 1)")
+    errorbar(1000 ./ (pd.x .- fit_res.param[2]), pd.y, pd.unc,
+             fmt="C$(i - 1)o", label="$(power / 4) mW")
 end
 # xticks([288500, 288530, 288560, 288590, 288620])
 # p: offset, strength
 # text(500, 5.0, ("\$\\left(a-\\dfrac{b}{f-705 GHz}\\right)\\cdot P^{1.29}\$"))
 # text(500, 2.8, ("\$a=$(fit_rabi.uncs[1] * 1000)\$ Hz/mW\$^{1.29}\$\n" *
 #               "\$b=$(fit_rabi.uncs[2])\$ kHz\$\\cdot\$GHz/mW\$^{1.29}\$"), fontsize="small")
-legend(loc="upper left", fontsize="small", handlelength=0.6, handletextpad=0.3)
+legend(loc="upper right", fontsize="small", handlelength=0.6, handletextpad=0.3)
 grid()
 yticks([0, 2, 4, 6, 8])
-xticks([-200, -160, -120, -80])
+# xticks([-200, -160, -120, -80])
 ylim([0, 9.7])
-xlabel("Detuning (GHz)")
-ylabel("\$\\Omega_{R} (2\\pi\\cdot \\mathrm{kHz})\$")
+xlabel("\$1 / \\Delta~(\\mathrm{THz^{-1}})\$")
+ylabel("\$\\Omega_{R}~(2\\pi\\cdot \\mathrm{kHz})\$")
 NaCsPlot.maybe_save("$(prefix)_rabi")
 
 const freq = 560
@@ -257,20 +259,20 @@ errorbar(plot2.x[2] / 4, (plot2.y[2] .- fit_res.param[1]) .* 1000,
 errorbar(plot2.x[3] / 4, (plot2.y[3] .- fit_res.param[1]) .* 1000,
          plot2.unc[3] .* 1000, fmt="C2o")
 plot(plot2.plotx ./ 4, (plot2.ploty .- fit_res.param[1]) .* 1000, "k")
-xscale("log")
-yscale("log")
+# xscale("log")
+# yscale("log")
 # minorticks_off()
 grid()
-xticks([1, 2, 4], ["1", "2", "4"])
-yticks([100, 200, 400], ["100", "200", "400"])
+# xticks([1, 2, 4], ["1", "2", "4"])
+# yticks([100, 200, 400], ["100", "200", "400"])
 ylabel("Light Shift (kHz)")
 xlim([0.625, 4.25])
 ylim([77, 440])
 setp(ax1.get_xticklabels(), visible=false)
 # ax1.tick_params(axis="x", length=0)
-ax1.set_xticks(0.7:0.1:4, minor=true)
-ax1.yaxis.set_minor_formatter(matplotlib.ticker.NullFormatter())
-ax1.xaxis.set_minor_formatter(matplotlib.ticker.NullFormatter())
+# ax1.set_xticks(0.7:0.1:4, minor=true)
+# ax1.yaxis.set_minor_formatter(matplotlib.ticker.NullFormatter())
+# ax1.xaxis.set_minor_formatter(matplotlib.ticker.NullFormatter())
 
 ax2 = fig.add_subplot(212)
 subplots_adjust(hspace=0.0)
@@ -280,15 +282,15 @@ errorbar(plot2.x[1] / 4, plot2.y[1], plot2.unc[1], fmt="C0o")
 errorbar(plot2.x[2] / 4, plot2.y[2], plot2.unc[2], fmt="C1o")
 errorbar(plot2.x[3] / 4, plot2.y[3], plot2.unc[3], fmt="C2o")
 plot(plot2.plotx ./ 4, plot2.ploty, "k")
-xscale("log")
-yscale("log")
+# xscale("log")
+# yscale("log")
 # minorticks_off()
 grid()
-xticks([1, 2, 4], ["1", "2", "4"])
-yticks([0.5, 1, 2, 4], ["0.5", "1", "2", "4"])
-ax2.xaxis.set_minor_formatter(matplotlib.ticker.NullFormatter())
-ax2.yaxis.set_minor_formatter(matplotlib.ticker.NullFormatter())
-ax2.set_xticks(0.7:0.1:4, minor=true)
+# xticks([1, 2, 4], ["1", "2", "4"])
+# yticks([0.5, 1, 2, 4], ["0.5", "1", "2", "4"])
+# ax2.xaxis.set_minor_formatter(matplotlib.ticker.NullFormatter())
+# ax2.yaxis.set_minor_formatter(matplotlib.ticker.NullFormatter())
+# ax2.set_xticks(0.7:0.1:4, minor=true)
 xlabel("Tweezer Power (mW)")
 ylabel("\$\\Omega_{R} (2\\pi\\cdot \\mathrm{kHz})\$")
 xlim([0.625, 4.25])

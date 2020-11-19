@@ -24,66 +24,58 @@ const data = LibArchive.Reader(fname) do reader
 end
 const prefix = joinpath(@__DIR__, "imgs", "raman")
 
-fig = figure(figsize=[1.11, 1.11] * 4.8)
+fig = figure(figsize=[1.11, 1.4] * 4.8)
 
-ax0 = fig.add_subplot(111)    # The big subplot
-ax0.spines["top"].set_color("none")
-ax0.spines["bottom"].set_color("none")
-ax0.spines["left"].set_color("none")
-ax0.spines["right"].set_color("none")
-ax0.set_xticks([])
-ax0.set_yticks([])
-ax0.tick_params(labelcolor="w", top="off", bottom="off", left="off", right="off")
-ylabel("\$\\Omega_{R}\$ and \$\\Gamma_{s}\$ (\$2\\pi\\cdot \\mathrm{kHz})\$")
-ax0.get_yaxis().set_label_coords(-0.13, 0.5)
-ax0.tick_params(axis="x", length=0)
-ax0.tick_params(axis="y", length=0)
-tax0 = ax0.twinx()
-tax0.set_xticks([])
-tax0.set_yticks([])
-tax0.tick_params(labelcolor="w", top="off", bottom="off", left="off", right="off")
-tax0.tick_params(axis="x", length=0)
-tax0.tick_params(axis="y", length=0)
-tax0.get_yaxis().set_label_coords(1.118, 0.5)
-ylabel("\$\\Omega_{R}/\\Gamma_{s}\$", color="C2")
-
-ax1 = fig.add_subplot(211)
+ax1 = fig.add_subplot(311)
+plot(data[:, 1] .- 351271.53, abs.(data[:, 2] ./ 2π / 1000), "C1",
+     label="\$v'=63\$")
 plot(data[:, 1] .- 288625.081, abs.(data[:, 2] ./ 2π / 1000), "C0",
-     label="\$\\Omega_{R}\$")
-plot(data[:, 1] .- 288625.081, abs.(data[:, 4] ./ 2π / 1000), "C1",
-     label="\$\\Gamma_{s}\$")
-text(-32, 2.5, "v'=0", fontsize="small")
-ylim([0, 30])
-grid()
-tax1 = ax1.twinx()
-tax1.plot(data[:, 1] .- 288625.081, abs.(data[:, 2] ./ data[:, 4]), "C2",
-          label="\$\\frac{\\Omega_{R}}{\\Gamma_{s}}\$")
+     label="\$v'=0\$")
+legend(fontsize=13.88, loc="upper right")
+ylabel("\$\\Gamma_{s}~(2\\pi\\!\\cdot\\!\\mathrm{kHz})\$")
 xlim([-35, 35])
-ylim([0, 60])
-tax1.tick_params(axis="y", labelcolor="C2")
+ylim([0.5, 600])
+yscale("log")
+yticks([1, 10, 100], ["1", "10", "100"])
+ax1.yaxis.set_minor_formatter(matplotlib.ticker.NullFormatter())
+grid()
 setp(ax1.get_xticklabels(), visible=false)
 setp(ax1.get_xticklabels(), visible=false)
 ax1.tick_params(axis="x", length=0)
 
-ax2 = fig.add_subplot(212)
+ax2 = fig.add_subplot(312)
 subplots_adjust(hspace=0.0)
-l1 = plot(data[:, 1] .- 351271.53, abs.(data[:, 2] ./ 2π / 1000), "C0",
-          label="\$\\Omega_{R}\$")
-l2 = plot(data[:, 1] .- 351271.53, abs.(data[:, 4] ./ 2π / 1000), "C1",
-          label="\$\\Gamma_{s}\$")
-text(-32, 130, "v'=63", fontsize="small")
-xlabel("One-Photon Detuning (GHz)")
-ylim([0, 596])
-grid()
-ax = gca()
-tax2 = ax.twinx()
-l3 = tax2.plot(data[:, 1] .- 351271.53, abs.(data[:, 2] ./ data[:, 4]), "C2",
-              label="\$\\frac{\\Omega_{R}}{\\Gamma_{s}}\$")
-ls = [l1; l2; l3]
-legend(ls, [l.get_label() for l in ls], fontsize=13.88, loc="upper right")
+plot(data[:, 1] .- 288625.081, abs.(data[:, 4] ./ 2π / 1000), "C0",
+     label="\$v'=0\$")
+plot(data[:, 1] .- 351271.53, abs.(data[:, 4] ./ 2π / 1000), "C1",
+     label="\$v'=63\$")
+ylabel("\$\\Omega_{R}~(2\\pi\\!\\cdot\\!\\mathrm{kHz})\$")
 xlim([-35, 35])
-ylim([0, 1.49])
-tax2.tick_params(axis="y", labelcolor="C2")
+ylim([0.012, 600])
+yscale("log")
+yticks([0.1, 1, 10, 100], ["0.1", "1", "10", "100"])
+ax2.set_yticks([0.02:0.01:0.09; 0.2:0.1:0.9; 2:1:9;
+                20:10:90; 200:100:600], minor=true)
+ax2.yaxis.set_minor_formatter(matplotlib.ticker.NullFormatter())
+grid()
+setp(ax2.get_xticklabels(), visible=false)
+setp(ax2.get_xticklabels(), visible=false)
+ax2.tick_params(axis="x", length=0)
+
+ax3 = fig.add_subplot(313)
+subplots_adjust(hspace=0.0)
+plot(data[:, 1] .- 288625.081, abs.(data[:, 2] ./ data[:, 4]), "C0",
+     label="\$v'=0\$")
+plot(data[:, 1] .- 351271.53, abs.(data[:, 2] ./ data[:, 4]), "C1",
+     label="\$v'=63\$")
+xlabel("One-Photon Detuning (GHz)")
+ylabel("\$\\Omega_{R}/\\Gamma_{s}\$")
+xlim([-35, 35])
+ylim([0.02, 60])
+yscale("log")
+yticks([0.1, 1, 10], ["0.1", "1", "10"])
+ax3.yaxis.set_minor_formatter(matplotlib.ticker.NullFormatter())
+grid()
 NaCsPlot.maybe_save("$(prefix)_v0_v63")
 
 NaCsPlot.maybe_show()
