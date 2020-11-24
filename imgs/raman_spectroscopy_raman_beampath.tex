@@ -117,6 +117,13 @@
     {\scalebox{#2}{\includegraphics[width=1.4285714285714286cm]{PBS.png}}};
   \end{scope}
 }
+\newcommand\drawmirror[3]{
+  % 1: center (x, y)
+  % 2: size
+  % 3: angle
+  \draw[line width=3] ($#1 + ({#2 * cos(#3)}, {#2 * sin(#3)})$) --
+  ($#1 - ({#2 * cos(#3)}, {#2 * sin(#3)})$);
+}
 
 \ifpdf
 % Ensure reproducible output
@@ -132,96 +139,104 @@
 \begin{document}
 
 \begin{tikzpicture}
+  \coordinate (Raman Input) at (2, 0);
+  \coordinate (Raman Output) at (0, 2);
+  \coordinate (DP PBS) at (0, 0);
+  \coordinate (Wavemeter) at (0, -2);
+  \coordinate (DP AOM) at (-2, 0);
+  \coordinate (DP lens) at (-4.5, 0);
+  \coordinate (DP M1) at (-6, 0);
+  \coordinate (DP QWP) at (-6, 1.5);
+  \coordinate (DP M2) at (-6 - 0.4, 2.5 + 0.05);
+  \coordinate (SP QWP) at (-6, 3.5);
+  \coordinate (SP IM1) at (-6, 5);
+  \coordinate (SP lens) at (-7.5, 5);
+  \coordinate (SP PBS) at (-9, 5);
+  \coordinate (SP IM2) at (-11.5, 5);
+  \coordinate (SP AOM) at (-11.5, 3.3);
+  \coordinate (SP M1) at (-11.5, 0);
+  \coordinate (SP M2) at (-9, 0);
+  \coordinate (SP HWP) at (-9, 1.7);
+
   % Input
-  \node[red,above] at (2, 0) {\large\textbf{From Laser}};
-  \draw[red,line width=1.6,mid arrow] (2, 0) -- (0, 0);
+  \node[red,above] at (Raman Input) {\large\textbf{From Laser}};
+  \draw[red,line width=1.6,mid arrow] (Raman Input) -- (DP PBS);
   % Wavemeter
-  \draw[red,line width=1.6] (0, 0) -- (0, -1);
-  \draw[red,line width=1.6,mid arrow] (0, -1) -- (0, -2);
-  \node[red,below] at (0, -2) {\large\textbf{To wavemeter}};
+  \draw[red,line width=1.6] (DP PBS) -- ($(DP PBS) + (0, -1)$);
+  \draw[red,line width=1.6,mid arrow] ($(DP PBS) + (0, -1)$) -- (Wavemeter);
+  \node[red,below] at (Wavemeter) {\large\textbf{To wavemeter}};
   % Between PBS and DP AOM
-  \draw[red,line width=1.6,mid arrow2] (-2, 0) -- (0, 0);
+  \draw[red,line width=1.6,mid arrow2] (DP AOM) -- (DP PBS);
   \begin{scope}
     % Clip off one arrow
-    \clip (-1.23, 0) rectangle (-2, 1);
-    \draw[blue,line width=1.6,mid arrow2] (-2, 0) -- (0, 0);
+    \clip ($(DP AOM) + (0.77, 0)$) rectangle ($(DP AOM) + (0, 1)$);
+    \draw[blue,line width=1.6,mid arrow2] (DP AOM) -- (DP PBS);
   \end{scope}
   \begin{scope}
     % Redraw the clipped line
-    \clip (0, 0) rectangle (-2, 1);
-    \draw[blue,line width=1.6] (-2, 0) -- (0, 0);
+    \clip (DP PBS) rectangle ($(DP AOM) + (0, 1)$);
+    \draw[blue,line width=1.6] (DP AOM) -- (DP PBS);
   \end{scope}
   % Output
-  \draw[red,line width=1.6] (0, 0) -- (0, 1);
-  \draw[red,line width=1.6,mid arrow] (0, 1) -- (0, 2);
+  \draw[red,line width=1.6] (DP PBS) -- ($(DP PBS) + (0, 1)$);
+  \draw[red,line width=1.6,mid arrow] ($(DP PBS) + (0, 1)$) -- (Raman Output);
   \begin{scope}
-    \clip (0, 0) rectangle (-1, 3);
-    \draw[blue,line width=1.6] (0, 0) -- (0, 1);
-    \draw[blue,line width=1.6,mid arrow] (0, 1) -- (0, 2);
+    \clip (DP PBS) rectangle (-1, 3);
+    \draw[blue,line width=1.6] (DP PBS) -- ($(DP PBS) + (0, 1)$);
+    \draw[blue,line width=1.6,mid arrow] ($(DP PBS) + (0, 1)$) -- (Raman Output);
   \end{scope}
-  \node[red] at (0, 2.3) {\large\textbf{To Experiment}};
+  \node[red] at ($(Raman Output) + (0, 0.3)$) {\large\textbf{To Experiment}};
   \begin{scope}
-    \clip (-2, 2.3) rectangle (2, 3.5);
-    \node[blue] at (0, 2.3) {\large\textbf{To Experiment}};
+    \clip ($(Raman Output) + (-2, 0.3)$) rectangle ($(Raman Output) + (2, 1.5)$);
+    \node[blue] at ($(Raman Output) + (0, 0.3)$) {\large\textbf{To Experiment}};
   \end{scope}
-  \draw[red,line width=1.6,mid arrow2] (-2, 0) -- (-6, 0);
-  \draw[blue,line width=1.6,mid arrow2] (-2, 0) --
-  node[above,pos=0.34,rotate=-5] {\small $\approx\!+345~\mathrm{MHz}$} (-6 - 0.3, 0 + 0.3);
-  \draw[blue,line width=1.6,mid arrow2] (-6 - 0.3, 0 + 0.3) -- (-6 - 0.4, 2.5 + 0.05);
-  \draw[red,line width=1.6,mid arrow2] (-6, 0) -- (-6, 5);
-  \draw[red,line width=1.6,mid arrow2] (-7.5, 5) -- (-6, 5);
-  \draw[red,line width=1.6] (-7.5, 5) -- (-9, 5);
-  \draw[red,line width=1.6] (-9, 5) -- (-10, 5);
-  \draw[red,line width=1.6,mid arrow] (-10, 5) -- (-11.5, 5);
-  \draw[red,line width=1.6] (-11.5, 5) -- (-11.5, 3.3);
-  \draw[red,line width=1.6,mid arrow] (-11.5, 3.3) --
-  node[above,rotate=86,pos=0.45] {\small $-80~\mathrm{MHz}$} (-11.5 - 0.2, 0 + 0.2);
-  \draw[red,line width=1.6,mid arrow] (-11.5 - 0.2, 0 + 0.2) -- (-9, 0);
-  \draw[red,line width=1.6,mid arrow] (-9, 0) -- (-9, 5);
+  \draw[red,line width=1.6,mid arrow2] (DP AOM) -- (DP M1);
+  \draw[blue,line width=1.6,mid arrow2] (DP AOM) --
+  node[above,pos=0.34,rotate=-5] {\small $\approx\!+345~\mathrm{MHz}$} ($(DP M1) + (-0.3, 0.3)$);
+  \draw[blue,line width=1.6,mid arrow2] ($(DP M1) + (-0.3, 0.3)$) -- (DP M2);
+  \draw[red,line width=1.6,mid arrow2] (DP M1) -- (SP IM1);
+  \draw[red,line width=1.6,mid arrow2] (SP lens) -- (SP IM1);
+  \draw[red,line width=1.6] (SP lens) -- (SP PBS);
+  \draw[red,line width=1.6] (SP PBS) -- ($(SP PBS) + (-1, 0)$);
+  \draw[red,line width=1.6,mid arrow] ($(SP PBS) + (-1, 0)$) -- (SP IM2);
+  \draw[red,line width=1.6] (SP IM2) -- (SP AOM);
+  \draw[red,line width=1.6,mid arrow] (SP AOM) --
+  node[above,rotate=86,pos=0.45] {\small $-80~\mathrm{MHz}$} ($(SP M1) + (-0.2, 0.2)$);
+  \draw[red,line width=1.6,mid arrow] ($(SP M1) + (-0.2, 0.2)$) -- (SP M2);
+  \draw[red,line width=1.6,mid arrow] (SP M2) -- (SP PBS);
   % Input PBS
-  \drawpbs{(0, 0)}{0.7}{0}
-  \node[blue!40!cyan,below right] at (0 + 0.7, 0 - 0.7) {\large PBS 1};
+  \drawpbs{(DP PBS)}{0.7}{0}
+  \node[blue!40!cyan,below right] at ($(DP PBS) + (0.7, -0.7)$) {\large PBS 1};
   % DP AOM
-  \drawaom{(-2, 0)}{1}{0.5}{90}
-  \node[rotate=-90] at (-2, 0) {\large DP AOM};
+  \drawaom{(DP AOM)}{1}{0.5}{90}
+  \node[rotate=-90] at (DP AOM) {\large DP AOM};
   % DP Lens
-  % \node[rotate=90] at (-4.5, 0) {\includegraphics[width={2 cm}]{lens.pdf}};
-  \drawlens{(-4.5, 0)}{1}{90}
-  \node[blue!80!cyan,below] at (-4.5, -1) {\large L1};
-  \draw[line width=3] (-6 - 0.7, 0 + 0.7) -- (-6 + 0.7, 0 - 0.7);
+  \drawlens{(DP lens)}{1}{90}
+  \node[blue!80!cyan,below] at ($(DP lens) + (0, -1)$-4.5, -1) {\large L1};
+  \drawmirror{(DP M1)}{0.9}{-45}
   % DP QWP
-  \drawwaveplate{(-6, 1.5)}{1}{0}
-  \node[blue!80!black,right] at (-5.1, 1.5) {\large $\lambda/4$};
-  \draw[line width=3,shift={(-6 - 0.4, 2.5 + 0.05)}] (-0.3, -0.02) -- (0.3, 0.02);
+  \drawwaveplate{(DP QWP)}{1}{0}
+  \node[blue!80!black,right] at ($(DP QWP) + (0.9, 0)$) {\large $\lambda/4$};
+  \drawmirror{(DP M2)}{0.3}{3.8}
   % Post DP QWP
-  \drawwaveplate{(-6, 3.5)}{1}{0}
-  \node[blue!80!black,right] at (-5.1, 3.5) {\large $\lambda/4$};
-  \draw[line width=3] (-6 - 0.7, 5 + 0.7) -- (-6 + 0.7, 5 - 0.7);
+  \drawwaveplate{(SP QWP)}{1}{0}
+  \node[blue!80!black,right] at ($(SP QWP) + (0.9, 0)$) {\large $\lambda/4$};
+  \drawmirror{(SP IM1)}{0.9}{-45}
   % Post DP Lens
-  \drawlens{(-7.5, 5)}{1}{90}
-  \node[blue!80!cyan,above] at (-7.5, 6) {\large L2};
+  \drawlens{(SP lens)}{1}{90}
+  \node[blue!80!cyan,above] at ($(SP lens) + (0, 1)$) {\large L2};
   % SP PBS
-  \drawpbs{(-9, 5)}{0.7}{0}
-  \node[blue!40!cyan,above] at (-9, 5 + 0.7) {\large PBS 2};
-  \draw[line width=3] (-11.5 - 0.7, 5 - 0.7) -- (-11.5 + 0.7, 5 + 0.7);
+  \drawpbs{(SP PBS)}{0.7}{0}
+  \node[blue!40!cyan,above] at ($(SP PBS) + (0, 0.7)$) {\large PBS 2};
+  \drawmirror{(SP IM2)}{0.9}{45}
   % SP AOM
-  \drawaom{(-11.5, 3.3)}{1}{0.5}{0}
-  \node at (-11.5, 3.3) {\large SP AOM};
-  \draw[line width=3] (-11.5 - 0.7, 0 + 0.7) -- (-11.5 + 0.7, 0 - 0.7);
-  \draw[line width=3] (-9 - 0.7, 0 - 0.7) -- (-9 + 0.7, 0 + 0.7);
+  \drawaom{(SP AOM)}{1}{0.5}{0}
+  \node at (SP AOM) {\large SP AOM};
+  \drawmirror{(SP M1)}{0.9}{-45}
+  \drawmirror{(SP M2)}{0.9}{45}
   % SP HWP
-  \drawwaveplate{(-9, 1.7)}{1}{0}
-  \node[blue!80!black,left] at (-9.9, 1.7) {\large $\lambda/2$};
-
-  \draw[gray,opacity=0.8,line width=1,dashed] (-4, 6) |- (2.8, 2.8);
-
-  \begin{scope}[shift={(-1.4, 4)}]
-    \draw[red,line width=1.6,mid arrow] (3, 0) node[below] {\large\textbf{Input}} -- (0, 0);
-    \draw[red,line width=1.6,mid arrow] (0, 0) -- ({3 * cos(40)}, {3 * sin(40)})
-    node[left] {\large\textbf{Output}};
-    \draw[gray,line width=6] ({-0.7 * tan(20)}, 0.7) --
-    node[black,left] {\large ASE Filter} ({0.7 * tan(20)}, -0.7);
-  \end{scope}
+  \drawwaveplate{(SP HWP)}{1}{0}
+  \node[blue!80!black,left] at ($(SP HWP) + (-0.9, 0)$) {\large $\lambda/2$};
 \end{tikzpicture}
 
 \end{document}
