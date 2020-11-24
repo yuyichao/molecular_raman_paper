@@ -143,20 +143,20 @@
   \coordinate (Raman Output) at (0, 2);
   \coordinate (DP PBS) at (0, 0);
   \coordinate (Wavemeter) at (0, -2);
-  \coordinate (DP AOM) at (-2, 0);
-  \coordinate (DP lens) at (-4.5, 0);
-  \coordinate (DP M1) at (-6, 0);
-  \coordinate (DP QWP) at (-6, 1.5);
-  \coordinate (DP M2) at (-6 - 0.4, 2.5 + 0.05);
-  \coordinate (SP QWP) at (-6, 3.5);
-  \coordinate (SP IM1) at (-6, 5);
-  \coordinate (SP lens) at (-7.5, 5);
-  \coordinate (SP PBS) at (-9, 5);
-  \coordinate (SP IM2) at (-11.5, 5);
-  \coordinate (SP AOM) at (-11.5, 3.3);
-  \coordinate (SP M1) at (-11.5, 0);
-  \coordinate (SP M2) at (-9, 0);
-  \coordinate (SP HWP) at (-9, 1.7);
+  \coordinate (DP AOM) at (-1.7, 0);
+  \coordinate (DP lens) at (-4.2, 0);
+  \coordinate (DP M1) at (-5.2, 0);
+  \coordinate (DP QWP) at (-5.2, 1.4);
+  \coordinate (DP M2) at (-5.2 - 0.4, 2.0 + 0.05);
+  \coordinate (SP QWP) at (-5.2, 2.9);
+  \coordinate (SP IM1) at (-5.2, 4);
+  \coordinate (SP lens) at (-6.5, 4);
+  \coordinate (SP PBS) at (-7.5, 4);
+  \coordinate (SP IM2) at (-10, 4);
+  \coordinate (SP AOM) at (-10, 2.7);
+  \coordinate (SP M1) at (-10, 0);
+  \coordinate (SP M2) at (-7.5, 0);
+  \coordinate (SP HWP) at (-7.5, 1.7);
 
   % Input
   \node[red,above] at (Raman Input) {\large\textbf{From Laser}};
@@ -166,11 +166,13 @@
   \draw[red,line width=1.6,mid arrow] ($(DP PBS) + (0, -1)$) -- (Wavemeter);
   \node[red,below] at (Wavemeter) {\large\textbf{To wavemeter}};
   % Between PBS and DP AOM
-  \draw[red,line width=1.6,mid arrow2] (DP AOM) -- (DP PBS);
+  \draw[red,line width=1.6] ($(DP PBS) + (-1.2, 0)$) -- (DP AOM);
+  \draw[red,line width=1.6,mid arrow2] ($(DP PBS) + (-1.2, 0)$) -- (DP PBS);
   \begin{scope}
     % Clip off one arrow
-    \clip ($(DP AOM) + (0.77, 0)$) rectangle ($(DP AOM) + (0, 1)$);
-    \draw[blue,line width=1.6,mid arrow2] (DP AOM) -- (DP PBS);
+    \clip ($(DP AOM) + (0.9, 0)$) rectangle ($(DP AOM) + (0, 1)$);
+    \draw[blue,line width=1.6] ($(DP PBS) + (-1.2, 0)$) -- (DP AOM);
+    \draw[blue,line width=1.6,mid arrow2] ($(DP PBS) + (-1.2, 0)$) -- (DP PBS);
   \end{scope}
   \begin{scope}
     % Redraw the clipped line
@@ -192,7 +194,7 @@
   \end{scope}
   \draw[red,line width=1.6,mid arrow2] (DP AOM) -- (DP M1);
   \draw[blue,line width=1.6,mid arrow2] (DP AOM) --
-  node[above,pos=0.34,rotate=-5] {\small $\approx\!+345~\mathrm{MHz}$} ($(DP M1) + (-0.3, 0.3)$);
+  node[above,pos=0.38,rotate=-6] {\small $\approx\!+345~\mathrm{MHz}$} ($(DP M1) + (-0.3, 0.3)$);
   \draw[blue,line width=1.6,mid arrow2] ($(DP M1) + (-0.3, 0.3)$) -- (DP M2);
   \draw[red,line width=1.6,mid arrow2] (DP M1) -- (SP IM1);
   \draw[red,line width=1.6,mid arrow2] (SP lens) -- (SP IM1);
@@ -201,7 +203,7 @@
   \draw[red,line width=1.6,mid arrow] ($(SP PBS) + (-1, 0)$) -- (SP IM2);
   \draw[red,line width=1.6] (SP IM2) -- (SP AOM);
   \draw[red,line width=1.6,mid arrow] (SP AOM) --
-  node[above,rotate=86,pos=0.45] {\small $-80~\mathrm{MHz}$} ($(SP M1) + (-0.2, 0.2)$);
+  node[above,rotate=86,pos=0.5] {\small $-80~\mathrm{MHz}$} ($(SP M1) + (-0.2, 0.2)$);
   \draw[red,line width=1.6,mid arrow] ($(SP M1) + (-0.2, 0.2)$) -- (SP M2);
   \draw[red,line width=1.6,mid arrow] (SP M2) -- (SP PBS);
   % Input PBS
