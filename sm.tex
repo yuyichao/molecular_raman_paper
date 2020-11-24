@@ -218,19 +218,19 @@ pairs, a harmonic confining potential is added to the molecular potentials and t
 to 3000~\AA.
 
 \section{Excited Molecular States} \label{sm:excited_states}
-To obtain a full calculation for the expected Raman Rabi frequency, light shift and scattering, we need to account for all the excited molecular states. 
-The lowest eight molecular potentials in NaCs asymptote to the dissociation limit of Na 3S + Cs 6P. 
-These eight potentials can be written in the Hund's case (a) basis as $ \mathrm{c^3\Sigma^+_{\Omega = 0^-},c^3\Sigma^+_{\Omega = 1}, b^3\Pi_{\Omega = 0^-}, b^3\Pi_{\Omega = 0^+}, b^3\Pi_{\Omega = 1}, b^3\Pi_{\Omega = 2}, B^1\Pi_{\Omega = 1}, A^1\Sigma^+_{\Omega = 0^+}}$ \cite{Korek2007}. 
-Due to spin-orbit coupling, especially large in Cs, the excited molecular states are mixed, containing components in multiple potentials. 
+To obtain a full calculation for the expected Raman Rabi frequency, light shift and scattering, we need to account for all the excited molecular states.
+The lowest eight molecular potentials in NaCs asymptote to the dissociation limit of Na 3S + Cs 6P.
+These eight potentials can be written in the Hund's case (a) basis as $ \mathrm{c^3\Sigma^+_{\Omega = 0^-},c^3\Sigma^+_{\Omega = 1}, b^3\Pi_{\Omega = 0^-}, b^3\Pi_{\Omega = 0^+}, b^3\Pi_{\Omega = 1}, b^3\Pi_{\Omega = 2}, B^1\Pi_{\Omega = 1}, A^1\Sigma^+_{\Omega = 0^+}}$ \cite{Korek2007}.
+Due to spin-orbit coupling, especially large in Cs, the excited molecular states are mixed, containing components in multiple potentials.
 Fortunately, single-channel potential energy curves for $\mathrm{c^3\Sigma^+_1}$ and $  B^1\Pi_1 $ have been experimentally determined, and are predictive across the entire energy range of the potential \cite{Grochola2010, Grochola2011, Liu2017}.
 Since there is only one $ \Omega = 2$ potential at this dissociation limit, a single-channel potential has been determined for $ b^3\Pi_2$ as well \cite{Zabawa2012}.
-Unfortunately, single-channel potentials for the other electronic states do not exist. 
-A deperturbation analysis was required for states belonging to the mixed $\mathrm{A-b}$ complex, 
-and the fitted potentials and spin-orbit coupling coefficients are only accurate within the energy range of the measured experimental data \cite{Zaharova2009}. 
-Since our experiment attempts to work in a regime where the predominant Raman coupling comes from the $v' = 0$ state of $ \mathrm{c^3\Sigma^+_1} $, 
-the contribution of the other seven potentials is mainly to a background that is nearly detuning independent. 
+Unfortunately, single-channel potentials for the other electronic states do not exist.
+A deperturbation analysis was required for states belonging to the mixed $\mathrm{A-b}$ complex,
+and the fitted potentials and spin-orbit coupling coefficients are only accurate within the energy range of the measured experimental data \cite{Zaharova2009}.
+Since our experiment attempts to work in a regime where the predominant Raman coupling comes from the $v' = 0$ state of $ \mathrm{c^3\Sigma^+_1} $,
+the contribution of the other seven potentials is mainly to a background that is nearly detuning independent.
 Thus, for computational ease, we use the diabatic potentials for $ \mathrm{b^3\Pi_{0}, b^3\Pi_{1}} $ and $ \mathrm{A^1\Sigma^+_{0^+}}$, and remove the states nearest to the $ v' = 0$ state of $ \mathrm{c^3\Sigma^+_1} $.
-Lastly, to our knowledge, no potential fit to experimental data exists for the $ c^3\Sigma^+_{0^-}$ state. Assuming that its contribution is only to the background, as an approximation, we simply double the contribution of all states except $v' = 0$ from $ c^3\Sigma^+_1$. 
+Lastly, to our knowledge, no potential fit to experimental data exists for the $ c^3\Sigma^+_{0^-}$ state. Assuming that its contribution is only to the background, as an approximation, we simply double the contribution of all states except $v' = 0$ from $ c^3\Sigma^+_1$.
 
 \section{Calculating Matrix Elements with Coupled Channel Ground State}
 To calculate Rabi frequencies for transitions to the eight excited molecular potentials, we
@@ -238,9 +238,9 @@ obtain their wavefunctions from a single-channel calculation \cite{Fattal1996} u
 then calculate overlap integrals between these functions and either the triplet ($S=1$) or singlet ($S=0$) components of the
 coupled-channel wavefunctions for either the target molecular state or the confined atomic state.
 These calculations assume that the intermediate states have pure singlet or triplet character and neglect its
-nuclear spin character, which is unknown.
+nuclear spin character, which is unknown. These calculations include an electronic transition dipole moment. These were calculated ab initio by \textcolor{red}{Should we just mention Mosynski or Rosario? or say something about the ab initio method and give a citation.}
 
-The full calculation of the Raman Rabi frequency and scattering rate using the methods in section \ref{sm:sect_2} is shown in figure \ref{f-sm}. The strong contribution from the atomic threshold arises from the large overlap to the near-threshold bound states. This leads to a $1/\delta_{\text{thresh}}^2$ dependence of the scattering rate and favors using deeply bound states as the intermediate state for the Raman transfer. 
+The full calculation of the Raman Rabi frequency and scattering rate using the methods in section \ref{sm:sect_2} is shown in figure \ref{f-sm}. The strong contribution from the atomic threshold arises from the large overlap to the near-threshold bound states. This leads to a $1/\delta_{\text{thresh}}^2$ dependence of the scattering rate and favors using deeply bound states as the intermediate state for the Raman transfer.
 
 \begin{figure}[ht!]
   \includegraphics[width=\textwidth]{imgs/raman_theory_full.pdf}
