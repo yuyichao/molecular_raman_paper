@@ -15,7 +15,6 @@ using LibArchive
 
 using DelimitedFiles
 
-# const fname = joinpath(@__DIR__, "../damop-2020/20MHz_linewidth_c3SigmaOnly_3322_80kHzConfinement.csv.zst")
 const fname = joinpath(@__DIR__, "data/FCFtoc3Sigma.csv")
 const data = readdlm(fname, ',', skipstart=1)
 const prefix = joinpath(@__DIR__, "imgs", "fcf")
