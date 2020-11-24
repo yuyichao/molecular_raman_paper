@@ -38,48 +38,83 @@
     \end{scope}
   \end{scope}
 }
+% \newcommand\drawlens[3]{
+%   % 1: center (x, y)
+%   % 2: size
+%   % 3: angle
+%   \drawellipseshade[inner color=blue,outer color=blue!40!cyan]{#1}{#2}{{0.14 * #2}}{#3}
+% }
+% \newcommand\drawwaveplate[3]{
+%   % 1: center (x, y)
+%   % 2: size
+%   % 3: angle
+%   \drawellipseshade[inner color=blue!50!black,outer color=blue!80!black]{#1}{#2}{{0.07 * #2}}{#3}
+% }
+% \newcommand\drawaom[4]{
+%   % 1: center (x, y)
+%   % 2: xsize
+%   % 3: ysize
+%   % 4: angle
+%   \drawellipseshade[inner color=orange,outer color=orange]{#1}{#2}{#3}{#4}
+%   \begin{scope}[rotate around={#4:#1}]
+%     \fill[orange, even odd rule, opacity=0.8]
+%     ($#1 + ({#2}, 0)$) arc (0:360:{#2} and {#3})
+%     -- ($#1 + ({#2}, {#3})$) -- ($#1 + (-{#2}, {#3})$) -- ($#1 + (-{#2}, -{#3})$)
+%     -- ($#1 + ({#2}, -{#3})$) --cycle;
+%     \draw ($#1 + ({#2}, {#3})$) -- ($#1 + (-{#2}, {#3})$) -- ($#1 + (-{#2}, -{#3})$)
+%     -- ($#1 + ({#2}, -{#3})$) --cycle;
+%   \end{scope}
+% }
+% \newcommand\drawpbs[3]{
+%   % 1: center (x, y)
+%   % 2: size
+%   % 3: angle
+%   \begin{scope}
+%     \begin{scope}
+%       \clip[rotate around={#3:#1}] ($#1 - ({#2}, {#2})$) rectangle ($#1 + ({#2}, {#2})$);
+%       \begin{scope}[transform canvas={shift={#1}, rotate=#3}]
+%         \shade[bottom color=blue!60!cyan, top color=blue!50!cyan, path fading=pbs fading]
+%         (-{#2}, -{#2}) rectangle ({#2}, {#2});
+%         \draw[line width=1] (-{#2}, -{#2}) -- ({#2}, {#2});
+%       \end{scope}
+%     \end{scope}
+%     % Make sure the frame is not clipped
+%     \draw[rotate around={#3:#1}] ($#1 - ({#2}, {#2})$) rectangle ($#1 + ({#2}, {#2})$);
+%   \end{scope}
+% }
 \newcommand\drawlens[3]{
   % 1: center (x, y)
   % 2: size
   % 3: angle
-  \drawellipseshade[inner color=blue,outer color=blue!40!cyan]{#1}{#2}{{0.14 * #2}}{#3}
+  \begin{scope}[shift={#1}]
+    \node[rotate={#3}] at (0, 0) {\scalebox{#2}{\includegraphics[width=2cm]{lens.png}}};
+  \end{scope}
 }
 \newcommand\drawwaveplate[3]{
   % 1: center (x, y)
   % 2: size
   % 3: angle
-  \drawellipseshade[inner color=blue!50!black,outer color=blue!80!black]{#1}{#2}{{0.07 * #2}}{#3}
+  \begin{scope}[shift={#1}]
+    \node[rotate={#3}] at (0, 0) {\scalebox{#2}{\includegraphics[width=2cm]{wp.png}}};
+  \end{scope}
 }
 \newcommand\drawaom[4]{
   % 1: center (x, y)
   % 2: xsize
   % 3: ysize
   % 4: angle
-  \drawellipseshade[inner color=orange,outer color=orange]{#1}{#2}{#3}{#4}
-  \begin{scope}[rotate around={#4:#1}]
-    \fill[orange, even odd rule, opacity=0.8]
-    ($#1 + ({#2}, 0)$) arc (0:360:{#2} and {#3})
-    -- ($#1 + ({#2}, {#3})$) -- ($#1 + (-{#2}, {#3})$) -- ($#1 + (-{#2}, -{#3})$)
-    -- ($#1 + ({#2}, -{#3})$) --cycle;
-    \draw ($#1 + ({#2}, {#3})$) -- ($#1 + (-{#2}, {#3})$) -- ($#1 + (-{#2}, -{#3})$)
-    -- ($#1 + ({#2}, -{#3})$) --cycle;
+  \begin{scope}[shift={#1}]
+    \node[rotate={#4}] at (0, 0)
+    {\scalebox{#2}[#3]{\includegraphics[width=2cm,height=2cm]{AOM.png}}};
   \end{scope}
 }
 \newcommand\drawpbs[3]{
   % 1: center (x, y)
   % 2: size
   % 3: angle
-  \begin{scope}
-    \begin{scope}
-      \clip[rotate around={#3:#1}] ($#1 - ({#2}, {#2})$) rectangle ($#1 + ({#2}, {#2})$);
-      \begin{scope}[transform canvas={shift={#1}, rotate=#3}]
-        \shade[bottom color=blue!60!cyan, top color=blue!50!cyan, path fading=pbs fading]
-        (-{#2}, -{#2}) rectangle ({#2}, {#2});
-        \draw[line width=1] (-{#2}, -{#2}) -- ({#2}, {#2});
-      \end{scope}
-    \end{scope}
-    % Make sure the frame is not clipped
-    \draw[rotate around={#3:#1}] ($#1 - ({#2}, {#2})$) rectangle ($#1 + ({#2}, {#2})$);
+  \begin{scope}[shift={#1}]
+    \node[rotate={#3}] at (0, 0)
+    {\scalebox{#2}{\includegraphics[width=1.4285714285714286cm]{PBS.png}}};
   \end{scope}
 }
 
@@ -150,6 +185,7 @@
   \drawaom{(-2, 0)}{1}{0.5}{90}
   \node[rotate=-90] at (-2, 0) {\large DP AOM};
   % DP Lens
+  % \node[rotate=90] at (-4.5, 0) {\includegraphics[width={2 cm}]{lens.pdf}};
   \drawlens{(-4.5, 0)}{1}{90}
   \node[blue!80!cyan,below] at (-4.5, -1) {\large L1};
   \draw[line width=3] (-6 - 0.7, 0 + 0.7) -- (-6 + 0.7, 0 - 0.7);
