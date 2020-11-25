@@ -414,7 +414,7 @@ and the tweezer returns to a single frequency.
     in a trap of depth $3.75~\mathrm{mW}$ caused by off-resonance photoassociation.
     This is used to improve the fitting of the Raman transfer data.
     Inset: Atomic scattering rate scales as
-    $P_\textrm{tweezer}^{2.58}\cdot\!2\pi\!\cdot29.3(17)~\mathrm{mHz/mW^{2.58}}$ on a log-log scale;
+    $P_\textrm{tweezer}^{2.58}\times\!2\pi\!\times29.3(17)~\mathrm{mHz/mW^{2.58}}$ on a log-log scale;
     this is consistent with a two-photon scattering process.
     We have not measured a clear dependency of the loss rate on the tweezer detuning.
     \label{f-lifetime}}
@@ -484,8 +484,8 @@ or Raman Rabi frequency comes from the $ v' = 0$ intermediate state.
     and $c=16.43(2)~\mathrm{MHz\cdot GHz/mW}$.
     (b) Raman Rabi frequency ($\Omega_R$) fitted to $(a + b/\Delta)\cdot P^{1.29}$.
     The detuning is calculated using the PA frequency fitted in (a).
-    The fitting results are $a=-2\pi\cdot\!0.41(2)~\mathrm{kHz/mW^{1.29}}$
-    $b=4\pi^2\cdot\!167(2)~\mathrm{kHz\cdot\!GHz/mW^{1.29}}$.
+    The fitting results are $a=-2\pi\times\!0.41(2)~\mathrm{kHz/mW^{1.29}}$
+    $b=4\pi^2\times\!167(2)~\mathrm{kHz\cdot\!GHz/mW^{1.29}}$.
     (c) Tweezer power dependency of light shift (top) and Raman Rabi frequency (bottom)
     on a log-log plot showing the power-law scaling.
     \label{f-det}}
@@ -500,11 +500,9 @@ The background is caused by coupling to other excited states that are further aw
 The $1/\Delta$ component, however, is due to the coupling between the molecular state
 and the $v'=0$ intermediate state.
 From this measurement, we can extract a $\Omega_m$ of
-$2\pi\times72.32(4) ~\mathrm{MHz}/\sqrt{\mathrm{mW}}$.
-% or
-% $2\pi\times140.06(8) ~\mathrm{MHz}$ for the $3.75~\mathrm{mW}$ tweezer power used above.
-This number is close to the value of
-$2\pi\times296 ~\mathrm{MHz}/\sqrt{\mathrm{mW}}$ calculated from theory. \todo{ref/sm theory}
+$2\pi\times181.3(1)~\mathrm{MHz}/\sqrt{\mathrm{mW}}$.
+This number is within $50~\mathrm{\%}$
+of the value $2\pi\times296 ~\mathrm{MHz}/\sqrt{\mathrm{mW}}$ calculated from theory.
 
 In order to calculate the ratio $\Omega_m/\Omega_a$,
 we now need to extract $ \Omega_a $.
@@ -524,12 +522,12 @@ Similar to the light shift, the detuning dependency of the Raman Rabi frequency
 is determined by a constant background component and
 a $v'=0$ component that scales as $1/\Delta$.
 The $v'=0$ component of the Raman Rabi frequency at our detuning is
-$2\pi\times1.02(2)~\mathrm{kHz\cdot mW^{-1.29}}$,
-or $2\pi \times 5.6(1)~\mathrm{kHz}$ at $3.75~\mathrm{mW}$ tweezer power.
-Together with the $\Omega_m$ measured above, the Rabi frequency, $ \Omega_a $, is
-$2\pi \times 12.1(3)~\mathrm{MHz}$.
-This gives a matrix-element ratio of $11.6(3)$,
-which is in fact better than the theory prediction of $23.8$ (Table \ref{tab:rabi_freqs}).
+$2\pi\times1.15(1)~\mathrm{kHz\cdot mW^{-1.29}}$,
+or $2\pi \times 6.34(8)~\mathrm{kHz}$ at $3.75~\mathrm{mW}$ tweezer power.
+Together with the $\Omega_m$ measured above, the Rabi frequency, $\Omega_a$, is
+$2\pi\times 5.23(6)~\mathrm{MHz}$.
+This gives a matrix-element ratio $\Omega_m/\Omega_a$ of $67.1(8)$,
+which is close to the theory prediction of $77.7$~(Table~\ref{tab:rabi_freqs}).
 Therefore, this should not cause the ratio of the Raman Rabi frequency to scattering rate
 from the $v'=0$ state to be higher than expected.
 Furthermore, we independently measure the natural linewidth of the $v'=0$ excited state to be no larger than $50~\mathrm{MHz}$ using photoassociation (PA) spectroscopy, which cannot explain the excess scattering either.
@@ -540,9 +538,9 @@ Furthermore, we independently measure the natural linewidth of the $v'=0$ excite
     & Experiment & Theory \\ \hline
     $\Omega_R $ & $-$ & $2\pi \times 15.3~\mathrm{kHz}$ \\
     $\Gamma_s$ & $-$ & $ 2\pi \times 533~\mathrm{Hz}$ \\
-    $ \Omega_m $ & $2\pi \times 140.06(8) ~\mathrm{MHz} $ & $2\pi \times 573 ~\mathrm{MHz}$ \\
-    $\Omega_a$ & $2\pi \times 12.1(3) ~\mathrm{MHz}$ & $2\pi \times 7.37 ~\mathrm{MHz}$ \\
-    $\Omega_m/\Omega_a$ & $11.6(3)$ & $ 77.7$
+    $\Omega_m$ & $2\pi \times 351.1(2)~\mathrm{MHz} $ & $2\pi \times 573 ~\mathrm{MHz}$ \\
+    $\Omega_a$ & $2\pi \times 5.23(6)~\mathrm{MHz}$ & $2\pi \times 7.37 ~\mathrm{MHz}$ \\
+    $\Omega_m/\Omega_a$ & $67.1(8)$ & $77.7$
   \end{tabular}
   \caption{Comparison between theory and experiment of $\Omega_R,\Gamma_s, \Omega_m, \Omega_a$. $\Omega_R$ and $ \Gamma_s $ are reported at $145~\mathrm{GHz}$ detuned from the $v' = 0$ state. All numbers are reported at $3.75$ mW tweezer power. }
   \label{tab:rabi_freqs}
