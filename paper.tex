@@ -211,6 +211,22 @@ This system-independent approach creates molecules atom-by-atom with full quantu
 \begin{figure}
   \includegraphics[width=0.5\textwidth]{imgs/raman_spectroscopy_raman_beampath.pdf}
   \caption{
+    Beampath for generating the frequency for Raman transition in the tweezer.
+    (Some mirrors and other optics used for alignment are not included.)
+    The two ASE filters before and after the fibers are also shown.
+    The red beam path is the $0$-th order of the double pass~(DP) AOM
+    which is used for the tweezer.
+    When the double-pass~(DP) AOM is turned on, some power is redirected to the first order
+    (blue beam path) which generates the required frequency different to drive
+    the Raman transition. The two frequencies are recombined on the DP AOM.
+    The $0$-th order light is shifted by another single pass~(SP) AOM
+    running on a different frequency before recombining.
+    Without this AOM, the leak light from the DP AOM will be at the same frequency
+    as the $0$-th order light which can cause a significant power fluctuation
+    due to interference.
+    The experiment typically start with the SP AOM on and the DP AOM off.
+    When driving the Raman transition, the powers on both AOMs are ramped simultaneously
+    to achieve the desired power at both frequencies.
     \label{f-beampath}
   }
 \end{figure}
