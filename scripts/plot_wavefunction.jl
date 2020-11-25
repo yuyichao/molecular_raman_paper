@@ -1,6 +1,6 @@
 #!/usr/bin/julia
 
-push!(LOAD_PATH, joinpath(@__DIR__, "../../lib"))
+push!(LOAD_PATH, joinpath(@__DIR__, "../../../lib"))
 
 import NaCsCalc.Format: Unc, Sci
 using NaCsCalc
@@ -24,14 +24,14 @@ function read_csv_compressed(fname, args...; kwargs...)
     end
 end
 
-const fname31 = joinpath(@__DIR__, "../2020-postdoc/3311boundstate.csv.zst")
-const fname32 = joinpath(@__DIR__, "../2020-postdoc/3322boundstate.csv.zst")
-const fname42 = joinpath(@__DIR__, "../2020-postdoc/4422boundstate.csv.zst")
+const fname31 = joinpath(@__DIR__, "../../2020-postdoc/3311boundstate.csv.zst")
+const fname32 = joinpath(@__DIR__, "../../2020-postdoc/3322boundstate.csv.zst")
+const fname42 = joinpath(@__DIR__, "../../2020-postdoc/4422boundstate.csv.zst")
 const data31 = read_csv_compressed(fname31, ',', Float64)
 const data32 = read_csv_compressed(fname32, ',', Float64)
 const data42 = read_csv_compressed(fname42, ',', Float64)
 
-const prefix = joinpath(@__DIR__, "imgs", "wavefunction")
+const prefix = joinpath(@__DIR__, "../imgs", "wavefunction")
 
 figure()
 plot(data42[:, 1], data42[:, 2] .* 2e6, "C2", label="Na(2,2) Cs(4,4)")

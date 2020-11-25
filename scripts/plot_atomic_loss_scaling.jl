@@ -1,6 +1,6 @@
 #!/usr/bin/julia
 
-push!(LOAD_PATH, joinpath(@__DIR__, "../../lib"))
+push!(LOAD_PATH, joinpath(@__DIR__, "../../../lib"))
 
 import NaCsCalc.Format: Unc, Sci
 using NaCsCalc
@@ -25,7 +25,7 @@ fit_gamma_a2 = fit_data(gen_power_model(2.58), rates[:, 1], rates[:, 2], rates[:
                         [1.0]; plot_lo=2.7)
 @show fit_gamma_a2.uncs
 
-const prefix = joinpath(@__DIR__, "imgs", "atomic_loss_scaling")
+const prefix = joinpath(@__DIR__, "../imgs", "atomic_loss_scaling")
 
 # figure()
 # errorbar(rates[:, 1], rates[:, 2], rates[:, 3], fmt="C0o")
@@ -39,7 +39,7 @@ const prefix = joinpath(@__DIR__, "imgs", "atomic_loss_scaling")
 # ax.xaxis.set_minor_formatter(matplotlib.ticker.NullFormatter())
 # ax.set_xticks(3:16, minor=true)
 # xlabel("Tweezer Power (mW)")
-# ylabel("\$\\Gamma_{atom} (2\\pi\\cdot \\mathrm{Hz})\$")
+# ylabel("\$\\Gamma_{atom} (2\\pi\\times \\mathrm{Hz})\$")
 # NaCsPlot.maybe_save("$(prefix)")
 
 figure(figsize=[4.8, 3.6] .* 1.08792)
@@ -58,7 +58,7 @@ yticks([1, 3, 10, 30], ["1", "3", "10", "30"])
 ax.xaxis.set_minor_formatter(matplotlib.ticker.NullFormatter())
 ax.set_xticks(0.7:0.1:4, minor=true)
 xlabel("Tweezer Power (mW)", fontsize=17)
-ylabel("\$\\Gamma_{atom} (2\\pi\\cdot \\mathrm{Hz})\$", fontsize=17)
+ylabel("\$\\Gamma_{atom} (2\\pi\\times \\mathrm{Hz})\$", fontsize=17)
 tight_layout()
 NaCsPlot.maybe_save("$(prefix)_inset")
 

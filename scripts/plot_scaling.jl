@@ -1,6 +1,6 @@
 #!/usr/bin/julia
 
-push!(LOAD_PATH, joinpath(@__DIR__, "../../lib"))
+push!(LOAD_PATH, joinpath(@__DIR__, "../../../lib"))
 
 import NaCsCalc.Format: Unc, Sci
 using NaCsCalc
@@ -193,7 +193,7 @@ const data_rabi = gen_data(rabi_freqs)
 const fit_rabi = fit_data(model_rabi, data_rabi.x, data_rabi.y, [0.1, 0.1], plotx=false)
 @show fit_rabi.uncs
 
-const prefix = joinpath(@__DIR__, "imgs", "scaling")
+const prefix = joinpath(@__DIR__, "../imgs", "scaling")
 
 const powers_plot = [15, 6, 3]
 
@@ -243,7 +243,7 @@ yticks([0, 2, 4, 6, 8])
 # xticks([-200, -160, -120, -80])
 ylim([0, 9.7])
 xlabel("\$1 / \\Delta~(\\mathrm{THz^{-1}})\$")
-ylabel("\$\\Omega_{R}~(2\\pi\\cdot \\mathrm{kHz})\$")
+ylabel("\$\\Omega_{R}~(\\mathrm{2\\pi\\times kHz})\$")
 NaCsPlot.maybe_save("$(prefix)_rabi")
 
 const freq = 560
@@ -292,7 +292,7 @@ grid()
 # ax2.yaxis.set_minor_formatter(matplotlib.ticker.NullFormatter())
 # ax2.set_xticks(0.7:0.1:4, minor=true)
 xlabel("Tweezer Power (mW)")
-ylabel("\$\\Omega_{R} (2\\pi\\cdot \\mathrm{kHz})\$")
+ylabel("\$\\Omega_{R} (\\mathrm{2\\pi\\times kHz})\$")
 xlim([0.625, 4.25])
 ylim([0.42, 4.2])
 NaCsPlot.maybe_save("$(prefix)_560")

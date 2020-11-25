@@ -1,8 +1,8 @@
 #!/usr/bin/julia
 
-push!(LOAD_PATH, joinpath(@__DIR__, "../../lib"))
+push!(LOAD_PATH, joinpath(@__DIR__, "../../../lib"))
 
-include("../../experiments/nacs_202003/molecular_raman_model.jl")
+include("../../../experiments/nacs_202003/molecular_raman_model.jl")
 
 import NaCsCalc.Format: Unc, Sci
 using NaCsCalc
@@ -18,7 +18,7 @@ const inames = ["nacs_202010/data/data_20201001_203322.mat",
                 "nacs_202010/data/data_20201006_190214.mat",
                 "nacs_202010/data/data_20201002_085901.mat",
                 "nacs_202010/data/data_20201003_102015.mat"]
-const datas = [NaCsData.load_striped_mat(joinpath(@__DIR__, "../../experiments/", iname)) for iname in inames]
+const datas = [NaCsData.load_striped_mat(joinpath(@__DIR__, "../../../experiments/", iname)) for iname in inames]
 const maxcnts = [typemax(Int),
                  typemax(Int),
                  typemax(Int),
@@ -76,7 +76,7 @@ const data_fit = [NaCsData.map_params((i, v) -> (1, 570.4, v, 1), data_nacs_00);
                   NaCsData.map_params((i, v) -> (5, v, 0.0, 6), data_pa_m);
                   NaCsData.map_params((i, v) -> (6, v, 0.0, 7), data_nacs_m)]
 
-const prefix = joinpath(@__DIR__, "imgs", "exp_data")
+const prefix = joinpath(@__DIR__, "../imgs", "exp_data")
 
 function model_exp(x, p)
     if length(p) > 2

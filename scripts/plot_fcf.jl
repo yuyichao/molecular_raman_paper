@@ -1,6 +1,6 @@
 #!/usr/bin/julia
 
-push!(LOAD_PATH, joinpath(@__DIR__, "../../lib"))
+push!(LOAD_PATH, joinpath(@__DIR__, "../../../lib"))
 
 import NaCsCalc.Format: Unc, Sci
 using NaCsCalc
@@ -15,9 +15,9 @@ using LibArchive
 
 using DelimitedFiles
 
-const fname = joinpath(@__DIR__, "data/FCFtoc3Sigma.csv")
+const fname = joinpath(@__DIR__, "../data/FCFtoc3Sigma.csv")
 const data = readdlm(fname, ',', skipstart=1)
-const prefix = joinpath(@__DIR__, "imgs", "fcf")
+const prefix = joinpath(@__DIR__, "../imgs", "fcf")
 
 figure(figsize=[13.8, 4.8])
 plot(data, "C0o-")

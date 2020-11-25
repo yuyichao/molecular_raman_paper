@@ -1,6 +1,6 @@
 #!/usr/bin/julia
 
-push!(LOAD_PATH, joinpath(@__DIR__, "../../lib"))
+push!(LOAD_PATH, joinpath(@__DIR__, "../../../lib"))
 
 import NaCsCalc.Format: Unc, Sci
 using NaCsCalc
@@ -15,15 +15,15 @@ using LibArchive
 
 using DelimitedFiles
 
-# const fname = joinpath(@__DIR__, "../damop-2020/20MHz_linewidth_c3SigmaOnly_3322_80kHzConfinement.csv.zst")
-const fname = joinpath(@__DIR__, "data/50MHz_linewidth_8TotalExcitedStates_3322_80kHzConfinement_3.75mWPowerAtAtom.csv.zst")
+# const fname = joinpath(@__DIR__, "../../damop-2020/20MHz_linewidth_c3SigmaOnly_3322_80kHzConfinement.csv.zst")
+const fname = joinpath(@__DIR__, "../data/50MHz_linewidth_8TotalExcitedStates_3322_80kHzConfinement_3.75mWPowerAtAtom.csv.zst")
 const data = LibArchive.Reader(fname) do reader
     LibArchive.support_format_raw(reader)
     LibArchive.support_filter_all(reader)
     LibArchive.next_header(reader)
     readdlm(reader, ',', skipstart=1)
 end
-const prefix = joinpath(@__DIR__, "imgs", "raman")
+const prefix = joinpath(@__DIR__, "../imgs", "raman")
 
 fig = figure(figsize=[1.11, 1.5] * 4.8)
 
@@ -32,7 +32,7 @@ plot(data[:, 1] .- 339724.57, abs.(data[:, 2] ./ 2π / 1000), "C1",
      label="\$v'=40\$")
 plot(data[:, 1] .- 288625.081, abs.(data[:, 2] ./ 2π / 1000), "C0",
      label="\$v'=0\$")
-ylabel("\$\\Omega_{R}~(2\\pi\\!\\cdot\\!\\mathrm{kHz})\$")
+ylabel("\$\\Omega_{R}~(2\\pi\\!\\times\\!\\mathrm{kHz})\$")
 xlim([-300, 300])
 ylim([6, 20000])
 yscale("log")
@@ -49,7 +49,7 @@ plot(data[:, 1] .- 288625.081, abs.(data[:, 4] ./ 2π / 1000), "C0",
      label="\$v'=0\$")
 plot(data[:, 1] .- 339724.57, abs.(data[:, 4] ./ 2π / 1000), "C1",
      label="\$v'=40\$")
-ylabel("\$\\Gamma_{s}~(2\\pi\\!\\cdot\\!\\mathrm{kHz})\$")
+ylabel("\$\\Gamma_{s}~(2\\pi\\!\\times\\!\\mathrm{kHz})\$")
 legend(fontsize=13.88, loc="upper left", handlelength=1, handletextpad=0.3)
 xlim([-300, 300])
 ylim([0.12, 200000])
