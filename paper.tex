@@ -402,6 +402,24 @@ and the tweezer returns to a single frequency.
 
 %% Experiment condition/resonance
 
+\begin{figure}[t!]
+  \includegraphics[width=0.48\textwidth]{imgs/fig-lifetime.pdf}
+  \caption{
+    (a) Direct measurement of molecule lifetime in a trap of depth $3.75~\mathrm{mW}$.
+    Molecule survival is detected by dissociating back to atoms using a second Raman transition.
+    The lifetime is consistent with the $0.199(9)~\mathrm{ms}$
+    measured from the Raman transition data.
+    Inset: pulse sequence for the lifetime measurement.
+    (b) Two-body atom lifetime of $5(1)~\mathrm{ms}$
+    in a trap of depth $3.75~\mathrm{mW}$ caused by off-resonance photoassociation.
+    This is used to improve the fitting of the Raman transfer data.
+    Inset: Atomic scattering rate scales as
+    $P_\textrm{tweezer}^{2.58}\cdot\!2\pi\!\cdot29.3(17)~\mathrm{mHz/mW^{2.58}}$ on a log-log scale;
+    this is consistent with a two-photon scattering process.
+    We have not measured a clear dependency of the loss rate on the tweezer detuning.
+    \label{f-lifetime}}
+\end{figure}
+
 We choose the tweezer frequency to be $288560~\mathrm{GHz}$
 which is far detuned (by $\approx\!145~\mathrm{GHz}$) from the $v' = 0$ line.
 Guided by the coupled-channel calculations,
@@ -443,44 +461,11 @@ it can be due either to a high ratio $\Omega_m / \Omega_a$ or to a large $\Gamma
 Additionally, coupling to other excited states can add an offset to
 both the Raman Rabi frequency and the scattering rate and thus affect their ratio.
 
-\begin{figure}[t!]
-  \includegraphics[width=0.48\textwidth]{imgs/fig-lifetime.pdf}
-  \caption{
-    (a) Direct measurement of molecule lifetime in a trap of depth $3.75~\mathrm{mW}$.
-    Molecule survival is detected by dissociating back to atoms using a second Raman transition.
-    The lifetime is consistent with the $0.199(9)~\mathrm{ms}$
-    measured from the Raman transition data.
-    Inset: pulse sequence for the lifetime measurement.
-    (b) Two-body atom lifetime of $5(1)~\mathrm{ms}$
-    in a trap of depth $3.75~\mathrm{mW}$ caused by off-resonance photoassociation.
-    This is used to improve the fitting of the Raman transfer data.
-    Inset: Atomic scattering rate scales as
-    $P_\textrm{tweezer}^{2.58}\cdot\!2\pi\!\cdot29.3(17)~\mathrm{mHz/mW^{2.58}}$ on a log-log scale;
-    this is consistent with a two-photon scattering process.
-    We have not measured a clear dependency of the loss rate on the tweezer detuning.
-    \label{f-lifetime}}
-\end{figure}
-
 In order to verify whether any one of these sources are the origin of the reduced transfer efficiency,
 we measured the properties of the Raman resonance as a function of the tweezer power and single-photon detuning.
 These dependencies allow us to experimentally determine the Rabi frequencies,
 $ \Omega_a $, $\Omega_m $ and how much of the scattering, Stark shift,
 or Raman Rabi frequency comes from the $ v' = 0$ intermediate state.
-
-First we look at the change in resonance frequency to determine $\Omega_m$.
-We observe that the resonance frequency depends linearly on the tweezer power due to the differential light shift between the atomic and molecular state.
-When we vary the tweezer frequency around the $v'=0$ intermediate state,
-we can further observe a $1/\Delta$ component
-and a constant background in the experimentally explored region, as shown in Fig.~\ref{f-det}a.
-The background is caused by coupling to other excited states that are further away in energy.
-The $1/\Delta$ component, however, is due to the coupling between the molecular state
-and the $v'=0$ intermediate state.
-From this measurement, we can extract a $\Omega_m$ of
-$2\pi\times72.32(4) ~\mathrm{MHz}/\sqrt{\mathrm{mW}}$.
-% or
-% $2\pi\times140.06(8) ~\mathrm{MHz}$ for the $3.75~\mathrm{mW}$ tweezer power used above.
-This number is close to the value of
-$2\pi\times296 ~\mathrm{MHz}/\sqrt{\mathrm{mW}}$ calculated from theory. \todo{ref/sm theory}
 
 \begin{figure*}
   \includegraphics[width=\textwidth]{imgs/fig-det.pdf}
@@ -505,6 +490,21 @@ $2\pi\times296 ~\mathrm{MHz}/\sqrt{\mathrm{mW}}$ calculated from theory. \todo{r
     on a log-log plot showing the power-law scaling.
     \label{f-det}}
 \end{figure*}
+
+First we look at the change in resonance frequency to determine $\Omega_m$.
+We observe that the resonance frequency depends linearly on the tweezer power due to the differential light shift between the atomic and molecular state.
+When we vary the tweezer frequency around the $v'=0$ intermediate state,
+we can further observe a $1/\Delta$ component
+and a constant background in the experimentally explored region, as shown in Fig.~\ref{f-det}a.
+The background is caused by coupling to other excited states that are further away in energy.
+The $1/\Delta$ component, however, is due to the coupling between the molecular state
+and the $v'=0$ intermediate state.
+From this measurement, we can extract a $\Omega_m$ of
+$2\pi\times72.32(4) ~\mathrm{MHz}/\sqrt{\mathrm{mW}}$.
+% or
+% $2\pi\times140.06(8) ~\mathrm{MHz}$ for the $3.75~\mathrm{mW}$ tweezer power used above.
+This number is close to the value of
+$2\pi\times296 ~\mathrm{MHz}/\sqrt{\mathrm{mW}}$ calculated from theory. \todo{ref/sm theory}
 
 In order to calculate the ratio $\Omega_m/\Omega_a$,
 we now need to extract $ \Omega_a $.
