@@ -1,4 +1,4 @@
-\documentclass{standalone}
+\documentclass[border=-2pt]{standalone}
 \usepackage{tikz}
 \usepackage[colorlinks=true]{hyperref}
 \usetikzlibrary{decorations.pathreplacing,
@@ -142,10 +142,10 @@
 \begin{document}
 
 \begin{tikzpicture}
-  \coordinate (Fiber 1 Out) at (1.3, 0);
+  \coordinate (Fiber 1 Out) at (1.1, 0);
   \coordinate (Fiber 1 In) at ($(Fiber 1 Out) + (1.3, 0)$);
-  \coordinate (Filter 1) at ($(Fiber 1 In) + (1.6, 0)$);
-  \coordinate (Input) at ($(Filter 1) + ({-2 * cos(44)}, {2 * sin(44)})$);
+  \coordinate (Filter 1) at ($(Fiber 1 In) + (1.5, 0)$);
+  \coordinate (Input) at ($(Filter 1) + ({-1.93 * cos(44)}, {1.93 * sin(44)})$);
 
   \coordinate (DP PBS) at (0, 0);
   \coordinate (Wavemeter) at (0, -2);
@@ -156,13 +156,13 @@
   \coordinate (DP M2) at (-5.2 - 0.4, 2.0 + 0.05);
   \coordinate (SP QWP) at (-5.2, 2.4);
   \coordinate (SP IM1) at (-5.2, 4);
-  \coordinate (SP lens) at (-6.5, 4);
-  \coordinate (SP PBS) at (-7.5, 4);
-  \coordinate (SP IM2) at (-10, 4);
-  \coordinate (SP AOM) at (-10, 2.7);
-  \coordinate (SP M1) at (-10, 0);
-  \coordinate (SP M2) at (-7.5, 0);
-  \coordinate (SP HWP) at (-7.5, 1.7);
+  \coordinate (SP lens) at (-6.1, 4);
+  \coordinate (SP PBS) at (-7.1, 4);
+  \coordinate (SP IM2) at (-9.0, 4);
+  \coordinate (SP AOM) at (-9.0, 2.7);
+  \coordinate (SP M1) at (-9.0, 0);
+  \coordinate (SP M2) at (-7.1, 0);
+  \coordinate (SP HWP) at (-7.1, 1.7);
 
   \coordinate (Servo AOM) at (0, 1.8);
   \coordinate (Fiber 2 In) at (0.3, 3.2);
@@ -173,7 +173,7 @@
   \coordinate (Output) at ($(Filter 2) + ({2 * cos(44)}, {2 * sin(44)})$);
 
   \draw[gray!30!white,line width=2] (-4.2, 5.6) |- (-1, 3.3);
-  \draw[gray!30!white,line width=2] (2.0, 5.6) |- (2.0, 1.3);
+  \draw[gray!30!white,line width=2] (1.85, 5.6) -- (1.85, 1.3);
 
   % Input
   \draw[red,line width=1.6,mid arrow] (Fiber 1 Out) -- (DP PBS);
@@ -201,14 +201,14 @@
   node[above,pos=0.38,rotate=-6] {\small $\approx\!+345~\mathrm{MHz}$} ($(DP M1) + (-0.3, 0.3)$);
   \draw[blue,line width=1.6,mid arrow2] ($(DP M1) + (-0.3, 0.3)$) -- (DP M2);
   \draw[red,line width=1.6,mid arrow2] (DP M1) -- (SP IM1);
-  \draw[red,line width=1.6,mid arrow2] (SP lens) -- (SP IM1);
+  \draw[red,line width=1.6,mid arrow2=0.7] (SP lens) -- (SP IM1);
   \draw[red,line width=1.6] (SP lens) -- (SP PBS);
   \draw[red,line width=1.6,mid arrow=0.6] (SP PBS) -- (SP IM2);
   \draw[red,line width=1.6] (SP IM2) -- (SP AOM);
   \draw[red,line width=1.6,mid arrow] (SP AOM) --
   node[above,rotate=86,pos=0.5] {\small $-80~\mathrm{MHz}$} ($(SP M1) + (-0.2, 0.2)$);
   \draw[red,line width=1.6,mid arrow] ($(SP M1) + (-0.2, 0.2)$) -- (SP M2);
-  \draw[red,line width=1.6,mid arrow] (SP M2) -- (SP PBS);
+  \draw[red,line width=1.6,mid arrow=0.7] (SP M2) -- (SP PBS);
 
   % Servo AOM
   \draw[red,line width=1.6,mid arrow=0.65] (Servo AOM) -- (Fiber 2 In);
@@ -240,7 +240,7 @@
     \node[below] at (0, -0.5) {Fiber 1};
   \end{scope}
   \drawmirror[line width=8,gray!60!white]{(Filter 1)}{0.5}{68};
-  \node[below] at ($(Filter 1) + (-0.4, -0.45)$) {ASE Filter 1};
+  \node[below] at ($(Filter 1) + (-0.7, -0.45)$) {ASE Filter 1};
 
   % Input PBS
   \drawpbs{(DP PBS)}{0.7}{0}
