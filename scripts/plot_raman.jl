@@ -28,7 +28,7 @@ const prefix = joinpath(@__DIR__, "../imgs", "raman")
 fig = figure(figsize=[1.11, 1.5] * 4.8)
 
 ax1 = fig.add_subplot(311)
-plot(data[:, 1] .- 339724.57, abs.(data[:, 2] ./ 2π / 1000), "C1",
+plot(data[:, 1] .- 339724.57, abs.(data[:, 2] ./ 2π / 1000), "C1--",
      label="\$v'=40\$")
 plot(data[:, 1] .- 288625.081, abs.(data[:, 2] ./ 2π / 1000), "C0",
      label="\$v'=0\$")
@@ -45,10 +45,10 @@ ax1.tick_params(axis="x", length=0)
 
 ax2 = fig.add_subplot(312)
 subplots_adjust(hspace=0.018)
+plot(data[:, 1] .- 339724.57, abs.(data[:, 4] ./ 2π / 1000), "C1--",
+     label="\$v'=40\$")
 plot(data[:, 1] .- 288625.081, abs.(data[:, 4] ./ 2π / 1000), "C0",
      label="\$v'=0\$")
-plot(data[:, 1] .- 339724.57, abs.(data[:, 4] ./ 2π / 1000), "C1",
-     label="\$v'=40\$")
 ylabel("\$\\Gamma_{s}~(2\\pi\\!\\times\\!\\mathrm{kHz})\$")
 legend(fontsize=13.88, loc="upper left", handlelength=1, handletextpad=0.3)
 xlim([-300, 300])
@@ -65,7 +65,7 @@ ax3 = fig.add_subplot(313)
 subplots_adjust(hspace=0.018)
 plot(data[:, 1] .- 288625.081, abs.(data[:, 2] ./ data[:, 4]), "C0",
      label="\$v'=0\$")
-plot(data[:, 1] .- 339724.57, abs.(data[:, 2] ./ data[:, 4]), "C1",
+plot(data[:, 1] .- 339724.57, abs.(data[:, 2] ./ data[:, 4]), "C1--",
      label="\$v'=40\$")
 xlabel("One-Photon Detuning (GHz)")
 ylabel("\$\\Omega_{R}/\\Gamma_{s}\$")
