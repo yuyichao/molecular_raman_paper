@@ -262,7 +262,19 @@ The full calculation of the Raman Rabi frequency and scattering rate using the m
   \caption{The Franck-Condon Factor (FCF) between the target molecular state and vibrational state $v'$ of $c^3\Sigma^+_1$. The potential supports 74 bound states, and the predominant contribution arises from the near-threshold bound states. The total overlap with all the bound states is $0.4822$, which is $96.8\%$ of the total triplet fraction of the target molecular state.
     \label{f-smfcf}}
 \end{figure}
+\section{Effective Matrix Elements to a Single State}
 
+In this calculation, there is a matrix element, $\Omega_{ai}, \Omega_{mi}$ between each channel $ i $ of the coupled channel ground state and an excited state. The total Raman Rabi frequency $ \Omega_R$, light shift $ \delta$ and off-resonant scattering $ \Gamma_S $ contribution from this single excited state is calculated as
+
+\begin{align}
+    \Omega_{R} &= \displaystyle\sum_{i} \frac{\Omega_{ai} \Omega_{mi}}{2\Delta} \\
+    \delta &= \displaystyle\sum_{i} \frac{\Omega_{ai}^2 - \Omega_{mi}^2}{2\Delta} \\
+    \Gamma_S &= \displaystyle\sum_{i} \Gamma_e \frac{\Omega_{ai}^2 + \Omega_{mi}^2}{2\Delta^2}
+\end{align}
+
+where $ \Delta $ is the single photon detuning and $ \Gamma_e $ is the excited state linewidth. The experiment, through measuring the detuning dependence of the Raman Rabi frequency and the resonance frequency, extracts a single $ \Omega_m $ and $ \Omega_a $. In order to compare to the theory, we introduce effective $ \Omega_a', \Omega_m', \Gamma_e'$, so that $ \Omega_R = \Omega_a'\Omega_m'/2\Delta $, $\delta = (\Omega_{a}'^2 - \Omega_{m}'^2)/2\Delta $, and $\Gamma_S = \Gamma_e'(\Omega_{a}'^2 + \Omega_{m}'^2)/2\Delta^2 $. These effective Rabi frequencies are used to calculate the Rabi frequency ratio and are the quantities reported in the main text when compared to experiment. 
+
+\section{Scaling of atomic matrix element with tweezer power}
 
 Since our coupled-channel calculations include the harmonic confinement, we can calculate the enhancement in $\Omega_a$ with increasing confinement. Using two calculations with $ \omega_{\text{trap}} = 36.5~\mathrm{kHz}$ and $\omega_{\text{trap}} = 80~\mathrm{kHz}$ trapping frequencies, and assuming a power law scaling, we find $ \Omega_a \propto \omega_{\text{trap}}^{0.58} $. Thus, $\Omega_a \propto P^{0.29} $, which was also experimentally verified. However, we note that in the actual experiment, our system does not have spherically symmetric confinement. The radial trapping frequency is about $5.7$ times larger than the axial trapping frequency.
 \todo{
