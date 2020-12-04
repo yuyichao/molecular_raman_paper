@@ -136,7 +136,8 @@ have directly cooled different species of diatomic or polyatomic molecules
 below 1~mK~\cite{Norrgard2016,Anderegg2018, Mitra1366, PhysRevX.10.021049,
   PhysRevLett.121.013202, Truppe2017},
 the highest phase-space-density gas~\cite{Demarco2018} and
-the coldest individual molecules~\cite{Zhang2020,He331}
+% the coldest
+trapped individual molecules~\cite{Zhang2020,He331}
 have been achieved through the association of ultracold atoms.
 % (any place to cite molecular ion work?)
 % Citations are not complete. Add them as you see fit.
@@ -233,13 +234,13 @@ This system-independent approach creates molecules atom-by-atom with full quantu
 
 The essence of an optical Raman transfer can be illustrated
 using a three-level system shown in Fig.~\ref{f-theory}a,
-where the initial atomic state and the target weakly bound molecular state are coupled to an intermediate state by two lasers with Rabi frequencies, $\Omega_a$ and $\Omega_m$, with one-photon detuning $ \Delta $, and two-photon detuning, $ \delta$.  %(Ultimately, we calculate with contribution of all vibrational states of the excited electronic potential, $\mathrm{c^3\Sigma^+}$)
-The transfer Raman Rabi Rate is given by $\Omega_a\Omega_m / 2\Delta$~\cite{Wineland2003}.
+where the initial atomic state and the target weakly bound molecular state are coupled to an intermediate state by two lasers with Rabi frequencies, $\Omega_a$ and $\Omega_m$, with one-photon detuning $ \Delta $, and two-photon detuning, $ \delta$. Note that we use the convention where the Rabi frequency describes the population oscillation between the two states.  %(Ultimately, we calculate with contribution of all vibrational states of the excited electronic potential, $\mathrm{c^3\Sigma^+}$)
+The transfer Raman Rabi Rate is given by $\Omega_a\Omega_m / (2\Delta)$~\cite{Wineland2003}.
 % , is accompanied by a photon scattering rate $\Gamma_e (\Omega_a^2 + \Omega_m^2)/4\Delta^2$
 % $\Gamma_e \Omega^2 / 4\Delta^2 $, where $ \Gamma_e $ is the excited state linewidth
 Unlike Raman transitions in atoms, the two Rabi frequencies are greatly imbalanced %. Since $ \Omega_m $ is generally much larger than $ \Omega_a $
 due to the small wavefunction overlap between the atomic state and the intermediate state, %the atomic state and the excited molecular state,
-and therefore the scattering is predominantly from the target molecular state. Furthermore, the energy difference between the atomic state and target molecular state is small ($ < 1~\mathrm{GHz} $) compared to the single-photon detuning, $ \Delta $, so the target molecular state can scatter off both beams roughly equally. Thus, the scattering rate is given by $ \Gamma_e \Omega_m^2 / 2\Delta^2$, where $ \Gamma_e $ is the excited-state linewidth \footnote{We choose the two beams to have equal power, which gives the highest Raman Rabi rate at a fixed total power. Thus, this results in a simple factor of 2 coming from scattering off 2 beams.}.
+and therefore the scattering is predominantly from the target molecular state. Furthermore, the energy difference between the atomic state and target molecular state is small ($ < 1~\mathrm{GHz} $) compared to the single-photon detuning, $ \Delta $, so the target molecular state can scatter off both beams roughly equally. Thus, the scattering rate is given by $ \Gamma_e \Omega_m^2 / (2\Delta^2)$, where $ \Gamma_e $ is the excited-state linewidth \footnote{We choose the two beams to have equal power, which gives the highest Raman Rabi rate at a fixed total power. Thus, this results in a simple factor of 2 coming from scattering off 2 beams.}.
 The ratio between the Raman Rabi frequency and the scattering rate is therefore $ \Omega_a/\Omega_m \times \Delta/\Gamma_e $. %, depends on the ratio of the two matrix elements and how far detuned the laser is from the transition in units of the linewidth.
 To ensure a coherent process, a detuning as large as possible, while maintaining a realistic Raman Rabi frequency, is preferred. %However, the detuning cannot be too large, since that will reduce the Raman Rabi frequency.
 
@@ -273,7 +274,7 @@ choosing an initial and a final state for a large ratio $\Omega_a/\Omega_m$
 maximizes $\Omega_R$ at a given detuning.
 Furthermore, a larger ratio also relaxes the intensity stability requirement for the Raman lasers,
 because this is also the ratio between $\Omega_R$
-and the AC Stark shift of the molecular state, $\Omega_m^2 / 2\Delta$
+and the AC Stark shift of the molecular state, $\Omega_m^2 / (2\Delta)$
 \footnote{There is an additional factor of 2, with both beams at equal power,
   to account for the Stark shift caused by both beams.}.
 Due to the small extent of the intermediate-state wavefunction
@@ -511,9 +512,7 @@ and a constant background in the experimentally explored region, as shown in Fig
 The background is caused by coupling to other excited states that are further away in energy.
 The $1/\Delta$ component, however, is due to the coupling to the $v'=0$ intermediate state. Combining the fit coefficients, summarized in Table \ref{tab:f-det:fit}, for the $1/\Delta$ component, we can extract $\Omega_m $ and $ \Omega_a $.
 
-We perform the experiment at various tweezer powers to extract the power dependence of $ \Omega_m $ and $ \Omega_a $, as shown in Fig.~\ref{f-det}c. $ \Omega_m $ scales with $ P^{0.5} $ as expected, and we obtain a fit value of $2\pi\times180.87(7)~\mathrm{MHz}/\sqrt{\mathrm{mW}}$.
-This number is within $40~\mathrm{\%}$
-of the value $2\pi\times296 ~\mathrm{MHz}/\sqrt{\mathrm{mW}}$ calculated from theory. The scaling of $ \Omega_a $ differs from $ P^{0.5} $, which is the expected scaling from the laser intensity, due to the change in the atomic wavefunction caused by tighter confinement at higher power. For weakly interacting particles,
+We perform the experiment at various tweezer powers to extract the power dependence of $ \Omega_m $ and $ \Omega_a $, as shown in Fig.~\ref{f-det}c. $ \Omega_m $ scales with $ P^{0.5} $ as expected, and we obtain a fit value of $2\pi\times180.87(7)~\mathrm{MHz}/\sqrt{\mathrm{mW}}$. The scaling of $ \Omega_a $ differs from $ P^{0.5} $, which is the expected scaling from the laser intensity, due to the change in the atomic wavefunction caused by tighter confinement at higher power. For weakly interacting particles,
 $\Omega_a$ scales as $P^{3/8}$.
 However, due to the strong interaction between the two atoms in the $\ket{\uparrow_{\text{Na}}\downarrow_{\text{Cs}}}$ state, this approximation breaks down.
 Instead, coupled-channel calculations show that the scaling
@@ -546,18 +545,23 @@ Furthermore, we independently measure the natural linewidth of the $v'=0$ excite
 % This gives a matrix-element ratio $\Omega_m/\Omega_a$ of $63(3)$,
 % which is close to the theory prediction of $77.7$~(Table~\ref{tab:rabi_freqs}).
 
+% Theory numbers
+% $2\pi \times 15.3~\mathrm{kHz}$
+% $ 2\pi \times 533~\mathrm{Hz}$
+% $2\pi \times 573 ~\mathrm{MHz}$
+% $2\pi \times 7.37 ~\mathrm{MHz}$
 
 \begin{table}[ht]
   \centering
-  \begin{tabular}{c|c|c}
-    & Experiment & Theory \\ \hline
-    $\Omega_R $ & $2\pi \times 3.28(4)~\mathrm{kHz}$ & $2\pi \times 15.3~\mathrm{kHz}$ \\
-    $\Gamma_s$ & $2\pi \times 0.80(4)~\mathrm{kHz}$ & $ 2\pi \times 533~\mathrm{Hz}$ \\
-    $\Omega_m$ & $2\pi \times 348.3(3)~\mathrm{MHz} $ & $2\pi \times 573 ~\mathrm{MHz}$ \\
-    $\Omega_a$ & $2\pi \times 5.5(2)~\mathrm{MHz}$ & $2\pi \times 7.37 ~\mathrm{MHz}$ \\
-    $\Omega_m/\Omega_a$ & $63(3)$ & $77.7$
+  \begin{tabular}{c|c}
+    & Measured Values \\ \hline
+    $\Omega_R $ & $2\pi \times 3.28(4)~\mathrm{kHz}$ \\
+    $\Gamma_s$ & $2\pi \times 0.80(4)~\mathrm{kHz}$ \\
+    $\Omega_m$ & $2\pi \times 348.3(3)~\mathrm{MHz} $  \\
+    $\Omega_a$ & $2\pi \times 5.5(2)~\mathrm{MHz}$  \\
+    $\Omega_m/\Omega_a$ & $63(3)$
   \end{tabular}
-  \caption{Comparison between theory and experiment of $\Omega_R,\Gamma_s, \Omega_m, \Omega_a$. $\Omega_R$ and $ \Gamma_s $ are reported at $151~\mathrm{GHz}$ detuned from the $v' = 0$ state. All numbers are reported at $3.75$ mW tweezer power. }
+  \caption{Experimental values of $\Omega_R,\Gamma_s, \Omega_m, \Omega_a$. $\Omega_R$ and $ \Gamma_s $ are reported at $151~\mathrm{GHz}$ detuned from the $v' = 0$ state. All numbers are reported at $3.75$ mW tweezer power. }
   \label{tab:rabi_freqs}
 \end{table}
 
