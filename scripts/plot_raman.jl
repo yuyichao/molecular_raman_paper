@@ -75,6 +75,8 @@ xlim([-300, 300])
 ylim([0.02, 90])
 yscale("log")
 yticks([0.1, 1, 10], ["0.1", "1", "10"])
+legend(fontsize=13.88, loc="center left", bbox_to_anchor=(0.0, 0.6),
+       handlelength=1, handletextpad=0.3)
 ax3.yaxis.set_minor_formatter(matplotlib.ticker.NullFormatter())
 grid()
 NaCsPlot.maybe_save("$(prefix)_v0_vhi")
