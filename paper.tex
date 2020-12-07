@@ -181,7 +181,7 @@ serves as the intermediate state in the Raman scheme,
 and is chosen to minimize photon scattering during Raman Rabi oscillations.
 To reduce photon scattering and sensitivity to laser intensity noise further,
 we choose the initial and final states to balance the two Rabi frequencies as much as possible.
-This system-independent approach creates molecules atom-by-atom with full quantum state control.
+This approach applies to a variety of molecules that can be created atom-by-atom with full quantum state control.
 
 
 \begin{figure*}
@@ -244,9 +244,9 @@ The transfer Raman Rabi Rate is given by $\Omega_a\Omega_m / (2\Delta)$~\cite{Wi
 Unlike Raman transitions in atoms, the two Rabi frequencies are greatly imbalanced ($\Omega_a/\Omega_m \ll 1$) %. Since $ \Omega_m $ is generally much larger than $ \Omega_a $
 due to the small wavefunction overlap between the atomic state and the intermediate state, %the atomic state and the excited molecular state,
 and scattering losses are dominated by the final state. Furthermore, the energy difference between the atomic state and target molecular state is small ($ < 1~\mathrm{GHz} $) compared to the single-photon detuning $ \Delta $ of $80$ to $200$~GHz, causing the target molecular state to scatter both beams nearly equally with a total rate $ \Gamma_e \Omega_m^2 / (2\Delta^2)$, where $ \Gamma_e $ is the excited-state linewidth~\footnote{The two beams have equal power to maximize the Raman Rabi rate at fixed total power, resulting in a factor of 2 for scattering two beams.}.
-In this idealized treatment, the ratio between the Raman Rabi frequency and the scattering rate is $ \Omega_a/\Omega_m \times \Delta/\Gamma_e $, which limits the transfer efficiency into the molecular state. At the same time, the intensity-stability requirement is determined by the ratio of Raman Rabi frequency to Stark shift ($\Omega_a/\Omega_m$)~\footnote{There is an additional factor of 2, with both beams at equal power,
+In this idealized treatment, the ratio between the Raman Rabi frequency and the scattering rate is $ \Omega_a/\Omega_m \times \Delta/\Gamma_e $, which limits the transfer efficiency into the molecular state. At the same time, the intensity-stability requirement is determined by the ratio of Raman Rabi frequency to light shift ($\Omega_a/\Omega_m$)~\footnote{There is an additional factor of 2, with both beams at equal power,
   to account for the Stark shift caused by both beams.}. Notably, both figures of merit improve with a larger ratio $\Omega_a/\Omega_m$. %, depends on the ratio of the two matrix elements and how far detuned the laser is from the transition in units of the linewidth.
-To ensure a coherent process, a detuning as large as possible, while maintaining a realistic Raman Rabi frequency, is preferred \TR{Mention 2-photon here?}. %However, the detuning cannot be too large, since that will reduce the Raman Rabi frequency.
+%However, the detuning cannot be too large, since that will reduce the Raman Rabi frequency.
 
 Earlier experiments used weakly bound excited states as the intermediate state
 in the Raman transition to ensure a large Raman Rabi frequency~\cite{Wynar2000,Rom2004}.
@@ -366,7 +366,7 @@ $31\mathrm{\%}$ of initial two-atom population is transferred.
 To transfer the atom pair into the target weakly bound molecular state,
 we modulate the tweezer beam with a second frequency near $770$~MHz, as shown in Fig.~\ref{f-beampath}.
 The dual use of the tweezer beam for confinement and Raman transfer not only minimizes photon scattering,
-but also allows a tight focus to minimize the transfer duration. A tweezer frequency far detuned (by $-151~\mathrm{GHz}$) from the 3 observed rotational~\TR{spectral?} lines at $v' = 0 $ reduces resonant scattering~\cite{Liu2019}.
+but also allows a tight focus to minimize the transfer duration. A tweezer frequency far detuned (by $-151~\mathrm{GHz}$) from $v' = 0 $ ($<50$~MHz natural linewidth) reduces resonant scattering~\cite{Liu2019}.
 %Furthermore, two filters, each with a linewidth (FWHM) of $50~\mathrm{GHz}$,
 %clean the laser spectrum and prevent broadband noise from causing unwanted excitation.
 %As shown in Fig.~\ref{f-beampath}, one filter immediately follows the laser, while the second filter precedes the microscope objective for final cleanup of the laser spectrum.
@@ -394,13 +394,13 @@ but also allows a tight focus to minimize the transfer duration. A tweezer frequ
 \begin{figure}[t!]
   \includegraphics[width=0.48\textwidth]{imgs/fig-lifetime.pdf}
   \caption{
-    (a) Direct measurement of molecule lifetime with about $3.75~\mathrm{mW}$ optical power.
+    (a) Direct measurement of molecule lifetime with about $X.XX~\mathrm{mW}$ optical power.
     Molecule survival is detected by dissociating back to atoms via a second Raman transition.
     The lifetime is consistent with the $0.199(9)~\mathrm{ms}$
     measured from the Raman transition data.
     Inset: pulse sequence for the lifetime measurement.
     (b) Two-body atom lifetime of $5(1)~\mathrm{ms}$
-    in a trap of depth $3.75~\mathrm{mW}$ caused by off-resonance photoassociation.
+    in a trap of depth $X.XX~\mathrm{mW}$ caused by off-resonance photoassociation.
     This is used to improve the fitting of the Raman transfer data.
     Inset: Atomic scattering rate scales as
     $P_\textrm{tweezer}^{2.58}\times\!2\pi\!\times29.3(17)~\mathrm{mHz/mW^{2.58}}$ on a log-log scale;
@@ -455,11 +455,11 @@ The $1/\Delta$ components, due to the nearby $v'=0$ intermediate state, determin
     $b~(\mathrm{4\pi^2\times MHz\cdot GHz})$&$-12.46(2)$&$-24.44(3)$&$-60.66(8)$\\\hline
     $c~(\mathrm{2\pi\times kHz})$&$0.29(2)$&$0.63(4)$&$2.4(2)$\\
     $d~(\mathrm{4\pi^2\times MHz\cdot GHz})$&$0.115(4)$&$0.275(6)$&$0.95(3)$\\ \hline
-    $\Omega_R~(\mathrm{2\pi\times kHz})$ & & &  \\
+    $\Omega_R~(\mathrm{2\pi\times kHz})$ & 0.49(2) & 1.18(3) & 3.97(9) \\
     $\Omega_m~(\mathrm{2\pi\times MHz})$ & & & 348.3(3) \\
     $\Omega_a~(\mathrm{2\pi\times kHz})$ & & & 5.5(2)
   \end{tabular}
-  \caption{Fitting results for Fig.~\ref{f-det}(a,b). $\Omega_R$ is reported at $-151~\mathrm{GHz}$ detuning from the $v' = 0$ state.  The coefficients $\Omega_m$ and $\Omega_a$ are in broad agreement with our calculation and their ratio $63$ is near the theory prediction of $78$.  The measured Rabi rate $\Omega_R$ is ZZ~\% of $\Omega_m \Omega_a/(2\Delta)$ due to interference from further-detuned Raman processes.
+  \caption{Fitting results for Fig.~\ref{f-det}(a,b). $\Omega_R$ is reported at $-151~\mathrm{GHz}$ detuning from the $v' = 0$ state.  The coefficients $\Omega_m$ and $\Omega_a$ are in broad agreement with our calculation and their ratio at $3.75~\mathrm{mW}$ is $0.016$, which is near the theory prediction of $0.013$.  The measured Rabi rate $\Omega_R$ is ZZ~\% of $\Omega_m \Omega_a/(2\Delta)$ due to interference from further-detuned Raman processes.
     \label{tab:f-det:fit}}
 \end{table}
 
@@ -518,7 +518,8 @@ is well approximated by $P^{0.29}$ within the range of confinement in our experi
 % belonging to a different electronically excited state at higher frequencies
 % which prevent the blue side of the transition from being be usable for the Raman transition.
 
-The measured single-photon Rabi frequencies of Table~I are in broad agreement with calculations (see Supplementary Materials). Known single-photon scattering rates of Na and Cs atoms together with an independent measurement (via photoassociation spectroscopy) of the $v'=0$ excited state natural linewidth of no more than $50~\mathrm{MHz}$ indicate that single-photon scattering from the molecular or atomic state do not explain the decoherence in Fig. 3b~\TR{long sentence}.  Below, we further investigate the loss of coherence.
+The measured single-photon Rabi frequencies of Table~I are in broad agreement with calculations (see Supplementary Materials). From the full calculation of the expected scattering rate including all excited states
+%Known single-photon scattering rates of Na and Cs atoms together with an independent measurement (via photoassociation spectroscopy) of the $v'=0$ excited state natural linewidth of no more than $50~\mathrm{MHz}$ indicate that single-photon scattering from the molecular or atomic state do not explain the decoherence in Fig. 3b~\TR{long sentence}.  Below, we further investigate the loss of coherence.
 
 \todo{change scattering to decoherence? since the fluctuation of light shift
   does not lead to scattering but only decherence.}
@@ -568,7 +569,7 @@ the potential for higher transfer efficiency than the observed value of $69$~\%.
 Our technique can be applied to form a diverse set of molecular species,
 because it does not rely on a magnetic Feshbach resonance, states bound by only a few MHz,
 or a narrow excited state. The formation of weakly bound molecules is a key step
-in forming rovibrational ground state molecules. By scaling up to many optical tweezers~\cite{Endres2016, Barredo2018,  PhysRevLett.122.203601}, large arrays with arbitrary geometry of highly controlled molecules can be achieved. These highly controlled molecules comprise a flexible platform for quantum simulation and quantum computing applications. \textcolor{blue}{(End with a sentence on molecules for future quantum applications?)}
+in forming rovibrational ground state molecules. By scaling up to many optical tweezers~\cite{Endres2016, Barredo2018,  PhysRevLett.122.203601}, large arrays with arbitrary geometry of highly controlled molecules can be achieved. These molecules comprise a flexible platform for quantum simulation and quantum computing applications. \textcolor{blue}{(End with a sentence on molecules for future quantum applications?)}
 % Combined with real-time rearrangement~\cite{Barredo2016, Endres2016},
 % defect-free arrays of highly controlled molecules comprise a promising
 % and flexible platform for quantum simulation and quantum computing applications.
@@ -586,6 +587,8 @@ in forming rovibrational ground state molecules. By scaling up to many optical t
 \TR{``We" is overused in this paper and obscures more important subject-object relationships.  Authorship already implies that ``we" did everything in the paper.}
 
 \TR{Is Raman Rabi freq the best term for $\Omega_R$?}
+
+\TR{Broader statement on experimentally possible vs. theoretical detunings.}
 
 \bibliography{master_ref}
 \bibliographystyle{apsrev4-2}
