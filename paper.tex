@@ -178,7 +178,7 @@ The resulting single molecule is in a well-defined internal quantum state
 and predominantly in its motional ground state.
 A vibrational state of the electronic excited state $\mathrm{c^3\Sigma^+}(\Omega = 1)$
 serves as the intermediate state in the Raman scheme,
-and is chosen to minimize photon scattering during Raman Rabi \TR{Is Raman Rabi freq the best term?} oscillations.
+and is chosen to minimize photon scattering during Raman Rabi oscillations.
 To reduce photon scattering and sensitivity to laser intensity noise further,
 we choose the initial and final states to balance the two Rabi frequencies as much as possible.
 This system-independent approach creates molecules atom-by-atom with full quantum state control.
@@ -216,7 +216,7 @@ This system-independent approach creates molecules atom-by-atom with full quantu
   \caption{
     Beampath for generating the frequency for Raman transition in the tweezer.
     (Some mirrors and other optics used for alignment are not included.)
-    The two ASE filters before and after the fibers are also shown.
+    The two ASE filters before and after the fibers are also shown. The laser source is a fiber amplifier seeded by a external cavity diode laser. 
     The red beam path is the $0$-th order of the double pass~(DP) AOM
     which is used for the tweezer.
     When the double-pass~(DP) AOM is turned on, some power is redirected to the first order
@@ -297,7 +297,7 @@ All other stable spin combinations give smaller scattering lengths ($<~50~a_0$).
 
 To identify a suitable target molecular state, we carry out coupled-channel calculations of the near-threshold bound states, as described in the Supplemental Material.
 Choosing a bound state with similar spin character to the atomic state  minimizes the sensitivity of the transition frequency to magnetic field.
-A suitable state with this character is predicted about 763 MHz below the $\ket{\uparrow_{\Na} \downarrow_{\Cs}}$ threshold.
+A suitable state with this character is predicted about 763 MHz below the $\ket{\uparrow_{\Na} \downarrow_{\Cs}}$ threshold and the ratio $\Omega_a/\Omega_m$ increases to about 0.013.
 % The coupled-channel calculations show that this target molecular state has lower overlap with the intermediate state, compared to bound states from other hyperfine combinations.
 % For the target molecular state, the spin state is ideally similar to the initial spin state in order to minimize sensitivity to the magnetic field.
 % We find a target spin state predominantly in the initial spin state
@@ -307,10 +307,9 @@ A suitable state with this character is predicted about 763 MHz below the $\ket{
 % instead of $0.3~\mathrm{\%}$ which is typical for other states.
 % In addition to the increased atomic coupling, $ \Omega_a $,
 % Coupled-channel calculations show that this target molecular state with similar spin composition also has reduced Rabi frequency, $ \Omega_m $, with the intermediate state when compared to bound states of the other spin compositions.
-The ratio $\Omega_a/\Omega_m$ increases to about 0.013 when starting from atoms in the $\ket{\uparrow_{\Na} \downarrow_{\Cs}}$ hyperfine combination.
 % $\ket{\uparrow_{\Na}\uparrow_{\Cs}}$ and $\ket{\downarrow_{\Na}\downarrow_{\Cs}} $ bound states.
-Compared to 0.003
-with the other combinations, this relaxes the intensity stability requirement to the percent level. % Thus, instead of a required intensity stability of $0.3 ~\mathrm{\%} $ for the 4422 or 3311 combination, the 3322 combination only requires the intensity to be stabilized to $ 5~\mathrm{\%} $.
+Compared to $\Omega_a/\Omega_m \approx 0.003$
+for other combinations, this relaxes the intensity stability requirement to the percent level and enhances the Raman Rabi frequency. % Thus, instead of a required intensity stability of $0.3 ~\mathrm{\%} $ for the 4422 or 3311 combination, the 3322 combination only requires the intensity to be stabilized to $ 5~\mathrm{\%} $.
 % Thus, we choose the $\ket{\uparrow_{\Na} \downarrow_{\Cs}}$ spin combination as our initial state and drive to the first bound state for the $\ket{\uparrow_{\Na} \downarrow_{\Cs}}$ spin combination.
 % \textcolor{blue}{(clean up the paragraph some more).} %(We might want to mention that those ratios are for 80 kHz spherical trap if we want to give more details about the coupled-channel calculation anywhere...)
 
@@ -318,16 +317,16 @@ with the other combinations, this relaxes the intensity stability requirement to
 \begin{figure}[ht!]
   \includegraphics[width=0.48\textwidth]{imgs/fig-raman.pdf}
   \caption{Coherent transfer of atoms to molecules.  The molecular state is dark to the imaging step and corresponds to zero signal.
-    (a) Raman difference frequency scans for different durations showing the resonance.
+    (a) Raman difference frequency scans for various durations showing the resonance as a frequency offset from $770.2$~MHz, near the calculated value of $763$~MHz.
     (b) Raman pulse-length scan on resonance.
     A decaying Rabi oscillation shows the coherence of
     the Raman transfer process.
     A model is fitted to (a) and (b) to determine
-    both the Raman Rabi frequency and the loss rates.
+    the Raman Rabi frequency and loss rates.
     \emph{Inset:} Geometry and polarization of trap and Raman beam relative to the magnetic field.
-    The beam X.yy~mW beam is focused to a waist of $0.9~\mathrm{\mu m}$
+    The X.yy~mW beam is focused to a waist of $0.9~\mathrm{\mu m}$
     that confines the atoms and molecule.
-    A magnetic field of $B_0=8.83(2)~\mathrm{G}$ along the tweezer polarization
+    A perpendicular $B_0=8.83(2)~\mathrm{G}$ magnetic field 
     defines the quantization axis and the atoms experience predominantly $\pi$-polarized light.
     \label{f-raman}}
 \end{figure}
@@ -343,39 +342,36 @@ based on the initial loading condition.
 After imaging, we turn on a $8.83(2)~\mathrm{G}$ magnetic field to define the quantization axis
 for the state preparation and molecule formation steps.
 Raman sideband cooling is then applied to prepare both atoms simultaneously
-in the 3-dimensional motional ground state of their optical tweezers.
-After cooling, the Na and Cs atoms are in the spin state~$\ket{\uparrow_{\Na}\uparrow_{\Cs}}\equiv \ket{f=2,m_f=2}_{\Na}\ket{f=4,m_f=4}_{\Cs}$,
+in the 3-dimensional motional ground state of their optical tweezers, leaving the atoms in the spin state~$\ket{\uparrow_{\Na}\uparrow_{\Cs}}\equiv \ket{f=2,m_f=2}_{\Na}\ket{f=4,m_f=4}_{\Cs}$,
 which has a small scattering length.
-The weak two-atom interaction allows the merging of the two tweezers to be done
-with minimum pertubation so that they remain in the motional ground state.
+The weak two-atom interaction allows merging of the two tweezers with minimum pertubation so that they remain in the motional ground state.
 
 % After preparing the Na and Cs atoms in the same tweezer in a single quantum state,
-Next, we drive the atoms into spin combination $\ket{\uparrow_{\Na} \downarrow_{\Cs}}$,
-which has large scattering length,
+Next, we drive the atoms into spin combination $\ket{\uparrow_{\Na} \downarrow_{\Cs}}$ with a large scattering length
 by performing a Cs spin flip while taking into account
 the $-30.7~\mathrm{kHz}$ interaction shift~\cite{Hood2019}.
 This is the initial atomic state for Raman transfer.
-This spin flip selectively transfers atoms in the relative motional ground state,
+The spin flip selectively transfers atoms in the relative motional ground state,
 removing any background from atoms in excited motional states
 \footnote{This interaction shift is larger than the differential axial trapping frequency
   between Na and Cs atoms, which decouples the relative and center of mass motional state
   and improves the robustness of our preparation of the relative motional ground state.}.
 For the experiment reported here,
-$31\mathrm{\%}$ of our initial two-atom population is transferred.
+$31\mathrm{\%}$ of initial two-atom population is transferred.
 % of two atoms loaded in separate optical tweezers.\textcolor{red}{I also find this part of the sentence confusing.  can you say this more concisely?}\todo{}
 % The stronger interaction in this spin state also enhances the atomic wavefunction at short range and increases its overlap with the intermediate molecular state used for our Raman transfer..
 
 %% Transfer scheme
 % After the atoms are prepared in the $\ket{\uparrow_{\Na}\uparrow_{\Cs}} $ hyperfine combination, we then perform the Raman transfer.
-To perform the Raman transfer of an atom pair to the target weakly bound molecular state,
-we modulate the tweezer beam with a second frequency, as shown in Fig.~\ref{f-beampath}.
+To transfer the atom pair into the target weakly bound molecular state,
+we modulate the tweezer beam with a second frequency near $770$~MHz, as shown in Fig.~\ref{f-beampath}.
 The dual use of the tweezer beam for confinement and Raman transfer not only minimizes photon scattering,
-but also allows a tight focus to minimize the transfer duration.
-Furthermore, two filters, each with a linewidth (FWHM) of $50~\mathrm{GHz}$,
-clean the laser spectrum and prevent broadband noise from causing unwanted excitation.
-As shown in Fig.~\ref{f-beampath}, one filter immediately follows the laser, while the second filter precedes the microscope objective for final cleanup of the laser spectrum.
-The filters reduce photon scattering rate by a factor of $2$. While we have not fully characterized the sources
-of broadband noise, possibilities include amplified spontaneous emission (ASE) from the laser and fiber nonlinearities.
+but also allows a tight focus to minimize the transfer duration. A tweezer frequency far detuned (by $-151~\mathrm{GHz}$) from the 3 observed rotational~\TR{spectral?} lines at $v' = 0 $ reduces resonant scattering~\cite{Liu2019}.
+%Furthermore, two filters, each with a linewidth (FWHM) of $50~\mathrm{GHz}$,
+%clean the laser spectrum and prevent broadband noise from causing unwanted excitation.
+%As shown in Fig.~\ref{f-beampath}, one filter immediately follows the laser, while the second filter precedes the microscope objective for final cleanup of the laser spectrum.
+%The filters reduce photon scattering rate by a factor of $2$ (\textcolor{red}{KW: Since we mention this again later when we explore the causes of our lower than expected transfer efficiency, do we need to mention this reduction here? or the possible causes?}). While we have not fully characterized the sources
+%of broadband noise, possibilities include amplified spontaneous emission (ASE) from the laser and fiber nonlinearities.
 % After the total tweezer power is set to the desired value,
 % we smoothly ramp down the power of one frequency in the tweezer
 % while simultaneously ramping up the power of the other frequency
@@ -413,16 +409,14 @@ of broadband noise, possibilities include amplified spontaneous emission (ASE) f
     \label{f-lifetime}}
 \end{figure}
 
-\TR{``We" is overused in this paper and obscures more important subject-object relationships.  Authorship already implies that ``we" did everything in the paper.} We choose a tweezer frequency far detuned (by $-151~\mathrm{GHz}$) from the 3 observed rotational lines at $v' = 0 $ to reduce resonant scattering~\cite{Liu2019}.
-Guided by the coupled-channel calculations,
-we locate the Raman resonance as shown in Fig.~\ref{f-raman}, which shows a Fourier-limited resonance together with Rabi oscillations between the atomic and molecular states.
+Figure~\ref{f-raman} shows a Fourier-limited resonance together with Rabi oscillations between the atomic and molecular states.
 % (We can maybe add information about the prediction here?)
 %% Prediction
 % This excited state used in the Raman transition was measured in our previous experiment using photoassociation to be at $288560 GHz$ from our atomic state. The ground molecular state has not been observed previously in experimentally. Based on our measurement of FB resonance, interaction shift and the binding energy of the 4422 bound state. Theory prediction was at $770.1 MHz$.
 % The background level of $31~\mathrm{\%}$ corresponds to the probability of preparing the two atoms in the relative motional ground state.
 % When the atoms are transferred into the molecule state by the Raman transition, there is a decrease in the two body survival since the resulting molecule is dark to our imaging sequence. % directly detected by our imaging step.
-A decaying Rabi oscillation fitted to the data suggests that
-$69~\mathrm{\%}$ of atoms initially in the relative motional ground state are transferred into the molecular state after a $\pi$ pulse. Over $60\%$ of the created molecules are in the motional ground state (both relative motion and center of mass motion), inferred from independent Raman sideband thermometry measurements of the atoms. A fit including atomic and molecular losses (see below) yields a Raman Rabi frequency of $2\pi\times3.28(4)~\mathrm{kHz}$.
+A decaying Rabi oscillation with frequency $2\pi\times3.28(4)~\mathrm{kHz}$ fitted to the data suggests that
+$69~\mathrm{\%}$ of atoms initially in the relative motional ground state are transferred into the molecular state after a $\pi$-pulse. Over $60\%$ of the molecules are in the motional ground state (both relative and center of mass), inferred from independent Raman sideband thermometry measurements of the atoms.
 
 \begin{figure*}
   \includegraphics[width=\textwidth]{imgs/fig-det.pdf}
@@ -461,11 +455,11 @@ The $1/\Delta$ components, due to the nearby $v'=0$ intermediate state, determin
     $b~(\mathrm{4\pi^2\times MHz\cdot GHz})$&$-12.46(2)$&$-24.44(3)$&$-60.66(8)$\\\hline
     $c~(\mathrm{2\pi\times kHz})$&$0.29(2)$&$0.63(4)$&$2.4(2)$\\
     $d~(\mathrm{4\pi^2\times MHz\cdot GHz})$&$0.115(4)$&$0.275(6)$&$0.95(3)$\\ \hline
-    $\Omega_R$ ($2\pi\times$kHz) & & & X.YY \\
-    $\Omega_m$ ($2\pi\times$MHz) & & & 348.3(3) \\
-    $\Omega_a$ ($2\pi\times$kHz) & & & 5.5(2)
+    $\Omega_R~(\mathrm{2\pi\times kHz})$ & & & X.YY \\
+    $\Omega_m~(\mathrm{2\pi\times MHz})$ & & & 348.3(3) \\
+    $\Omega_a~(\mathrm{2\pi\times kHz})$ & & & 5.5(2)
   \end{tabular}
-  \caption{Fitting results for Fig.~\ref{f-det}(a,b). $\Omega_R$ is reported at $-151~\mathrm{GHz}$ detuning from the $v' = 0$ state.  The coefficients $\Omega_m$ and $\Omega_a$ are in broad agreement with our calculation and their ratio $63$ is near the theory prediction of $78$.  The measured Rabi rate $\Omega_R$ is ZZ~\% of $\Omega_m \Omega_a/2$ due to interference from further-detuned Raman processes.
+  \caption{Fitting results for Fig.~\ref{f-det}(a,b). $\Omega_R$ is reported at $-151~\mathrm{GHz}$ detuning from the $v' = 0$ state.  The coefficients $\Omega_m$ and $\Omega_a$ are in broad agreement with our calculation and their ratio $63$ is near the theory prediction of $78$.  The measured Rabi rate $\Omega_R$ is ZZ~\% of $\Omega_m \Omega_a/(2\Delta)$ due to interference from further-detuned Raman processes.
     \label{tab:f-det:fit}}
 \end{table}
 
@@ -586,7 +580,12 @@ in forming rovibrational ground state molecules. By scaling up to many optical t
 \end{acknowledgments}
 
 \TR{Mention somewhere that the shape of Fig. 3b Rabi flopping indicates molecular loss, not atomic loss or frequency fluctuation.}
+
 \TR{Check all ``$P=3.75$~mW'' results because they may negelect reduction from 2nd ASE filter.  Better to quote the reduced power.}
+
+\TR{``We" is overused in this paper and obscures more important subject-object relationships.  Authorship already implies that ``we" did everything in the paper.}
+
+\TR{Is Raman Rabi freq the best term for $\Omega_R$?}
 
 \bibliography{master_ref}
 \bibliographystyle{apsrev4-2}
