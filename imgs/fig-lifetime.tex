@@ -1,4 +1,4 @@
-\documentclass{standalone}
+\documentclass[border={-3pt -6pt -4pt -4pt}]{standalone} % left bottom right top
 \usepackage{tikz}
 \usetikzlibrary{
   arrows,
@@ -33,23 +33,25 @@
 
 \begin{tikzpicture}[scale=1.5391]
   \node at (0, 0) {\includegraphics[width=7.6958cm]{exp_data_norm_m_t.pdf}};
-  \node at (-2.35, 1.7) {\footnotesize (\textbf{a})};
+  \node at (-2.4, 1.2) {\footnotesize (\textbf{a})};
 
-  \node at (0.77, 0.5) {$t_{\mathrm{hold}}$};
-  \draw[->,>=stealth,line width=1] (0.4, 0.5) -- (0, 0.5);
-  \draw[->,>=stealth,line width=1] (1.1, 0.5) -- (1.5, 0.5);
-  \draw[orange!80!white,line width=1,fill=orange!50!white]
-  (-0.3, 0.2) -- (-0.3, 0.8) -- node[above,orange!90!black] {\small $\pi$-pulse}
-  (0, 0.8) -- (0, 0.2);
-  \draw[orange!80!white,line width=1,fill=orange!50!white,shift={(1.8, 0)}]
-  (-0.3, 0.2) -- (-0.3, 0.8) -- node[above,orange!90!black] {\small $\pi$-pulse}
-  (0, 0.8) -- (0, 0.2);
-  \draw[->,>=stealth,line width=1] (-0.5, 0.2) -- (2, 0.2);
+  \begin{scope}[shift={(0, 0.1)}]
+    \node at (0.77, 0.5) {$t_{\mathrm{hold}}$};
+    \draw[->,>=stealth,line width=1] (0.4, 0.5) -- (0, 0.5);
+    \draw[->,>=stealth,line width=1] (1.1, 0.5) -- (1.5, 0.5);
+    \draw[orange!80!white,line width=1,fill=orange!50!white]
+    (-0.3, 0.2) -- (-0.3, 0.8) -- node[above,orange!90!black] {\small $\pi$-pulse}
+    (0, 0.8) -- (0, 0.2);
+    \draw[orange!80!white,line width=1,fill=orange!50!white,shift={(1.8, 0)}]
+    (-0.3, 0.2) -- (-0.3, 0.8) -- node[above,orange!90!black] {\small $\pi$-pulse}
+    (0, 0.8) -- (0, 0.2);
+    \draw[->,>=stealth,line width=1] (-0.5, 0.2) -- (2, 0.2);
+  \end{scope}
 
-  \node at (0, -3.9) {\includegraphics[width=7.6958cm]{exp_data_norm_a_t.pdf}};
-  \node at (-2.35, 1.5 - 3.9) {\footnotesize (\textbf{b})};
+  \node at (0, -2.7) {\includegraphics[width=7.6958cm]{exp_data_norm_a_t.pdf}};
+  \node at (-2.4, 1.2 - 2.7) {\footnotesize (\textbf{b})};
   % strength = 2pi 29.3(17) mHz/mW^2.58
-  \node at (0.85, -3.25) {\includegraphics[width=4.6175cm]{atomic_loss_scaling_inset.pdf}};
+  \node at (0.8, -2.25) {\includegraphics[width=4.6175cm]{atomic_loss_scaling_inset.pdf}};
 \end{tikzpicture}
 
 \end{document}

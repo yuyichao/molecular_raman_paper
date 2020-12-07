@@ -338,7 +338,7 @@ xlabel("Atom Hold Time (ms)")
 ylabel("Two-Body Survival")
 NaCsPlot.maybe_save("$(prefix)_a_t")
 
-figure(figsize=[7.2, 5.4] .* 1.26042)
+figure(figsize=[7.2, 5.4 * 0.67] .* 1.26042)
 NaCsPlot.plot_survival_data(data_pa_m, 1 / param_pa[1], fmt="C0o")
 plot(plot_pa_time, model_exp(plot_pa_time, param_pa) ./ param_pa[1], "C0-")
 # text(7, 0.12 / param_pa[1], "\$\\tau_{atom}=$(1 / uncs_1[5])\\ \\mathrm{ms}\$", color="C0")
@@ -362,7 +362,7 @@ xlabel("Molecule Hold Time (ms)")
 ylabel("Two-Body Survival")
 NaCsPlot.maybe_save("$(prefix)_m_t")
 
-figure(figsize=[7.2, 5.4] .* 1.26042)
+figure(figsize=[7.2, 5.4 * 0.67] .* 1.26042)
 NaCsPlot.plot_survival_data(data_nacs_m[1:end - 1], scale_ramsey, fmt="C0o")
 plot(plot_m_time, model_ramsey(plot_m_time, param_ramsey) .* scale_ramsey, "C0-")
 # text(0.218, 0.07 * scale_ramsey,
