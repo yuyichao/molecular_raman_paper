@@ -108,7 +108,7 @@
   We report on coherent association
   of atoms into a single weakly bound NaCs molecule in an optical tweezer
   through an optical Raman transition.
-  The Raman scheme uses a deeply bound electronic excited intermediate state
+  The Raman technique uses a deeply bound electronic excited intermediate state
   to achieve a large transition dipole moment while reducing photon scattering.
   Starting from two atoms in their relative motional ground state,
   we achieve an optical transfer efficiency of $69\mathrm{\%}$.
@@ -149,7 +149,7 @@ Molecular association of ultracold atoms takes advantage of the cooling and trap
 that have been developed for atoms.
 Associating atoms into deeply bound molecules is challenging
 because of the small wavefunction overlap between the free-atom and molecular states
-and the release of a large amount of binding energy.
+and the release of large binding energy.
 A widely used method of overcoming these challenges is to associate atom pairs
 into weakly bound molecules first,
 and then transfer the molecules from this single internal state
@@ -160,8 +160,7 @@ So far, molecular association has generally been achieved by magnetoassociation
 through a magnetic Feshbach scattering resonance.
 Exceptions include Sr$_2$, where narrow linewidth ($\sim 20~\mathrm{kHz}$) excited states
 are available and optical association can be driven coherently~\cite{Reinaudi2012,Stellmer2012},
-and $^{87}$Rb$^{85}$Rb,
-where there are molecular states bound by $1-2~\mathrm{MHz}$~\cite{He331}.
+and $^{87}$Rb$^{85}$Rb with molecular states bound by only $1-2~\mathrm{MHz}$~\cite{He331}.
 With these requirements, molecules involving non-magnetic atoms
 or atoms without narrow intercombination lines remain difficult to associate.
 % These requirements limit the generality of previous association techniques.
@@ -172,12 +171,12 @@ or atoms without narrow intercombination lines remain difficult to associate.
 Here, we demonstrate coherent association of an atom pair to a weakly bound molecule
 by two-photon optical Raman transfer via an electronic excited state,
 as shown in Fig.~\ref{f-theory}a.
-The scheme does not rely on a Feshbach resonance,
-molecular states bound by a few~MHz, or a narrow excited state.
+The technique does not rely on a Feshbach resonance,
+molecular states bound by a only few~MHz, or a narrow excited state.
 The resulting single molecule is in a well-defined internal quantum state
 and predominantly in its motional ground state.
 A vibrational state of the electronic excited state $\mathrm{c^3\Sigma^+}(\Omega = 1)$
-serves as the intermediate state in the Raman scheme,
+serves as the intermediate state in the Raman technique,
 and is chosen to minimize photon scattering during Raman Rabi oscillations.
 To reduce photon scattering and sensitivity to laser intensity noise further,
 we choose the initial and final states to balance the two Rabi frequencies as much as possible.
@@ -238,7 +237,7 @@ This approach applies to a variety of molecules that can be created atom-by-atom
 The optical Raman transfer is illustrated
 by the idealized three-level system shown in Fig.~\ref{f-theory}a,
 where the initial atomic state and the target weakly bound molecular state are coupled to an intermediate state by two lasers with Rabi frequencies $\Omega_a$ and $\Omega_m$ with one-photon detuning $ \Delta $, and all Rabi frequencies are population oscillation frequencies.  %(Ultimately, we calculate with contribution of all vibrational states of the excited electronic potential, $\mathrm{c^3\Sigma^+}$)
-The transfer Raman Rabi Rate is given by $\Omega_a\Omega_m / (2\Delta)$~\cite{Wineland2003}.
+The transfer Raman Rabi frequency is given by $\Omega_a\Omega_m / (2\Delta)$~\cite{Wineland2003}.
 % , is accompanied by a photon scattering rate $\Gamma_e (\Omega_a^2 + \Omega_m^2)/4\Delta^2$
 % $\Gamma_e \Omega^2 / 4\Delta^2 $, where $ \Gamma_e $ is the excited state linewidth
 Unlike Raman transitions in atoms, the two Rabi frequencies are greatly imbalanced ($\Omega_a/\Omega_m \ll 1$) %. Since $ \Omega_m $ is generally much larger than $ \Omega_a $
@@ -314,22 +313,7 @@ for other combinations, this relaxes the intensity stability requirement to the 
 % \textcolor{blue}{(clean up the paragraph some more).} %(We might want to mention that those ratios are for 80 kHz spherical trap if we want to give more details about the coupled-channel calculation anywhere...)
 
 % In additional to the final and the excited state, it is also important to select the an initial atomic state in order to improve the coupling.
-\begin{figure}[ht!]
-  \includegraphics[width=0.48\textwidth]{imgs/fig-raman.pdf}
-  \caption{Coherent transfer of atoms to molecules.  The molecular state is dark to the imaging step and corresponds to zero signal.
-    (a) Raman difference frequency scans for various durations showing the resonance as a frequency offset from $770.2$~MHz, near the calculated value of $763$~MHz.
-    (b) Raman pulse-length scan on resonance.
-    A decaying Rabi oscillation shows the coherence of
-    the Raman transfer process.
-    A model is fitted to (a) and (b) to determine
-    the Raman Rabi frequency and loss rates.
-    \emph{Inset:} Geometry and polarization of trap and Raman beam relative to the magnetic field.
-    The X.yy~mW beam is focused to a waist of $0.9~\mathrm{\mu m}$
-    that confines the atoms and molecule.
-    A perpendicular $B_0=8.83(2)~\mathrm{G}$ magnetic field
-    defines the quantization axis and the atoms experience predominantly $\pi$-polarized light.
-    \label{f-raman}}
-\end{figure}
+
 
 %% Preparation
 Experimentally, we first prepare two atoms in a well-defined external and internal quantum state
@@ -352,15 +336,31 @@ by performing a Cs spin flip while taking into account
 the $-30.7~\mathrm{kHz}$ interaction shift~\cite{Hood2019}.
 This is the initial atomic state for Raman transfer.
 The spin flip selectively transfers atoms in the relative motional ground state,
-removing any background from atoms in excited motional states
+removing any background from atoms in excited states of relative motion
 \footnote{This interaction shift is larger than the differential axial trapping frequency
   between Na and Cs atoms, which decouples the relative and center of mass motional state
   and improves the robustness of our preparation of the relative motional ground state.}.
 For the experiment reported here,
-$31\mathrm{\%}$ of initial two-atom population is transferred.
+$31\mathrm{\%}$ of initial two-atom population is transferred. Of this population, over $60\%$ is in the ground state of center of mass motion, inferred from Raman sideband thermometry~\cite{Zhang2020,He331}. %center-of-mass motional ground state.
 % of two atoms loaded in separate optical tweezers.\textcolor{red}{I also find this part of the sentence confusing.  can you say this more concisely?}\todo{}
 % The stronger interaction in this spin state also enhances the atomic wavefunction at short range and increases its overlap with the intermediate molecular state used for our Raman transfer..
 
+\begin{figure}[t!]
+  \includegraphics[width=0.48\textwidth]{imgs/fig-raman.pdf}
+  \caption{Coherent transfer of atoms to molecules.  The molecular state is dark to the imaging step and corresponds to zero signal.
+    (a) Raman difference frequency scans for various durations showing the resonance as a frequency offset from $770.2$~MHz, near the calculated value of $763$~MHz.
+    (b) Raman pulse-length scan on resonance.
+    A decaying Rabi oscillation shows the coherence of
+    the Raman transfer process.
+    A model is fitted to (a) and (b) to determine
+    the Raman Rabi frequency and loss rates.
+    \emph{Inset:} Geometry and polarization of trap and Raman beam relative to the magnetic field.
+    The X.yy~mW beam is focused to a waist of $0.9~\mathrm{\mu m}$
+    that confines the atoms and molecule.
+    A perpendicular $B_0=8.83(2)~\mathrm{G}$ magnetic field
+    defines the quantization axis and the atoms experience predominantly $\pi$-polarized light.
+    \label{f-raman}}
+\end{figure}
 %% Transfer scheme
 % After the atoms are prepared in the $\ket{\uparrow_{\Na}\uparrow_{\Cs}} $ hyperfine combination, we then perform the Raman transfer.
 To transfer the atom pair into the target weakly bound molecular state,
@@ -391,34 +391,7 @@ but also allows a tight focus to minimize the transfer duration. A tweezer frequ
 
 %% Experiment condition/resonance
 
-\begin{figure}[t!]
-  \includegraphics[width=0.48\textwidth]{imgs/fig-lifetime.pdf}
-  \caption{
-    (a) Direct measurement of molecule lifetime with about $X.XX~\mathrm{mW}$ optical power.
-    Molecule survival is detected by dissociating back to atoms via a second Raman transition.
-    The lifetime is consistent with the $0.199(9)~\mathrm{ms}$
-    measured from the Raman transition data.
-    Inset: pulse sequence for the lifetime measurement.
-    (b) Two-body atom lifetime of $5(1)~\mathrm{ms}$
-    in a trap of depth $X.XX~\mathrm{mW}$ caused by off-resonance photoassociation.
-    This is used to improve the fitting of the Raman transfer data.
-    Inset: Atomic scattering rate scales as
-    $P_\textrm{tweezer}^{2.58}\times\!2\pi\!\times29.3(17)~\mathrm{mHz/mW^{2.58}}$ on a log-log scale;
-    this is consistent with a two-photon scattering process.
-    We have not measured a clear dependency of the loss rate on the tweezer detuning.
-    \label{f-lifetime}}
-\end{figure}
-
-Figure~\ref{f-raman} shows a Fourier-limited resonance together with Rabi oscillations between the atomic and molecular states.
-% (We can maybe add information about the prediction here?)
-%% Prediction
-% This excited state used in the Raman transition was measured in our previous experiment using photoassociation to be at $288560 GHz$ from our atomic state. The ground molecular state has not been observed previously in experimentally. Based on our measurement of FB resonance, interaction shift and the binding energy of the 4422 bound state. Theory prediction was at $770.1 MHz$.
-% The background level of $31~\mathrm{\%}$ corresponds to the probability of preparing the two atoms in the relative motional ground state.
-% When the atoms are transferred into the molecule state by the Raman transition, there is a decrease in the two body survival since the resulting molecule is dark to our imaging sequence. % directly detected by our imaging step.
-A decaying Rabi oscillation with frequency $2\pi\times3.28(4)~\mathrm{kHz}$ fitted to the data suggests that
-$69~\mathrm{\%}$ of atoms initially in the relative motional ground state are transferred into the molecular state after a $\pi$-pulse. Over $60\%$ of the molecules are in the motional ground state (both relative and center of mass), inferred from independent Raman sideband thermometry measurements of the atoms.
-
-\begin{figure*}
+\begin{figure*}[t!]
   \includegraphics[width=\textwidth]{imgs/fig-det.pdf}
   \caption{Raman transition parameters as a function of tweezer power and detuning.
     (a) The Raman resonance fitted by $a_P+b_P/\Delta$, where
@@ -436,9 +409,20 @@ $69~\mathrm{\%}$ of atoms initially in the relative motional ground state are tr
     The detuning is calculated from the PA frequency fitted in (a). Fit parameters are listed in Table~\ref{tab:f-det:fit}.
     (c) Tweezer power dependency of $\Omega_m$ (top) and $\Omega_a$ (bottom) calculated from
     $b_P$ and $d_P$ on a log-log scale showing approximate $P^{0.5}$ scaling of $\Omega_m$ and
-    $P^{0.79}$ scaling of $\Omega_a$. [[TR: There should be a gap between (c) top and bottom.]
+    $P^{0.79}$ scaling of $\Omega_a$. 
     \label{f-det}}
 \end{figure*}
+
+Figure~\ref{f-raman} shows a Fourier-limited resonance together with Rabi oscillations between the atomic and molecular states.
+% (We can maybe add information about the prediction here?)
+%% Prediction
+% This excited state used in the Raman transition was measured in our previous experiment using photoassociation to be at $288560 GHz$ from our atomic state. The ground molecular state has not been observed previously in experimentally. Based on our measurement of FB resonance, interaction shift and the binding energy of the 4422 bound state. Theory prediction was at $770.1 MHz$.
+% The background level of $31~\mathrm{\%}$ corresponds to the probability of preparing the two atoms in the relative motional ground state.
+% When the atoms are transferred into the molecule state by the Raman transition, there is a decrease in the two body survival since the resulting molecule is dark to our imaging sequence. % directly detected by our imaging step.
+A decaying Rabi oscillation with frequency $2\pi\times3.28(4)~\mathrm{kHz}$ fitted to the data suggests that
+$69~\mathrm{\%}$ of atoms are transferred into the molecular state after a $\pi$-pulse with the majority of molecules in the ground state of motion. 
+%Over $60\%$ of the molecules are in the motional ground state (both relative and center of mass), inferred from independent Raman sideband thermometry measurements of the atoms.
+
 
 To better understand the details and limitations of the Raman transfer process, we measured the properties of the two-photon resonance as a function of tweezer power and single-photon detuning.
 Known dependencies of the light shift and Raman Rabi frequency on detuning $\Delta$ allow experimental determination of the Rabi frequencies
@@ -518,15 +502,15 @@ is well approximated by $P^{0.29}$ within the range of confinement in our experi
 % belonging to a different electronically excited state at higher frequencies
 % which prevent the blue side of the transition from being be usable for the Raman transition.
 
-The measured single-photon Rabi frequencies of Table~I are in broad agreement with calculations (see Supplementary Materials). The full calculation of the expected scattering rate of the molecular and atomic state including all excited states does not explain the decoherence
+The measured single-photon Rabi frequencies of Table~I are in broad agreement with calculations (see Supplementary Materials). 
+The full calculation of the expected scattering rate of the molecular and atomic state including all excited states does not explain the decoherence in Fig.~\ref{f-raman}b. 
 % Known single-photon scattering rates of Na and Cs atoms together with an independent measurement (via photoassociation spectroscopy) of the $v'=0$ excited state natural linewidth of no more than $50~\mathrm{MHz}$ indicate that single-photon scattering from the molecular or atomic state do not explain the decoherence in Fig. 3b~\TR{long sentence}.  Below, we further investigate the loss of coherence.
-
-\todo{change scattering to decoherence? since the fluctuation of light shift
-  does not lead to scattering but only decherence.}
+%\todo{change scattering to decoherence? since the fluctuation of light shift
+%  does not lead to scattering but only decherence.}
 % These results suggest that the decoherence or loss we observe during the Raman transition
 % comes from either a higher background scattering rate of an unknown source
 % or a different intrinsic or technical source for which we have not accounted for.
-Raman transfer efficiency is limited by the molecular lifetime, together with a reduction in the Raman Rabi frequency due to destructive interference with intermediate states beyond v'=0 (see Table~~\ref{tab:f-det:fit}).
+From experimental measurements, the Raman transfer efficiency is limited by the molecular lifetime, together with a reduction in the Raman Rabi frequency due to destructive interference with intermediate states beyond v'=0 (see Table~~\ref{tab:f-det:fit}).
 The lifetime is measured directly by preparing the molecule with a $\pi$-pulse,
 followed after a variable delay by a second dissociating $\pi$-pulse.
 The result in Fig.~\ref{f-lifetime}a shows a molecular lifetime of $0.199(9)~\mathrm{ms}$,
@@ -535,6 +519,24 @@ Preliminary experiments and theoretical considerations indicate that the molecul
 two-body lifetimes of the atoms directly without the second Raman frequency.  In principle, destructive interference that reduces the Raman Rabi rate for negative detunings $\Delta$ changes to constructive interference for positive detunings, but additional molecular resonances made the positive region unusable.  Separately we observe a decrease in coherence by a factor of 2 without laser spectrum filters,
 suggesting that spectral impurity of the laser can be a significant source of loss.
 
+
+\begin{figure}[t!]
+  \includegraphics[width=0.48\textwidth]{imgs/fig-lifetime.pdf}
+  \caption{
+    (a) Direct measurement of molecule lifetime with about $X.XX~\mathrm{mW}$ optical power.
+    Molecule survival is detected by dissociating back to atoms via a second Raman transition.
+    The lifetime is consistent with the $0.199(9)~\mathrm{ms}$
+    measured from the Raman transition data.
+    Inset: pulse sequence for the lifetime measurement.
+    (b) Two-body atom lifetime of $5(1)~\mathrm{ms}$
+    in a trap of depth $X.XX~\mathrm{mW}$ caused by off-resonance photoassociation.
+    This is used to improve the fitting of the Raman transfer data.
+    Inset: Atomic scattering rate scales as
+    $P_\textrm{tweezer}^{2.58}\times\!2\pi\!\times29.3(17)~\mathrm{mHz/mW^{2.58}}$ on a log-log scale;
+    this is consistent with a two-photon scattering process.
+    We have not measured a clear dependency of the loss rate on the tweezer detuning.
+    \label{f-lifetime}}
+\end{figure}
 Other potential decoherence sources include
 fluctuations of the tweezer intensity and magnetic field.
 Based on the Rabi frequency ratio in Table~\ref{tab:f-det:fit}
@@ -569,7 +571,7 @@ the potential for higher transfer efficiency than the observed value of $69$~\%.
 Our technique can be applied to form a diverse set of molecular species,
 because it does not rely on a magnetic Feshbach resonance, states bound by only a few MHz,
 or a narrow excited state. The formation of weakly bound molecules is a key step
-in forming rovibrational ground state molecules. By scaling up to many optical tweezers~\cite{Endres2016, Barredo2018,  PhysRevLett.122.203601}, large arrays with arbitrary geometry of highly controlled molecules can be achieved. These molecules comprise a flexible platform for quantum simulation and quantum computing applications. \textcolor{blue}{(End with a sentence on molecules for future quantum applications?)}
+in forming rovibrational ground state molecules. By scaling up to many optical tweezers~\cite{Endres2016, Barredo2018,  PhysRevLett.122.203601}, large arrays with arbitrary geometry of highly controlled molecules can be achieved. These molecules comprise a flexible platform for quantum simulation and quantum computing applications. %\textcolor{blue}{(End with a sentence on molecules for future quantum applications?)}
 % Combined with real-time rearrangement~\cite{Barredo2016, Endres2016},
 % defect-free arrays of highly controlled molecules comprise a promising
 % and flexible platform for quantum simulation and quantum computing applications.
@@ -580,7 +582,7 @@ in forming rovibrational ground state molecules. By scaling up to many optical t
   We thank Rosario Gonzalez-Ferez, Olivier Dulieu, Bo Gao, and Paul Julienne for discussion and Robert Moszynski for providing theoretical transition dipole moments of NaCs. This work is supported by the NSF~(PHY-1806595), the AFOSR~(FA9550-19-1-0089), ARO DURIP (W911NF1810194) and the Arnold and Mabel Beckman foundation. J.~T.~Z. is supported by a National Defense Science and Engineering Graduate Fellowship. W.~C. is supported by a Max Planck-Harvard Research Center for Quantum Optics fellowship. K.~W. is supported by an NSF GRFP fellowship. J.~M.~H. is supported by the U.K. Engineering and Physical Sciences Research Council (EPSRC) Grants No.\ EP/N007085/1, EP/P008275/1 and EP/P01058X/1.
 \end{acknowledgments}
 
-\TR{Mention somewhere that the shape of Fig. 3b Rabi flopping indicates molecular loss, not atomic loss or frequency fluctuation.}
+\TR{Mention somewhere that the shape of Fig. 3b Rabi flopping indicates loss, not frequency fluctuation.}
 
 \TR{Check all ``$P=3.75$~mW'' results because they may negelect reduction from 2nd ASE filter.  Better to quote the reduced power.}
 
