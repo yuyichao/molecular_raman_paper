@@ -322,12 +322,12 @@ ylim([0.14, 0.39])
 ylabel("\$\\Omega_m\$ (\$\\mathrm{2\\pi\\times GHz}\$)")
 setp(ax1.get_xticklabels(), visible=false)
 ax1.tick_params(axis="x", length=0)
-ax1.set_xticks(0.7:0.1:4, minor=true)
+ax1.set_xticks([], minor=true)
 ax1.yaxis.set_minor_formatter(matplotlib.ticker.NullFormatter())
 ax1.xaxis.set_minor_formatter(matplotlib.ticker.NullFormatter())
 
 ax2 = fig.add_subplot(212)
-subplots_adjust(hspace=0.0)
+subplots_adjust(hspace=0.018)
 errorbar(omegas.powers[1] ./ 4, omegas.omega_as[1] ./ 1e6,
          omegas.omega_as_unc[1] ./ 1e6, fmt="C0o")
 errorbar(omegas.powers[2] ./ 4, omegas.omega_as[2] ./ 1e6,
