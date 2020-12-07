@@ -26,7 +26,8 @@ end
 const prefix = joinpath(@__DIR__, "../imgs", "raman")
 
 # fig = figure(figsize=[1.11, 1.5] * 4.8)
-fig = figure()
+# fig = figure()
+fig = figure(figsize=[6.4, 2.6])
 
 # ax1 = fig.add_subplot(311)
 # plot(data[:, 1] .- 339724.57, abs.(data[:, 2] ./ 2π / 1000), "C1--",
@@ -75,7 +76,7 @@ xlim([-300, 300])
 ylim([0.02, 90])
 yscale("log")
 yticks([0.1, 1, 10], ["0.1", "1", "10"])
-legend(fontsize=13.88, loc="center left", bbox_to_anchor=(0.0, 0.6),
+legend(fontsize=13.88, loc="center left", bbox_to_anchor=(0.0, 0.67),
        handlelength=1, handletextpad=0.3)
 ax3.yaxis.set_minor_formatter(matplotlib.ticker.NullFormatter())
 grid()

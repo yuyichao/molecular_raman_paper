@@ -33,9 +33,9 @@ const data42 = read_csv_compressed(fname42, ',', Float64)
 
 const prefix = joinpath(@__DIR__, "../imgs", "wavefunction")
 
-figure()
-plot(data42[:, 1], data42[:, 2] .* 2e6, "C2", label="Na(2,2) Cs(4,4)")
+fig = figure(figsize=[6.4, 2.6])
 plot(data32[:, 1], data32[:, 2] .* 2e6, "C1", label="Na(2,2) Cs(3,3)")
+plot(data42[:, 1], data42[:, 2] .* 2e6, "C2", label="Na(2,2) Cs(4,4)")
 plot(data31[:, 1], data31[:, 2] .* 2e6, "C3--", label="Na(1,1) Cs(3,3)")
 axvline(100, color="C0", ls="dashed", linewidth=3)
 grid()
