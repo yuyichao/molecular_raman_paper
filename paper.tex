@@ -135,9 +135,10 @@ quantum simulations~\cite{Micheli2006, Yao2018, Wall2015, wall2015realizing},
 quantum information processing~\cite{DeMille2002, Ni2018, Hudson2018, Lin2019},
 and studies of ultracold chemistry~\cite{Bala2016,Hu1111,Segev2019,deJongh626}.
 While many innovative approaches in the last few years
-have directly cooled different species of diatomic or polyatomic molecules
-below 1~mK~\cite{Norrgard2016,Anderegg2018, Mitra1366, PhysRevX.10.021049,
-  PhysRevLett.121.013202, Truppe2017},
+have directly cooled different species of %diatomic or polyatomic
+molecules
+below 1~mK~\cite{Norrgard2016,Prehn2016,Truppe2017,Anderegg2018,  PhysRevX.10.021049,
+Mitra1366},
 the highest phase-space-density gas~\cite{Demarco2018} and
 % the coldest
 trapped individual molecules~\cite{Zhang2020,He331}
@@ -159,7 +160,7 @@ releasing the binding energy by stimulated emission~\cite{Danzl2008, Ni2008, Lan
 So far, molecular association has generally been achieved by magnetoassociation
 through a magnetic Feshbach scattering resonance.
 Exceptions include Sr$_2$, where narrow linewidth ($\sim 20~\mathrm{kHz}$) excited states
-are available and optical association can be driven coherently~\cite{Reinaudi2012,Stellmer2012},
+are available and optical association can be driven coherently~\cite{Stellmer2012,Reinaudi2012},
 and $^{87}$Rb$^{85}$Rb with molecular states bound by only $1-2~\mathrm{MHz}$~\cite{He331}.
 With these requirements, molecules involving non-magnetic atoms
 or atoms without narrow intercombination lines remain difficult to associate.
@@ -185,7 +186,7 @@ This approach applies to a variety of molecules that can be created atom-by-atom
 
 \begin{figure*}
   \includegraphics[width=\textwidth]{imgs/fig-theory.pdf}
-  \caption{Optical creation of single molecule from single atoms in an optical tweezer.
+  \caption{Optical creation of single molecules from single atoms in an optical tweezer.
     (a) Schematic of the optical transition from an atom pair to a weakly bound molecule.
     The initial state is the relative motional ground state between the two atoms
     and the final state is the first molecular bound state.
@@ -218,9 +219,8 @@ This approach applies to a variety of molecules that can be created atom-by-atom
 \begin{figure}
   \includegraphics[width=0.5\textwidth]{imgs/raman_spectroscopy_raman_beampath.pdf}
   \caption{
-    Beampath for generating two frequencies in the tweezer for the Raman transition
-    (Some mirrors and other optics used for alignment are not included.)
-    Two ASE filters, one directly after the laser source and one after both optical fibers, are used. The laser source is a fiber amplifier seeded by a external cavity diode laser.
+    Beampath for generating two frequencies in the tweezer for the Raman transition (only essential optics are shown.)
+    Two  filters, one directly after the laser source and one after both optical fibers, are used. The laser source is a fiber amplifier seeded by a external cavity diode laser.
     The red beam path is the $0$-th order of the double pass~(DP) AOM which is used at all times.
     The blue beam path is the $1$-st order of the DP AOM, and generates the second frequency required to drive the Raman transition.
     % When the double-pass~(DP) AOM is turned on, some power is redirected to the first order
@@ -334,21 +334,6 @@ in the 3-dimensional motional ground state of their optical tweezers, leaving th
 which has a small scattering length.
 The weak two-atom interaction allows merging of the two tweezers with minimum pertubation so that they remain in the motional ground state.
 
-% After preparing the Na and Cs atoms in the same tweezer in a single quantum state,
-Next, we drive the atoms into spin combination $\ket{\uparrow_{\Na} \downarrow_{\Cs}}$ with a large scattering length
-by performing a Cs spin flip while taking into account
-the $-30.7~\mathrm{kHz}$ interaction shift~\cite{Hood2019}.
-This is the initial atomic state for Raman transfer.
-The spin flip selectively transfers atoms in the relative motional ground state,
-removing any background from atoms in excited states of relative motion
-\footnote{This interaction shift is larger than the differential axial trapping frequency
-  between Na and Cs atoms, which decouples the relative and center of mass motional state
-  and improves the robustness of our preparation of the relative motional ground state.}.
-For the experiment reported here,
-$31\mathrm{\%}$ of initial two-atom population is transferred. Of this population, over $60\%$ is in the ground state of center of mass motion, inferred from Raman sideband thermometry. %center-of-mass motional ground state.
-% of two atoms loaded in separate optical tweezers.\textcolor{red}{I also find this part of the sentence confusing.  can you say this more concisely?}\todo{}
-% The stronger interaction in this spin state also enhances the atomic wavefunction at short range and increases its overlap with the intermediate molecular state used for our Raman transfer..
-
 \begin{figure}[t!]
   \includegraphics[width=0.48\textwidth]{imgs/fig-raman.pdf}
   \caption{Coherent transfer of atoms to molecules.  The molecular state is dark to the imaging step and corresponds to zero signal.
@@ -367,6 +352,42 @@ $31\mathrm{\%}$ of initial two-atom population is transferred. Of this populatio
     defines the quantization axis and the atoms experience predominantly $\pi$-polarized light.
     \label{f-raman}}
 \end{figure}
+Next, we drive the atoms into spin combination $\ket{\uparrow_{\Na} \downarrow_{\Cs}}$ with a large scattering length
+by performing a Cs spin flip while taking into account
+the $-30.7~\mathrm{kHz}$ interaction shift~\cite{Hood2019}.
+This is the initial atomic state for Raman transfer.
+The spin flip selectively transfers atoms in the relative motional ground state,
+removing any background from atoms in excited states of relative motion
+\footnote{This interaction shift is larger than the differential axial trapping frequency
+  between Na and Cs atoms, which decouples the relative and center of mass motional state
+  and improves the robustness of our preparation of the relative motional ground state.}.
+For the experiment reported here,
+$31\mathrm{\%}$ of initial two-atom population is transferred. Of this population, over $60\%$ is in the ground state of center of mass motion, inferred from Raman sideband thermometry. %center-of-mass motional ground state.
+% of two atoms loaded in separate optical tweezers.\textcolor{red}{I also find this part of the sentence confusing.  can you say this more concisely?}\todo{}
+% The stronger interaction in this spin state also enhances the atomic wavefunction at short range and increases its overlap with the intermediate molecular state used for our Raman transfer..
+
+\begin{figure*}[htb]
+  \includegraphics[width=\textwidth]{imgs/fig-det.pdf}
+  \caption{Raman transition parameters as a function of tweezer power and detuning.
+    (a) The Raman resonance fitted by $a_P+b_P/\Delta$, where
+    $a_P$ and $b_P=(\Omega_a^2-\Omega_m^2)/2$
+    are the power ($P$) dependent background and $v'=0$ contributions
+    to the light shift and
+    $\Delta\equiv2\pi\times\paren{f_0 - f_{\mathrm{tweezer}}}$ is the detuning from
+    the $v'=0$ resonance frequency $f_0$.
+    $a_P$ is fitted to a model including linear and small quadratic light shift
+    \todo{which assumes $\Omega_m\gg\Omega_a$} to obtain the Raman resonance frequency
+    at zero tweezer power $\omega_{R0}=2\pi\times770.1969(2)~\mathrm{MHz}$ where the statistical uncertainty is shown.
+    (b) Raman Rabi frequency ($\Omega_R$) fitted to $c_P+d_P/\Delta$, where
+    $c_P$ and $d_P=\Omega_a\Omega_m/2$
+    are the background and $v'=0$ contributions that scale as $P^{1.29}$ with optical power.
+    The detuning is calculated from the PA frequency fitted in (a). Fit parameters are listed in Table~\ref{tab:f-det:fit}.
+    (c) Tweezer power dependency of $\Omega_m$ (top) and $\Omega_a$ (bottom) calculated from
+    $b_P$ and $d_P$ on a log-log scale showing approximate $P^{0.5}$ scaling of $\Omega_m$ and
+    $P^{0.79}$ scaling of $\Omega_a$.
+    \label{f-det}}
+\end{figure*}
+
 %% Transfer scheme
 % After the atoms are prepared in the $\ket{\uparrow_{\Na}\uparrow_{\Cs}} $ hyperfine combination, we then perform the Raman transfer.
 To transfer the atom pair into the target weakly bound molecular state,
@@ -397,27 +418,7 @@ As shown in Fig.~\ref{f-beampath}, one filter immediately follows the laser, whi
 
 %% Experiment condition/resonance
 
-\begin{figure*}[t!]
-  \includegraphics[width=\textwidth]{imgs/fig-det.pdf}
-  \caption{Raman transition parameters as a function of tweezer power and detuning.
-    (a) The Raman resonance fitted by $a_P+b_P/\Delta$, where
-    $a_P$ and $b_P=(\Omega_a^2-\Omega_m^2)/2$
-    are the power ($P$) dependent background and $v'=0$ contributions
-    to the light shift and
-    $\Delta\equiv2\pi\times\paren{f_0 - f_{\mathrm{tweezer}}}$ is the detuning from
-    the $v'=0$ resonance frequency $f_0$.
-    $a_P$ is fitted to a model including linear and small quadratic light shift
-    \todo{which assumes $\Omega_m\gg\Omega_a$} to obtain the Raman resonance frequency
-    at zero tweezer power $\omega_{R0}=2\pi\times770.1969(2)~\mathrm{MHz}$ where the statistical uncertainty is shown.
-    (b) Raman Rabi frequency ($\Omega_R$) fitted to $c_P+d_P/\Delta$, where
-    $c_P$ and $d_P=\Omega_a\Omega_m/2$
-    are the background and $v'=0$ contributions that scale as $P^{1.29}$ with optical power.
-    The detuning is calculated from the PA frequency fitted in (a). Fit parameters are listed in Table~\ref{tab:f-det:fit}.
-    (c) Tweezer power dependency of $\Omega_m$ (top) and $\Omega_a$ (bottom) calculated from
-    $b_P$ and $d_P$ on a log-log scale showing approximate $P^{0.5}$ scaling of $\Omega_m$ and
-    $P^{0.79}$ scaling of $\Omega_a$.
-    \label{f-det}}
-\end{figure*}
+
 
 Figure~\ref{f-raman} shows a Fourier-limited resonance together with Rabi oscillations between the atomic and molecular states.
 % (We can maybe add information about the prediction here?)
@@ -431,7 +432,7 @@ $69~\mathrm{\%}$ of atoms are transferred into the molecular state after a $\pi$
 
 
 
-\begin{figure}[t!]
+\begin{figure}[ht]
   \includegraphics[width=0.48\textwidth]{imgs/fig-lifetime.pdf}
   \caption{
     (a) Direct measurement of molecule lifetime with about $3.25~\mathrm{mW}$ optical power.
@@ -579,7 +580,7 @@ the potential for higher transfer efficiency than the observed value of $69$~\%.
 Our technique can be applied to form a diverse set of molecular species,
 because it does not rely on a magnetic Feshbach resonance, states bound by only a few MHz,
 or a narrow excited state. The formation of weakly bound molecules is a key step
-in forming rovibrational ground state molecules. By scaling up to many optical tweezers~\cite{Endres2016, Barredo2018,  PhysRevLett.122.203601}, large arrays with arbitrary geometry of highly controlled molecules can be achieved. These molecules comprise a flexible platform for quantum simulation and quantum computing applications. %\textcolor{blue}{(End with a sentence on molecules for future quantum applications?)}
+in forming rovibrational ground state molecules. By scaling up to many optical tweezers~\cite{Endres2016, Barredo2018,  PhysRevLett.122.203601}, large arrays with arbitrary geometry of highly controlled molecules can be achieved. These molecules comprise a flexible platform for quantum simulation,  quantum computing, precision measurements applications. %\textcolor{blue}{(End with a sentence on molecules for future quantum applications?)}
 % Combined with real-time rearrangement~\cite{Barredo2016, Endres2016},
 % defect-free arrays of highly controlled molecules comprise a promising
 % and flexible platform for quantum simulation and quantum computing applications.
