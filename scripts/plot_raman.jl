@@ -73,10 +73,10 @@ plot(data[:, 1] .- 339724.57, abs.(data[:, 2] ./ data[:, 4]), "C1--",
 xlabel("One-Photon Detuning (GHz)")
 ylabel("\$\\Omega_{R}/\\Gamma_{s}\$")
 xlim([-300, 300])
-ylim([0.02, 90])
+ylim([0.02, 30])
 yscale("log")
 yticks([0.1, 1, 10], ["0.1", "1", "10"])
-legend(fontsize=13.88, loc="center left", bbox_to_anchor=(0.0, 0.67),
+legend(fontsize=13.88, loc="center left", bbox_to_anchor=(0.06, 0.66),
        handlelength=1, handletextpad=0.3)
 ax3.yaxis.set_minor_formatter(matplotlib.ticker.NullFormatter())
 grid()
