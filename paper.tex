@@ -128,7 +128,7 @@
 
 % Trapped neutral molecules, assembled in an array of optical tweezers, are a promising platform to study quantum information and quantum simulation. (more detail to add here about applications?).
 
-Diverse species of fully quantum controlled  ultracold molecules are desired
+Diverse species of fully quantum-controlled ultracold molecules are desired
 for a variety of applications including precision measurements~\cite{
   Kondov2019,Nick_and_Ivan2017, PhysRevA.101.042504, Andreev2018,
   PhysRevLett.119.153001, hudson2011},
@@ -160,7 +160,7 @@ releasing the binding energy by stimulated emission~\cite{Danzl2008, Ni2008, Lan
   Takekoshi2014, Molony2014, Park2015, Guo2016, Kondov2019, Voges2020}.
 So far, molecular association has generally been achieved by magnetoassociation
 through a magnetic Feshbach scattering resonance.
-Exceptions include Sr$_2$, where narrow linewidth ($\sim 20~\mathrm{kHz}$) excited states
+Exceptions include Sr$_2$, where narrow-linewidth ($\sim 20~\mathrm{kHz}$) excited states
 are available and optical association can be driven coherently~\cite{Stellmer2012,Reinaudi2012},
 and $^{87}$Rb$^{85}$Rb with molecular states bound by only $1-2~\mathrm{MHz}$~\cite{He331}.
 With these requirements, molecules involving non-magnetic atoms
@@ -182,7 +182,8 @@ serves as the intermediate state in the Raman technique,
 and is chosen to minimize photon scattering during Raman Rabi oscillations.
 To reduce photon scattering and sensitivity to laser intensity noise further,
 we choose the initial and final states that balance the two Rabi frequencies as much as possible.
-This approach applies to a variety of molecules that can be created atom-by-atom with full quantum state control.
+This approach applies to a variety of molecules that can be created atom-by-atom
+with full quantum-state control.
 
 
 \begin{figure*}
@@ -192,8 +193,9 @@ This approach applies to a variety of molecules that can be created atom-by-atom
     The initial state is the relative motional ground state between the two atoms
     and the final state is the first molecular bound state.
     The transition is driven by a pair of laser frequencies whose difference ($< 1$~GHz) matches the molecular binding energy.
-    The lasers are detuned from an excited molecular state in the $\mathrm{c^3\Sigma}$ potential
-    by $\Delta$ in order to reduce scattering during the transfer.
+    The lasers are detuned by $\Delta$ from an excited molecular state
+    in the $\mathrm{c^3\Sigma}$ electronic state
+    in order to reduce scattering during the transfer.
     (b) Calculation of the scattering rate vs. laser frequency
     including all vibrational states of 8 excited-state potentials
     and the atomic continuum.
@@ -213,7 +215,7 @@ This approach applies to a variety of molecules that can be created atom-by-atom
 \begin{figure}
   \includegraphics[width=0.5\textwidth]{imgs/raman_spectroscopy_raman_beampath.pdf}
   \caption{
-    Beampath for generating two frequencies in the tweezer for the Raman transition (only essential optics shown.)
+    Beam path for generating two frequencies in the tweezer for the Raman transition (only essential optics shown.)
     Two  filters, one directly after the laser source and one after both optical fibers clean the light from a fiber amplifier seeded by an external cavity diode laser.
     The red beam path is the always-present $0^{\mathrm{th}}$ order of the double pass~(DP) AOM.
     The blue beam path is the switchable $1^{\mathrm{st}}$ order of the DP AOM. It generates the second frequency for the Raman transition.
@@ -436,7 +438,8 @@ $69~\mathrm{\%}$ of atoms are transferred into the molecular state after a $\pi$
     \label{f-lifetime}}
 \end{figure}
 
-To better understand the details and limitations of the Raman transfer process, we measured the properties of the two-photon resonance as a function of tweezer power and single-photon detuning.
+To understand the details and limitations of the Raman transfer process better,
+we measured the properties of the two-photon resonance as a function of tweezer power and single-photon detuning.
 Known dependencies of the light shift and Raman Rabi frequency ($\Omega_{\rm R}$) on detuning ($\Delta$) allow experimental determination of the Rabi frequencies
 $ \Omega_{\rm a} $ and $\Omega_{\rm m}$ whose ratio critically affects the transfer efficiency.
 Both the light shift and $\Omega_{\rm R}$ follow a $1/\Delta$ slope as shown in Fig.~\ref{f-det}a, b and include a constant offset that we attribute to coupling to other excited states that are further away in energy.
@@ -459,7 +462,7 @@ The $1/\Delta$ components due to the nearby $v'=0$ intermediate state determine 
     \label{tab:f-det:fit}}
 \end{table}
 
-Figure~\ref{f-det}c shows the power dependence of $ \Omega_{\rm m} $ and $ \Omega_{\rm a} $, where $ \Omega_{\rm m} $ scales like $ P^{1/2} $ as expected. As discussed previously, the scaling of $ \Omega_{\rm a} $ is $P^{7/8}$ for weakly interacting particles.
+Figure~\ref{f-det}c shows the power dependence of $ \Omega_{\rm m} $ and $ \Omega_{\rm a} $, where $ \Omega_{\rm m} $ scales as $ P^{1/2} $ as expected. As discussed previously, the scaling of $ \Omega_{\rm a} $ is $P^{7/8}$ for weakly interacting particles.
 However, due to the strong interaction between the two atoms in the $\ket{\uparrow_{\text{Na}}\downarrow_{\text{Cs}}}$ state, this approximation breaks down.
 Coupled-channel calculations show that the wavefunction scaling
 is well approximated by $P^{0.29}$ within the range of confinement in our experiment and the expected scaling of $ \Omega_{\rm a} \propto P^{0.79} $ agrees with the data.
@@ -519,7 +522,7 @@ While the measured single-photon Rabi frequencies of Table~I are in broad agreem
 % These results suggest that the decoherence or loss we observe during the Raman transition
 % comes from either a higher background scattering rate of an unknown source
 % or a different intrinsic or technical source for which we have not accounted for.
-From experimental measurements, the Raman transfer efficiency is limited by the molecular lifetime, together with a reduction in the Raman Rabi frequency due to destructive interference with intermediate states beyond v'=0 (see Table~~\ref{tab:f-det:fit}). We discuss loss and decoherence below.
+From experimental measurements, the Raman transfer efficiency is limited by the molecular lifetime, together with a reduction in the Raman Rabi frequency due to destructive interference with intermediate states beyond $v'=0$ (see Table~~\ref{tab:f-det:fit}). We discuss loss and decoherence below.
 
 The molecular lifetime of $0.199(9)~\mathrm{ms}$ in Fig.~\ref{f-lifetime}a is measured by preparing the molecule with a $\pi$-pulse,
 followed after a variable delay by a second dissociating $\pi$-pulse.
@@ -556,13 +559,13 @@ fluctuation of $1.5~\mathrm{mG}$.
 
 In conclusion, we have coherently formed a weakly bound NaCs molecule in an optical tweezer
 by optical Raman transfer.  This process is enabled by utilizing a deeply-bound intermediate state, as well as highly-interacting initial atomic states.  A theoretical investigation including 8 excited state potentials,
-the excited atomic continuum, and coupled-channel ground state wavefunctions indicates
+the excited atomic continuum, and coupled-channel ground-state wavefunctions indicates
 the potential for higher transfer efficiency than the observed value of $69$~\%.  Future experiments may benefit from better balancing of the up-leg and down-leg Rabi frequencies, for example by driving to more deeply bound states.  If possible, destructive interference that reduces the two-photon Rabi rate should be avoided.  Nonlinear optical effects that limit the molecular state lifetime can also be explored.
 
 Our technique can be applied to form a diverse set of molecular species,
 because it does not rely on a magnetic Feshbach resonance, states bound by only a few MHz,
 or a narrow excited state. The formation of weakly bound molecules is a key step
-in forming rovibrational ground state molecules. By scaling up to many optical tweezers~\cite{Endres2016, Barredo2018,  PhysRevLett.122.203601}, large arrays with arbitrary geometry of highly controlled molecules can be achieved. These molecules comprise a flexible platform for quantum simulation,  quantum computing, precision measurements applications. %\textcolor{blue}{(End with a sentence on molecules for future quantum applications?)}
+in forming rovibrational ground-state molecules. By scaling up to many optical tweezers~\cite{Endres2016, Barredo2018,  PhysRevLett.122.203601}, large arrays with arbitrary geometry of highly controlled molecules can be achieved. These molecules comprise a flexible platform for quantum simulation,  quantum computing, precision measurements applications. %\textcolor{blue}{(End with a sentence on molecules for future quantum applications?)}
 % Combined with real-time rearrangement~\cite{Barredo2016, Endres2016},
 % defect-free arrays of highly controlled molecules comprise a promising
 % and flexible platform for quantum simulation and quantum computing applications.
