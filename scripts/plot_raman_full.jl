@@ -46,7 +46,7 @@ plot(data[:, 1] ./ 1000, abs.(data[:, 4] ./ 2π / 1000), "C1", label="\$\\Gamma_
 #     axvline(v * 100, color="C3", linewidth=5)
 # end
 ylabel("\$2\\pi\\times \\mathrm{kHz}\$")
-xlabel("Raman Single-Photon Frequency (THz)")
+xlabel("Tweezer Frequency (THz)")
 yscale("log")
 ylim([0.12, 400])
 yticks([1, 10, 100], ["1", "10", "100"])
@@ -76,7 +76,7 @@ text(339.724570, 3, "v'=40", rotation=90, va="center", ha="right", color="C0", f
 #     axvline(v * 100, color="C3", linewidth=5)
 # end
 ylabel("\$\\Gamma_{s}~(2\\pi\\times \\mathrm{kHz})\$")
-xlabel("Raman Single-Photon Frequency (THz)")
+xlabel("Tweezer Frequency (THz)")
 yscale("log")
 ylim([0.12, 400])
 yticks([1, 10, 100], ["1", "10", "100"])
