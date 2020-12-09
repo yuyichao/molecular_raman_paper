@@ -223,13 +223,13 @@ with full quantum-state control.
     % (blue beam path) which generates the required frequency different to drive
     % the Raman transition.
     % The two frequencies are recombined on the DP AOM.
-    To reduce power fluctuations, the $0^{\mathrm{th}}$ order light is shifted by another single pass~(SP) AOM before recombination, preventing interference with leakage light from the DP AOM~[[TR: What frequency is the leakage light? ]].
+    To reduce interferences that cause relative power fluctuation of the two frequencies, the $0^{\mathrm{th}}$ order is frequency shifted by $-80$~MHz before recombination.
     % be at the same frequency
     % as the $0$-th order light which can cause a significant power fluctuation
     % due to interference.
-    The experiment typically starts with the SP AOM on and the DP AOM off.
+    The experiment typically starts with the single-pass (SP) AOM on and the DP AOM off.
     When driving the Raman transition, the RF powers for both AOMs are ramped simultaneously
-    to achieve the desired power at both frequencies, while keeping the total power fixed.
+    to achieve the desired optical power at both frequencies, while keeping the total optical power fixed.
     \label{f-beampath}
   }
 \end{figure}
@@ -527,7 +527,7 @@ From experimental measurements, the Raman transfer efficiency is limited by the 
 The molecular lifetime of $0.199(9)~\mathrm{ms}$ in Fig.~\ref{f-lifetime}a is measured by preparing the molecule with a $\pi$-pulse,
 followed after a variable delay by a second dissociating $\pi$-pulse.
 This result is
-consistent with the decay of the Rabi oscillation in Fig.~\ref{f-raman}b. Preliminary experiments and theoretical considerations indicate that the molecular lifetime may be limited by two-photon coupling to the atomic continuum~\cite{YichaoYu}.  Atom loss is shown to be small in Fig.~\ref{f-lifetime}b by measuring the two-body lifetimes of the atoms directly without the second Raman frequency. In principle, destructive interference that reduces the Raman Rabi rate ($\Omega_{\rm R}$) for negative detunings ($\Delta$) changes to constructive interference for positive detunings, but additional molecular resonances make the positive region unusable.  More negative detunings than XXX~GHz that might reduce the scattering rate were prevented by vanishing of $\Omega_{\rm R}$.
+consistent with the decay of the Rabi oscillation in Fig.~\ref{f-raman}b. Preliminary experiments and theoretical considerations indicate that the molecular lifetime may be limited by two-photon coupling to the atomic continuum~\cite{YichaoYu}.  Atom loss is shown to be small in Fig.~\ref{f-lifetime}b by measuring the two-body lifetimes of the atoms directly without the second Raman frequency. In principle, destructive interference that reduces the Raman Rabi rate ($\Omega_{\rm R}$) for negative detunings ($\Delta$) changes to constructive interference for positive detunings, but additional molecular resonances make the positive region unusable.  More negative detunings that might reduce the scattering rate were prevented by vanishing of $\Omega_{\rm R}$.
 
 Separately we observe a decrease in coherence by a factor of 2 without laser spectrum filters,
 suggesting that spectral impurity of the laser can be a significant source of loss.   While we have not fully characterized the sources
