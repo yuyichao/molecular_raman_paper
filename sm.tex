@@ -235,7 +235,8 @@ A deperturbation analysis was required for states belonging to the mixed $\mathr
 and the fitted potentials and spin-orbit coupling coefficients are only accurate within the energy range of the measured experimental data \cite{Zaharova2009}.
 Since our experiment attempts to work in a regime where the predominant Raman coupling comes from the $v' = 0$ state of $ \mathrm{c^3\Sigma^+_1} $,
 the contribution of the other seven potentials is mainly to a background that is nearly detuning independent.
-Thus, for computational ease, we use the diabatic potentials for $ \mathrm{b^3\Pi_{0}, b^3\Pi_{1}} $ and $ \mathrm{A^1\Sigma^+_{0^+}}$, and remove the states nearest to the $ v' = 0$ state of $ \mathrm{c^3\Sigma^+_1} $.
+Thus, for computational ease, we use the diabatic potentials for $ \mathrm{b^3\Pi_{0}, b^3\Pi_{1}} $ and $ \mathrm{A^1\Sigma^+_{0^+}}$.
+%and remove the states nearest to the $ v' = 0$ state of $ \mathrm{c^3\Sigma^+_1} $.
 Lastly, to our knowledge, no potential fit to experimental data exists for the $ c^3\Sigma^+_{0^-}$ state. Assuming that its contribution is only to the background, as an approximation, we simply double the contribution of all states except $v' = 0$ from $ c^3\Sigma^+_1$.
 
 \section{Calculating Matrix Elements with Coupled Channel Ground State}
@@ -244,7 +245,7 @@ obtain their wavefunctions from a single-channel calculation \cite{Fattal1996} u
 then calculate overlap integrals between these functions and either the triplet ($S=1$) or singlet ($S=0$) components of the
 coupled-channel wavefunctions for either the target molecular state or the confined atomic state.
 These calculations assume that the intermediate states have pure singlet or triplet character and neglect its
-nuclear spin character, which is unknown. These calculations include theoretical electronic transition dipole moments\footnote{Private communication with R. Gonzalez-Ferez and R. Moszynski}
+nuclear spin character, which is unknown. These calculations include theoretical electronic transition dipole moments~\footnote{Private communication with R. Gonzalez-Ferez and R. Moszynski}.
 
 The full calculation of the Raman Rabi frequency and scattering rate using the methods in section \ref{sm:sect_2} is shown in figure \ref{f-sm}. The strong contribution from the atomic threshold arises from the large overlap to the near-threshold bound states shown in figure \ref{f-smfcf} for the $c^3\Sigma^+_1$ state. This leads to a $1/\Delta_{\text{thresh}}^2$ dependence of the scattering rate and favors using deeply bound states as the intermediate state for the Raman transfer. A similar result holds for the other excited state potentials.
 
@@ -270,12 +271,12 @@ The full calculation of the Raman Rabi frequency and scattering rate using the m
 \end{figure}
 \section{Effective Matrix Elements to a Single State}
 
-In this calculation, there is a matrix element, $\Omega_{ai}, \Omega_{mi}$ between each channel $ i $ of the coupled channel ground state and an excited state. The total Raman Rabi frequency $ \Omega_{\rm R}$, light shift $ \delta$ and off-resonant scattering $ \Gamma_{\rm s} $ contribution from this single excited state is calculated as
+In this calculation, there is a matrix element, $\Omega_{\mathrm{a}i}, \Omega_{\mathrm{m}i}$ between each channel $ i $ of the coupled channel ground state and an excited state. The total Raman Rabi frequency $ \Omega_{\rm R}$, light shift $ \delta$ and off-resonant scattering $ \Gamma_{\rm s} $ contribution from this single excited state is calculated as
 
 \begin{align}
-  \Omega_{\rm R} &= \displaystyle\sum_{i} \frac{\Omega_{ai} \Omega_{mi}}{2\Delta} \\
-  \delta &= \displaystyle\sum_{i} \frac{\Omega_{ai}^2 - \Omega_{mi}^2}{2\Delta} \\
-  \Gamma_{\rm s} &= \displaystyle\sum_{i} \Gamma_{\rm e} \frac{\Omega_{ai}^2 + \Omega_{mi}^2}{2\Delta^2}
+  \Omega_{\rm R} &= \displaystyle\sum_{i} \frac{\Omega_{\mathrm{a}i} \Omega_{\mathrm{m}i}}{2\Delta} \\
+  \delta &= \displaystyle\sum_{i} \frac{\Omega_{\mathrm{a}i}^2 - \Omega_{\mathrm{m}i}^2}{2\Delta} \\
+  \Gamma_{\rm s} &= \displaystyle\sum_{i} \Gamma_{\rm e} \frac{\Omega_{\mathrm{a}i}^2 + \Omega_{\mathrm{m}i}^2}{2\Delta^2}
 \end{align}
 
 where $ \Delta $ is the single photon detuning and $ \Gamma_{\rm e} $ is the excited state linewidth. The experiment, through measuring the detuning dependence of the Raman Rabi frequency and the resonance frequency, extracts a single $ \Omega_{\rm m} $ and $ \Omega_{\rm a} $. In order to compare to the theory, we introduce effective $ \Omega_{\rm a}', \Omega_{\rm m}', \Gamma_{\rm e}'$, so that $ \Omega_{\rm R} = \Omega_{\rm a}'\Omega_{\rm m}'/(2\Delta) $, $\delta = (\Omega_{\rm a}'^2 - \Omega_{\rm m}'^2)/(2\Delta) $, and $\Gamma_{\rm s} = \Gamma_{\rm e}'(\Omega_{\rm a}'^2 + \Omega_{\rm m}'^2)/(2\Delta^2) $. The effective Rabi frequencies for the $v' = 0$ state of $ c^3\Sigma^+_1$ and their ratio are reported in Table~\ref{tab:sm} at $3.75~\mathrm{mW}$ of tweezer power.
@@ -299,7 +300,7 @@ where $ \Delta $ is the single photon detuning and $ \Gamma_{\rm e} $ is the exc
 
 \section{Scaling of atomic matrix element with tweezer power}
 
-Since our coupled-channel calculations include the harmonic confinement, we can calculate the enhancement in $\Omega_{\rm a}$ with increasing confinement. Using two calculations with $ \omega_{\text{trap}} = 36.5~\mathrm{kHz}$ and $\omega_{\text{trap}} = 80~\mathrm{kHz}$ trapping frequencies, and assuming a power law scaling, we find $ \Omega_{\rm a} \propto \omega_{\text{trap}}^{0.58} $. Thus, $\Omega_{\rm a} \propto P^{0.29} $, which was also experimentally verified. However, we note that in the actual experiment, our system does not have spherically symmetric confinement. The radial trapping frequency is about $5.7$ times larger than the axial trapping frequency.
+Since our coupled-channel calculations include the harmonic confinement, we can calculate the enhancement in $\Omega_{\rm a}$ with increasing confinement. Using two calculations with $ \omega_{\text{trap}} = 36.5~\mathrm{kHz}$ and $\omega_{\text{trap}} = 80~\mathrm{kHz}$ trapping frequencies, and assuming a power law scaling, we find that the wavefunction overlap scales as $ \omega_{\text{trap}}^{0.58} = P^{0.29} $. Thus, $\Omega_{\rm a} \propto P^{0.79} $, which was also experimentally verified. However, we note that in the actual experiment, our system does not have spherically symmetric confinement. The radial trapping frequency is about $5.7$ times larger than the axial trapping frequency.
 \todo{
   Power/intensity calibration
 }
