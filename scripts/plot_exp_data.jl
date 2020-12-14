@@ -152,6 +152,10 @@ const plot_time = linspace(0, 0.79, 1000)
 const plot_pa_time = linspace(0, 21, 1000)
 const plot_m_time = linspace(0, 1.55, 1000)
 
+fit_m = fit_survival(model_exp, data_nacs_m[1:end - 1], [0.3, 5.0, 0],
+                     lower=zeros(3))
+@show fit_m.uncs
+
 const data_nacs_12′ = NaCsData.map_params((i, v)->v - param_1[3], data_nacs_12)
 const data_nacs_25′ = NaCsData.map_params((i, v)->v - param_1[3], data_nacs_25)
 
