@@ -1,0 +1,5 @@
+Systems built from ultracold molecules are promising for many applications such as precision measurement and quantum information thanks to their rich internal states and strong interaction. However, achieving full quantum control of such systems is challenging due to their inherit complexity. One way to alleviate such challenges is to create the molecules from simpler and fully controlled atoms. Here, we experimentally demostrated this approach using our the optical tweezer platform.
+
+Starting from a sodium and a cesium atom in the same tweezer prepared in a single quantum state, we use an optical Raman transition to trigger a precise chemical reaction and form a weakly bound molecule in the electronic ground state. We are able to turn more than 60% of the ground state atoms into the molecule while maintaining the control we have achieved on the initial atoms.
+
+The molecules we create can be transfered to other states with stronger interaction to be used for quantum computation and simulation. Compared to previous results, our method relies on fewer special properties of the molecule and is promising for building more variety of molecules in the future.
