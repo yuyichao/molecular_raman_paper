@@ -157,8 +157,8 @@ which can be calculated from the vibrational states of the excited state potenti
   \Omega_{\rm R} \approx \frac{d^2E^2}{2\hbar^2}\displaystyle\sum_{v' \leq v'_{\text{max}}} \frac{\braket{a|v'}\braket{v'|m}}{\Delta_{v'}} -  \frac{d^2E^2}{2\hbar^2\Delta_{\text{thresh}}}\displaystyle\sum_{v' \leq v'_{\text{max}}} \braket{a|v'}\braket{v'|m}.
 \end{equation}
 We can account for the atomic continuum in the scattering rate in a similar way
-\begin{align} 
-            \Gamma_{\rm s} &\approx \frac{d^2E^2}{2\hbar^2}\displaystyle\sum_{v' \leq v'_{\text{max}}}\Gamma_{v'} \frac{\braket{m|v'}\braket{v'|m}}{\Delta_{v'}^2} + \frac{d^2E^2\Gamma}{2\hbar^2\Delta_{\text{thresh}}^2}\displaystyle\sum_{v' > v'_{\text{max}}}\braket{m|v'}\braket{v'|m},
+\begin{align}
+  \Gamma_{\rm s} &\approx \frac{d^2E^2}{2\hbar^2}\displaystyle\sum_{v' \leq v'_{\text{max}}}\Gamma_{v'} \frac{\braket{m|v'}\braket{v'|m}}{\Delta_{v'}^2} + \frac{d^2E^2\Gamma}{2\hbar^2\Delta_{\text{thresh}}^2}\displaystyle\sum_{v' > v'_{\text{max}}}\braket{m|v'}\braket{v'|m},
 \end{align}
 where $\Gamma_{v'}$ is the excited state linewidth for the $\ket{v'}$ state, and we have assumed the atomic continuum states all have the same linewidth $\Gamma$. Using normalization, we derive an expression for the sum in the second term
 \begin{equation}
@@ -241,7 +241,7 @@ and the fitted potentials and spin-orbit coupling coefficients are only accurate
 Since our experiment attempts to work in a regime where the predominant Raman coupling comes from the $v' = 0$ state of $ \mathrm{c^3\Sigma^+_1} $,
 the contribution of the other seven potentials is mainly to a background that is nearly detuning independent.
 Thus, for computational ease, we use the diabatic potentials for $ \mathrm{b^3\Pi_{0}, b^3\Pi_{1}} $ and $ \mathrm{A^1\Sigma^+_{0^+}}$.
-%and remove the states nearest to the $ v' = 0$ state of $ \mathrm{c^3\Sigma^+_1} $.
+% and remove the states nearest to the $ v' = 0$ state of $ \mathrm{c^3\Sigma^+_1} $.
 Lastly, to our knowledge, no potential fit to experimental data exists for the $ c^3\Sigma^+_{0^-}$ state. Assuming that its contribution is only to the background, as an approximation, we simply double the contribution of all states except $v' = 0$ from $ c^3\Sigma^+_1$.
 
 \section{Calculating Matrix Elements with Coupled Channel Ground State}
