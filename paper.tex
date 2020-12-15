@@ -65,6 +65,7 @@
 \newcommand{\harvardccb}{\affiliation{Department of Chemistry and Chemical Biology, Harvard University, Cambridge, Massachusetts 02138, USA}}
 \newcommand{\cua}{\affiliation{Harvard-MIT Center for Ultracold Atoms, Cambridge, Massachusetts 02138, USA}}
 \newcommand{\agendile}{\affiliation{Agendile LLC, Cambridge, Massachusetts 02139, USA}}
+\newcommand{\itamp}{\affiliation{ITAMP, Harvard-Smithsonian Center for Astrophysics, Cambridge, Massachusetts 02138, USA}}
 \newcommand{\gradstudent}{
   \harvardphysics
   \harvardccb
@@ -80,7 +81,6 @@
 \title{Coherent optical creation of a single molecule}
 \author{Yichao~Yu}
 \thanks{Y.Y.~and K.W.~contributed equally to this work.}
-\email{yichaoyu@g.harvard.edu}
 \gradstudent
 \author{Kenneth~Wang}
 \thanks{Y.Y.~and K.W.~contributed equally to this work.}
@@ -99,10 +99,11 @@
 \affiliation{Joint Quantum Centre Durham-Newcastle, Department of Chemistry, Durham University, Durham, DH1 3LE, United Kingdom}
 \author{Rosario Gonzalez-Ferez}
 \affiliation{Instituto Carlos I de F\'{\i}sica Te\'orica y Computacional, and Departamento de F\'{\i}sica At\'omica, Molecular y Nuclear,  Universidad de Granada, 18071 Granada, Spain}
+\itamp
 \author{Till Rosenband}
 \agendile
 \author{Kang-Kuen~Ni}
-\email{ni@chemistry.harvard.edu}
+\email[To whom correspondence should be addressed: ]{ni@chemistry.harvard.edu}
 \harvardccb
 \harvardphysics
 \cua
@@ -176,7 +177,7 @@ or atoms without narrow intercombination lines remain difficult to associate.
 
 Here, we demonstrate coherent association of an atom pair to a weakly bound molecule
 by two-photon optical Raman transfer via an electronic excited state,
-as shown in Fig.~\ref{f-theory}a.
+as shown in Fig.~\ref{f-theory}a, taking NaCs as the prototype system.
 The technique does not rely on a Feshbach resonance,
 molecular states bound by a only few~MHz, or a narrow excited state.
 The resulting single molecule is in a well-defined internal quantum state
@@ -216,27 +217,7 @@ with full quantum-state control.
   }
 \end{figure*}
 
-\begin{figure}
-  \includegraphics[width=0.5\textwidth]{imgs/raman_spectroscopy_raman_beampath.pdf}
-  \caption{
-    Beam path for generating two frequencies in the tweezer for the Raman transition (only essential optics shown.)
-    Two filters, one directly after the laser source and one after both optical fibers clean the light from a fiber amplifier seeded by an external cavity diode laser.
-    The red beam path is the always-present $0^{\mathrm{th}}$ order of the double pass~(DP) AOM.
-    The blue beam path is the switchable $1^{\mathrm{st}}$ order of the DP AOM. It generates the second frequency for the Raman transition.
-    % When the double-pass~(DP) AOM is turned on, some power is redirected to the first order
-    % (blue beam path) which generates the required frequency different to drive
-    % the Raman transition.
-    % The two frequencies are recombined on the DP AOM.
-    To reduce interferences that cause relative power fluctuation of the two frequencies, the $0^{\mathrm{th}}$ order is frequency shifted by $-80$~MHz before recombination.
-    % be at the same frequency
-    % as the $0$-th order light which can cause a significant power fluctuation
-    % due to interference.
-    The experiment typically starts with the single-pass (SP) AOM on and the DP AOM off.
-    When driving the Raman transition, the RF powers for both AOMs are ramped simultaneously
-    to achieve the desired optical power at both frequencies, while keeping the total optical power fixed.
-    \label{f-beampath}
-  }
-\end{figure}
+
 
 
 The optical Raman transfer is illustrated
@@ -261,15 +242,15 @@ where $\Delta_{\mathrm{thresh}}$ is the detuning from the dissociation threshold
 which is smaller for intermediate states that are deeply bound.
 
 
-We optimize over intermediate states by calculating the Raman Rabi frequency $\Omega_{\rm R}$
+We optimize over intermediate states by calculating the total Raman Rabi frequency $\Omega_{\rm R}$
 and scattering rate $\Gamma_{\rm s}$ at different detunings from the atomic threshold,
-taking into account of all states of
-8 excited molecular potentials~\cite{Korek2007, Grochola2011, Zaharova2009, Grochola2010, Zabawa2012}
-and the continuum~\cite{Liu2017}.
+taking into account all states of
+8 excited molecular electronic potentials~\cite{Korek2007, Grochola2011, Zaharova2009, Grochola2010, Zabawa2012}
+and the continuum~\cite{Liu2017}; 
+see Supplementary Material for details.
 This calculation shows that the figure of merit $\Omega_{\rm R}/\Gamma_{\rm s}$
 can be larger for the lowest vibrational state compared to higher bound states
-at a cost of a smaller transfer rate $\Omega_{\rm R}$, as shown in Fig.~\ref{f-theory}c;
-see Supplementary Material for details.
+at a cost of a smaller transfer rate $\Omega_{\rm R}$, as shown in Fig.~\ref{f-theory}c.
 As a result, we choose the $v'=0$ level of $\mathrm{c^3\Sigma^+}(\Omega = 1)$
 as the intermediate state near which to drive Raman transitions.
 
@@ -315,6 +296,27 @@ for other combinations, this relaxes the intensity stability requirement to the 
 
 % In additional to the final and the excited state, it is also important to select the an initial atomic state in order to improve the coupling.
 
+\begin{figure}
+  \includegraphics[width=0.5\textwidth]{imgs/raman_spectroscopy_raman_beampath.pdf}
+  \caption{
+    Beam path for generating two frequencies in the tweezer for the Raman transition (only essential optics shown.)
+    Two filters, one directly after the laser source and one after both optical fibers clean the light from a fiber amplifier seeded by an external cavity diode laser.
+    The red beam path is the always-present $0^{\mathrm{th}}$ order of the double pass~(DP) AOM.
+    The blue beam path is the switchable $1^{\mathrm{st}}$ order of the DP AOM. It generates the second frequency for the Raman transition.
+    % When the double-pass~(DP) AOM is turned on, some power is redirected to the first order
+    % (blue beam path) which generates the required frequency different to drive
+    % the Raman transition.
+    % The two frequencies are recombined on the DP AOM.
+    To reduce interferences that cause relative power fluctuation of the two frequencies, the $0^{\mathrm{th}}$ order is frequency shifted by $-80$~MHz before recombination.
+    % be at the same frequency
+    % as the $0$-th order light which can cause a significant power fluctuation
+    % due to interference.
+    The experiment typically starts with the single-pass (SP) AOM on and the DP AOM off.
+    When driving the Raman transition, the RF powers for both AOMs are ramped simultaneously
+    to achieve the desired optical power at both frequencies, while keeping the total optical power fixed.
+    \label{f-beampath}
+  }
+\end{figure}
 
 %% Preparation
 Experimentally, we first prepare two atoms in a well-defined external and internal quantum state
@@ -348,17 +350,6 @@ The weak two-atom interaction allows merging of the two tweezers with minimum pe
     defines the quantization axis and the atoms experience predominantly $\pi$-polarized light.
     \label{f-raman}}
 \end{figure}
-After merging the tweezers, we drive the atoms into spin combination $\ket{\uparrow_{\Na} \downarrow_{\Cs}}$ with a large scattering length
-by performing a Cs spin flip while taking into account
-the $-30.7~\mathrm{kHz}$ interaction shift~\cite{Hood2019}.
-This is the initial atomic state for Raman transfer.
-The spin flip selectively transfers atoms in the relative motional ground state,
-removing any background from atoms in excited states of relative motion
-\footnote{This interaction shift is larger than the differential axial trapping frequency
-  between Na and Cs atoms, which decouples the relative and center of mass motional state
-  and improves the robustness of our preparation of the relative motional ground state.}.
-For the experiment reported here,
-$31\mathrm{\%}$ of initial two-atom population is transferred. Of this population, over $60\%$ is in the ground state of center-of-mass motion, inferred from Raman sideband thermometry.
 
 \begin{figure*}[htb]
   \includegraphics[width=\textwidth]{imgs/fig-det.pdf}
@@ -381,6 +372,20 @@ $31\mathrm{\%}$ of initial two-atom population is transferred. Of this populatio
     $P^{0.79}$ scaling of $\Omega_{\rm a}$.
     \label{f-det}}
 \end{figure*}
+
+After merging the tweezers, we drive the atoms into spin combination $\ket{\uparrow_{\Na} \downarrow_{\Cs}}$ with a large scattering length
+by performing a Cs spin flip while taking into account
+the $-30.7~\mathrm{kHz}$ interaction shift~\cite{Hood2019}.
+This is the initial atomic state for Raman transfer.
+The spin flip selectively transfers atoms in the relative motional ground state,
+removing any background from atoms in excited states of relative motion
+\footnote{This interaction shift is larger than the differential axial trapping frequency
+  between Na and Cs atoms, which decouples the relative and center of mass motional state
+  and improves the robustness of our preparation of the relative motional ground state.}.
+For the experiment reported here,
+$31\mathrm{\%}$ of initial two-atom population is transferred. Of this population, over $60\%$ is in the ground state of center-of-mass motion, inferred from Raman sideband thermometry.
+
+
 
 %% Transfer scheme
 % After the atoms are prepared in the $\ket{\uparrow_{\Na}\uparrow_{\Cs}} $ hyperfine combination, we then perform the Raman transfer.
@@ -528,9 +533,8 @@ From experimental measurements, the Raman transfer efficiency is limited by the 
 
 The molecular lifetime measurement in Fig.~\ref{f-lifetime}a is performed
 by preparing the molecule with a $\pi$-pulse,
-followed after a variable delay by a second dissociating $\pi$-pulse.
-Together with the Rabi oscillation in Fig.~\ref{f-raman}b,
-we obtain a molecule lifetime of $0.199(9)~\mathrm{ms}$.
+followed after a variable delay by a second dissociating $\pi$-pulse. The measured lifetime of $0.196(14)~\mathrm{ms}$ is consistent with the decaying time scale of  $0.203(13)~\mathrm{ms}$ of the  Rabi oscillation 
+ in Fig.~\ref{f-raman}b. %,we obtain a molecule lifetime of $0.199(9)~\mathrm{ms}$.
 Preliminary experiments and theoretical considerations indicate that
 the molecular lifetime may be limited by two-photon coupling
 to the atomic continuum~\cite{YichaoYu}.
@@ -572,8 +576,8 @@ fluctuation of $1.5~\mathrm{mG}$.
 % and is not the limiting factor in this experiment.
 
 In conclusion, we have coherently formed a weakly bound NaCs molecule in an optical tweezer
-by optical Raman transfer.  This process is enabled by utilizing a deeply-bound intermediate state, as well as highly-interacting initial atomic states.  A theoretical investigation including 8 excited state potentials,
-the excited atomic continuum, and coupled-channel ground-state wavefunctions indicates
+by optical Raman transfer.  This process is enabled by utilizing a deeply-bound intermediate state, as well as highly-interacting initial atomic states.  A theoretical investigation including 8 excited molecular electronic potentials,
+the electronically excited atomic continuum, and coupled-channel ground-state wavefunctions indicates
 the potential for higher transfer efficiency than the observed value of $69$~\%.  Future experiments may benefit from better balancing of the up-leg and down-leg Rabi frequencies, for example by driving to more deeply bound states.  If possible, destructive interference that reduces the two-photon Rabi rate should be avoided.  Nonlinear optical effects that limit the molecular state lifetime can also be explored.
 
 Our technique can be applied to form a diverse set of molecular species,
@@ -585,10 +589,10 @@ in forming rovibrational ground-state molecules. By scaling up to many optical t
 % and flexible platform for quantum simulation and quantum computing applications.
 
 \begin{acknowledgments}
-  We thank Bo Gao and Paul Julienne for discussion and Robert Moszynski for providing theoretical transition dipole moments of NaCs. This work is supported by the NSF~(PHY-1806595), the AFOSR~(FA9550-19-1-0089), ARO DURIP (W911NF1810194) and the Arnold and Mabel Beckman foundation. J.~T.~Z. is supported by a National Defense Science and Engineering Graduate Fellowship. W.~C. is supported by a Max Planck-Harvard Research Center for Quantum Optics fellowship. K.~W. is supported by an NSF GRFP fellowship. J.~M.~H. is supported by the U.K. Engineering and Physical Sciences Research Council (EPSRC) Grants No.\ EP/N007085/1, EP/P008275/1 and EP/P01058X/1.
+  We thank Bo Gao and Paul Julienne for discussion and Robert Moszynski for providing theoretical transition dipole moments of NaCs. This work is supported by the NSF~(PHY-1806595), the AFOSR~(FA9550-19-1-0089), ARO DURIP (W911NF1810194) and the Arnold and Mabel Beckman foundation. J.~T.~Z. is supported by a National Defense Science and Engineering Graduate Fellowship. W.~C. is supported by a Max Planck-Harvard Research Center for Quantum Optics fellowship. K.~W. is supported by an NSF GRFP fellowship. J.~M.~H. is supported by the U.K. Engineering and Physical Sciences Research Council (EPSRC) Grants No.\ EP/N007085/1, EP/P008275/1 and EP/P01058X/1. R.~G.~F. acknowledges financial support of the Spanish Project FIS2017-89349-P (MINECO), and the Andalusian research group FQM-207.
 \end{acknowledgments}
 
-\TR{What is meant by ``result is consistent with the decay of the Rabi oscillation'' if independent fits not done?  See also Fig.~5 caption.}
+%\TR{What is meant by ``result is consistent with the decay of the Rabi oscillation'' if independent fits not done?  See also Fig.~5 caption.}
 
 \bibliography{master_ref}
 \bibliographystyle{apsrev4-2}

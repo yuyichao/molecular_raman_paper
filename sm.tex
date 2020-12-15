@@ -56,6 +56,7 @@
   \harvardccb
   \cua
 }
+\newcommand{\itamp}{\affiliation{ITAMP, Harvard-Smithsonian Center for Astrophysics, Cambridge, Massachusetts 02138, USA}}
 
 % Add S1 to bibliography
 \bibliographystyle{apsrev4-2}
@@ -85,9 +86,11 @@
 \begin{document}
 \title{Coherent optical creation of a single molecule -- Supplemental material}
 \author{Yichao~Yu}
+\thanks{Y.Y.~and K.W.~contributed equally to this work.}
 \email{yichaoyu@g.harvard.edu}
 \gradstudent
 \author{Kenneth~Wang}
+\thanks{Y.Y.~and K.W.~contributed equally to this work.}
 \gradstudent
 \author{Jonathan~D.~Hood}
 \affiliation{Department of Chemistry, Purdue University, West Lafayette, Indiana, 47906, USA}
@@ -103,6 +106,7 @@
 \affiliation{Joint Quantum Centre Durham-Newcastle, Department of Chemistry, Durham University, Durham, DH1 3LE, United Kingdom}
 \author{Rosario Gonzalez-Ferez}
 \affiliation{Instituto Carlos I de F\'{\i}sica Te\'orica y Computacional, and Departamento de F\'{\i}sica At\'omica, Molecular y Nuclear,  Universidad de Granada, 18071 Granada, Spain}
+\itamp
 \author{Till Rosenband}
 \affiliation{Agendile LLC, Cambridge, Massachusetts 02139, USA}
 \author{Kang-Kuen~Ni}
@@ -117,9 +121,9 @@
 
 \section{3 Level Raman Transfer with Cross Coupling}
 
-In our system, the separation in energy between the initial and target state is much smaller than the single photon detuning $\Delta$ from the intermediate state.
+In our system, the separation in energy between the initial and target state is much smaller than the single photon detuning $\Delta$ from the intermediate state; see Fig.~1a in the main text.
 Thus, there is significant cross coupling for the scattering rate and light shift, where each state is coupled to the excited state by the power in both beams.
-Under these conditions, the scattering rate and light shift is proportional to the total power $P_{\text{tot}} = P_{\rm m} + P_{\rm a}$, where $P_{\rm m} (P_{\rm a})$ is the power in the beam that addresses the molecular (atomic) state.
+Under these conditions, the scattering rate and light shift are proportional to the total power $P_{\text{tot}} = P_{\rm m} + P_{\rm a}$, where $P_{\rm m} (P_{\rm a})$ is the power in the beam that addresses the molecular (atomic) state.
 The Raman Rabi frequency is proportional to $\sqrt{P_{\rm m}P_{\rm a}} $.
 With a fixed total power and thus fixed scattering rate, the Raman Rabi frequency is maximized when $ P_{\rm m} = P_{\rm a} = P_{\text{tot}}/2$.
 
@@ -128,52 +132,51 @@ Thus, the Raman Rabi frequency is $\Omega_{\rm a}\Omega_{\rm m}/(2\Delta)$, wher
 Cross coupling affects the scattering rate and light shift, and assuming equal powers in both beams, these quantities become $ \Gamma_{\rm e} \Omega_{\rm m}^2 / (2\Delta^2) + \Gamma_{\rm e} \Omega_{\rm a}^2 / (2\Delta^2) $ and $ \Omega_{\rm m}^2/(2\Delta) - \Omega_{\rm a}^2/(2\Delta) $, where $\Gamma_{\rm e}$ is the excited state linewidth. Since $ \Omega_{\rm m} >> \Omega_{\rm a} $, the scattering rate and light shift can be approximated as $ \Gamma_{\rm e} \Omega_{\rm m}^2/(2\Delta^2)$ and $\Omega_{\rm m}^2/(2\Delta)$.
 
 \section{Raman Transfer with Many Intermediate States} \label{sm:sect_2}
-With multiple intermediate states, the total Raman Rabi frequency, scattering rate, and light shift become a sum over all these possible states. In our model, we consider all vibrational states of $ \mathrm{c^3\Sigma^+(\Omega = 1)} $ and states in the atomic continuum as intermediate states. The Rabi frequency between two states is proportional to the electronic dipole moment, arising from the electronic wavefunctions, and the overlap of the vibrational wavefunctions. Under the assumption that the electronic dipole moment $ d $ is the same for all transitions between the ground state and the excited electronic state, the total Raman Rabi frequency becomes:
+With multiple intermediate states, the total Raman Rabi frequency, scattering rate, and light shift become a sum over all these possible states. In our model, we consider all vibrational states of $ \mathrm{c^3\Sigma^+(\Omega = 1)} $ and states in the atomic continuum as intermediate states. The Rabi frequency between two states is proportional to the electronic dipole moment, arising from the electronic wavefunctions, and the overlap of the vibrational wavefunctions. Under the assumption that the electronic dipole moment $ d $ is the same for all transitions between the ground state and the excited electronic state, the total Raman Rabi frequency becomes
 \begin{equation}
-  \Omega_{\rm R} = \frac{d^2E^2}{2\hbar^2} \displaystyle\sum_{v'} \frac{\braket{a|v'}\braket{v'|m}}{\Delta_{v'}}
+  \Omega_{\rm R} = \frac{d^2E^2}{2\hbar^2} \displaystyle\sum_{v'} \frac{\braket{a|v'}\braket{v'|m}}{\Delta_{v'}},
 \end{equation}
-where $\ket{a}$ ($\ket{m}$) are the relative coordinate wavefunctions for the trapped atomic (target molecular) state, and $\ket{v'}$ is the relative-coordinate wavefunction for the excited state which includes both bound molecular states and the atomic continuum. $\Delta_{v'}$ is a single photon detuning with respect to the $\ket{v'}$ state, $ E $ is the electric field for the power in the single beam given a waist size. We can divide this sum into a sum over all the bound molecular states, and a sum over atomic continuum states.
+where $\ket{a}$ ($\ket{m}$) are the relative coordinate wavefunctions for the trapped atomic (target molecular) state, and $\ket{v'}$ is the relative-coordinate wavefunction for the excited state which includes both bound molecular states and the atomic continuum. $\Delta_{v'}$ is a single photon detuning with respect to the $\ket{v'}$ state, $ E $ is the electric field for the power in the single beam given a waist size. We can divide this sum into a sum over all the bound molecular states, and a sum over atomic continuum states,
 \begin{equation}
-  \Omega_{\rm R} = \frac{d^2E^2}{2\hbar^2}\displaystyle\sum_{v' \leq v'_{\text{max}}} \frac{\braket{a|v'}\braket{v'|m}}{\Delta_{v'}} +  \frac{d^2E^2}{2\hbar^2}\displaystyle\sum_{v' > v'_{\text{max}}} \frac{\braket{a|v'}\braket{v'|m}}{\Delta_{v'}}
+  \Omega_{\rm R} = \frac{d^2E^2}{2\hbar^2}\displaystyle\sum_{v' \leq v'_{\text{max}}} \frac{\braket{a|v'}\braket{v'|m}}{\Delta_{v'}} +  \frac{d^2E^2}{2\hbar^2}\displaystyle\sum_{v' > v'_{\text{max}}} \frac{\braket{a|v'}\braket{v'|m}}{\Delta_{v'}},
 \end{equation}
-where $ v'_{\text{max}}$ corresponds to the excited molecular state, which is most weakly bound. The first term can be calculated numerically given an excited state potential. To calculate the second term, we first make an assumption that we are far enough detuned from the contributing continuum states that they are all at approximately the same detuning, $ \Delta_{\text{thresh}}$. This allows us to pull it out of the sum, and we obtain:
+where $ v'_{\text{max}}$ corresponds to the excited molecular state, which is most weakly bound. The first term can be calculated numerically given an excited state potential. To calculate the second term, we first make an assumption that we are far enough detuned from the contributing continuum states that they are all at approximately the same detuning, $ \Delta_{\text{thresh}}$. This allows us to pull it out of the sum, and we obtain
 \begin{equation}
-  \Omega_{\rm R} \approx \frac{d^2E^2}{2\hbar^2}\displaystyle\sum_{v' \leq v'_{\text{max}}} \frac{\braket{a|v'}\braket{v'|m}}{\Delta_{v'}} +  \frac{d^2E^2}{2\hbar^2\Delta_{\text{thresh}}}\displaystyle\sum_{v' > v'_{\text{max}}} \braket{a|v'}\braket{v'|m}  \label{rabifreq}
+  \Omega_{\rm R} \approx \frac{d^2E^2}{2\hbar^2}\displaystyle\sum_{v' \leq v'_{\text{max}}} \frac{\braket{a|v'}\braket{v'|m}}{\Delta_{v'}} +  \frac{d^2E^2}{2\hbar^2\Delta_{\text{thresh}}}\displaystyle\sum_{v' > v'_{\text{max}}} \braket{a|v'}\braket{v'|m} . \label{rabifreq}
 \end{equation}
-From requiring orthogonality,
+From requiring completeness and orthogonality,
 \begin{equation}
-  \displaystyle\sum_{v'} \braket{a|v'}\braket{v'|m} = \braket{a|m} = 0
+  \displaystyle\sum_{v'} \braket{a|v'}\braket{v'|m} = \braket{a|m} = 0,
 \end{equation}
 we derive an expression for the second sum in equation \ref{rabifreq}
 \begin{equation}
-  \displaystyle\sum_{v'> v'_{\text{max}}} \braket{a|v'}\braket{v'|m} = -\displaystyle\sum_{v' \leq v'_{\text{max}}} \braket{a|v'}\braket{v'|m}
+  \displaystyle\sum_{v'> v'_{\text{max}}} \braket{a|v'}\braket{v'|m} = -\displaystyle\sum_{v' \leq v'_{\text{max}}} \braket{a|v'}\braket{v'|m},
 \end{equation}
 which can be calculated from the vibrational states of the excited state potential. Thus, the Raman Rabi frequency can be approximated as:
 \begin{equation}
-  \Omega_{\rm R} \approx \frac{d^2E^2}{2\hbar^2}\displaystyle\sum_{v' \leq v'_{\text{max}}} \frac{\braket{a|v'}\braket{v'|m}}{\Delta_{v'}} -  \frac{d^2E^2}{2\hbar^2\Delta_{\text{thresh}}}\displaystyle\sum_{v' \leq v'_{\text{max}}} \braket{a|v'}\braket{v'|m}
+  \Omega_{\rm R} \approx \frac{d^2E^2}{2\hbar^2}\displaystyle\sum_{v' \leq v'_{\text{max}}} \frac{\braket{a|v'}\braket{v'|m}}{\Delta_{v'}} -  \frac{d^2E^2}{2\hbar^2\Delta_{\text{thresh}}}\displaystyle\sum_{v' \leq v'_{\text{max}}} \braket{a|v'}\braket{v'|m}.
 \end{equation}
-We can account for the atomic continuum in the scattering rate in a similar way.
-\begin{align}
-  \Gamma_{\rm s} &= \frac{d^2E^2}{2\hbar^2}\displaystyle\sum_{v' \leq v'_{\text{max}}}\Gamma_{v'} \frac{\braket{m|v'}\braket{v'|m}}{\Delta_{v'}^2} + \frac{d^2E^2}{2\hbar^2}\displaystyle\sum_{v' > v'_{\text{max}}}\Gamma_{v'} \frac{\braket{m|v'}\braket{v'|m}}{\Delta_{v'}^2} \\
-           &\approx \frac{d^2E^2}{2\hbar^2}\displaystyle\sum_{v' \leq v'_{\text{max}}}\Gamma_{v'} \frac{\braket{m|v'}\braket{v'|m}}{\Delta_{v'}^2} + \frac{d^2E^2\Gamma}{2\hbar^2\Delta_{\text{thresh}}^2}\displaystyle\sum_{v' > v'_{\text{max}}}\braket{m|v'}\braket{v'|m}
+We can account for the atomic continuum in the scattering rate in a similar way
+\begin{align} 
+            \Gamma_{\rm s} &\approx \frac{d^2E^2}{2\hbar^2}\displaystyle\sum_{v' \leq v'_{\text{max}}}\Gamma_{v'} \frac{\braket{m|v'}\braket{v'|m}}{\Delta_{v'}^2} + \frac{d^2E^2\Gamma}{2\hbar^2\Delta_{\text{thresh}}^2}\displaystyle\sum_{v' > v'_{\text{max}}}\braket{m|v'}\braket{v'|m},
 \end{align}
 where $\Gamma_{v'}$ is the excited state linewidth for the $\ket{v'}$ state, and we have assumed the atomic continuum states all have the same linewidth $\Gamma$. Using normalization, we derive an expression for the sum in the second term
 \begin{equation}
-  \displaystyle\sum_{v' > v'_{\text{max}}}\braket{m|v'}\braket{v'|m} = 1 - \displaystyle\sum_{v' \leq v'_{\text{max}}}\braket{m|v'}\braket{v'|m}
+  \displaystyle\sum_{v' > v'_{\text{max}}}\braket{m|v'}\braket{v'|m} = 1 - \displaystyle\sum_{v' \leq v'_{\text{max}}}\braket{m|v'}\braket{v'|m}.
 \end{equation}
 We then arrive at an expression for the scattering rate, accounting for the atomic continuum,
 \begin{equation}
-  \Gamma_{\rm s} \approx \frac{d^2E^2}{2\hbar^2}\displaystyle\sum_{v' \leq v'_{\text{max}}}\Gamma_{v'} \frac{\braket{m|v'}\braket{v'|m}}{\Delta_{v'}^2} +  \frac{d^2E^2\Gamma}{2\hbar^2\Delta_{\text{thresh}}^2}\left(1 - \displaystyle\sum_{v' \leq v'_{\text{max}}}\braket{m|v'}\braket{v'|m}\right)
+  \Gamma_{\rm s} \approx \frac{d^2E^2}{2\hbar^2}\displaystyle\sum_{v' \leq v'_{\text{max}}}\Gamma_{v'} \frac{\braket{m|v'}\braket{v'|m}}{\Delta_{v'}^2} +  \frac{d^2E^2\Gamma}{2\hbar^2\Delta_{\text{thresh}}^2}\left(1 - \displaystyle\sum_{v' \leq v'_{\text{max}}}\braket{m|v'}\braket{v'|m}\right).
 \end{equation}
 We have replaced the full continuum with an effective state at the atomic threshold with strength proportional to the amount of wavefunction overlap between the target molecular state and all atomic continuum states. This model leads to a component in the scattering rate that is proportional to $ 1/\Delta_{\text{thresh}}^2$ and is smaller as one detunes farther from the threshold. We note that the first term can also scale nearly as $1/\Delta_{\text{thresh}}^2 $, if, as in our case, the largest terms in the summation are from states near the threshold.
 
-A very similar result holds for the light shift and is written here for completeness
+A very similar result holds for the light shift $\delta$ and is written here for completeness
 
 \begin{equation}
-  \frac{d^2E^2}{2\hbar^2}\displaystyle\sum_{v' \leq v'_{\text{max}}} \frac{\braket{m|v'}\braket{v'|m}}{\Delta_{v'}} +  \frac{d^2E^2}{2\hbar^2\Delta_{\text{thresh}}}\left(1 - \displaystyle\sum_{v' \leq v'_{\text{max}}}\braket{m|v'}\braket{v'|m}\right)
+  \delta = \frac{d^2E^2}{2\hbar^2}\displaystyle\sum_{v' \leq v'_{\text{max}}} \frac{\braket{m|v'}\braket{v'|m}}{\Delta_{v'}} +  \frac{d^2E^2}{2\hbar^2\Delta_{\text{thresh}}}\left(1 - \displaystyle\sum_{v' \leq v'_{\text{max}}}\braket{m|v'}\braket{v'|m}\right).
 \end{equation}
 
-\section{Computational methods for bound states and scattering}
+\section{Computational methods for bound and scattering states}
 
 For scattering and near-threshold bound states, we solve the Schr\"odinger equation by
 coupled-channel methods \cite{HUTSON1994}, using a basis set in which the electron spins
@@ -273,14 +276,13 @@ The full calculation of the Raman Rabi frequency and scattering rate using the m
 \end{figure}
 \section{Effective Matrix Elements to a Single State}
 
-In this calculation, there is a matrix element, $\Omega_{\mathrm{a}i}, \Omega_{\mathrm{m}i}$ between each channel $ i $ of the coupled channel ground state and an excited state. The total Raman Rabi frequency $ \Omega_{\rm R}$, light shift $ \delta$ and off-resonant scattering $ \Gamma_{\rm s} $ contribution from this single excited state is calculated as
+In this calculation, there is a matrix element, $\Omega_{\mathrm{a}ij}, \Omega_{\mathrm{m}ij}$ between each channel $ i $ of the coupled channel ground state and an excited state $ j $. The total Raman Rabi frequency $ \Omega_{\rm R}$, light shift $ \delta$ and off-resonant scattering $ \Gamma_{\rm s} $ contribution from this single excited state is calculated as
 
 \begin{align}
-  \Omega_{\rm R} &= \displaystyle\sum_{i} \frac{\Omega_{\mathrm{a}i} \Omega_{\mathrm{m}i}}{2\Delta} \\
-  \delta &= \displaystyle\sum_{i} \frac{\Omega_{\mathrm{a}i}^2 - \Omega_{\mathrm{m}i}^2}{2\Delta} \\
-  \Gamma_{\rm s} &= \displaystyle\sum_{i} \Gamma_{\rm e} \frac{\Omega_{\mathrm{a}i}^2 + \Omega_{\mathrm{m}i}^2}{2\Delta^2}
+  \Omega_{\mathrm{R}j} &= \displaystyle\sum_{i} \frac{\Omega_{\mathrm{a}ij} \Omega_{\mathrm{m}ij}}{2\Delta}, \\
+  \delta_j &= \displaystyle\sum_{i} \frac{\Omega_{\mathrm{a}ij}^2 - \Omega_{\mathrm{m}ij}^2}{2\Delta}, \\
+  \Gamma_{\mathrm{s} j} &= \displaystyle\sum_{i} \Gamma_{\rm e} \frac{\Omega_{\mathrm{a}ij}^2 + \Omega_{\mathrm{m}ij}^2}{2\Delta^2},
 \end{align}
-
 where $ \Delta $ is the single photon detuning and $ \Gamma_{\rm e} $ is the excited state linewidth. The experiment, through measuring the detuning dependence of the Raman Rabi frequency and the resonance frequency, extracts a single $ \Omega_{\rm m} $ and $ \Omega_{\rm a} $. In order to compare to the theory, we introduce effective $ \Omega_{\rm a}', \Omega_{\rm m}', \Gamma_{\rm e}'$, so that $ \Omega_{\rm R} = \Omega_{\rm a}'\Omega_{\rm m}'/(2\Delta) $, $\delta = (\Omega_{\rm a}'^2 - \Omega_{\rm m}'^2)/(2\Delta) $, and $\Gamma_{\rm s} = \Gamma_{\rm e}'(\Omega_{\rm a}'^2 + \Omega_{\rm m}'^2)/(2\Delta^2) $. The effective Rabi frequencies for the $v' = 0$ state of $ c^3\Sigma^+_1$ and their ratio are reported in Table~\ref{tab:sm} at $3.75~\mathrm{mW}$ of tweezer power.
 
 % $2\pi \times 15.3~\mathrm{kHz}$
