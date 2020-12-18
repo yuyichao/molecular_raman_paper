@@ -89,7 +89,7 @@
   % 2: size
   % 3: angle
   \begin{scope}[shift={#1}]
-    \node[rotate={#3}] at (0, 0) {\scalebox{#2}{\includegraphics[width=2cm]{lens.png}}};
+    \node[rotate={#3}] at (0, 0) {\scalebox{#2}{\includegraphics[width=2cm]{imgs/lens.png}}};
   \end{scope}
 }
 \newcommand\drawwaveplate[3]{
@@ -97,7 +97,7 @@
   % 2: size
   % 3: angle
   \begin{scope}[shift={#1}]
-    \node[rotate={#3}] at (0, 0) {\scalebox{#2}{\includegraphics[width=2cm]{wp.png}}};
+    \node[rotate={#3}] at (0, 0) {\scalebox{#2}{\includegraphics[width=2cm]{imgs/wp.png}}};
   \end{scope}
 }
 \newcommand\drawaom[4]{
@@ -107,7 +107,7 @@
   % 4: angle
   \begin{scope}[shift={#1}]
     \node[rotate={#4}] at (0, 0)
-    {\scalebox{#2}[#3]{\includegraphics[width=2cm,height=2cm]{AOM.png}}};
+    {\scalebox{#2}[#3]{\includegraphics[width=2cm,height=2cm]{imgs/AOM.png}}};
   \end{scope}
 }
 \newcommand\drawpbs[3]{
@@ -116,7 +116,7 @@
   % 3: angle
   \begin{scope}[shift={#1}]
     \node[rotate={#3}] at (0, 0)
-    {\scalebox{#2}{\includegraphics[width=1.4285714285714286cm]{PBS.png}}};
+    {\scalebox{#2}{\includegraphics[width=1.4285714285714286cm]{imgs/PBS.png}}};
   \end{scope}
 }
 \newcommand\drawmirror[4][line width=3]{
