@@ -39,11 +39,11 @@ figure(figsize=[13.8, 4.8])
 plot(data_a3b3[:, 1] .* 0.529177210903, data_a3b3[:, 2], "C1",
      label="\$a^3\\Sigma\\rightarrow b^3\\Pi\$")
 plot(data_a3c3[:, 1] .* 0.529177210903, data_a3c3[:, 2], "C2",
-     label="\$a^3\\Sigma\\rightarrow b^3\\Pi\$")
+     label="\$a^3\\Sigma\\rightarrow c^3\\Sigma\$")
 plot(data_X1A1[:, 1] .* 0.529177210903, data_X1A1[:, 2], "C3",
-     label="\$a^3\\Sigma\\rightarrow b^3\\Pi\$")
+     label="\$X^1\\Sigma\\rightarrow A^1\\Sigma\$")
 plot(data_X1B1[:, 1] .* 0.529177210903, data_X1B1[:, 2], "C4",
-     label="\$a^3\\Sigma\\rightarrow b^3\\Pi\$")
+     label="\$X^1\\Sigma\\rightarrow B^1\\Pi\$")
 grid()
 xscale("log")
 xlim([2.7, 25])
@@ -62,11 +62,11 @@ figure(figsize=[6.4, 4.8])
 plot(data_a3b3[:, 1] .* 0.529177210903, data_a3b3[:, 2], "C1",
      label="\$a^3\\Sigma\\rightarrow b^3\\Pi\$")
 plot(data_a3c3[:, 1] .* 0.529177210903, data_a3c3[:, 2], "C2",
-     label="\$a^3\\Sigma\\rightarrow b^3\\Pi\$")
+     label="\$a^3\\Sigma\\rightarrow c^3\\Sigma\$")
 plot(data_X1A1[:, 1] .* 0.529177210903, data_X1A1[:, 2], "C3",
-     label="\$a^3\\Sigma\\rightarrow b^3\\Pi\$")
+     label="\$X^1\\Sigma\\rightarrow A^1\\Sigma\$")
 plot(data_X1B1[:, 1] .* 0.529177210903, data_X1B1[:, 2], "C4",
-     label="\$a^3\\Sigma\\rightarrow b^3\\Pi\$")
+     label="\$X^1\\Sigma\\rightarrow B^1\\Pi\$")
 grid()
 xscale("log")
 xlim([2.7, 25])
